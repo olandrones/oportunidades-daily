@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oportunidades Diárias — Lyriane</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0f0f1a; color: #e0e0e0; min-height: 100vh; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        header { text-align: center; padding: 30px 0; border-bottom: 1px solid #2a2a4a; margin-bottom: 30px; }
+        h1 { color: #7c3aed; font-size: 2em; margin-bottom: 5px; }
+        .subtitle { color: #888; font-size: 0.9em; }
+        .filters { background: #1a1a2e; padding: 20px; border-radius: 12px; margin-bottom: 30px; display: flex; gap: 10px; flex-wrap: wrap; }
+        .filters input, .filters select { padding: 10px 15px; border: 1px solid #2a2a4a; border-radius: 8px; background: #0f0f1a; color: #fff; font-size: 0.9em; }
+        .filters input { flex: 1; min-width: 200px; }
+        .filters select { min-width: 150px; }
+        .filters button { padding: 10px 20px; background: #7c3aed; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; }
+        .filters button:hover { background: #6d28d9; }
+        .meta-info { color: #666; font-size: 0.85em; margin-bottom: 20px; }
+        .section { margin-bottom: 40px; }
+        .section-title { display: flex; align-items: center; gap: 10px; font-size: 1.4em; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #2a2a4a; }
+        .card { background: #1a1a2e; border-radius: 12px; padding: 20px; margin-bottom: 15px; border: 1px solid #2a2a4a; transition: transform 0.2s, border-color 0.2s; }
+        .card:hover { transform: translateY(-2px); border-color: #7c3aed; }
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+        .card-title { font-size: 1.1em; font-weight: 700; color: #fff; }
+        .card-badge { font-size: 0.75em; padding: 4px 10px; border-radius: 20px; background: #7c3aed20; color: #a78bfa; border: 1px solid #7c3aed40; }
+        .card-meta { font-size: 0.8em; color: #666; margin-bottom: 10px; display: flex; gap: 15px; flex-wrap: wrap; }
+        .card-meta span { display: flex; align-items: center; gap: 4px; }
+        .card-desc { color: #aaa; line-height: 1.6; font-size: 0.95em; }
+        .card-tags { margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap; }
+        .tag { font-size: 0.75em; padding: 3px 10px; border-radius: 6px; background: #2a2a4a; color: #888; }
+        .tag.origem { background: #3b82f620; color: #60a5fa; border: 1px solid #3b82f640; }
+        .tag.categoria { background: #7c3aed20; color: #a78bfa; border: 1px solid #7c3aed40; }
+        .vol { font-weight: 700; color: #10b981; }
+        .growth { color: #f59e0b; font-weight: 600; }
+        .empty-state { text-align: center; padding: 60px 20px; color: #666; }
+        .progress-bar { height: 3px; background: #2a2a4a; border-radius: 2px; margin-top: 15px; overflow: hidden; }
+        .progress-bar div { height: 100%; background: linear-gradient(90deg, #7c3aed, #3b82f6); border-radius: 2px; transition: width 0.3s; }
+        @media (max-width: 600px) { .filters { flex-direction: column; } .card-header { flex-direction: column; gap: 10px; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 Oportunidades Diárias</h1>
+            <p class="subtitle">Relatório automático de tendências e oportunidades — atualizado 3x ao dia</p>
+        </header>
+
+        <div class="filters">
+            <input type="text" id="searchInput" placeholder="Buscar por termo..." onkeyup="filtrar()">
+            <select id="categoriaFilter" onchange="filtrar()">
+                <option value="">Todas Categorias</option>
+                <option value="tendencia">🔥 Tendência</option>
+                <option value="app">🚀 App/Produto</option>
+                <option value="negocio">💼 Oportunidade</option>
+            </select>
+            <select id="origemFilter" onchange="filtrar()">
+                <option value="">Todas Origens</option>
+                <option value="global">Global</option>
+                <option value="brasil">🇧🇷 Brasil</option>
+            </select>
+            <button onclick="limparFiltros()">Limpar</button>
+        </div>
+
+        <div class="meta-info" id="metaInfo">Carregando...</div>
+
+        <div class="section" id="sectionTendencias">
+            <div class="section-title">🔥 Tendências do Dia</div>
+            <div id="tendenciasList">
+                <div class="empty-state">Nenhuma tendência registrada ainda. Primeira atualização às 06h.</div>
+            </div>
+        </div>
+
+        <div class="section" id="sectionApps">
+            <div class="section-title">🚀 Apps & Produtos em Alta</div>
+            <div id="appsList">
+                <div class="empty-state">Nenhum app registrado ainda. Primeira atualização às 12h.</div>
+            </div>
+        </div>
+
+        <div class="section" id="sectionOportunidades">
+            <div class="section-title">💼 Oportunidades de Negócio</div>
+            <div id="oportunidadesList">
+                <div class="empty-state">Nenhuma oportunidade registrada ainda. Primeira atualização às 18h.</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filtrar() {
+            const termo = document.getElementById('searchInput').value.toLowerCase();
+            const cat = document.getElementById('categoriaFilter').value;
+            const orig = document.getElementById('origemFilter').value;
+            const cards = document.querySelectorAll('.card');
+            let visiveis = 0;
+            cards.forEach(c => {
+                const texto = c.textContent.toLowerCase();
+                const cats = c.dataset.categoria || '';
+                const ors = c.dataset.origem || '';
+                const mostrar = texto.includes(termo) && (cat === '' || cats === cat) && (orig === '' || ors === orig);
+                c.style.display = mostrar ? 'block' : 'none';
+                if (mostrar) visiveis++;
+            });
+            document.getElementById('metaInfo').textContent = `${visiveis} entrada(s) encontrada(s) | Atualizado: ${new Date().toLocaleString('pt-BR')}`;
+        }
+        function limparFiltros() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('categoriaFilter').value = '';
+            document.getElementById('origemFilter').value = '';
+            filtrar();
+        }
+        filtrar();
+    </script>
+</body>
+</html>
