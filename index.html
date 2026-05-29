@@ -85,6 +85,7 @@
         <div class="filters">
             <div class="filter-group" id="filterCategoria"></div>
             <div class="filter-group" id="filterOrigem"></div>
+            <button class="filter-btn" id="btnOrdenar">🔥 Ordenar por calor</button>
         </div>
 
         <!-- Grid de cards -->
@@ -98,6 +99,38 @@
         let filtroCat = '';
         let filtroOrigem = '';
         let filtroTag = '';
+        let ordenacao = 'default';
+
+        function parseNumero(str) {
+            if (!str) return 0;
+            str = str.replace(/,/g, '');
+            if (str.includes('K')) return parseFloat(str) * 1000;
+            if (str.includes('M')) return parseFloat(str) * 1000000;
+            return parseFloat(str) || 0;
+        }
+
+        function calcularCalor(item) {
+            const cresc = parseNumero(item.crescimento);
+            const stars = parseNumero(item.stars);
+            if (stars > 0) return Math.log10(stars + 1) * 10;
+            if (cresc > 0) return Math.log10(cresc + 1) * 5;
+            return 0;
+        }
+
+        function ordenarCards() {
+            if (ordenacao === 'default') return;
+            const grid = document.getElementById('cardsGrid');
+            const cards = Array.from(grid.querySelectorAll('.card:not(.hidden)'));
+            cards.sort((a, b) => {
+                const tituloA = a.querySelector('.card-title').textContent.trim();
+                const tituloB = b.querySelector('.card-title').textContent.trim();
+                const ia = dados.find(d => d.titulo.trim() === tituloA);
+                const ib = dados.find(d => d.titulo.trim() === tituloB);
+                if (!ia || !ib) return 0;
+                return calcularCalor(ib) - calcularCalor(ia);
+            });
+            cards.forEach(c => grid.appendChild(c));
+        }
 
         function gerarUrl(item) {
             // Extrai nome limpo do título
@@ -206,7 +239,21 @@
                 btn.addEventListener('click', () => {
                     filtroOrigem = filtroOrigem === btn.dataset.origem ? '' : btn.dataset.origem;
                     atualizarFiltros();
+                    if (ordenacao === 'calor') ordenarCards();
                 });
+            });
+
+            // Ordenar por calor
+            document.getElementById('btnOrdenar').addEventListener('click', () => {
+                ordenacao = ordenacao === 'default' ? 'calor' : 'default';
+                const btn = document.getElementById('btnOrdenar');
+                btn.classList.toggle('active', ordenacao === 'calor');
+                btn.textContent = ordenacao === 'calor' ? '↺ Limpar ordenação' : '🔥 Ordenar por calor';
+                if (ordenacao === 'calor') {
+                    ordenarCards();
+                } else {
+                    location.reload();
+                }
             });
         }
 
@@ -305,6 +352,7 @@
                     }
 
                     atualizarFiltros();
+                    if (ordenacao === 'calor') ordenarCards();
                 })
                 .catch(err => {
                     document.getElementById('cardsGrid').innerHTML =
