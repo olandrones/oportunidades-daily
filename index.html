@@ -7,37 +7,68 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0f0f1a; color: #e0e0e0; min-height: 100vh; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-        header { text-align: center; padding: 30px 0; border-bottom: 1px solid #2a2a4a; margin-bottom: 30px; }
-        h1 { color: #7c3aed; font-size: 2em; margin-bottom: 5px; }
-        .subtitle { color: #888; font-size: 0.9em; }
-        .filters { background: #1a1a2e; padding: 20px; border-radius: 12px; margin-bottom: 30px; display: flex; gap: 10px; flex-wrap: wrap; }
-        .filters input, .filters select { padding: 10px 15px; border: 1px solid #2a2a4a; border-radius: 8px; background: #0f0f1a; color: #fff; font-size: 0.9em; }
-        .filters input { flex: 1; min-width: 200px; }
-        .filters select { min-width: 150px; }
-        .filters button { padding: 10px 20px; background: #7c3aed; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; }
-        .filters button:hover { background: #6d28d9; }
-        .meta-info { color: #666; font-size: 0.85em; margin-bottom: 20px; }
-        .section { margin-bottom: 40px; }
-        .section-title { display: flex; align-items: center; gap: 10px; font-size: 1.4em; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #2a2a4a; }
-        .card { background: #1a1a2e; border-radius: 12px; padding: 20px; margin-bottom: 15px; border: 1px solid #2a2a4a; transition: transform 0.2s, border-color 0.2s; }
-        .card:hover { transform: translateY(-2px); border-color: #7c3aed; }
-        .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
-        .card-title { font-size: 1.1em; font-weight: 700; color: #fff; }
-        .card-badge { font-size: 0.75em; padding: 4px 10px; border-radius: 20px; background: #7c3aed20; color: #a78bfa; border: 1px solid #7c3aed40; }
-        .card-meta { font-size: 0.8em; color: #666; margin-bottom: 10px; display: flex; gap: 15px; flex-wrap: wrap; }
-        .card-meta span { display: flex; align-items: center; gap: 4px; }
-        .card-desc { color: #aaa; line-height: 1.6; font-size: 0.95em; }
-        .card-tags { margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap; }
-        .tag { font-size: 0.75em; padding: 3px 10px; border-radius: 6px; background: #2a2a4a; color: #888; }
-        .tag.origem { background: #3b82f620; color: #60a5fa; border: 1px solid #3b82f640; }
-        .tag.categoria { background: #7c3aed20; color: #a78bfa; border: 1px solid #7c3aed40; }
-        .vol { font-weight: 700; color: #10b981; }
-        .growth { color: #f59e0b; font-weight: 600; }
-        .empty-state { text-align: center; padding: 60px 20px; color: #666; }
-        .progress-bar { height: 3px; background: #2a2a4a; border-radius: 2px; margin-top: 15px; overflow: hidden; }
-        .progress-bar div { height: 100%; background: linear-gradient(90deg, #7c3aed, #3b82f6); border-radius: 2px; transition: width 0.3s; }
-        @media (max-width: 600px) { .filters { flex-direction: column; } .card-header { flex-direction: column; gap: 10px; } }
+        .container { max-width: 1400px; margin: 0 auto; padding: 16px; }
+
+        /* ── HEADER ── */
+        header { text-align: center; padding: 20px 0 16px; border-bottom: 1px solid #2a2a4a; margin-bottom: 20px; }
+        h1 { color: #7c3aed; font-size: 1.6em; margin-bottom: 4px; }
+        .subtitle { color: #666; font-size: 0.8em; }
+
+        /* ── RESUMO SEMÂNTICO ── */
+        .resumo-semantico { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 16px; padding: 12px; background: #13132a; border-radius: 10px; border: 1px solid #2a2a4a; }
+        .resumo-stat { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; background: #1a1a2e; border: 1px solid #2a2a4a; cursor: pointer; font-size: 0.78em; transition: all 0.2s; color: #888; }
+        .resumo-stat:hover { border-color: #7c3aed; color: #e0e0e0; }
+        .resumo-stat.active { background: #7c3aed20; border-color: #7c3aed; color: #a78bfa; }
+        .resumo-stat .num { font-weight: 700; color: #fff; }
+        .resumo-stat.all-stat { border-color: #444; }
+
+        /* ── TOGGLE FILTERS ── */
+        .filters { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 20px; }
+        .filter-group { display: flex; gap: 4px; background: #1a1a2e; padding: 4px; border-radius: 10px; }
+        .filter-btn { padding: 7px 14px; border: none; border-radius: 7px; background: transparent; color: #888; font-size: 0.8em; cursor: pointer; transition: all 0.2s; font-weight: 500; }
+        .filter-btn:hover { color: #e0e0e0; background: #2a2a4a; }
+        .filter-btn.active { background: #7c3aed; color: #fff; }
+
+        /* ── GRID DE CARDS ── */
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 12px; }
+        @media (max-width: 400px) { .cards-grid { grid-template-columns: 1fr; } }
+
+        /* ── CARD ── */
+        .card { background: #1a1a2e; border-radius: 10px; padding: 14px; border: 1px solid #2a2a4a; transition: border-color 0.2s; cursor: pointer; display: flex; flex-direction: column; gap: 6px; max-height: 130px; overflow: hidden; position: relative; }
+        .card:hover { border-color: #7c3aed; }
+        .card.expanded { max-height: none; }
+        .card.hidden { display: none; }
+
+        /* Card: header row */
+        .card-header { display: flex; align-items: flex-start; gap: 8px; }
+        .card-title { font-size: 0.9em; font-weight: 700; color: #fff; flex: 1; line-height: 1.3; }
+        .card-badge { font-size: 0.7em; padding: 3px 8px; border-radius: 12px; background: #7c3aed20; color: #a78bfa; border: 1px solid #7c3aed40; white-space: nowrap; flex-shrink: 0; }
+
+        /* Card: inline meta + tags row */
+        .card-meta-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+        .card-meta-item { font-size: 0.72em; color: #666; display: flex; align-items: center; gap: 3px; }
+        .card-meta-item .vol { color: #10b981; font-weight: 700; }
+        .card-meta-item .growth { color: #f59e0b; font-weight: 600; }
+        .card-meta-item .sep { color: #333; }
+        .card-tag { font-size: 0.68em; padding: 2px 7px; border-radius: 5px; background: #2a2a4a; color: #777; }
+        .card-tag.origem-tag { background: #3b82f620; color: #60a5fa; }
+
+        /* Card: description */
+        .card-desc { font-size: 0.78em; color: #999; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .card.expanded .card-desc { -webkit-line-clamp: unset; display: block; }
+        .card-expand-hint { font-size: 0.68em; color: #555; text-align: center; margin-top: 2px; }
+        .card.expanded .card-expand-hint { display: none; }
+
+        /* Card: footer link */
+        .card-link { display: none; align-items: center; gap: 5px; font-size: 0.72em; color: #7c3aed; text-decoration: none; padding-top: 6px; border-top: 1px solid #2a2a4a; margin-top: 4px; }
+        .card-link:hover { color: #a78bfa; }
+        .card.expanded .card-link { display: flex; }
+
+        /* ── EMPTY STATE ── */
+        .empty-state { text-align: center; padding: 60px; color: #555; grid-column: 1 / -1; }
+
+        /* ── FOOTER META ── */
+        .page-meta { text-align: center; color: #444; font-size: 0.75em; padding: 20px 0; margin-top: 20px; border-top: 1px solid #1a1a2e; }
     </style>
 </head>
 <body>
@@ -47,72 +78,208 @@
             <p class="subtitle">Relatório automático de tendências e oportunidades — atualizado 3x ao dia</p>
         </header>
 
+        <!-- Resumo semântico clicável -->
+        <div class="resumo-semantico" id="resumoSemantico"></div>
+
+        <!-- Toggle filters -->
         <div class="filters">
-            <input type="text" id="searchInput" placeholder="Buscar por termo..." onkeyup="filtrar()">
-            <select id="categoriaFilter" onchange="filtrar()">
-                <option value="">Todas Categorias</option>
-                <option value="tendencia">🔥 Tendência</option>
-                <option value="app">🚀 App/Produto</option>
-                <option value="negocio">💼 Oportunidade</option>
-            </select>
-            <select id="origemFilter" onchange="filtrar()">
-                <option value="">Todas Origens</option>
-                <option value="global">Global</option>
-                <option value="brasil">🇧🇷 Brasil</option>
-            </select>
-            <button onclick="limparFiltros()">Limpar</button>
+            <div class="filter-group" id="filterCategoria"></div>
+            <div class="filter-group" id="filterOrigem"></div>
         </div>
 
-        <div class="meta-info" id="metaInfo">Carregando...</div>
-
-        <div class="section" id="sectionTendencias">
-            <div class="section-title">🔥 Tendências do Dia</div>
-            <div id="tendenciasList">
-                <div class="empty-state">Nenhuma tendência registrada ainda.</div>
-            </div>
-        </div>
-
-        <div class="section" id="sectionApps">
-            <div class="section-title">🚀 Apps & Produtos em Alta</div>
-            <div id="appsList">
-                <div class="empty-state">Nenhum app registrado ainda.</div>
-            </div>
-        </div>
-
-        <div class="section" id="sectionOportunidades">
-            <div class="section-title">💼 Oportunidades de Negócio</div>
-            <div id="oportunidadesList">
-                <div class="empty-state">Nenhuma oportunidade registrada ainda.</div>
-            </div>
-        </div>
+        <!-- Grid de cards -->
+        <div class="cards-grid" id="cardsGrid"></div>
     </div>
+
+    <div class="page-meta" id="pageMeta"></div>
 
     <script>
         let dados = [];
+        let filtroCat = '';
+        let filtroOrigem = '';
+        let filtroTag = '';
+
+        function gerarUrl(item) {
+            // Extrai nome limpo do título
+            const nome = item.titulo
+                .replace(/[^\w\s]/g, ' ')
+                .replace(/\s+/g, ' ')
+                .trim()
+                .split(' ')
+                .slice(0, 4)
+                .join(' ');
+
+            if (item.fonte === 'GitHub Trending') {
+                return `https://github.com/search?q=${encodeURIComponent(nome)}&s=stars&type=repositories`;
+            }
+            return `https://www.google.com/search?q=${encodeURIComponent(nome + ' ' + item.fonte)}`;
+        }
+
+        function renderResumoSemantico() {
+            const total = dados.length;
+            const cats = { tendencia: 0, app: 0, negocio: 0 };
+            const origens = { global: 0, brasil: 0 };
+            const todasTags = {};
+
+            dados.forEach(d => {
+                cats[d.categoria]++;
+                origens[d.origem]++;
+                (d.tags || []).forEach(t => { todasTags[t] = (todasTags[t] || 0) + 1; });
+            });
+
+            // Top 6 tags
+            const topTags = Object.entries(todasTags)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 6);
+
+            let html = `<div class="resumo-stat all-stat ${!filtroCat && !filtroOrigem && !filtroTag ? 'active' : ''}" data-filter="all">
+                <span class="num">${total}</span> total
+            </div>
+            <div class="resumo-stat ${filtroCat === 'tendencia' ? 'active' : ''}" data-filter="cat:tendencia">
+                <span class="num">${cats.tendencia}</span> 🔥 tendências
+            </div>
+            <div class="resumo-stat ${filtroCat === 'app' ? 'active' : ''}" data-filter="cat:app">
+                <span class="num">${cats.app}</span> 🚀 apps
+            </div>
+            <div class="resumo-stat ${filtroCat === 'negocio' ? 'active' : ''}" data-filter="cat:negocio">
+                <span class="num">${cats.negocio}</span> 💼 negócios
+            </div>
+            <div class="resumo-stat ${filtroOrigem === 'global' ? 'active' : ''}" data-filter="origem:global">
+                <span class="num">${origens.global}</span> 🌐 global
+            </div>
+            <div class="resumo-stat ${filtroOrigem === 'brasil' ? 'active' : ''}" data-filter="origem:brasil">
+                <span class="num">${origens.brasil}</span> 🇧🇷 brasil
+            </div>`;
+
+            if (topTags.length) {
+                html += `<div style="width:1px;background:#2a2a4a;margin:0 4px;"></div>`;
+                topTags.forEach(([tag, count]) => {
+                    html += `<div class="resumo-stat ${filtroTag === tag ? 'active' : ''}" data-filter="tag:${tag}">
+                        <span class="num">${count}</span> ${tag}
+                    </div>`;
+                });
+            }
+
+            document.getElementById('resumoSemantico').innerHTML = html;
+
+            // Bind click
+            document.querySelectorAll('.resumo-stat[data-filter]').forEach(el => {
+                el.addEventListener('click', () => {
+                    const f = el.dataset.filter;
+                    if (f === 'all') { filtroCat = ''; filtroOrigem = ''; filtroTag = ''; }
+                    else if (f.startsWith('cat:')) { filtroCat = filtroCat === f.slice(4) ? '' : f.slice(4); }
+                    else if (f.startsWith('origem:')) { filtroOrigem = filtroOrigem === f.slice(7) ? '' : f.slice(7); }
+                    else if (f.startsWith('tag:')) { filtroTag = filtroTag === f.slice(4) ? '' : f.slice(4); }
+                    atualizarFiltros();
+                });
+            });
+        }
+
+        function renderFiltros() {
+            const cats = [
+                { val: '', label: 'Todas' },
+                { val: 'tendencia', label: '🔥 Tendência' },
+                { val: 'app', label: '🚀 App' },
+                { val: 'negocio', label: '💼 Negócio' }
+            ];
+            const origens = [
+                { val: '', label: 'Todas' },
+                { val: 'global', label: '🌐 Global' },
+                { val: 'brasil', label: '🇧🇷 Brasil' }
+            ];
+
+            document.getElementById('filterCategoria').innerHTML = cats.map(c => `
+                <button class="filter-btn ${filtroCat === c.val ? 'active' : ''}" data-cat="${c.val}">${c.label}</button>
+            `).join('');
+
+            document.getElementById('filterOrigem').innerHTML = origens.map(o => `
+                <button class="filter-btn ${filtroOrigem === o.val ? 'active' : ''}" data-origem="${o.val}">${o.label}</button>
+            `).join('');
+
+            document.querySelectorAll('[data-cat]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filtroCat = filtroCat === btn.dataset.cat ? '' : btn.dataset.cat;
+                    atualizarFiltros();
+                });
+            });
+            document.querySelectorAll('[data-origem]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filtroOrigem = filtroOrigem === btn.dataset.origem ? '' : btn.dataset.origem;
+                    atualizarFiltros();
+                });
+            });
+        }
 
         function renderCard(item) {
             let metaHtml = '';
             if (item.stars) {
-                metaHtml += `<span>⭐ <span class="vol">${item.stars}</span> stars</span>`;
-                if (item.forks) metaHtml += `<span>🍴 <span class="vol">${item.forks}</span> forks</span>`;
+                metaHtml += `<span class="card-meta-item">⭐ <span class="vol">${item.stars}</span></span>`;
+                if (item.forks) metaHtml += `<span class="sep">·</span><span class="card-meta-item">🍴 <span class="vol">${item.forks}</span></span>`;
             } else if (item.volume) {
-                metaHtml += `<span>🔊 <span class="vol">${item.volume}</span> searches</span>`;
-                if (item.crescimento) metaHtml += `<span>📈 <span class="growth">${item.crescimento}</span></span>`;
+                metaHtml += `<span class="card-meta-item">🔊 <span class="vol">${item.volume}</span></span>`;
+                if (item.crescimento) metaHtml += `<span class="sep">·</span><span class="card-meta-item">📈 <span class="growth">${item.crescimento}</span></span>`;
             }
-            metaHtml += `<span>🌐 ${item.origem === 'brasil' ? '🇧🇷 Brasil' : 'global'}</span>`;
+            metaHtml += `<span class="sep">·</span><span class="card-meta-item">${item.origem === 'brasil' ? '🇧🇷' : '🌐'}</span>`;
 
-            const tagsHtml = item.tags.map(t => `<span class="tag">${t}</span>`).join('');
-            const fonteHtml = item.fonte ? `<span class="tag origem">${item.fonte}</span>` : '';
+            const tagsHtml = (item.tags || []).slice(0, 3).map(t => `<span class="card-tag">${t}</span>`).join('');
+            const fonteHtml = item.fonte ? `<span class="card-tag origem-tag">${item.fonte}</span>` : '';
+            const url = gerarUrl(item);
+            const shortDesc = item.descricao.length > 120 ? item.descricao.slice(0, 120) + '…' : item.descricao;
 
-            return `<div class="card" data-categoria="${item.categoria}" data-origem="${item.origem}">
-    <div class="card-header">
-        <div class="card-title">${item.titulo}</div>
-        <div class="card-badge">${item.badge}</div>
-    </div>
-    <div class="card-meta">${metaHtml}</div>
-    <div class="card-desc">${item.descricao}</div>
-    <div class="card-tags">${tagsHtml}${fonteHtml}</div>
-</div>`;
+            return `<div class="card" data-categoria="${item.categoria}" data-origem="${item.origem}" data-tags="${(item.tags || []).join(',')}">
+                <div class="card-header">
+                    <div class="card-title">${item.titulo}</div>
+                    <div class="card-badge">${item.badge}</div>
+                </div>
+                <div class="card-meta-row">
+                    ${metaHtml}
+                    ${tagsHtml}
+                    ${fonteHtml}
+                </div>
+                <div class="card-desc">${shortDesc}</div>
+                <div class="card-expand-hint">▸ clique para expandir</div>
+                <a class="card-link" href="${url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+                    🔗 Ver mais detalhes →
+                </a>
+            </div>`;
+        }
+
+        function atualizarFiltros() {
+            // Atualiza estado visual dos botões
+            document.querySelectorAll('[data-cat]').forEach(btn => {
+                btn.classList.toggle('active', filtroCat === btn.dataset.cat);
+            });
+            document.querySelectorAll('[data-origem]').forEach(btn => {
+                btn.classList.toggle('active', filtroOrigem === btn.dataset.origem);
+            });
+            document.querySelectorAll('.resumo-stat').forEach(el => {
+                const f = el.dataset.filter;
+                let active = false;
+                if (f === 'all') active = !filtroCat && !filtroOrigem && !filtroTag;
+                else if (f.startsWith('cat:')) active = filtroCat === f.slice(4);
+                else if (f.startsWith('origem:')) active = filtroOrigem === f.slice(7);
+                else if (f.startsWith('tag:')) active = filtroTag === f.slice(4);
+                el.classList.toggle('active', active);
+            });
+
+            // Filtra cards
+            const cards = document.querySelectorAll('.card');
+            let visiveis = 0;
+            cards.forEach(c => {
+                const cat = c.dataset.categoria;
+                const orig = c.dataset.origem;
+                const tags = c.dataset.tags.split(',');
+                const matchCat = !filtroCat || cat === filtroCat;
+                const matchOrig = !filtroOrigem || orig === filtroOrigem;
+                const matchTag = !filtroTag || tags.includes(filtroTag);
+                const mostrar = matchCat && matchOrig && matchTag;
+                c.classList.toggle('hidden', !mostrar);
+                if (mostrar) visiveis++;
+            });
+
+            const total = dados.length;
+            document.getElementById('pageMeta').textContent =
+                `${visiveis} de ${total} entradas | Atualizado: ${new Date().toLocaleString('pt-BR')}`;
         }
 
         function carregarDados() {
@@ -120,46 +287,29 @@
                 .then(r => r.json())
                 .then(data => {
                     dados = data;
-                    const тенденции = dados.filter(i => i.categoria === 'tendencia');
-                    const apps = dados.filter(i => i.categoria === 'app');
-                    const negócios = dados.filter(i => i.categoria === 'negocio');
+                    renderResumoSemantico();
+                    renderFiltros();
+                    const grid = document.getElementById('cardsGrid');
+                    grid.innerHTML = dados.map(renderCard).join('');
 
-                    document.getElementById('tendenciasList').innerHTML =
-                        тенденции.length ? тенденции.map(renderCard).join('') : '<div class="empty-state">Nenhuma tendência registrada.</div>';
-                    document.getElementById('appsList').innerHTML =
-                        apps.length ? apps.map(renderCard).join('') : '<div class="empty-state">Nenhum app registrado.</div>';
-                    document.getElementById('oportunidadesList').innerHTML =
-                        negócios.length ? negócios.map(renderCard).join('') : '<div class="empty-state">Nenhuma oportunidade registrada.</div>';
+                    // Click to expand
+                    document.querySelectorAll('.card').forEach(card => {
+                        card.addEventListener('click', (e) => {
+                            if (e.target.tag !== 'A') card.classList.toggle('expanded');
+                        });
+                    });
 
-                    filtrar();
+                    // Auto-expand if only 1-3 items
+                    if (dados.length <= 3) {
+                        document.querySelectorAll('.card').forEach(c => c.classList.add('expanded'));
+                    }
+
+                    atualizarFiltros();
                 })
                 .catch(err => {
-                    document.getElementById('metaInfo').textContent = 'Erro ao carregar dados. ' + err.message;
+                    document.getElementById('cardsGrid').innerHTML =
+                        `<div class="empty-state">Erro ao carregar dados: ${err.message}</div>`;
                 });
-        }
-
-        function filtrar() {
-            const termo = document.getElementById('searchInput').value.toLowerCase();
-            const cat = document.getElementById('categoriaFilter').value;
-            const orig = document.getElementById('origemFilter').value;
-            const cards = document.querySelectorAll('.card');
-            let visiveis = 0;
-            cards.forEach(c => {
-                const texto = c.textContent.toLowerCase();
-                const cats = c.dataset.categoria || '';
-                const ors = c.dataset.origem || '';
-                const mostrar = texto.includes(termo) && (cat === '' || cats === cat) && (orig === '' || ors === orig);
-                c.style.display = mostrar ? 'block' : 'none';
-                if (mostrar) visiveis++;
-            });
-            document.getElementById('metaInfo').textContent = `${visiveis} entrada(s) encontrada(s) | ${dados.length} total | Atualizado: ${new Date().toLocaleString('pt-BR')}`;
-        }
-
-        function limparFiltros() {
-            document.getElementById('searchInput').value = '';
-            document.getElementById('categoriaFilter').value = '';
-            document.getElementById('origemFilter').value = '';
-            filtrar();
         }
 
         carregarDados();
