@@ -68,26 +68,76 @@
         <div class="section" id="sectionTendencias">
             <div class="section-title">🔥 Tendências do Dia</div>
             <div id="tendenciasList">
-                <div class="empty-state">Nenhuma tendência registrada ainda. Primeira atualização às 06h.</div>
+                <div class="empty-state">Nenhuma tendência registrada ainda.</div>
             </div>
         </div>
 
         <div class="section" id="sectionApps">
             <div class="section-title">🚀 Apps & Produtos em Alta</div>
             <div id="appsList">
-                <div class="empty-state">Nenhum app registrado ainda. Primeira atualização às 12h.</div>
+                <div class="empty-state">Nenhum app registrado ainda.</div>
             </div>
         </div>
 
         <div class="section" id="sectionOportunidades">
             <div class="section-title">💼 Oportunidades de Negócio</div>
             <div id="oportunidadesList">
-                <div class="empty-state">Nenhuma oportunidade registrada ainda. Primeira atualização às 18h.</div>
+                <div class="empty-state">Nenhuma oportunidade registrada ainda.</div>
             </div>
         </div>
     </div>
 
     <script>
+        let dados = [];
+
+        function renderCard(item) {
+            let metaHtml = '';
+            if (item.stars) {
+                metaHtml += `<span>⭐ <span class="vol">${item.stars}</span> stars</span>`;
+                if (item.forks) metaHtml += `<span>🍴 <span class="vol">${item.forks}</span> forks</span>`;
+            } else if (item.volume) {
+                metaHtml += `<span>🔊 <span class="vol">${item.volume}</span> searches</span>`;
+                if (item.crescimento) metaHtml += `<span>📈 <span class="growth">${item.crescimento}</span></span>`;
+            }
+            metaHtml += `<span>🌐 ${item.origem === 'brasil' ? '🇧🇷 Brasil' : 'global'}</span>`;
+
+            const tagsHtml = item.tags.map(t => `<span class="tag">${t}</span>`).join('');
+            const fonteHtml = item.fonte ? `<span class="tag origem">${item.fonte}</span>` : '';
+
+            return `<div class="card" data-categoria="${item.categoria}" data-origem="${item.origem}">
+    <div class="card-header">
+        <div class="card-title">${item.titulo}</div>
+        <div class="card-badge">${item.badge}</div>
+    </div>
+    <div class="card-meta">${metaHtml}</div>
+    <div class="card-desc">${item.descricao}</div>
+    <div class="card-tags">${tagsHtml}${fonteHtml}</div>
+</div>`;
+        }
+
+        function carregarDados() {
+            fetch('dados.json')
+                .then(r => r.json())
+                .then(data => {
+                    dados = data;
+                    const тенденции = dados.filter(i => i.categoria === 'tendencia');
+                    const apps = dados.filter(i => i.categoria === 'app');
+                    const negócios = dados.filter(i => i.categoria === 'negocio');
+
+                    document.getElementById('tendenciasList').innerHTML =
+                        тенденции.length ? тенденции.map(renderCard).join('') : '<div class="empty-state">Nenhuma tendência registrada.</div>';
+                    document.getElementById('appsList').innerHTML =
+                        apps.length ? apps.map(renderCard).join('') : '<div class="empty-state">Nenhum app registrado.</div>';
+                    document.getElementById('oportunidadesList').innerHTML =
+                        negócios.length ? negócios.map(renderCard).join('') : '<div class="empty-state">Nenhuma oportunidade registrada.</div>';
+
+                    filtrar();
+                })
+                .catch(err => {
+                    document.getElementById('metaInfo').textContent = 'Erro ao carregar dados. ' + err.message;
+                });
+        }
+
         function filtrar() {
             const termo = document.getElementById('searchInput').value.toLowerCase();
             const cat = document.getElementById('categoriaFilter').value;
@@ -102,15 +152,17 @@
                 c.style.display = mostrar ? 'block' : 'none';
                 if (mostrar) visiveis++;
             });
-            document.getElementById('metaInfo').textContent = `${visiveis} entrada(s) encontrada(s) | Atualizado: ${new Date().toLocaleString('pt-BR')}`;
+            document.getElementById('metaInfo').textContent = `${visiveis} entrada(s) encontrada(s) | ${dados.length} total | Atualizado: ${new Date().toLocaleString('pt-BR')}`;
         }
+
         function limparFiltros() {
             document.getElementById('searchInput').value = '';
             document.getElementById('categoriaFilter').value = '';
             document.getElementById('origemFilter').value = '';
             filtrar();
         }
-        filtrar();
+
+        carregarDados();
     </script>
 </body>
 </html>

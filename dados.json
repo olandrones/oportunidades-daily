@@ -1,0 +1,852 @@
+[
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🧳 Leather Tote Bag",
+    "badge": "+3650%",
+    "volume": "49.5K",
+    "crescimento": "+3650%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Large open-top handbag crafted from leather, offering style and functionality for daily essentials. Durable, timeless design. Target: professionals and fashion-conscious individuals seeking versatile accessories.",
+    "tags": [
+      "fashion",
+      "accessories",
+      "e-commerce"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "💪 Creatine Monohydrate",
+    "badge": "+940%",
+    "volume": "1M",
+    "crescimento": "+940%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Popular dietary supplement enhancing athletic performance, increasing muscle mass, and improving strength by boosting ATP production. Target: athletes, bodybuilders, and fitness enthusiasts.",
+    "tags": [
+      "supplements",
+      "fitness",
+      "health"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "💇 Nanoplastia Hair Treatment",
+    "badge": "+1017%",
+    "volume": "74K",
+    "crescimento": "+1017%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Innovative hair treatment repairing damaged hair, reducing frizz, and improving texture using advanced nanotechnology. Delivers transformative results. Target: individuals with frizzy, damaged hair.",
+    "tags": [
+      "beauty",
+      "haircare",
+      "wellness"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "⚡ PilotDeck — Task-Oriented AI Agent",
+    "badge": "🔥 1.2K stars",
+    "volume": "82",
+    "crescimento": "",
+    "stars": "1,208",
+    "forks": "82",
+    "descricao": "Task-oriented AI Agent productivity platform by OpenBMB for autonomous task execution and workflow automation.",
+    "tags": [
+      "AI",
+      "productivity",
+      "agents"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🏗️ awesome-architecture — Software Architecture Maps",
+    "badge": "🔥 660 stars",
+    "volume": "660",
+    "crescimento": "",
+    "stars": "660",
+    "forks": "66",
+    "descricao": "21 architecture maps including AI gateway, RAG, agents, vector DB + system-design tutorial. Every template links to open-source prototypes.",
+    "tags": [
+      "architecture",
+      "system-design",
+      "learning"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🎨 guizang-social-card-skill — Social Media Cards",
+    "badge": "🔥 555 stars",
+    "volume": "555",
+    "crescimento": "",
+    "stars": "555",
+    "forks": "69",
+    "descricao": "Claude Code/Codex skill for generating Xiaohongshu carousels and WeChat covers. Editorial Swiss visual systems, 28 layouts, 10 themes.",
+    "tags": [
+      "AI",
+      "social-media",
+      "design"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "💹 Cleanspark — Bitcoin Mining Tech",
+    "badge": "+300%",
+    "volume": "8.1K",
+    "crescimento": "+300%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Bitcoin mining technology company managing data centers with focus on sustainable and efficient energy solutions.",
+    "tags": [
+      "crypto",
+      "mining",
+      "sustainability"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🧊 AI Fridge (Smart Refrigerator)",
+    "badge": "+3000%",
+    "volume": "2.4K",
+    "crescimento": "+3000%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Smart refrigerator equipped with AI for inventory tracking, food freshness monitoring, recipe suggestions based on available ingredients, and energy optimization. Some models integrate with smart home systems. Target: tech-savvy households, culinary enthusiasts, and individuals seeking to minimize food waste.",
+    "tags": [
+      "IoT",
+      "AI",
+      "smart-home"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🔐 Identity And Access Management (IAM) Tools",
+    "badge": "+1000%",
+    "volume": "1.9K",
+    "crescimento": "+1000%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Tools designed to manage digital identities and control access to resources within an organization. Features include user provisioning, authentication, authorization, single sign-on, access governance, and audit reporting. Essential for organizations maintaining security, compliance, and operational efficiency.",
+    "tags": [
+      "cybersecurity",
+      "B2B",
+      "enterprise"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🌿 Slow Living Movement",
+    "badge": "+469%",
+    "volume": "40.5K",
+    "crescimento": "+469%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Lifestyle movement encouraging mindful, intentional, and sustainable approach to daily life by decelerating pace to enhance well-being. Emphasizes quality over quantity, fosters deeper connections, and reduces stress through simplified living. Appeals to individuals interested in sustainability, mindfulness, and personal well-being.",
+    "tags": [
+      "lifestyle",
+      "mindfulness",
+      "wellness"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "💰 MoneyPrinterTurbo (AI Video Generator)",
+    "badge": "🔥 62K stars",
+    "volume": "",
+    "crescimento": "",
+    "stars": "61,951",
+    "forks": "9,053",
+    "descricao": "利用AI大模型，一键生成高清短视频 — Generate short videos with one click using AI LLM. Chinese-origin tool gaining massive traction globally for automated short-form video content creation. Target: content creators, marketers, social media managers.",
+    "tags": [
+      "AI",
+      "video",
+      "content-creation"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🛡️ Anthropic Cybersecurity Skills",
+    "badge": "🔥 11K stars",
+    "volume": "",
+    "crescimento": "",
+    "stars": "10,530",
+    "forks": "1,224",
+    "descricao": "754 structured cybersecurity skills for AI agents mapped to 5 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND & NIST AI RMF. Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI & 20+ platforms. Massive enterprise demand for AI-secured workflows.",
+    "tags": [
+      "cybersecurity",
+      "AI",
+      "enterprise"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "💹 Kronos — Financial Markets Foundation Model",
+    "badge": "🔥 27K stars",
+    "volume": "",
+    "crescimento": "",
+    "stars": "26,879",
+    "forks": "4,655",
+    "descricao": "A Foundation Model for the Language of Financial Markets. NLP model specialized in financial text understanding, market analysis, and trading signals. Built by shiyu-coder with strong community adoption.",
+    "tags": [
+      "AI",
+      "fintech",
+      "finance"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🌿 Ashwagandha Lotion",
+    "badge": "+933%",
+    "volume": "90",
+    "crescimento": "+933%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Body care product formulated with ashwagandha extract to nourish and calm the skin while providing adaptogenic support. Designed to alleviate dryness and improve skin texture. Targets individuals seeking holistic skin hydration with herbal benefits. Niche but fast-growing wellness trend.",
+    "tags": [
+      "wellness",
+      "skincare",
+      "adaptogens"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🍓 Strawberry Matcha",
+    "badge": "+2025%",
+    "volume": "135K",
+    "crescimento": "+2025%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Combination of matcha green tea and strawberry flavor, popular in beverages and desserts. Unique flavor profile combining earthy matcha notes with sweet fruity essence of strawberries. Particularly popular among health-conscious individuals and tea enthusiasts seeking innovative drink options.",
+    "tags": [
+      "food-beverage",
+      "health-trend"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "💊 Nitric Oxide Gummies",
+    "badge": "+9000%",
+    "volume": "1K",
+    "crescimento": "+9000%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Dietary supplements formulated to enhance nitric oxide levels in the body, typically comprising L-arginine, L-citrulline, and organic beets. Promoted for potential benefits in improving circulation, supporting heart health, and boosting energy levels.",
+    "tags": [
+      "supplements",
+      "health"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🧠 Scalp Microbiome",
+    "badge": "+2600%",
+    "volume": "480",
+    "crescimento": "+2600%",
+    "stars": "",
+    "forks": "",
+    "descricao": "The community of microorganisms residing on the scalp plays a crucial role in maintaining scalp health and influencing conditions such as dandruff and hair loss. An imbalance can lead to various scalp issues, highlighting its importance for targeted treatments. Relevant to dermatologists and trichologists.",
+    "tags": [
+      "health",
+      "dermatology"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🦅 AI Bird Feeder",
+    "badge": "+5300%",
+    "volume": "880",
+    "crescimento": "+5300%",
+    "stars": "",
+    "forks": "",
+    "descricao": "A smart device that uses AI to identify bird species, monitor feeding activity, and provide insights into bird behavior. Equipped with image recognition, motion detection, and app integration. Ideal for bird enthusiasts, researchers, and nature lovers seeking interactive wildlife engagement.",
+    "tags": [
+      "AI",
+      "IoT"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🌐 Web 5.0",
+    "badge": "+314%",
+    "volume": "1.6K",
+    "crescimento": "+314%",
+    "stars": "",
+    "forks": "",
+    "descricao": "The next evolution of the internet focusing on decentralized web application development. Aims to provide developers with tools for incorporating verified credentials and decentralized web nodes, enhancing user data ownership and control. Primarily targets developers and users who prioritize data privacy.",
+    "tags": [
+      "web3",
+      "decentralized"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🎒 Granite Gear",
+    "badge": "+77%",
+    "volume": "9.9K",
+    "crescimento": "+77%",
+    "stars": "",
+    "forks": "",
+    "descricao": "A well-known brand in the outdoor gear industry, particularly recognized for high-quality backpacks and outdoor equipment. Known for innovative designs, durability, and functionality. Popular among hikers, backpackers, and outdoor enthusiasts for lightweight yet robust construction.",
+    "tags": [
+      "outdoor",
+      "gear"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "💻 ECC (Agent Harness Optimization)",
+    "badge": "🔥 195K stars",
+    "volume": "",
+    "crescimento": "",
+    "stars": "195,373",
+    "forks": "30,070",
+    "descricao": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+    "tags": [
+      "AI",
+      "developer-tools"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🧠 Understand-Anything",
+    "badge": "🔥 38K stars",
+    "volume": "",
+    "crescimento": "",
+    "stars": "38,080",
+    "forks": "3,036",
+    "descricao": "Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI, and more.",
+    "tags": [
+      "AI",
+      "knowledge-graph"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "⚡ knowledge-work-plugins",
+    "badge": "🔥 17K stars",
+    "volume": "",
+    "crescimento": "",
+    "stars": "16,961",
+    "forks": "1,990",
+    "descricao": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Coworkers.",
+    "tags": [
+      "AI",
+      "productivity"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🎨 taste-skill",
+    "badge": "🔥 23K stars",
+    "volume": "",
+    "crescimento": "",
+    "stars": "23,155",
+    "forks": "1,807",
+    "descricao": "Gives your AI good taste — stops the AI from generating boring, generic slop.",
+    "tags": [
+      "AI",
+      "writing"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🚫 stop-slop",
+    "badge": "🔥 5K stars",
+    "volume": "414",
+    "crescimento": "",
+    "stars": "5,317",
+    "forks": "414",
+    "descricao": "A skill file for removing AI tells from prose.",
+    "tags": [
+      "AI",
+      "writing-tools"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "📈 Kronos (Financial Markets AI)",
+    "badge": "🔥 27K stars",
+    "volume": "",
+    "crescimento": "",
+    "stars": "26,681",
+    "forks": "4,633",
+    "descricao": "A Foundation Model for the Language of Financial Markets.",
+    "tags": [
+      "AI",
+      "fintech"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🛡️ Anthropic-Cybersecurity-Skills",
+    "badge": "🔥 11K stars",
+    "volume": "",
+    "crescimento": "",
+    "stars": "10,530",
+    "forks": "1,224",
+    "descricao": "754 structured cybersecurity skills for AI agents mapped to 5 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND & NIST AI RMF. Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI & 20+ platforms.",
+    "tags": [
+      "cybersecurity",
+      "AI"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🔍 heretic (Censorship Removal)",
+    "badge": "🔥 22K stars",
+    "volume": "",
+    "crescimento": "",
+    "stars": "21,811",
+    "forks": "2,334",
+    "descricao": "Fully automatic censorship removal for language models.",
+    "tags": [
+      "AI",
+      "open-source"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🤖 PilotDeck — AI Agent Productivity",
+    "badge": "🔥 1.2K ★",
+    "volume": "82",
+    "crescimento": "",
+    "stars": "1,208",
+    "forks": "82",
+    "descricao": "Task-oriented AI Agent platform by OpenBMB for autonomous task execution and workflow automation. Built with TypeScript, supports multiple AI models.",
+    "tags": [
+      "AI",
+      "productivity",
+      "agents"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🧠 DeepSeek-GUI — AI Agent Workspace",
+    "badge": "🔥 483 ★",
+    "volume": "483",
+    "crescimento": "",
+    "stars": "483",
+    "forks": "43",
+    "descricao": "AI agent workspace for DeepSeek models with Code and Claw modes. Interactive environment for AI-assisted development.",
+    "tags": [
+      "AI",
+      "deepseek",
+      "development"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "💰 Sarwa — Investment & Trading Platform",
+    "badge": "+134%",
+    "volume": "18.1K",
+    "crescimento": "+134%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Financial platform enabling users to trade stocks/ETFs and invest passively. Comprehensive suite of financial services in one place.",
+    "tags": [
+      "fintech",
+      "investing",
+      "trading"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "⚡ Superpowers — Agentic Skills Framework",
+    "badge": "🔥 211K ★",
+    "volume": "",
+    "crescimento": "",
+    "stars": "210,781",
+    "forks": "18,760",
+    "descricao": "An agentic skills framework & software development methodology that works. Enables AI agents to use structured skills for reliable task execution across development workflows.",
+    "tags": [
+      "AI",
+      "agents",
+      "developer-tools"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "💰 MoneyPrinterTurbo — AI Short Video Generator",
+    "badge": "🔥 66K ★",
+    "volume": "",
+    "crescimento": "",
+    "stars": "65,618",
+    "forks": "9,513",
+    "descricao": "Generate short videos with one click using AI LLM. Auto-generates scripts, visuals, and voiceovers for TikTok, Reels, and Shorts. Chinese-origin tool with massive global traction.",
+    "tags": [
+      "AI",
+      "video",
+      "content-creation"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "💻 ECC — Agent Harness Optimization",
+    "badge": "🔥 197K ★",
+    "volume": "",
+    "crescimento": "",
+    "stars": "196,952",
+    "forks": "30,288",
+    "descricao": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+    "tags": [
+      "AI",
+      "developer-tools",
+      "agents"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🎬 Time Cut — AI Video Frame Rate Editor",
+    "badge": "+182%",
+    "volume": "74K",
+    "crescimento": "+182%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Powerful professional video editor using AI-driven image processing to enhance video quality and frame rate. Dedicated to changing frame rate/speed with AI quality enhancement.",
+    "tags": [
+      "AI",
+      "video-editing",
+      "creator-tools"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "💊 Nutricost — Supplements Brand",
+    "badge": "+3900%",
+    "volume": "74K",
+    "crescimento": "+3900%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Company offering high-quality, affordable dietary supplements: protein, vitamins, and minerals. Targeting fitness enthusiasts and individuals seeking to improve overall health and wellness.",
+    "tags": [
+      "supplements",
+      "fitness",
+      "D2C"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "📧 ActiveCampaign — Marketing Automation",
+    "badge": "+213%",
+    "volume": "90.5K",
+    "crescimento": "+213%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Cloud-based email marketing, marketing automation, sales automation, CRM integration, customer experience automation, analytics, and reporting platform for SMBs.",
+    "tags": [
+      "marketing",
+      "automation",
+      "CRM"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "👗 Edikted — Gen Z Fashion Brand",
+    "badge": "+3750%",
+    "volume": "1.5M",
+    "crescimento": "+3750%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Fashion brand with 10+ years experience, focusing on trendy pieces inspired by L.A. fashion scene, social media, and celebrity culture. Highly popular among Gen Z on TikTok.",
+    "tags": [
+      "fashion",
+      "Gen-Z",
+      "D2C"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🎨 taste-skill — AI Quality Enhancement",
+    "badge": "🔥 26K ★",
+    "volume": "",
+    "crescimento": "",
+    "stars": "25,859",
+    "forks": "1,951",
+    "descricao": "Gives your AI good taste — stops the AI from generating boring, generic slop. Improves AI output quality by filtering generic patterns and adding distinctive style.",
+    "tags": [
+      "AI",
+      "writing",
+      "productivity"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🎬 MoneyPrinterTurbo — AI Short Video Generator",
+    "badge": "🔥 62K ★",
+    "volume": "",
+    "crescimento": "",
+    "stars": "61,951",
+    "forks": "9,053",
+    "descricao": "One-click AI-powered high-definition short video generation. Uses LLMs to auto-generate scripts, visuals, and voiceovers for short-form content (TikTok, Reels, Shorts). Chinese-origin, rapidly growing global adoption. Monetization: subscription for premium features, API access for agencies.",
+    "tags": [
+      "AI",
+      "video",
+      "creator-tools"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "📊 Kronos — Financial Markets AI",
+    "badge": "🔥 27K ★",
+    "volume": "",
+    "crescimento": "",
+    "stars": "26,879",
+    "forks": "4,655",
+    "descricao": "Foundation model for financial markets language understanding. Analyzes earnings calls, news, SEC filings, and market data to generate trading signals and sentiment analysis. Could be packaged as API for hedge funds, retail trading platforms, and financial advisors.",
+    "tags": [
+      "AI",
+      "fintech",
+      "trading"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🛡️ AI Cybersecurity Skills Library",
+    "badge": "🔥 11K ★",
+    "volume": "",
+    "crescimento": "",
+    "stars": "10,530",
+    "forks": "1,224",
+    "descricao": "754 AI agent skills for cybersecurity mapped to MITRE ATT&CK, NIST CSF 2.0, ATLAS, D3FEND frameworks. Not an app per se but a productized skill layer for enterprise security operations. Opportunity: packaged security compliance dashboards for AI-first SOC teams.",
+    "tags": [
+      "cybersecurity",
+      "AI",
+      "enterprise"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "app",
+    "origem": "brasil",
+    "titulo": "🇧🇷 OneSkin — Brazilian Longevity Skincare",
+    "badge": "+1500%",
+    "volume": "40.5K",
+    "crescimento": "+1500%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Brazilian longevity company developing products targeting skin aging at the cellular level using aging science principles. Raised significant funding. The longevity beauty trend is exploding globally — opportunity for Brazilian founders in the anti-aging skincare space with scientific backing.",
+    "tags": [
+      "longevity",
+      "beauty-tech",
+      "biotech"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "global",
+    "titulo": "🎨 Micro-SaaS: Social Card Generator para Xiaohongshu",
+    "badge": "💼 555 stars",
+    "volume": "555",
+    "crescimento": "",
+    "stars": "555",
+    "forks": "",
+    "descricao": "Ferramenta de geracao de cards/carrosséis para Xiaohongshu e WeChat. Integracao com Claude Code/Codex. Receita: R$37-R$197/mês para templates premium.",
+    "tags": [],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "global",
+    "titulo": "🏗️ SaaS de Arquitetura de Software (Pattern Library)",
+    "badge": "💼 660 stars",
+    "volume": "660",
+    "crescimento": "",
+    "stars": "660",
+    "forks": "",
+    "descricao": "Biblioteca de mapas de arquitetura para sistemas modernos: AI gateway, RAG, agents, vector DB. Oportunidade: plataforma SaaS com templates interativos.",
+    "tags": [],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "global",
+    "titulo": "💪 Suplementos Fitness — D2C Brand de Creatina",
+    "badge": "💼 +940% crescimento",
+    "volume": "1M",
+    "crescimento": "+940%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Marca propria de creatina monohidratada com storytelling cientifico e influencer marketing. Margens de 60-70% em D2C.",
+    "tags": [],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "global",
+    "titulo": "💇 Beauty Tech — Nanoplastia Hair Treatment Studio",
+    "badge": "💼 +1017% interesse",
+    "volume": "74K",
+    "crescimento": "+1017%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Estudio especializado em tratamento capilar Nanoplastia. Modelo: agendamento online + assinatura de manutencao + produtos domicilares.",
+    "tags": [],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "global",
+    "titulo": "🎬 Micro-SaaS: AI Short Video Automation Platform",
+    "badge": "💼 Alta demanda",
+    "volume": "61.9K",
+    "crescimento": "",
+    "stars": "",
+    "forks": "",
+    "descricao": "Plataforma que automatiza criação de vídeos curtos com IA (TikTok, Reels, Shorts). Geração automática de script + visual + voiceover. Receita: assinaturas mensais (R$47-R$197) + API para agências. Mercado: creators, marketers, e-commerces. Concorrentes: InVideo, Kapwing, mas há espaço para nichos especializados.",
+    "tags": [
+      "micro-saas",
+      "AI"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "brasil",
+    "titulo": "🔐 IAM SaaS para PMEs Brasileiras",
+    "badge": "💼 +1000% crescimento",
+    "volume": "",
+    "crescimento": "+1000%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Feramenta de Identity & Access Management focada em PMEs brasileiras —.simple, acessível, compliance com LGPD. Funcionalidades: SSO, provisionamento de usuários, relatórios de auditoria. Preço: R$299-R$999/mês. Diferencial: Interface simples em português + suporte local + preço acessível vs. Okta/Microsoft.",
+    "tags": [],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "brasil",
+    "titulo": "🌿 App de Slow Living & Mindfulness",
+    "badge": "💼 +469% interesse",
+    "volume": "40.5K",
+    "crescimento": "+469%",
+    "stars": "",
+    "forks": "",
+    "descricao": "App de bem-estar focado no movimento Slow Living: rotinas intencionais, journal, minimalismo digital, produtividade humanizada. Diferencial: foco no mercado brasileiro com conteúdo em português + integração com apps locais ( Nubank, Spotify). Receitas: assinaturas premium + marketplace de produtos slow living.",
+    "tags": [],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "global",
+    "titulo": "🧠 Plugin de Produtividade para AI Coworkers",
+    "badge": "💼 17K stars",
+    "volume": "",
+    "crescimento": "",
+    "stars": "17,265",
+    "forks": "",
+    "descricao": "Marketplace de plugins para AI agents de produtividade — automação de research, email, planilhas, CRM, agenda. Inspirado no Anthropic knowledge-work-plugins. Oportunidade: curadoria + marketplace + upgrades pagos. Público: empresas usando AI agents (Claude, Copilot, Cursor).",
+    "tags": [],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "brasil",
+    "titulo": "🇧🇷 API de IA para Mercado Financeiro Brasileiro",
+    "badge": "💼 27K stars",
+    "volume": "",
+    "crescimento": "",
+    "stars": "26,879",
+    "forks": "",
+    "descricao": "API de IA especializada em linguagem de mercados financeiros — análise de balanços B3, relatórios do Banco Central, políticas do governo. Adaptar Kronos (Financial Markets LM) para o contexto brasileiro. Receita: tokens por requisição + planos enterprise para corretoras e gestoras.",
+    "tags": [],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "global",
+    "titulo": "🧊 Smart Fridge API — IoT as a Service",
+    "badge": "💼 +3000%",
+    "volume": "2.4K",
+    "crescimento": "+3000%",
+    "stars": "",
+    "forks": "",
+    "descricao": "API/SDK para fabricantes de geladeiras conectarem funcionalidades de IA: rastreamento de inventário, monitoramento de freshness, sugestões de receita. Oportunidade de licensing para OEM. Mercado: fabricantes de eletrodomésticos na América Latina buscando diferenciacao.",
+    "tags": [],
+    "fonte": "Exploding Topics"
+  }
+]
