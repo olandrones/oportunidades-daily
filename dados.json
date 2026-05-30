@@ -1,135 +1,5 @@
 [
   {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "👟 Onitsuka Tiger — Japanese Sports Fashion",
-    "badge": "+554%",
-    "volume": "3.35M",
-    "crescimento": "+554%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Japanese sports fashion brand established in 1949 by Kihachiro Onitsuka, known for its stylish and functional sports shoes. Blends traditional craftsmanship and modern design. Popular among athletes and fashion enthusiasts.",
-    "tags": [
-      "fashion",
-      "sportswear",
-      "japan"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "👗 Edikted — Gen Z Fashion Brand",
-    "badge": "+3750%",
-    "volume": "1.5M",
-    "crescimento": "+3750%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Fashion brand with 10+ years experience, focusing on trendy pieces inspired by L.A. fashion scene, social media, and celebrity culture. Highly popular among Gen Z on TikTok.",
-    "tags": [
-      "fashion",
-      "Gen-Z",
-      "D2C"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "💪 Creatine Monohydrate",
-    "badge": "+940%",
-    "volume": "1M",
-    "crescimento": "+940%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Popular dietary supplement enhancing athletic performance, increasing muscle mass, and improving strength by boosting ATP production. Target: athletes, bodybuilders, and fitness enthusiasts.",
-    "tags": [
-      "supplements",
-      "fitness",
-      "health"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "negocio",
-    "origem": "global",
-    "titulo": "💪 Suplementos Fitness — D2C Brand de Creatina",
-    "badge": "💼 +940% crescimento",
-    "volume": "1M",
-    "crescimento": "+940%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Marca propria de creatina monohidratada com storytelling cientifico e influencer marketing. Margens de 60-70% em D2C.",
-    "tags": [],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "🦅 AI Bird Feeder",
-    "badge": "+5300%",
-    "volume": "880",
-    "crescimento": "+5300%",
-    "stars": "",
-    "forks": "",
-    "descricao": "A smart device that uses AI to identify bird species, monitor feeding activity, and provide insights into bird behavior. Equipped with image recognition, motion detection, and app integration. Ideal for bird enthusiasts, researchers, and nature lovers seeking interactive wildlife engagement.",
-    "tags": [
-      "AI",
-      "IoT"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "🧠 Transcranial Magnetic Stimulation",
-    "badge": "+240%",
-    "volume": "550K",
-    "crescimento": "+240%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Non-invasive procedure that uses magnetic fields to stimulate nerve cells in the brain. Primarily used to treat depression, especially treatment-resistant cases.",
-    "tags": [
-      "health",
-      "mental-health",
-      "medtech"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "🧠 Scalp Microbiome",
-    "badge": "+2600%",
-    "volume": "480",
-    "crescimento": "+2600%",
-    "stars": "",
-    "forks": "",
-    "descricao": "The community of microorganisms residing on the scalp plays a crucial role in maintaining scalp health and influencing conditions such as dandruff and hair loss. An imbalance can lead to various scalp issues, highlighting its importance for targeted treatments. Relevant to dermatologists and trichologists.",
-    "tags": [
-      "health",
-      "dermatology"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "📈 Tradovate — Futures Trading Platform",
-    "badge": "+1675%",
-    "volume": "450K",
-    "crescimento": "+1675%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Modern, cloud-based futures trading platform registered as a futures commission merchant with the NFA. Offers unlimited, commission-free trading for a flat price.",
-    "tags": [
-      "fintech",
-      "trading",
-      "investing"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
     "categoria": "app",
     "origem": "global",
     "titulo": "⚡ Superpowers — Agentic Skills Framework",
@@ -164,94 +34,11 @@
     "fonte": "GitHub Trending"
   },
   {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "💻 ECC (Agent Harness Optimization)",
-    "badge": "🔥 195K stars",
-    "volume": "",
-    "crescimento": "",
-    "stars": "195,373",
-    "forks": "30,070",
-    "descricao": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-    "tags": [
-      "AI",
-      "developer-tools"
-    ],
-    "fonte": "GitHub Trending"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "💰 Hypergamy — Relationship Sociology",
-    "badge": "+92%",
-    "volume": "165K",
-    "crescimento": "+92%",
-    "stars": "",
-    "forks": "",
-    "descricao": "The practice of seeking a spouse of higher socioeconomic or caste status than oneself. Studied in social and evolutionary psychology, sociology, and anthropology.",
-    "tags": [
-      "psychology",
-      "relationships",
-      "social-science"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "🍓 Strawberry Matcha",
-    "badge": "+2025%",
-    "volume": "135K",
-    "crescimento": "+2025%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Combination of matcha green tea and strawberry flavor, popular in beverages and desserts. Unique flavor profile combining earthy matcha notes with sweet fruity essence of strawberries. Particularly popular among health-conscious individuals and tea enthusiasts seeking innovative drink options.",
-    "tags": [
-      "food-beverage",
-      "health-trend"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "💻 markitdown — Python Office Documents to Markdown",
-    "badge": "🔥 131K stars",
-    "volume": "131K",
-    "crescimento": "",
-    "stars": "131,320",
-    "forks": "8,995",
-    "descricao": "Python tool for converting files and office documents to Markdown. Supports Word, Excel, PowerPoint, PDF and more. Massive productivity tool for developers and technical writers.",
-    "tags": [
-      "AI",
-      "productivity",
-      "document-processing"
-    ],
-    "fonte": "GitHub Trending"
-  },
-  {
-    "categoria": "negocio",
-    "origem": "global",
-    "titulo": "🤖 Micro-SaaS: markitdown Integration API",
-    "badge": "💼 131K stars",
-    "volume": "131K",
-    "crescimento": "",
-    "stars": "131,320",
-    "forks": "",
-    "descricao": "API wrapper para markitdown — converter documentos Office para Markdown como serviço. Receita: R$29-R$199/mês baseado em volume. Nicho: desenvolvedores, technical writers, empresas com legacy documents.",
-    "tags": [
-      "micro-saas",
-      "AI",
-      "document-processing"
-    ],
-    "fonte": "GitHub Trending"
-  },
-  {
-    "categoria": "tendencia",
+    "categoria": "app",
     "origem": "global",
     "titulo": "🤖 claude-code — Anthropic Terminal AI Agent",
-    "badge": "🔥 128K stars",
-    "volume": "128K",
+    "badge": "🔥 128K ★",
+    "volume": "",
     "crescimento": "",
     "stars": "128,218",
     "forks": "20,931",
@@ -266,132 +53,17 @@
   {
     "categoria": "app",
     "origem": "global",
-    "titulo": "📧 ActiveCampaign — Marketing Automation",
-    "badge": "+213%",
-    "volume": "90.5K",
-    "crescimento": "+213%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Cloud-based email marketing, marketing automation, sales automation, CRM integration, customer experience automation, analytics, and reporting platform for SMBs.",
-    "tags": [
-      "marketing",
-      "automation",
-      "CRM"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "🌿 Ashwagandha Lotion",
-    "badge": "+933%",
-    "volume": "90",
-    "crescimento": "+933%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Body care product formulated with ashwagandha extract to nourish and calm the skin while providing adaptogenic support. Designed to alleviate dryness and improve skin texture. Targets individuals seeking holistic skin hydration with herbal benefits. Niche but fast-growing wellness trend.",
-    "tags": [
-      "wellness",
-      "skincare",
-      "adaptogens"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "💇 Nanoplastia Hair Treatment",
-    "badge": "+1017%",
-    "volume": "74K",
-    "crescimento": "+1017%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Innovative hair treatment repairing damaged hair, reducing frizz, and improving texture using advanced nanotechnology. Delivers transformative results. Target: individuals with frizzy, damaged hair.",
-    "tags": [
-      "beauty",
-      "haircare",
-      "wellness"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🎬 Time Cut — AI Video Frame Rate Editor",
-    "badge": "+182%",
-    "volume": "74K",
-    "crescimento": "+182%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Powerful professional video editor using AI-driven image processing to enhance video quality and frame rate. Dedicated to changing frame rate/speed with AI quality enhancement.",
-    "tags": [
-      "AI",
-      "video-editing",
-      "creator-tools"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "💊 Nutricost — Supplements Brand",
-    "badge": "+3900%",
-    "volume": "74K",
-    "crescimento": "+3900%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Company offering high-quality, affordable dietary supplements: protein, vitamins, and minerals. Targeting fitness enthusiasts and individuals seeking to improve overall health and wellness.",
-    "tags": [
-      "supplements",
-      "fitness",
-      "D2C"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "negocio",
-    "origem": "global",
-    "titulo": "💇 Beauty Tech — Nanoplastia Hair Treatment Studio",
-    "badge": "💼 +1017% interesse",
-    "volume": "74K",
-    "crescimento": "+1017%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Estudio especializado em tratamento capilar Nanoplastia. Modelo: agendamento online + assinatura de manutencao + produtos domicilares.",
-    "tags": [],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "💰 MoneyPrinterTurbo — AI Short Video Generator",
-    "badge": "🔥 66K ★",
-    "volume": "",
+    "titulo": "💻 markitdown — Python Office Docs to Markdown",
+    "badge": "🔥 131K ★",
+    "volume": "131K",
     "crescimento": "",
-    "stars": "65,618",
-    "forks": "9,513",
-    "descricao": "Generate short videos with one click using AI LLM. Auto-generates scripts, visuals, and voiceovers for TikTok, Reels, and Shorts. Chinese-origin tool with massive global traction.",
+    "stars": "131,320",
+    "forks": "8,995",
+    "descricao": "Python tool for converting files and office documents to Markdown. Supports Word, Excel, PowerPoint, PDF and more. Massive productivity tool for developers and technical writers.",
     "tags": [
       "AI",
-      "video",
-      "content-creation"
-    ],
-    "fonte": "GitHub Trending"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "💰 MoneyPrinterTurbo (AI Video Generator)",
-    "badge": "🔥 62K stars",
-    "volume": "",
-    "crescimento": "",
-    "stars": "61,951",
-    "forks": "9,053",
-    "descricao": "利用AI大模型，一键生成高清短视频 — Generate short videos with one click using AI LLM. Chinese-origin tool gaining massive traction globally for automated short-form video content creation. Target: content creators, marketers, social media managers.",
-    "tags": [
-      "AI",
-      "video",
-      "content-creation"
+      "productivity",
+      "document-processing"
     ],
     "fonte": "GitHub Trending"
   },
@@ -404,44 +76,276 @@
     "crescimento": "",
     "stars": "61,951",
     "forks": "9,053",
-    "descricao": "One-click AI-powered high-definition short video generation. Uses LLMs to auto-generate scripts, visuals, and voiceovers for short-form content (TikTok, Reels, Shorts). Chinese-origin, rapidly growing global adoption. Monetization: subscription for premium features, API access for agencies.",
+    "descricao": "One-click AI-powered high-definition short video generation. Uses LLMs to auto-generate scripts, visuals, and voiceovers for short-form content (TikTok, Reels, Shorts). Chinese-origin, rapidly growing globally.",
     "tags": [
       "AI",
       "video",
-      "creator-tools"
+      "content-creation"
     ],
     "fonte": "GitHub Trending"
   },
   {
-    "categoria": "negocio",
+    "categoria": "app",
     "origem": "global",
-    "titulo": "🎬 Micro-SaaS: AI Short Video Automation Platform",
-    "badge": "💼 Alta demanda",
-    "volume": "61.9K",
+    "titulo": "🗣️ VoxCPM — Tokenizer-Free Multilingual TTS",
+    "badge": "🔥 22.6K ★",
+    "volume": "",
     "crescimento": "",
-    "stars": "",
-    "forks": "",
-    "descricao": "Plataforma que automatiza criação de vídeos curtos com IA (TikTok, Reels, Shorts). Geração automática de script + visual + voiceover. Receita: assinaturas mensais (R$47-R$197) + API para agências. Mercado: creators, marketers, e-commerces. Concorrentes: InVideo, Kapwing, mas há espaço para nichos especializados.",
+    "stars": "22,616",
+    "forks": "2,657",
+    "descricao": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning. OpenBMB's breakthrough in speech synthesis without tokenization overhead.",
     "tags": [
-      "micro-saas",
-      "AI"
+      "AI",
+      "audio",
+      "speech-synthesis",
+      "multilingual"
     ],
     "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🔧 compound-engineering-plugin — Claude Code Plugin",
+    "badge": "🔥 18.3K ★",
+    "volume": "",
+    "crescimento": "",
+    "stars": "18,346",
+    "forks": "1,387",
+    "descricao": "Official Compound Engineering plugin for Claude Code, Codex, Cursor and beyond. Enables compound agent architectures and multi-agent collaboration for complex engineering tasks.",
+    "tags": [
+      "AI",
+      "developer-tools",
+      "agents",
+      "plugin"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🧠 harness — Meta-Skill Agent Teams",
+    "badge": "🔥 4.1K ★",
+    "volume": "",
+    "crescimento": "",
+    "stars": "4,159",
+    "forks": "617",
+    "descricao": "A meta-skill that designs domain-specific agent teams, defines specialized agents, and generates the skills they use. Enables orchestration of complex multi-agent workflows.",
+    "tags": [
+      "AI",
+      "agents",
+      "developer-tools",
+      "meta-skills"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "⚖️ EvenUp — Legal AI for Personal Injury",
+    "badge": "+627%",
+    "volume": "14.8K",
+    "crescimento": "+627%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Legal technology company leveraging AI to assist personal injury law firms in preparing demand packages and legal documents. Claims Intelligence Platform trained on legal and medical data.",
+    "tags": [
+      "legal-tech",
+      "AI",
+      "fintech",
+      "automation"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "📱 Breakroom — Deskless Worker Communication",
+    "badge": "+81%",
+    "volume": "40.5K",
+    "crescimento": "+81%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Platform for team communication and employee scheduling for deskless workers. Real-time messaging, shift management, and task assignments for retail, hospitality, and healthcare industries.",
+    "tags": [
+      "SaaS",
+      "communications",
+      "workforce-management",
+      "B2B"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🧹 Electric Scrubber — Smart Cleaning Tool",
+    "badge": "+667%",
+    "volume": "9.9K",
+    "crescimento": "+667%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Battery-operated, rechargeable cleaning tool with detachable brush heads and scrubbing pads. Targets homeowners and professional cleaners seeking to expedite household cleaning routines.",
+    "tags": [
+      "hardware",
+      "IoT",
+      "home-appliances",
+      "consumer"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🥤 Turmeric Time — Functional Beverage Brand",
+    "badge": "+357%",
+    "volume": "390",
+    "crescimento": "+357%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Brand offering turmeric shots with ginger, citrus, and honey. Non-GMO, preservative-free, no artificial ingredients. Targets health-conscious individuals seeking natural wellness beverages.",
+    "tags": [
+      "functional-beverage",
+      "health",
+      "D2C",
+      "wellness"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "💇 Bread Beauty Supply — Curly Hair Care",
+    "badge": "+212%",
+    "volume": "1.3K",
+    "crescimento": "+212%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Haircare products for curl types 3a-4c. Focuses on hair masks, washes, and oils using clean ingredients. Simplifies curly hair routines for women with textured hair.",
+    "tags": [
+      "beauty",
+      "haircare",
+      "D2C",
+      "curl-care"
+    ],
+    "fonte": "Exploding Topics"
   },
   {
     "categoria": "tendencia",
     "origem": "global",
-    "titulo": "🧳 Leather Tote Bag",
-    "badge": "+3650%",
-    "volume": "49.5K",
-    "crescimento": "+3650%",
+    "titulo": "🦅 AI Bird Feeder",
+    "badge": "+5300%",
+    "volume": "880",
+    "crescimento": "+5300%",
     "stars": "",
     "forks": "",
-    "descricao": "Large open-top handbag crafted from leather, offering style and functionality for daily essentials. Durable, timeless design. Target: professionals and fashion-conscious individuals seeking versatile accessories.",
+    "descricao": "Smart device using AI to identify bird species, monitor feeding activity, and provide insights. Equipped with image recognition, motion detection, and app integration for bird enthusiasts.",
     "tags": [
-      "fashion",
-      "accessories",
-      "e-commerce"
+      "AI",
+      "IoT",
+      "nature",
+      "smart-home"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🧠 Transcranial Magnetic Stimulation",
+    "badge": "+240%",
+    "volume": "550K",
+    "crescimento": "+240%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Non-invasive procedure using magnetic fields to stimulate nerve cells in the brain. Primarily used to treat depression, especially treatment-resistant cases. Growing mental health medtech trend.",
+    "tags": [
+      "health",
+      "mental-health",
+      "medtech"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "📈 Tradovate — Futures Trading Platform",
+    "badge": "+1675%",
+    "volume": "450K",
+    "crescimento": "+1675%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Modern, cloud-based futures trading platform registered as a futures commission merchant with the NFA. Offers unlimited, commission-free trading for a flat price.",
+    "tags": [
+      "fintech",
+      "trading",
+      "investing"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "💇 Nanoplastia Hair Treatment",
+    "badge": "+1017%",
+    "volume": "74K",
+    "crescimento": "+1017%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Innovative hair treatment repairing damaged hair, reducing frizz, and improving texture using advanced nanotechnology. Delivers transformative results for frizzy, damaged hair.",
+    "tags": [
+      "beauty",
+      "haircare",
+      "wellness"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🍓 Strawberry Matcha",
+    "badge": "+2025%",
+    "volume": "135K",
+    "crescimento": "+2025%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Combination of matcha green tea and strawberry flavor, popular in beverages and desserts. Earthy matcha notes with sweet fruity essence. Popular among health-conscious individuals and tea enthusiasts.",
+    "tags": [
+      "food-beverage",
+      "health-trend",
+      "tea"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "💰 Hypergamy — Relationship Sociology",
+    "badge": "+92%",
+    "volume": "165K",
+    "crescimento": "+92%",
+    "stars": "",
+    "forks": "",
+    "descricao": "The practice of seeking a spouse of higher socioeconomic status. Studied in social and evolutionary psychology. Relevant to dating app market research.",
+    "tags": [
+      "psychology",
+      "relationships",
+      "social-science"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "brasil",
+    "titulo": "🇧🇷 OneSkin — Brazilian Longevity Skincare",
+    "badge": "+1500%",
+    "volume": "40.5K",
+    "crescimento": "+1500%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Brazilian longevity company developing products targeting skin aging at the cellular level using aging science principles. Raised significant funding. Opportunity for Brazilian founders in anti-aging skincare with scientific backing.",
+    "tags": [
+      "longevity",
+      "beauty-tech",
+      "biotech",
+      "brasil"
     ],
     "fonte": "Exploding Topics"
   },
@@ -454,7 +358,7 @@
     "crescimento": "+469%",
     "stars": "",
     "forks": "",
-    "descricao": "Lifestyle movement encouraging mindful, intentional, and sustainable approach to daily life by decelerating pace to enhance well-being. Emphasizes quality over quantity, fosters deeper connections, and reduces stress through simplified living. Appeals to individuals interested in sustainability, mindfulness, and personal well-being.",
+    "descricao": "Lifestyle movement encouraging mindful, intentional, and sustainable approach to daily life. Emphasizes quality over quantity, fosters deeper connections, and reduces stress through simplified living.",
     "tags": [
       "lifestyle",
       "mindfulness",
@@ -463,33 +367,158 @@
     "fonte": "Exploding Topics"
   },
   {
-    "categoria": "app",
-    "origem": "brasil",
-    "titulo": "🇧🇷 OneSkin — Brazilian Longevity Skincare",
-    "badge": "+1500%",
-    "volume": "40.5K",
-    "crescimento": "+1500%",
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🧳 Leather Tote Bag",
+    "badge": "+3650%",
+    "volume": "49.5K",
+    "crescimento": "+3650%",
     "stars": "",
     "forks": "",
-    "descricao": "Brazilian longevity company developing products targeting skin aging at the cellular level using aging science principles. Raised significant funding. The longevity beauty trend is exploding globally — opportunity for Brazilian founders in the anti-aging skincare space with scientific backing.",
+    "descricao": "Large open-top handbag crafted from leather, offering style and functionality for daily essentials. Durable, timeless design targeting professionals and fashion-conscious individuals.",
     "tags": [
-      "longevity",
+      "fashion",
+      "accessories",
+      "e-commerce"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "global",
+    "titulo": "🤖 Micro-SaaS: markitdown Integration API",
+    "badge": "💼 131K stars",
+    "volume": "131K",
+    "crescimento": "",
+    "stars": "131,320",
+    "forks": "",
+    "descricao": "API wrapper para markitdown — converter documentos Office para Markdown como servico. Receita: R$29-R$199/mês baseado em volume. Nicho: desenvolvedores, technical writers, empresas com legacy documents.",
+    "tags": [
+      "micro-saas",
+      "AI",
+      "document-processing"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "global",
+    "titulo": "🎬 Micro-SaaS: AI Short Video Automation Platform",
+    "badge": "💼 Alta demanda",
+    "volume": "61.9K",
+    "crescimento": "",
+    "stars": "",
+    "forks": "",
+    "descricao": "Plataforma que automatiza criacao de videos curtos com IA (TikTok, Reels, Shorts). Geração automática de script + visual + voiceover. Receita: assinaturas mensais (R$47-R$197) + API para agências.",
+    "tags": [
+      "micro-saas",
+      "AI",
+      "video"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "global",
+    "titulo": "⚖️ Legal Tech — EvenUp-like AI Platform",
+    "badge": "💼 +627% interesse",
+    "volume": "14.8K",
+    "crescimento": "+627%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Plataforma de IA para advogados injury law. Automatiza demanda, análise de dados médicos, e otimização de settlements. Receita: R$299-R$999/mês por escritório.",
+    "tags": [
+      "legal-tech",
+      "AI",
+      "B2B"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "global",
+    "titulo": "📱 SaaS: Breakroom para Deskless Workers",
+    "badge": "💼 +81% interesse",
+    "volume": "40.5K",
+    "crescimento": "+81%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Plataforma SaaS de comunicação e agendamento para workers sem mesa. Modelo: B2B subscription (R$8-R$15/funcionário/mês). Integrações com sistemas de ponto, ERP, e messaging apps.",
+    "tags": [
+      "SaaS",
+      "workforce-management",
+      "B2B"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "global",
+    "titulo": "💇 Beauty Tech — Nanoplastia Hair Studio",
+    "badge": "💼 +1017% interesse",
+    "volume": "74K",
+    "crescimento": "+1017%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Estúdio especializado em tratamento capilar Nanoplastia. Modelo: agendamento online + assinatura de manutenção + produtos domicíliares. Margens altas em serviços estéticos premium.",
+    "tags": [
       "beauty-tech",
-      "biotech"
+      "haircare",
+      "servicos"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "global",
+    "titulo": "🥤 D2C Functional Beverages — Brand de Turmeric Shots",
+    "badge": "💼 +357% interesse",
+    "volume": "390",
+    "crescimento": "+357%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Marca própria de shots funcionais (turmeric, ginger, citrus). Storytelling saúde natural + influencer marketing no wellness. Margens de 60-70% em D2C.",
+    "tags": [
+      "D2C",
+      "functional-beverage",
+      "wellness"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "global",
+    "titulo": "🧹 Hardware Tech — Electric Scrubber D2C Brand",
+    "badge": "💼 +667% interesse",
+    "volume": "9.9K",
+    "crescimento": "+667%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Marca própria de electric scrubbers com heads intercambiáveis. Vendido via Amazon FBA + Shopify. Preço médio R$150-R$300. Mercado: donas de casa e profissionais de limpeza.",
+    "tags": [
+      "hardware",
+      "IoT",
+      "D2C",
+      "consumer"
     ],
     "fonte": "Exploding Topics"
   },
   {
     "categoria": "negocio",
     "origem": "brasil",
-    "titulo": "🌿 App de Slow Living & Mindfulness",
+    "titulo": "🌿 App de Slow Living & Mindfulness (Brasil)",
     "badge": "💼 +469% interesse",
     "volume": "40.5K",
     "crescimento": "+469%",
     "stars": "",
     "forks": "",
-    "descricao": "App de bem-estar focado no movimento Slow Living: rotinas intencionais, journal, minimalismo digital, produtividade humanizada. Diferencial: foco no mercado brasileiro com conteúdo em português + integração com apps locais ( Nubank, Spotify). Receitas: assinaturas premium + marketplace de produtos slow living.",
-    "tags": [],
+    "descricao": "App de bem-estar focado no movimento Slow Living: rotinas intencionais, journal, minimalismo digital, produtividade humanizada. Diferencial: foco no mercado brasileiro com conteúdo em português + integração com apps locais (Nubank, Spotify).",
+    "tags": [
+      "app",
+      "wellness",
+      "brasil",
+      "mindfulness"
+    ],
     "fonte": "Exploding Topics"
   }
 ]
