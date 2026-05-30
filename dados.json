@@ -1,5 +1,198 @@
 [
   {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "💄 Bakuchiol Eye Cream — Anti-Aging Skincare",
+    "badge": "+2000%",
+    "volume": "2.4K",
+    "crescimento": "+2000%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Eye cream formulated with bakuchiol and peptides, aimed at firming skin, smoothing wrinkles, and hydrating the delicate area around the eyes. Results in about 10 minutes, suitable for all skin types.",
+    "tags": [
+      "beauty",
+      "skincare",
+      "anti-aging",
+      "wellness"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "30/05/2026 18:52"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "📄 Intelligent Document Processing — AI Automation",
+    "badge": "+814%",
+    "volume": "6.6K",
+    "crescimento": "+814%",
+    "stars": "",
+    "forks": "",
+    "descricao": "AI technology that automates extraction, interpretation, and processing of data from documents. Uses ML and NLP for unstructured data. Benefits: finance, healthcare, legal sectors.",
+    "tags": [
+      "AI",
+      "automation",
+      "document-processing",
+      "MLOps"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "30/05/2026 18:52"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🔥 Self Heating Bag — Portable Heating Solution",
+    "badge": "+5000%",
+    "volume": "110",
+    "crescimento": "+5000%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Portable container using integrated chemical or thermal reaction to generate heat without external sources. For campers, military, emergency responders, and remote environments.",
+    "tags": [
+      "outdoor",
+      "emergency",
+      "consumer",
+      "portable"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "30/05/2026 18:52"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "📈 Stock Bits — Fractional Stock Investing Platform",
+    "badge": "+422%",
+    "volume": "201K",
+    "crescimento": "+422%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Feature allowing investors to purchase and sell fractional shares of stocks. Makes high-priced stocks accessible to smaller investors. Benefits new investors and portfolio diversification.",
+    "tags": [
+      "fintech",
+      "investing",
+      "fractional-shares",
+      "B2C"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "30/05/2026 18:52"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🚲 Lightweight Ebike — Urban Micro-Mobility",
+    "badge": "+1850%",
+    "volume": "12.1K",
+    "crescimento": "+1850%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Electric bicycle engineered to minimize weight while maintaining motorized assistance. Uses carbon fiber or aluminum, compact motors and batteries. Target: urban commuters and fitness enthusiasts.",
+    "tags": [
+      "mobility",
+      "ebike",
+      "urban",
+      "clean-energy"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "30/05/2026 18:52"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🧣 Neck Sweater — Versatile Fashion Essential",
+    "badge": "+809%",
+    "volume": "1.9K",
+    "crescimento": "+809%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Garment with varying neckline styles (crew, V-neck, turtleneck). Provides warmth and comfort with versatile fashion appeal. Broad demographic appeal.",
+    "tags": [
+      "fashion",
+      "apparel",
+      "e-commerce"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "30/05/2026 18:52"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "global",
+    "titulo": "📄 Micro-SaaS: Intelligent Document Processing API",
+    "badge": "💼 +814% interesse",
+    "volume": "6.6K",
+    "crescimento": "+814%",
+    "stars": "",
+    "forks": "",
+    "descricao": "API de processamento inteligente de documentos. Automatiza extração de dados de contratos, faturas, notas fiscais. Faturamento: R$99-R$999/mês baseado em volume de páginas.",
+    "tags": [
+      "micro-saas",
+      "AI",
+      "automation",
+      "document-processing",
+      "legaltech"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "30/05/2026 18:52"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "global",
+    "titulo": "🚲 Micro-SaaS: Lightweight Ebike Fleet Management (B2B)",
+    "badge": "💼 +1850% interesse",
+    "volume": "12.1K",
+    "crescimento": "+1850%",
+    "stars": "",
+    "forks": "",
+    "descricao": "SaaS de gestão de frotas de e-bikes leves para empresas de delivery e micrologística urbana. Monitoramento GPS + manutenção preditiva + gestão de bateria.",
+    "tags": [
+      "micro-saas",
+      "mobility",
+      "B2B",
+      "fleet-management",
+      "logistics"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "30/05/2026 18:52"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "global",
+    "titulo": "💄 Micro-SaaS: Bakuchiol Skincare Formulation Platform",
+    "badge": "💼 +2000% interesse",
+    "volume": "2.4K",
+    "crescimento": "+2000%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Plataforma D2C de formulações personalizadas com bakuchiol para cuidados com a pele. Assinatura mensal de produtos customizados + diagnóstico por foto IA.",
+    "tags": [
+      "micro-saas",
+      "beauty-tech",
+      "D2C",
+      "personalized",
+      "skincare"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "30/05/2026 18:52"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "global",
+    "titulo": "📈 Fintech: Stock Bits-like Fractional Investing API",
+    "badge": "💼 +422% interesse",
+    "volume": "201K",
+    "crescimento": "+422%",
+    "stars": "",
+    "forks": "",
+    "descricao": "API de frações de ações para fintechs e bancos digitais. Permite que corretoras ofereçam fractional shares. Modelo B2B2C por transação.",
+    "tags": [
+      "fintech",
+      "investing",
+      "API",
+      "B2B",
+      "fractional-shares"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "30/05/2026 18:52"
+  },
+  {
     "categoria": "app",
     "origem": "global",
     "titulo": "⚡ Superpowers — Agentic Skills Framework",
