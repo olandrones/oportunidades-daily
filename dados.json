@@ -76,7 +76,7 @@
     "crescimento": "",
     "stars": "61,951",
     "forks": "9,053",
-    "descricao": "One-click AI-powered high-definition short video generation. Uses LLMs to auto-generate scripts, visuals, and voiceovers for short-form content (TikTok, Reels, Shorts). Chinese-origin, rapidly growing globally.",
+    "descricao": "One-click AI-powered high-definition short video generation. Uses LLMs to auto-generate scripts, visuals, and voiceovers for short-form content (TikTok, Reels, Shorts).",
     "tags": [
       "AI",
       "video",
@@ -93,7 +93,7 @@
     "crescimento": "",
     "stars": "22,616",
     "forks": "2,657",
-    "descricao": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning. OpenBMB's breakthrough in speech synthesis without tokenization overhead.",
+    "descricao": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning.",
     "tags": [
       "AI",
       "audio",
@@ -111,7 +111,7 @@
     "crescimento": "",
     "stars": "18,346",
     "forks": "1,387",
-    "descricao": "Official Compound Engineering plugin for Claude Code, Codex, Cursor and beyond. Enables compound agent architectures and multi-agent collaboration for complex engineering tasks.",
+    "descricao": "Official Compound Engineering plugin for Claude Code, Codex, Cursor and beyond. Enables compound agent architectures and multi-agent collaboration.",
     "tags": [
       "AI",
       "developer-tools",
@@ -129,7 +129,7 @@
     "crescimento": "",
     "stars": "4,159",
     "forks": "617",
-    "descricao": "A meta-skill that designs domain-specific agent teams, defines specialized agents, and generates the skills they use. Enables orchestration of complex multi-agent workflows.",
+    "descricao": "A meta-skill that designs domain-specific agent teams, defines specialized agents, and generates the skills they use.",
     "tags": [
       "AI",
       "agents",
@@ -141,108 +141,72 @@
   {
     "categoria": "app",
     "origem": "global",
-    "titulo": "⚖️ EvenUp — Legal AI for Personal Injury",
-    "badge": "+627%",
-    "volume": "14.8K",
-    "crescimento": "+627%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Legal technology company leveraging AI to assist personal injury law firms in preparing demand packages and legal documents. Claims Intelligence Platform trained on legal and medical data.",
+    "titulo": "🔌 cursor/plugins — Cursor Plugin Spec & Official Plugins",
+    "badge": "🔥 1.4K ★",
+    "volume": "",
+    "crescimento": "",
+    "stars": "1,437",
+    "forks": "118",
+    "descricao": "Cursor plugin specification and official plugins. Extends the Cursor IDE with custom functionality.",
     "tags": [
-      "legal-tech",
       "AI",
-      "fintech",
-      "automation"
+      "developer-tools",
+      "IDE",
+      "plugins"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🛡️ Sensity AI — Deepfake Detection Platform",
+    "badge": "+1000%",
+    "volume": "3.6K",
+    "crescimento": "+1000%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Company specializing in the detection and mitigation of deepfake content and other visual threats, offering solutions to identify manipulated media.",
+    "tags": [
+      "AI",
+      "security",
+      "deepfake",
+      "media-integrity"
     ],
     "fonte": "Exploding Topics"
   },
   {
     "categoria": "app",
     "origem": "global",
-    "titulo": "📱 Breakroom — Deskless Worker Communication",
-    "badge": "+81%",
-    "volume": "40.5K",
-    "crescimento": "+81%",
+    "titulo": "⚙️ Zenml — ML Pipeline Orchestration",
+    "badge": "+4400%",
+    "volume": "2.9K",
+    "crescimento": "+4400%",
     "stars": "",
     "forks": "",
-    "descricao": "Platform for team communication and employee scheduling for deskless workers. Real-time messaging, shift management, and task assignments for retail, hospitality, and healthcare industries.",
+    "descricao": "Tool designed to orchestrate machine learning (ML) pipelines independently of any specific infrastructure. Helps ML teams avoid vendor lock-in.",
     "tags": [
-      "SaaS",
-      "communications",
-      "workforce-management",
-      "B2B"
+      "MLOps",
+      "AI",
+      "pipelines",
+      "developer-tools"
     ],
     "fonte": "Exploding Topics"
   },
   {
     "categoria": "app",
     "origem": "global",
-    "titulo": "🧹 Electric Scrubber — Smart Cleaning Tool",
-    "badge": "+667%",
-    "volume": "9.9K",
-    "crescimento": "+667%",
+    "titulo": "🩺 MDacne — Personalized Skincare Treatment",
+    "badge": "+62%",
+    "volume": "12.1K",
+    "crescimento": "+62%",
     "stars": "",
     "forks": "",
-    "descricao": "Battery-operated, rechargeable cleaning tool with detachable brush heads and scrubbing pads. Targets homeowners and professional cleaners seeking to expedite household cleaning routines.",
+    "descricao": "Personalized skincare service that formulates customized anti-acne treatment creams. Targets individuals seeking tailored skincare solutions.",
     "tags": [
-      "hardware",
-      "IoT",
-      "home-appliances",
-      "consumer"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🥤 Turmeric Time — Functional Beverage Brand",
-    "badge": "+357%",
-    "volume": "390",
-    "crescimento": "+357%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Brand offering turmeric shots with ginger, citrus, and honey. Non-GMO, preservative-free, no artificial ingredients. Targets health-conscious individuals seeking natural wellness beverages.",
-    "tags": [
-      "functional-beverage",
       "health",
-      "D2C",
-      "wellness"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "💇 Bread Beauty Supply — Curly Hair Care",
-    "badge": "+212%",
-    "volume": "1.3K",
-    "crescimento": "+212%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Haircare products for curl types 3a-4c. Focuses on hair masks, washes, and oils using clean ingredients. Simplifies curly hair routines for women with textured hair.",
-    "tags": [
       "beauty",
-      "haircare",
-      "D2C",
-      "curl-care"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "🦅 AI Bird Feeder",
-    "badge": "+5300%",
-    "volume": "880",
-    "crescimento": "+5300%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Smart device using AI to identify bird species, monitor feeding activity, and provide insights. Equipped with image recognition, motion detection, and app integration for bird enthusiasts.",
-    "tags": [
-      "AI",
-      "IoT",
-      "nature",
-      "smart-home"
+      "personalized",
+      "D2C"
     ],
     "fonte": "Exploding Topics"
   },
@@ -255,7 +219,7 @@
     "crescimento": "+240%",
     "stars": "",
     "forks": "",
-    "descricao": "Non-invasive procedure using magnetic fields to stimulate nerve cells in the brain. Primarily used to treat depression, especially treatment-resistant cases. Growing mental health medtech trend.",
+    "descricao": "Non-invasive procedure using magnetic fields to stimulate nerve cells in the brain. Primarily used to treat depression, especially treatment-resistant cases.",
     "tags": [
       "health",
       "mental-health",
@@ -272,7 +236,7 @@
     "crescimento": "+1675%",
     "stars": "",
     "forks": "",
-    "descricao": "Modern, cloud-based futures trading platform registered as a futures commission merchant with the NFA. Offers unlimited, commission-free trading for a flat price.",
+    "descricao": "Modern, cloud-based futures trading platform registered as a futures commission merchant with the NFA. Commission-free trading for a flat price.",
     "tags": [
       "fintech",
       "trading",
@@ -289,7 +253,7 @@
     "crescimento": "+1017%",
     "stars": "",
     "forks": "",
-    "descricao": "Innovative hair treatment repairing damaged hair, reducing frizz, and improving texture using advanced nanotechnology. Delivers transformative results for frizzy, damaged hair.",
+    "descricao": "Innovative hair treatment repairing damaged hair, reducing frizz, and improving texture using advanced nanotechnology.",
     "tags": [
       "beauty",
       "haircare",
@@ -306,7 +270,7 @@
     "crescimento": "+2025%",
     "stars": "",
     "forks": "",
-    "descricao": "Combination of matcha green tea and strawberry flavor, popular in beverages and desserts. Earthy matcha notes with sweet fruity essence. Popular among health-conscious individuals and tea enthusiasts.",
+    "descricao": "Combination of matcha green tea and strawberry flavor, popular in beverages and desserts. Earthy matcha notes with sweet fruity essence.",
     "tags": [
       "food-beverage",
       "health-trend",
@@ -317,17 +281,18 @@
   {
     "categoria": "tendencia",
     "origem": "global",
-    "titulo": "💰 Hypergamy — Relationship Sociology",
-    "badge": "+92%",
-    "volume": "165K",
-    "crescimento": "+92%",
+    "titulo": "🇿🇦 Paymenow — Earned Wage Access Fintech (ZA)",
+    "badge": "+1567%",
+    "volume": "246K",
+    "crescimento": "+1567%",
     "stars": "",
     "forks": "",
-    "descricao": "The practice of seeking a spouse of higher socioeconomic status. Studied in social and evolutionary psychology. Relevant to dating app market research.",
+    "descricao": "South African fintech platform offering Earned Wage Access (EWA) and financial wellness tools to employees through employer partnerships.",
     "tags": [
-      "psychology",
-      "relationships",
-      "social-science"
+      "fintech",
+      "EWA",
+      "financial-wellness",
+      "B2B"
     ],
     "fonte": "Exploding Topics"
   },
@@ -340,7 +305,7 @@
     "crescimento": "+1500%",
     "stars": "",
     "forks": "",
-    "descricao": "Brazilian longevity company developing products targeting skin aging at the cellular level using aging science principles. Raised significant funding. Opportunity for Brazilian founders in anti-aging skincare with scientific backing.",
+    "descricao": "Brazilian longevity company developing products targeting skin aging at the cellular level using aging science principles.",
     "tags": [
       "longevity",
       "beauty-tech",
@@ -358,7 +323,7 @@
     "crescimento": "+469%",
     "stars": "",
     "forks": "",
-    "descricao": "Lifestyle movement encouraging mindful, intentional, and sustainable approach to daily life. Emphasizes quality over quantity, fosters deeper connections, and reduces stress through simplified living.",
+    "descricao": "Lifestyle movement encouraging mindful, intentional, and sustainable approach to daily life.",
     "tags": [
       "lifestyle",
       "mindfulness",
@@ -375,7 +340,7 @@
     "crescimento": "+3650%",
     "stars": "",
     "forks": "",
-    "descricao": "Large open-top handbag crafted from leather, offering style and functionality for daily essentials. Durable, timeless design targeting professionals and fashion-conscious individuals.",
+    "descricao": "Large open-top handbag crafted from leather, offering style and functionality for daily essentials.",
     "tags": [
       "fashion",
       "accessories",
@@ -392,7 +357,7 @@
     "crescimento": "",
     "stars": "131,320",
     "forks": "",
-    "descricao": "API wrapper para markitdown — converter documentos Office para Markdown como servico. Receita: R$29-R$199/mês baseado em volume. Nicho: desenvolvedores, technical writers, empresas com legacy documents.",
+    "descricao": "API wrapper para markitdown — converter documentos Office para Markdown como servico. Receita: R$29-R$199/mês baseado em volume.",
     "tags": [
       "micro-saas",
       "AI",
@@ -409,7 +374,7 @@
     "crescimento": "",
     "stars": "",
     "forks": "",
-    "descricao": "Plataforma que automatiza criacao de videos curtos com IA (TikTok, Reels, Shorts). Geração automática de script + visual + voiceover. Receita: assinaturas mensais (R$47-R$197) + API para agências.",
+    "descricao": "Plataforma que automatiza criacao de videos curtos com IA (TikTok, Reels, Shorts). Geração automática de script + visual + voiceover.",
     "tags": [
       "micro-saas",
       "AI",
@@ -426,7 +391,7 @@
     "crescimento": "+627%",
     "stars": "",
     "forks": "",
-    "descricao": "Plataforma de IA para advogados injury law. Automatiza demanda, análise de dados médicos, e otimização de settlements. Receita: R$299-R$999/mês por escritório.",
+    "descricao": "Plataforma de IA para advogados injury law. Automatiza demanda, análise de dados médicos, e otimização de settlements.",
     "tags": [
       "legal-tech",
       "AI",
@@ -443,7 +408,7 @@
     "crescimento": "+81%",
     "stars": "",
     "forks": "",
-    "descricao": "Plataforma SaaS de comunicação e agendamento para workers sem mesa. Modelo: B2B subscription (R$8-R$15/funcionário/mês). Integrações com sistemas de ponto, ERP, e messaging apps.",
+    "descricao": "Plataforma SaaS de comunicação e agendamento para workers sem mesa. Modelo: B2B subscription (R$8-R$15/funcionário/mês).",
     "tags": [
       "SaaS",
       "workforce-management",
@@ -460,7 +425,7 @@
     "crescimento": "+1017%",
     "stars": "",
     "forks": "",
-    "descricao": "Estúdio especializado em tratamento capilar Nanoplastia. Modelo: agendamento online + assinatura de manutenção + produtos domicíliares. Margens altas em serviços estéticos premium.",
+    "descricao": "Estúdio especializado em tratamento capilar Nanoplastia. Modelo: agendamento online + assinatura de manutenção + produtos domicíliares.",
     "tags": [
       "beauty-tech",
       "haircare",
@@ -471,35 +436,54 @@
   {
     "categoria": "negocio",
     "origem": "global",
-    "titulo": "🥤 D2C Functional Beverages — Brand de Turmeric Shots",
-    "badge": "💼 +357% interesse",
-    "volume": "390",
-    "crescimento": "+357%",
+    "titulo": "🛡️ Micro-SaaS: Deepfake Detection API",
+    "badge": "💼 +1000% interesse",
+    "volume": "3.6K",
+    "crescimento": "+1000%",
     "stars": "",
     "forks": "",
-    "descricao": "Marca própria de shots funcionais (turmeric, ginger, citrus). Storytelling saúde natural + influencer marketing no wellness. Margens de 60-70% em D2C.",
+    "descricao": "API de detecção de deepfakes para empresas de mídia, jurídicas e corporativas. Verificação de identidade + análise de video authenticity.",
     "tags": [
-      "D2C",
-      "functional-beverage",
-      "wellness"
+      "micro-saas",
+      "AI",
+      "security",
+      "deepfake"
     ],
     "fonte": "Exploding Topics"
   },
   {
     "categoria": "negocio",
     "origem": "global",
-    "titulo": "🧹 Hardware Tech — Electric Scrubber D2C Brand",
-    "badge": "💼 +667% interesse",
-    "volume": "9.9K",
-    "crescimento": "+667%",
+    "titulo": "⚙️ Micro-SaaS: ZenML-as-a-Service for ML Teams",
+    "badge": "💼 +4400% interesse",
+    "volume": "2.9K",
+    "crescimento": "+4400%",
     "stars": "",
     "forks": "",
-    "descricao": "Marca própria de electric scrubbers com heads intercambiáveis. Vendido via Amazon FBA + Shopify. Preço médio R$150-R$300. Mercado: donas de casa e profissionais de limpeza.",
+    "descricao": "ML pipeline orchestration como servico. Gerencia fluxos de ML sem lock-in de vendor. Subscription por pipeline + compute usage.",
     "tags": [
-      "hardware",
-      "IoT",
-      "D2C",
-      "consumer"
+      "micro-saas",
+      "MLOps",
+      "AI",
+      "developer-tools"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "global",
+    "titulo": "🇿🇦 Fintech: Paymenow-like EWA Platform (Brasil)",
+    "badge": "💼 +1567% interesse",
+    "volume": "246K",
+    "crescimento": "+1567%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Plataforma de Earned Wage Access para o Brasil. Salário auferido disponível antes do payday. Modelo B2B2C.",
+    "tags": [
+      "fintech",
+      "EWA",
+      "B2B",
+      "brasil"
     ],
     "fonte": "Exploding Topics"
   },
@@ -512,12 +496,30 @@
     "crescimento": "+469%",
     "stars": "",
     "forks": "",
-    "descricao": "App de bem-estar focado no movimento Slow Living: rotinas intencionais, journal, minimalismo digital, produtividade humanizada. Diferencial: foco no mercado brasileiro com conteúdo em português + integração com apps locais (Nubank, Spotify).",
+    "descricao": "App de bem-estar focado no movimento Slow Living: rotinas intencionais, journal, minimalismo digital, produtividade humanizada.",
     "tags": [
       "app",
       "wellness",
       "brasil",
       "mindfulness"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "global",
+    "titulo": "📣 Micro-SaaS: Teleprompter as a Service",
+    "badge": "💼 +24% interesse",
+    "volume": "4.4K",
+    "crescimento": "+24%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Plataforma de teleprompter na nuvem para criadores de video. Freemium: R$0-R$47/mês. Nicho: YouTubers, podcasters, webinar hosts.",
+    "tags": [
+      "micro-saas",
+      "video",
+      "content-creation",
+      "productivity"
     ],
     "fonte": "Exploding Topics"
   }
