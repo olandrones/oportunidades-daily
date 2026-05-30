@@ -38,13 +38,17 @@
         .progress-bar { height: 3px; background: #2a2a4a; border-radius: 2px; margin-top: 15px; overflow: hidden; }
         .progress-bar div { height: 100%; background: linear-gradient(90deg, #7c3aed, #3b82f6); border-radius: 2px; transition: width 0.3s; }
         @media (max-width: 600px) { .filters { flex-direction: column; } .card-header { flex-direction: column; gap: 10px; } }
+        .date-header { background:#1a1a2e;padding:12px 16px;border-radius:8px;margin-bottom:15px;border-left:4px solid #f59e0b; }
+        .date-header-op { background:#1a1a2e;padding:12px 16px;border-radius:8px;margin-bottom:15px;border-left:4px solid #7c3aed; }
+        .date-header span { font-weight:700;color:#f59e0b; }
+        .date-header-op span { font-weight:700;color:#a78bfa; }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
             <h1>📊 Oportunidades Diárias</h1>
-            <p class="subtitle">Relatório automático de tendências e oportunidades — atualizado 3x ao dia</p>
+            <p class="subtitle">Relatório automático de tendências e oportunidades — atualizado 30/05/2026 10:41 BRT</p>
         </header>
 
         <div class="filters">
@@ -69,27 +73,24 @@
             <div class="section-title">🔥 Tendências do Dia</div>
             <div id="tendenciasList">
                 
-                <div class="empty-state" style="display:none;"></div>
-                <div class="date-header" style="background:#1a1a2e;padding:12px 16px;border-radius:8px;margin-bottom:15px;border-left:4px solid #f59e0b;">
-                    <span style="font-weight:700;color:#f59e0b;">📅 28/05/2026 — 06:30 BRT</span>
+                <div class="date-header-op">
+                    <span>📅 30/05/2026 10:41 BRT (Novas Tendências)</span>
                 </div>
 
 <div class="card" data-categoria="tendencia" data-origem="global">
     <div class="card-header">
-        <div class="card-title">🧳 Leather Tote Bag</div>
-        <div class="card-badge">+3650%</div>
+        <div class="card-title">👟 Onitsuka Tiger — Japanese Sports Fashion</div>
+        <div class="card-badge">+554%</div>
     </div>
     <div class="card-meta">
-        <span>🔊 <span class="vol">49.5K</span> searches</span>
-        <span>📈 <span class="growth">+3650%</span></span>
+        <span>📊 <span class="vol">3.35M</span></span>
+        <span>📈 <span class="growth">+554%</span></span>
+        
         <span>🌐 global</span>
     </div>
-    <div class="card-desc">Large open-top handbag crafted from leather, offering style and functionality for daily essentials. Durable, timeless design. Target: professionals and fashion-conscious individuals seeking versatile accessories.</div>
+    <div class="card-desc">Japanese sports fashion brand established in 1949 by Kihachiro Onitsuka, known for its stylish and functional sports shoes. Blends traditional craftsmanship and modern design. Popular among athletes and fashion enthusiasts.</div>
     <div class="card-tags">
-        <span class="tag">fashion</span>
-        <span class="tag">accessories</span>
-        <span class="tag">e-commerce</span>
-        <span class="tag tag-origem">Exploding Topics</span>
+        <span class="tag">fashion</span><span class="tag">sportswear</span><span class="tag">japan</span><span class="tag origem">Exploding Topics</span>
     </div>
 </div>
 
@@ -99,306 +100,14 @@
         <div class="card-badge">+940%</div>
     </div>
     <div class="card-meta">
-        <span>🔊 <span class="vol">1M</span> searches</span>
+        <span>📊 <span class="vol">1M</span></span>
         <span>📈 <span class="growth">+940%</span></span>
+        
         <span>🌐 global</span>
     </div>
     <div class="card-desc">Popular dietary supplement enhancing athletic performance, increasing muscle mass, and improving strength by boosting ATP production. Target: athletes, bodybuilders, and fitness enthusiasts.</div>
     <div class="card-tags">
-        <span class="tag">supplements</span>
-        <span class="tag">fitness</span>
-        <span class="tag">health</span>
-        <span class="tag tag-origem">Exploding Topics</span>
-    </div>
-</div>
-
-<div class="card" data-categoria="tendencia" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">💇 Nanoplastia Hair Treatment</div>
-        <div class="card-badge">+1017%</div>
-    </div>
-    <div class="card-meta">
-        <span>🔊 <span class="vol">74K</span> searches</span>
-        <span>📈 <span class="growth">+1017%</span></span>
-        <span>🌐 global</span>
-    </div>
-    <div class="card-desc">Innovative hair treatment repairing damaged hair, reducing frizz, and improving texture using advanced nanotechnology. Delivers transformative results. Target: individuals with frizzy, damaged hair.</div>
-    <div class="card-tags">
-        <span class="tag">beauty</span>
-        <span class="tag">haircare</span>
-        <span class="tag">wellness</span>
-        <span class="tag tag-origem">Exploding Topics</span>
-    </div>
-</div>
-
-<div class="card" data-categoria="tendencia" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">⚡ PilotDeck — Task-Oriented AI Agent</div>
-        <div class="card-badge">🔥 1.2K stars</div>
-    </div>
-    <div class="card-meta">
-        <span>⭐ <span class="vol">1,208</span> stars</span>
-        <span>🍴 <span class="vol">82</span> forks</span>
-        <span>🌐 global</span>
-    </div>
-    <div class="card-desc">Task-oriented AI Agent productivity platform by OpenBMB for autonomous task execution and workflow automation.</div>
-    <div class="card-tags">
-        <span class="tag">AI</span>
-        <span class="tag">productivity</span>
-        <span class="tag">agents</span>
-        <span class="tag tag-origem">GitHub Trending</span>
-    </div>
-</div>
-
-<div class="card" data-categoria="tendencia" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">🏗️ awesome-architecture — Software Architecture Maps</div>
-        <div class="card-badge">🔥 660 stars</div>
-    </div>
-    <div class="card-meta">
-        <span>⭐ <span class="vol">660</span> stars</span>
-        <span>🍴 <span class="vol">66</span> forks</span>
-        <span>🌐 global</span>
-    </div>
-    <div class="card-desc">21 architecture maps including AI gateway, RAG, agents, vector DB + system-design tutorial. Every template links to open-source prototypes.</div>
-    <div class="card-tags">
-        <span class="tag">architecture</span>
-        <span class="tag">system-design</span>
-        <span class="tag">learning</span>
-        <span class="tag tag-origem">GitHub Trending</span>
-    </div>
-</div>
-
-<div class="card" data-categoria="tendencia" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">🎨 guizang-social-card-skill — Social Media Cards</div>
-        <div class="card-badge">🔥 555 stars</div>
-    </div>
-    <div class="card-meta">
-        <span>⭐ <span class="vol">555</span> stars</span>
-        <span>🍴 <span class="vol">69</span> forks</span>
-        <span>🌐 global</span>
-    </div>
-    <div class="card-desc">Claude Code/Codex skill for generating Xiaohongshu carousels and WeChat covers. Editorial Swiss visual systems, 28 layouts, 10 themes.</div>
-    <div class="card-tags">
-        <span class="tag">AI</span>
-        <span class="tag">social-media</span>
-        <span class="tag">design</span>
-        <span class="tag tag-origem">GitHub Trending</span>
-    </div>
-</div>
-
-<div class="card" data-categoria="tendencia" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">💹 Cleanspark — Bitcoin Mining Tech</div>
-        <div class="card-badge">+300%</div>
-    </div>
-    <div class="card-meta">
-        <span>🔊 <span class="vol">8.1K</span> searches</span>
-        <span>📈 <span class="growth">+300%</span></span>
-        <span>🌐 global</span>
-    </div>
-    <div class="card-desc">Bitcoin mining technology company managing data centers with focus on sustainable and efficient energy solutions.</div>
-    <div class="card-tags">
-        <span class="tag">crypto</span>
-        <span class="tag">mining</span>
-        <span class="tag">sustainability</span>
-        <span class="tag tag-origem">Exploding Topics</span>
-    </div>
-</div>
-
-                <div class="date-header" style="background:#1a1a2e;padding:12px 16px;border-radius:8px;margin-bottom:15px;border-left:4px solid #f59e0b;">
-                    <span style="font-weight:700;color:#f59e0b;">📅 27/05/2026 — 20:35 BRT</span>
-                </div>
-
-<div class="card" data-categoria="tendencia" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">🧊 AI Fridge (Smart Refrigerator)</div>
-        <div class="card-badge">+3000%</div>
-    </div>
-    <div class="card-meta">
-        <span>🔊 <span class="vol">2.4K</span> searches</span>
-        <span>📈 <span class="growth">+3000%</span></span>
-        <span>🌐 global</span>
-    </div>
-    <div class="card-desc">Smart refrigerator equipped with AI for inventory tracking, food freshness monitoring, recipe suggestions based on available ingredients, and energy optimization. Some models integrate with smart home systems. Target: tech-savvy households, culinary enthusiasts, and individuals seeking to minimize food waste.</div>
-    <div class="card-tags">
-        <span class="tag">IoT</span>
-        <span class="tag">AI</span>
-        <span class="tag">smart-home</span>
-        <span class="tag tag-origem">Exploding Topics</span>
-    </div>
-</div>
-
-<div class="card" data-categoria="tendencia" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">🔐 Identity And Access Management (IAM) Tools</div>
-        <div class="card-badge">+1000%</div>
-    </div>
-    <div class="card-meta">
-        <span>🔊 <span class="vol">1.9K</span> searches</span>
-        <span>📈 <span class="growth">+1000%</span></span>
-        <span>🌐 global</span>
-    </div>
-    <div class="card-desc">Tools designed to manage digital identities and control access to resources within an organization. Features include user provisioning, authentication, authorization, single sign-on, access governance, and audit reporting. Essential for organizations maintaining security, compliance, and operational efficiency.</div>
-    <div class="card-tags">
-        <span class="tag">cybersecurity</span>
-        <span class="tag">B2B</span>
-        <span class="tag">enterprise</span>
-        <span class="tag tag-origem">Exploding Topics</span>
-    </div>
-</div>
-
-<div class="card" data-categoria="tendencia" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">🌿 Slow Living Movement</div>
-        <div class="card-badge">+469%</div>
-    </div>
-    <div class="card-meta">
-        <span>🔊 <span class="vol">40.5K</span> searches</span>
-        <span>📈 <span class="growth">+469%</span></span>
-        <span>🌐 global</span>
-    </div>
-    <div class="card-desc">Lifestyle movement encouraging mindful, intentional, and sustainable approach to daily life by decelerating pace to enhance well-being. Emphasizes quality over quantity, fosters deeper connections, and reduces stress through simplified living. Appeals to individuals interested in sustainability, mindfulness, and personal well-being.</div>
-    <div class="card-tags">
-        <span class="tag">lifestyle</span>
-        <span class="tag">mindfulness</span>
-        <span class="tag">wellness</span>
-        <span class="tag tag-origem">Exploding Topics</span>
-    </div>
-</div>
-
-<div class="card" data-categoria="tendencia" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">💰 MoneyPrinterTurbo (AI Video Generator)</div>
-        <div class="card-badge">🔥 62K stars</div>
-    </div>
-    <div class="card-meta">
-        <span>⭐ <span class="vol">61,951</span> stars</span>
-        <span>🍴 <span class="vol">9,053</span> forks</span>
-        <span>🌐 global</span>
-    </div>
-    <div class="card-desc">利用AI大模型，一键生成高清短视频 — Generate short videos with one click using AI LLM. Chinese-origin tool gaining massive traction globally for automated short-form video content creation. Target: content creators, marketers, social media managers.</div>
-    <div class="card-tags">
-        <span class="tag">AI</span>
-        <span class="tag">video</span>
-        <span class="tag">content-creation</span>
-        <span class="tag tag-origem">GitHub Trending</span>
-    </div>
-</div>
-
-<div class="card" data-categoria="tendencia" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">🛡️ Anthropic Cybersecurity Skills</div>
-        <div class="card-badge">🔥 11K stars</div>
-    </div>
-    <div class="card-meta">
-        <span>⭐ <span class="vol">10,530</span> stars</span>
-        <span>🍴 <span class="vol">1,224</span> forks</span>
-        <span>🌐 global</span>
-    </div>
-    <div class="card-desc">754 structured cybersecurity skills for AI agents mapped to 5 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND & NIST AI RMF. Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI & 20+ platforms. Massive enterprise demand for AI-secured workflows.</div>
-    <div class="card-tags">
-        <span class="tag">cybersecurity</span>
-        <span class="tag">AI</span>
-        <span class="tag">enterprise</span>
-        <span class="tag tag-origem">GitHub Trending</span>
-    </div>
-</div>
-
-<div class="card" data-categoria="tendencia" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">💹 Kronos — Financial Markets Foundation Model</div>
-        <div class="card-badge">🔥 27K stars</div>
-    </div>
-    <div class="card-meta">
-        <span>⭐ <span class="vol">26,879</span> stars</span>
-        <span>🍴 <span class="vol">4,655</span> forks</span>
-        <span>🌐 global</span>
-    </div>
-    <div class="card-desc">A Foundation Model for the Language of Financial Markets. NLP model specialized in financial text understanding, market analysis, and trading signals. Built by shiyu-coder with strong community adoption.</div>
-    <div class="card-tags">
-        <span class="tag">AI</span>
-        <span class="tag">fintech</span>
-        <span class="tag">finance</span>
-        <span class="tag tag-origem">GitHub Trending</span>
-    </div>
-</div>
-
-<div class="card" data-categoria="tendencia" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">🌿 Ashwagandha Lotion</div>
-        <div class="card-badge">+933%</div>
-    </div>
-    <div class="card-meta">
-        <span>🔊 <span class="vol">90</span> searches</span>
-        <span>📈 <span class="growth">+933%</span></span>
-        <span>🌐 global</span>
-    </div>
-    <div class="card-desc">Body care product formulated with ashwagandha extract to nourish and calm the skin while providing adaptogenic support. Designed to alleviate dryness and improve skin texture. Targets individuals seeking holistic skin hydration with herbal benefits. Niche but fast-growing wellness trend.</div>
-    <div class="card-tags">
-        <span class="tag">wellness</span>
-        <span class="tag">skincare</span>
-        <span class="tag">adaptogens</span>
-        <span class="tag tag-origem">Exploding Topics</span>
-    </div>
-</div>
-
-                <div class="date-header" style="background:#1a1a2e;padding:12px 16px;border-radius:8px;margin-bottom:15px;border-left:4px solid #7c3aed;">
-                    <span style="font-weight:700;color:#a78bfa;">📅 27/05/2026 — 08:21 BRT</span>
-                </div>
-
-<div class="card" data-categoria="tendencia" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">🍓 Strawberry Matcha</div>
-        <div class="card-badge">+2025%</div>
-    </div>
-    <div class="card-meta">
-        <span>🔊 <span class="vol">135K</span> searches</span>
-        <span>📈 <span class="growth">+2025%</span></span>
-        <span>🌐 global</span>
-    </div>
-    <div class="card-desc">Combination of matcha green tea and strawberry flavor, popular in beverages and desserts. Unique flavor profile combining earthy matcha notes with sweet fruity essence of strawberries. Particularly popular among health-conscious individuals and tea enthusiasts seeking innovative drink options.</div>
-    <div class="card-tags">
-        <span class="tag">food-beverage</span>
-        <span class="tag">health-trend</span>
-        <span class="tag tag-origem">Exploding Topics</span>
-    </div>
-</div>
-
-<div class="card" data-categoria="tendencia" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">💊 Nitric Oxide Gummies</div>
-        <div class="card-badge">+9000%</div>
-    </div>
-    <div class="card-meta">
-        <span>🔊 <span class="vol">1K</span> searches</span>
-        <span>📈 <span class="growth">+9000%</span></span>
-        <span>🌐 global</span>
-    </div>
-    <div class="card-desc">Dietary supplements formulated to enhance nitric oxide levels in the body, typically comprising L-arginine, L-citrulline, and organic beets. Promoted for potential benefits in improving circulation, supporting heart health, and boosting energy levels.</div>
-    <div class="card-tags">
-        <span class="tag">supplements</span>
-        <span class="tag">health</span>
-        <span class="tag tag-origem">Exploding Topics</span>
-    </div>
-</div>
-
-<div class="card" data-categoria="tendencia" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">🧠 Scalp Microbiome</div>
-        <div class="card-badge">+2600%</div>
-    </div>
-    <div class="card-meta">
-        <span>🔊 <span class="vol">480</span> searches</span>
-        <span>📈 <span class="growth">+2600%</span></span>
-        <span>🌐 global</span>
-    </div>
-    <div class="card-desc">The community of microorganisms residing on the scalp plays a crucial role in maintaining scalp health and influencing conditions such as dandruff and hair loss. An imbalance can lead to various scalp issues, highlighting its importance for targeted treatments. Relevant to dermatologists and trichologists.</div>
-    <div class="card-tags">
-        <span class="tag">health</span>
-        <span class="tag">dermatology</span>
-        <span class="tag tag-origem">Exploding Topics</span>
+        <span class="tag">supplements</span><span class="tag">fitness</span><span class="tag">health</span><span class="tag origem">Exploding Topics</span>
     </div>
 </div>
 
@@ -408,51 +117,65 @@
         <div class="card-badge">+5300%</div>
     </div>
     <div class="card-meta">
-        <span>🔊 <span class="vol">880</span> searches</span>
+        <span>📊 <span class="vol">880</span></span>
         <span>📈 <span class="growth">+5300%</span></span>
+        
         <span>🌐 global</span>
     </div>
     <div class="card-desc">A smart device that uses AI to identify bird species, monitor feeding activity, and provide insights into bird behavior. Equipped with image recognition, motion detection, and app integration. Ideal for bird enthusiasts, researchers, and nature lovers seeking interactive wildlife engagement.</div>
     <div class="card-tags">
-        <span class="tag">AI</span>
-        <span class="tag">IoT</span>
-        <span class="tag tag-origem">Exploding Topics</span>
+        <span class="tag">AI</span><span class="tag">IoT</span><span class="tag origem">Exploding Topics</span>
     </div>
 </div>
 
 <div class="card" data-categoria="tendencia" data-origem="global">
     <div class="card-header">
-        <div class="card-title">🌐 Web 5.0</div>
-        <div class="card-badge">+314%</div>
+        <div class="card-title">🧠 Transcranial Magnetic Stimulation</div>
+        <div class="card-badge">+240%</div>
     </div>
     <div class="card-meta">
-        <span>🔊 <span class="vol">1.6K</span> searches</span>
-        <span>📈 <span class="growth">+314%</span></span>
+        <span>📊 <span class="vol">550K</span></span>
+        <span>📈 <span class="growth">+240%</span></span>
+        
         <span>🌐 global</span>
     </div>
-    <div class="card-desc">The next evolution of the internet focusing on decentralized web application development. Aims to provide developers with tools for incorporating verified credentials and decentralized web nodes, enhancing user data ownership and control. Primarily targets developers and users who prioritize data privacy.</div>
+    <div class="card-desc">Non-invasive procedure that uses magnetic fields to stimulate nerve cells in the brain. Primarily used to treat depression, especially treatment-resistant cases.</div>
     <div class="card-tags">
-        <span class="tag">web3</span>
-        <span class="tag">decentralized</span>
-        <span class="tag tag-origem">Exploding Topics</span>
+        <span class="tag">health</span><span class="tag">mental-health</span><span class="tag">medtech</span><span class="tag origem">Exploding Topics</span>
     </div>
 </div>
 
 <div class="card" data-categoria="tendencia" data-origem="global">
     <div class="card-header">
-        <div class="card-title">🎒 Granite Gear</div>
-        <div class="card-badge">+77%</div>
+        <div class="card-title">🧠 Scalp Microbiome</div>
+        <div class="card-badge">+2600%</div>
     </div>
     <div class="card-meta">
-        <span>🔊 <span class="vol">9.9K</span> searches</span>
-        <span>📈 <span class="growth">+77%</span></span>
+        <span>📊 <span class="vol">480</span></span>
+        <span>📈 <span class="growth">+2600%</span></span>
+        
         <span>🌐 global</span>
     </div>
-    <div class="card-desc">A well-known brand in the outdoor gear industry, particularly recognized for high-quality backpacks and outdoor equipment. Known for innovative designs, durability, and functionality. Popular among hikers, backpackers, and outdoor enthusiasts for lightweight yet robust construction.</div>
+    <div class="card-desc">The community of microorganisms residing on the scalp plays a crucial role in maintaining scalp health and influencing conditions such as dandruff and hair loss. An imbalance can lead to various scalp issues, highlighting its importance for targeted treatments. Relevant to dermatologists and trichologists.</div>
     <div class="card-tags">
-        <span class="tag">outdoor</span>
-        <span class="tag">gear</span>
-        <span class="tag tag-origem">Exploding Topics</span>
+        <span class="tag">health</span><span class="tag">dermatology</span><span class="tag origem">Exploding Topics</span>
+    </div>
+</div>
+
+<div class="card" data-categoria="tendencia" data-origem="global">
+    <div class="card-header">
+        <div class="card-title">📈 Tradovate — Futures Trading Platform</div>
+        <div class="card-badge">+1675%</div>
+    </div>
+    <div class="card-meta">
+        <span>📊 <span class="vol">450K</span></span>
+        <span>📈 <span class="growth">+1675%</span></span>
+        
+        <span>🌐 global</span>
+    </div>
+    <div class="card-desc">Modern, cloud-based futures trading platform registered as a futures commission merchant with the NFA. Offers unlimited, commission-free trading for a flat price.</div>
+    <div class="card-tags">
+        <span class="tag">fintech</span><span class="tag">trading</span><span class="tag">investing</span><span class="tag origem">Exploding Topics</span>
     </div>
 </div>
 
@@ -462,141 +185,167 @@
         <div class="card-badge">🔥 195K stars</div>
     </div>
     <div class="card-meta">
-        <span>⭐ <span class="vol">195,373</span> stars</span>
-        <span>🍴 <span class="vol">30,070</span> forks</span>
+        
+        
+        <span>⭐ 195,373</span>
         <span>🌐 global</span>
     </div>
     <div class="card-desc">The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.</div>
     <div class="card-tags">
-        <span class="tag">AI</span>
-        <span class="tag">developer-tools</span>
-        <span class="tag tag-origem">GitHub Trending</span>
+        <span class="tag">AI</span><span class="tag">developer-tools</span><span class="tag origem">GitHub Trending</span>
     </div>
 </div>
 
 <div class="card" data-categoria="tendencia" data-origem="global">
     <div class="card-header">
-        <div class="card-title">🧠 Understand-Anything</div>
-        <div class="card-badge">🔥 38K stars</div>
+        <div class="card-title">💰 Hypergamy — Relationship Sociology</div>
+        <div class="card-badge">+92%</div>
     </div>
     <div class="card-meta">
-        <span>⭐ <span class="vol">38,080</span> stars</span>
-        <span>🍴 <span class="vol">3,036</span> forks</span>
+        <span>📊 <span class="vol">165K</span></span>
+        <span>📈 <span class="growth">+92%</span></span>
+        
         <span>🌐 global</span>
     </div>
-    <div class="card-desc">Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI, and more.</div>
+    <div class="card-desc">The practice of seeking a spouse of higher socioeconomic or caste status than oneself. Studied in social and evolutionary psychology, sociology, and anthropology.</div>
     <div class="card-tags">
-        <span class="tag">AI</span>
-        <span class="tag">knowledge-graph</span>
-        <span class="tag tag-origem">GitHub Trending</span>
+        <span class="tag">psychology</span><span class="tag">relationships</span><span class="tag">social-science</span><span class="tag origem">Exploding Topics</span>
     </div>
 </div>
 
 <div class="card" data-categoria="tendencia" data-origem="global">
     <div class="card-header">
-        <div class="card-title">⚡ knowledge-work-plugins</div>
-        <div class="card-badge">🔥 17K stars</div>
+        <div class="card-title">🍓 Strawberry Matcha</div>
+        <div class="card-badge">+2025%</div>
     </div>
     <div class="card-meta">
-        <span>⭐ <span class="vol">16,961</span> stars</span>
-        <span>🍴 <span class="vol">1,990</span> forks</span>
+        <span>📊 <span class="vol">135K</span></span>
+        <span>📈 <span class="growth">+2025%</span></span>
+        
         <span>🌐 global</span>
     </div>
-    <div class="card-desc">Open source repository of plugins primarily intended for knowledge workers to use in Claude Coworkers.</div>
+    <div class="card-desc">Combination of matcha green tea and strawberry flavor, popular in beverages and desserts. Unique flavor profile combining earthy matcha notes with sweet fruity essence of strawberries. Particularly popular among health-conscious individuals and tea enthusiasts seeking innovative drink options.</div>
     <div class="card-tags">
-        <span class="tag">AI</span>
-        <span class="tag">productivity</span>
-        <span class="tag tag-origem">GitHub Trending</span>
+        <span class="tag">food-beverage</span><span class="tag">health-trend</span><span class="tag origem">Exploding Topics</span>
     </div>
 </div>
 
 <div class="card" data-categoria="tendencia" data-origem="global">
     <div class="card-header">
-        <div class="card-title">🎨 taste-skill</div>
-        <div class="card-badge">🔥 23K stars</div>
+        <div class="card-title">💻 markitdown — Python Office Documents to Markdown</div>
+        <div class="card-badge">🔥 131K stars</div>
     </div>
     <div class="card-meta">
-        <span>⭐ <span class="vol">23,155</span> stars</span>
-        <span>🍴 <span class="vol">1,807</span> forks</span>
+        <span>📊 <span class="vol">131K</span></span>
+        
+        <span>⭐ 131,320</span>
         <span>🌐 global</span>
     </div>
-    <div class="card-desc">Gives your AI good taste — stops the AI from generating boring, generic slop.</div>
+    <div class="card-desc">Python tool for converting files and office documents to Markdown. Supports Word, Excel, PowerPoint, PDF and more. Massive productivity tool for developers and technical writers.</div>
     <div class="card-tags">
-        <span class="tag">AI</span>
-        <span class="tag">writing</span>
-        <span class="tag tag-origem">GitHub Trending</span>
+        <span class="tag">AI</span><span class="tag">productivity</span><span class="tag">document-processing</span><span class="tag origem">GitHub Trending</span>
     </div>
 </div>
 
 <div class="card" data-categoria="tendencia" data-origem="global">
     <div class="card-header">
-        <div class="card-title">🚫 stop-slop</div>
-        <div class="card-badge">🔥 5K stars</div>
+        <div class="card-title">🤖 claude-code — Anthropic Terminal AI Agent</div>
+        <div class="card-badge">🔥 128K stars</div>
     </div>
     <div class="card-meta">
-        <span>⭐ <span class="vol">5,317</span> stars</span>
-        <span>🍴 <span class="vol">414</span> forks</span>
+        <span>📊 <span class="vol">128K</span></span>
+        
+        <span>⭐ 128,218</span>
         <span>🌐 global</span>
     </div>
-    <div class="card-desc">A skill file for removing AI tells from prose.</div>
+    <div class="card-desc">Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows.</div>
     <div class="card-tags">
-        <span class="tag">AI</span>
-        <span class="tag">writing-tools</span>
-        <span class="tag tag-origem">GitHub Trending</span>
+        <span class="tag">AI</span><span class="tag">developer-tools</span><span class="tag">agents</span><span class="tag origem">GitHub Trending</span>
     </div>
 </div>
 
 <div class="card" data-categoria="tendencia" data-origem="global">
     <div class="card-header">
-        <div class="card-title">📈 Kronos (Financial Markets AI)</div>
-        <div class="card-badge">🔥 27K stars</div>
+        <div class="card-title">🌿 Ashwagandha Lotion</div>
+        <div class="card-badge">+933%</div>
     </div>
     <div class="card-meta">
-        <span>⭐ <span class="vol">26,681</span> stars</span>
-        <span>🍴 <span class="vol">4,633</span> forks</span>
+        <span>📊 <span class="vol">90</span></span>
+        <span>📈 <span class="growth">+933%</span></span>
+        
         <span>🌐 global</span>
     </div>
-    <div class="card-desc">A Foundation Model for the Language of Financial Markets.</div>
+    <div class="card-desc">Body care product formulated with ashwagandha extract to nourish and calm the skin while providing adaptogenic support. Designed to alleviate dryness and improve skin texture. Targets individuals seeking holistic skin hydration with herbal benefits. Niche but fast-growing wellness trend.</div>
     <div class="card-tags">
-        <span class="tag">AI</span>
-        <span class="tag">fintech</span>
-        <span class="tag tag-origem">GitHub Trending</span>
+        <span class="tag">wellness</span><span class="tag">skincare</span><span class="tag">adaptogens</span><span class="tag origem">Exploding Topics</span>
     </div>
 </div>
 
 <div class="card" data-categoria="tendencia" data-origem="global">
     <div class="card-header">
-        <div class="card-title">🛡️ Anthropic-Cybersecurity-Skills</div>
-        <div class="card-badge">🔥 11K stars</div>
+        <div class="card-title">💇 Nanoplastia Hair Treatment</div>
+        <div class="card-badge">+1017%</div>
     </div>
     <div class="card-meta">
-        <span>⭐ <span class="vol">10,530</span> stars</span>
-        <span>🍴 <span class="vol">1,224</span> forks</span>
+        <span>📊 <span class="vol">74K</span></span>
+        <span>📈 <span class="growth">+1017%</span></span>
+        
         <span>🌐 global</span>
     </div>
-    <div class="card-desc">754 structured cybersecurity skills for AI agents mapped to 5 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND & NIST AI RMF. Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI & 20+ platforms.</div>
+    <div class="card-desc">Innovative hair treatment repairing damaged hair, reducing frizz, and improving texture using advanced nanotechnology. Delivers transformative results. Target: individuals with frizzy, damaged hair.</div>
     <div class="card-tags">
-        <span class="tag">cybersecurity</span>
-        <span class="tag">AI</span>
-        <span class="tag tag-origem">GitHub Trending</span>
+        <span class="tag">beauty</span><span class="tag">haircare</span><span class="tag">wellness</span><span class="tag origem">Exploding Topics</span>
     </div>
 </div>
 
 <div class="card" data-categoria="tendencia" data-origem="global">
     <div class="card-header">
-        <div class="card-title">🔍 heretic (Censorship Removal)</div>
-        <div class="card-badge">🔥 22K stars</div>
+        <div class="card-title">💰 MoneyPrinterTurbo (AI Video Generator)</div>
+        <div class="card-badge">🔥 62K stars</div>
     </div>
     <div class="card-meta">
-        <span>⭐ <span class="vol">21,811</span> stars</span>
-        <span>🍴 <span class="vol">2,334</span> forks</span>
+        
+        
+        <span>⭐ 61,951</span>
         <span>🌐 global</span>
     </div>
-    <div class="card-desc">Fully automatic censorship removal for language models.</div>
+    <div class="card-desc">利用AI大模型，一键生成高清短视频 — Generate short videos with one click using AI LLM. Chinese-origin tool gaining massive traction globally for automated short-form video content creation. Target: content creators, marketers, social media managers.</div>
     <div class="card-tags">
-        <span class="tag">AI</span>
-        <span class="tag">open-source</span>
-        <span class="tag tag-origem">GitHub Trending</span>
+        <span class="tag">AI</span><span class="tag">video</span><span class="tag">content-creation</span><span class="tag origem">GitHub Trending</span>
+    </div>
+</div>
+
+<div class="card" data-categoria="tendencia" data-origem="global">
+    <div class="card-header">
+        <div class="card-title">🧳 Leather Tote Bag</div>
+        <div class="card-badge">+3650%</div>
+    </div>
+    <div class="card-meta">
+        <span>📊 <span class="vol">49.5K</span></span>
+        <span>📈 <span class="growth">+3650%</span></span>
+        
+        <span>🌐 global</span>
+    </div>
+    <div class="card-desc">Large open-top handbag crafted from leather, offering style and functionality for daily essentials. Durable, timeless design. Target: professionals and fashion-conscious individuals seeking versatile accessories.</div>
+    <div class="card-tags">
+        <span class="tag">fashion</span><span class="tag">accessories</span><span class="tag">e-commerce</span><span class="tag origem">Exploding Topics</span>
+    </div>
+</div>
+
+<div class="card" data-categoria="tendencia" data-origem="global">
+    <div class="card-header">
+        <div class="card-title">🌿 Slow Living Movement</div>
+        <div class="card-badge">+469%</div>
+    </div>
+    <div class="card-meta">
+        <span>📊 <span class="vol">40.5K</span></span>
+        <span>📈 <span class="growth">+469%</span></span>
+        
+        <span>🌐 global</span>
+    </div>
+    <div class="card-desc">Lifestyle movement encouraging mindful, intentional, and sustainable approach to daily life by decelerating pace to enhance well-being. Emphasizes quality over quantity, fosters deeper connections, and reduces stress through simplified living. Appeals to individuals interested in sustainability, mindfulness, and personal well-being.</div>
+    <div class="card-tags">
+        <span class="tag">lifestyle</span><span class="tag">mindfulness</span><span class="tag">wellness</span><span class="tag origem">Exploding Topics</span>
     </div>
 </div>
 
@@ -604,72 +353,25 @@
         </div>
 
         <div class="section" id="sectionApps">
-            <div class="section-title">🚀 Apps & Produtos em Alta</div>
+            <div class="section-title">🚀 Apps & Produtos</div>
             <div id="appsList">
-                <div class="date-header" style="background:#1a1a2e;padding:12px 16px;border-radius:8px;margin-bottom:15px;border-left:4px solid #f59e0b;">
-                    <span style="font-weight:700;color:#f59e0b;">📅 28/05/2026 — 06:30 BRT</span>
-                </div>
 
 <div class="card" data-categoria="app" data-origem="global">
     <div class="card-header">
-        <div class="card-title">🤖 PilotDeck — AI Agent Productivity</div>
-        <div class="card-badge">🔥 1.2K ★</div>
+        <div class="card-title">👗 Edikted — Gen Z Fashion Brand</div>
+        <div class="card-badge">+3750%</div>
     </div>
     <div class="card-meta">
-        <span>⭐ <span class="vol">1,208</span> stars</span>
-        <span>🍴 <span class="vol">82</span> forks</span>
+        <span>📊 <span class="vol">1.5M</span></span>
+        <span>📈 <span class="growth">+3750%</span></span>
+        
         <span>🌐 global</span>
     </div>
-    <div class="card-desc">Task-oriented AI Agent platform by OpenBMB for autonomous task execution and workflow automation. Built with TypeScript, supports multiple AI models.</div>
+    <div class="card-desc">Fashion brand with 10+ years experience, focusing on trendy pieces inspired by L.A. fashion scene, social media, and celebrity culture. Highly popular among Gen Z on TikTok.</div>
     <div class="card-tags">
-        <span class="tag">AI</span>
-        <span class="tag">productivity</span>
-        <span class="tag">agents</span>
-        <span class="tag tag-origem">GitHub Trending</span>
+        <span class="tag">fashion</span><span class="tag">Gen-Z</span><span class="tag">D2C</span><span class="tag origem">Exploding Topics</span>
     </div>
 </div>
-
-<div class="card" data-categoria="app" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">🧠 DeepSeek-GUI — AI Agent Workspace</div>
-        <div class="card-badge">🔥 483 ★</div>
-    </div>
-    <div class="card-meta">
-        <span>⭐ <span class="vol">483</span> stars</span>
-        <span>🍴 <span class="vol">43</span> forks</span>
-        <span>🌐 global</span>
-    </div>
-    <div class="card-desc">AI agent workspace for DeepSeek models with Code and Claw modes. Interactive environment for AI-assisted development.</div>
-    <div class="card-tags">
-        <span class="tag">AI</span>
-        <span class="tag">deepseek</span>
-        <span class="tag">development</span>
-        <span class="tag tag-origem">GitHub Trending</span>
-    </div>
-</div>
-
-<div class="card" data-categoria="app" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">💰 Sarwa — Investment & Trading Platform</div>
-        <div class="card-badge">+134%</div>
-    </div>
-    <div class="card-meta">
-        <span>🔊 <span class="vol">18.1K</span> searches</span>
-        <span>📈 <span class="growth">+134%</span></span>
-        <span>🌐 global</span>
-    </div>
-    <div class="card-desc">Financial platform enabling users to trade stocks/ETFs and invest passively. Comprehensive suite of financial services in one place.</div>
-    <div class="card-tags">
-        <span class="tag">fintech</span>
-        <span class="tag">investing</span>
-        <span class="tag">trading</span>
-        <span class="tag tag-origem">Exploding Topics</span>
-    </div>
-</div>
-
-                <div class="date-header" style="background:#1a1a2e;padding:12px 16px;border-radius:8px;margin-bottom:15px;border-left:4px solid #10b981;">
-                    <span style="font-weight:700;color:#10b981;">📅 28/05/2026 — 12:00 BRT</span>
-                </div>
 
 <div class="card" data-categoria="app" data-origem="global">
     <div class="card-header">
@@ -677,35 +379,14 @@
         <div class="card-badge">🔥 211K ★</div>
     </div>
     <div class="card-meta">
-        <span>⭐ <span class="vol">210,781</span> stars</span>
-        <span>🍴 <span class="vol">18,760</span> forks</span>
+        
+        
+        <span>⭐ 210,781</span>
         <span>🌐 global</span>
     </div>
     <div class="card-desc">An agentic skills framework & software development methodology that works. Enables AI agents to use structured skills for reliable task execution across development workflows.</div>
     <div class="card-tags">
-        <span class="tag">AI</span>
-        <span class="tag">agents</span>
-        <span class="tag">developer-tools</span>
-        <span class="tag tag-origem">GitHub Trending</span>
-    </div>
-</div>
-
-<div class="card" data-categoria="app" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">💰 MoneyPrinterTurbo — AI Short Video Generator</div>
-        <div class="card-badge">🔥 66K ★</div>
-    </div>
-    <div class="card-meta">
-        <span>⭐ <span class="vol">65,618</span> stars</span>
-        <span>🍴 <span class="vol">9,513</span> forks</span>
-        <span>🌐 global</span>
-    </div>
-    <div class="card-desc">Generate short videos with one click using AI LLM. Auto-generates scripts, visuals, and voiceovers for TikTok, Reels, and Shorts. Chinese-origin tool with massive global traction.</div>
-    <div class="card-tags">
-        <span class="tag">AI</span>
-        <span class="tag">video</span>
-        <span class="tag">content-creation</span>
-        <span class="tag tag-origem">GitHub Trending</span>
+        <span class="tag">AI</span><span class="tag">agents</span><span class="tag">developer-tools</span><span class="tag origem">GitHub Trending</span>
     </div>
 </div>
 
@@ -715,54 +396,14 @@
         <div class="card-badge">🔥 197K ★</div>
     </div>
     <div class="card-meta">
-        <span>⭐ <span class="vol">196,952</span> stars</span>
-        <span>🍴 <span class="vol">30,288</span> forks</span>
+        
+        
+        <span>⭐ 196,952</span>
         <span>🌐 global</span>
     </div>
     <div class="card-desc">The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.</div>
     <div class="card-tags">
-        <span class="tag">AI</span>
-        <span class="tag">developer-tools</span>
-        <span class="tag">agents</span>
-        <span class="tag tag-origem">GitHub Trending</span>
-    </div>
-</div>
-
-<div class="card" data-categoria="app" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">🎬 Time Cut — AI Video Frame Rate Editor</div>
-        <div class="card-badge">+182%</div>
-    </div>
-    <div class="card-meta">
-        <span>🔊 <span class="vol">74K</span> searches</span>
-        <span>📈 <span class="growth">+182%</span></span>
-        <span>🌐 global</span>
-    </div>
-    <div class="card-desc">Powerful professional video editor using AI-driven image processing to enhance video quality and frame rate. Dedicated to changing frame rate/speed with AI quality enhancement.</div>
-    <div class="card-tags">
-        <span class="tag">AI</span>
-        <span class="tag">video-editing</span>
-        <span class="tag">creator-tools</span>
-        <span class="tag tag-origem">Exploding Topics</span>
-    </div>
-</div>
-
-<div class="card" data-categoria="app" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">💊 Nutricost — Supplements Brand</div>
-        <div class="card-badge">+3900%</div>
-    </div>
-    <div class="card-meta">
-        <span>🔊 <span class="vol">74K</span> searches</span>
-        <span>📈 <span class="growth">+3900%</span></span>
-        <span>🌐 global</span>
-    </div>
-    <div class="card-desc">Company offering high-quality, affordable dietary supplements: protein, vitamins, and minerals. Targeting fitness enthusiasts and individuals seeking to improve overall health and wellness.</div>
-    <div class="card-tags">
-        <span class="tag">supplements</span>
-        <span class="tag">fitness</span>
-        <span class="tag">D2C</span>
-        <span class="tag tag-origem">Exploding Topics</span>
+        <span class="tag">AI</span><span class="tag">developer-tools</span><span class="tag">agents</span><span class="tag origem">GitHub Trending</span>
     </div>
 </div>
 
@@ -772,178 +413,67 @@
         <div class="card-badge">+213%</div>
     </div>
     <div class="card-meta">
-        <span>🔊 <span class="vol">90.5K</span> searches</span>
+        <span>📊 <span class="vol">90.5K</span></span>
         <span>📈 <span class="growth">+213%</span></span>
+        
         <span>🌐 global</span>
     </div>
     <div class="card-desc">Cloud-based email marketing, marketing automation, sales automation, CRM integration, customer experience automation, analytics, and reporting platform for SMBs.</div>
     <div class="card-tags">
-        <span class="tag">marketing</span>
-        <span class="tag">automation</span>
-        <span class="tag">CRM</span>
-        <span class="tag tag-origem">Exploding Topics</span>
+        <span class="tag">marketing</span><span class="tag">automation</span><span class="tag">CRM</span><span class="tag origem">Exploding Topics</span>
     </div>
 </div>
 
 <div class="card" data-categoria="app" data-origem="global">
     <div class="card-header">
-        <div class="card-title">👗 Edikted — Gen Z Fashion Brand</div>
-        <div class="card-badge">+3750%</div>
+        <div class="card-title">🎬 Time Cut — AI Video Frame Rate Editor</div>
+        <div class="card-badge">+182%</div>
     </div>
     <div class="card-meta">
-        <span>🔊 <span class="vol">1.5M</span> searches</span>
-        <span>📈 <span class="growth">+3750%</span></span>
+        <span>📊 <span class="vol">74K</span></span>
+        <span>📈 <span class="growth">+182%</span></span>
+        
         <span>🌐 global</span>
     </div>
-    <div class="card-desc">Fashion brand with 10+ years experience, focusing on trendy pieces inspired by L.A. fashion scene, social media, and celebrity culture. Highly popular among Gen Z on TikTok.</div>
+    <div class="card-desc">Powerful professional video editor using AI-driven image processing to enhance video quality and frame rate. Dedicated to changing frame rate/speed with AI quality enhancement.</div>
     <div class="card-tags">
-        <span class="tag">fashion</span>
-        <span class="tag">Gen-Z</span>
-        <span class="tag">D2C</span>
-        <span class="tag tag-origem">Exploding Topics</span>
+        <span class="tag">AI</span><span class="tag">video-editing</span><span class="tag">creator-tools</span><span class="tag origem">Exploding Topics</span>
     </div>
 </div>
 
 <div class="card" data-categoria="app" data-origem="global">
     <div class="card-header">
-        <div class="card-title">🎨 taste-skill — AI Quality Enhancement</div>
-        <div class="card-badge">🔥 26K ★</div>
+        <div class="card-title">💊 Nutricost — Supplements Brand</div>
+        <div class="card-badge">+3900%</div>
     </div>
     <div class="card-meta">
-        <span>⭐ <span class="vol">25,859</span> stars</span>
-        <span>🍴 <span class="vol">1,951</span> forks</span>
+        <span>📊 <span class="vol">74K</span></span>
+        <span>📈 <span class="growth">+3900%</span></span>
+        
         <span>🌐 global</span>
     </div>
-    <div class="card-desc">Gives your AI good taste — stops the AI from generating boring, generic slop. Improves AI output quality by filtering generic patterns and adding distinctive style.</div>
+    <div class="card-desc">Company offering high-quality, affordable dietary supplements: protein, vitamins, and minerals. Targeting fitness enthusiasts and individuals seeking to improve overall health and wellness.</div>
     <div class="card-tags">
-        <span class="tag">AI</span>
-        <span class="tag">writing</span>
-        <span class="tag">productivity</span>
-        <span class="tag tag-origem">GitHub Trending</span>
-    </div>
-</div>
-
-                <div class="date-header" style="background:#1a1a2e;padding:12px 16px;border-radius:8px;margin-bottom:15px;border-left:4px solid #10b981;">
-                    <span style="font-weight:700;color:#10b981;">📅 29/05/2026 — 12:00 BRT</span>
-                </div>
-
-<div class="card" data-categoria="app" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">📊 Gamma — AI Presentation Platform</div>
-        <div class="card-badge">$2.1B valuation</div>
-    </div>
-    <div class="card-meta">
-        <span>🔊 <span class="vol">70M</span> users</span>
-        <span>💰 <span class="vol">$68M</span> Series B</span>
-        <span>🌐 global</span>
-    </div>
-    <div class="card-desc">AI-powered presentation, document and webpage generator by OpenAI investors (Andreessen Horowitz, Accel). Web-based format with structured visual layouts instead of slides. By November 2025 reached 70M users and raised $68M at $2.1B valuation. Monetization: subscription plans, API access for enterprise.</div>
-    <div class="card-tags">
-        <span class="tag">AI</span>
-        <span class="tag">productivity</span>
-        <span class="tag">presentations</span>
-        <span class="tag tag-origem">Wikipedia</span>
+        <span class="tag">supplements</span><span class="tag">fitness</span><span class="tag">D2C</span><span class="tag origem">Exploding Topics</span>
     </div>
 </div>
 
 <div class="card" data-categoria="app" data-origem="global">
     <div class="card-header">
-        <div class="card-title">💻 markitdown — Microsoft Doc-to-Markdown</div>
-        <div class="card-badge">🔥 129K ★</div>
+        <div class="card-title">💰 MoneyPrinterTurbo — AI Short Video Generator</div>
+        <div class="card-badge">🔥 66K ★</div>
     </div>
     <div class="card-meta">
-        <span>⭐ <span class="vol">129,137</span> stars</span>
-        <span>🍴 <span class="vol">8,856</span> forks</span>
+        
+        
+        <span>⭐ 65,618</span>
         <span>🌐 global</span>
     </div>
-    <div class="card-desc">Python tool by Microsoft for converting files and office documents to Markdown. Supports Word, Excel, PowerPoint, PDF, and more. Official Microsoft repository gaining massive traction for documentation workflows.</div>
+    <div class="card-desc">Generate short videos with one click using AI LLM. Auto-generates scripts, visuals, and voiceovers for TikTok, Reels, and Shorts. Chinese-origin tool with massive global traction.</div>
     <div class="card-tags">
-        <span class="tag">AI</span>
-        <span class="tag">developer-tools</span>
-        <span class="tag">documentation</span>
-        <span class="tag tag-origem">GitHub Trending</span>
+        <span class="tag">AI</span><span class="tag">video</span><span class="tag">content-creation</span><span class="tag origem">GitHub Trending</span>
     </div>
 </div>
-
-<div class="card" data-categoria="app" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">🏢 twentyhq/twenty — Open-Source CRM for AI</div>
-        <div class="card-badge">🔥 48K ★</div>
-    </div>
-    <div class="card-meta">
-        <span>⭐ <span class="vol">48,239</span> stars</span>
-        <span>🍴 <span class="vol">6,835</span> forks</span>
-        <span>🌐 global</span>
-    </div>
-    <div class="card-desc">The open alternative to Salesforce, designed for AI. CRM with built-in AI capabilities for sales, lead tracking, and pipeline management. Growing rapidly as companies seek AI-native CRM alternatives to legacy platforms.</div>
-    <div class="card-tags">
-        <span class="tag">AI</span>
-        <span class="tag">CRM</span>
-        <span class="tag">B2B</span>
-        <span class="tag tag-origem">GitHub Trending</span>
-    </div>
-</div>
-
-<div class="card" data-categoria="app" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">☀️ Portable Solar Heater</div>
-        <div class="card-badge">+3600%</div>
-    </div>
-    <div class="card-meta">
-        <span>🔊 <span class="vol">140</span> searches</span>
-        <span>📈 <span class="growth">+3600%</span></span>
-        <span>🌐 global</span>
-    </div>
-    <div class="card-desc">Compact, mobile device that captures solar energy for localized heating. Ideal for camping, emergency heating, or off-grid living. Fast-growing niche in sustainable living / outdoor gear market.</div>
-    <div class="card-tags">
-        <span class="tag">sustainability</span>
-        <span class="tag">outdoor</span>
-        <span class="tag">solar</span>
-        <span class="tag tag-origem">Exploding Topics</span>
-    </div>
-</div>
-
-<div class="card" data-categoria="app" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">🌿 Centella Moisturizer — Skincare Trend</div>
-        <div class="card-badge">+1580%</div>
-    </div>
-    <div class="card-meta">
-        <span>🔊 <span class="vol">18.1K</span> searches</span>
-        <span>📈 <span class="growth">+1580%</span></span>
-        <span>🌐 global</span>
-    </div>
-    <div class="card-desc">Deep hydration and soothing skincare product, lightweight texture, quick absorption. Ideal for sensitive or irritated skin. Fast-growing in Asian beauty and global skincare markets.</div>
-    <div class="card-tags">
-        <span class="tag">beauty</span>
-        <span class="tag">skincare</span>
-        <span class="tag">wellness</span>
-        <span class="tag tag-origem">Exploding Topics</span>
-    </div>
-</div>
-
-<div class="card" data-categoria="app" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">🌍 Carbon Reform — Climate Tech</div>
-        <div class="card-badge">+2150%</div>
-    </div>
-    <div class="card-meta">
-        <span>🔊 <span class="vol">210</span> searches</span>
-        <span>📈 <span class="growth">+2150%</span></span>
-        <span>🌐 global</span>
-    </div>
-    <div class="card-desc">Policies and technologies aimed at reducing carbon emissions: carbon pricing, renewable energy, energy efficiency, emissions standards, and new clean technologies. Government and enterprise-focused climate tech opportunity.</div>
-    <div class="card-tags">
-        <span class="tag">climate-tech</span>
-        <span class="tag">sustainability</span>
-        <span class="tag">B2B</span>
-        <span class="tag tag-origem">Exploding Topics</span>
-    </div>
-</div>
-
-                <div class="date-header" style="background:#1a1a2e;padding:12px 16px;border-radius:8px;margin-bottom:15px;border-left:4px solid #f59e0b;">
-                    <span style="font-weight:700;color:#f59e0b;">📅 27/05/2026 — 20:35 BRT</span>
-                </div>
 
 <div class="card" data-categoria="app" data-origem="global">
     <div class="card-header">
@@ -951,54 +481,14 @@
         <div class="card-badge">🔥 62K ★</div>
     </div>
     <div class="card-meta">
-        <span>⭐ <span class="vol">61,951</span> stars</span>
-        <span>🍴 <span class="vol">9,053</span> forks</span>
+        
+        
+        <span>⭐ 61,951</span>
         <span>🌐 global</span>
     </div>
     <div class="card-desc">One-click AI-powered high-definition short video generation. Uses LLMs to auto-generate scripts, visuals, and voiceovers for short-form content (TikTok, Reels, Shorts). Chinese-origin, rapidly growing global adoption. Monetization: subscription for premium features, API access for agencies.</div>
     <div class="card-tags">
-        <span class="tag">AI</span>
-        <span class="tag">video</span>
-        <span class="tag">creator-tools</span>
-        <span class="tag tag-origem">GitHub Trending</span>
-    </div>
-</div>
-
-<div class="card" data-categoria="app" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">📊 Kronos — Financial Markets AI</div>
-        <div class="card-badge">🔥 27K ★</div>
-    </div>
-    <div class="card-meta">
-        <span>⭐ <span class="vol">26,879</span> stars</span>
-        <span>🍴 <span class="vol">4,655</span> forks</span>
-        <span>🌐 global</span>
-    </div>
-    <div class="card-desc">Foundation model for financial markets language understanding. Analyzes earnings calls, news, SEC filings, and market data to generate trading signals and sentiment analysis. Could be packaged as API for hedge funds, retail trading platforms, and financial advisors.</div>
-    <div class="card-tags">
-        <span class="tag">AI</span>
-        <span class="tag">fintech</span>
-        <span class="tag">trading</span>
-        <span class="tag tag-origem">GitHub Trending</span>
-    </div>
-</div>
-
-<div class="card" data-categoria="app" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">🛡️ AI Cybersecurity Skills Library</div>
-        <div class="card-badge">🔥 11K ★</div>
-    </div>
-    <div class="card-meta">
-        <span>⭐ <span class="vol">10,530</span> stars</span>
-        <span>🍴 <span class="vol">1,224</span> forks</span>
-        <span>🌐 global</span>
-    </div>
-    <div class="card-desc">754 AI agent skills for cybersecurity mapped to MITRE ATT&CK, NIST CSF 2.0, ATLAS, D3FEND frameworks. Not an app per se but a productized skill layer for enterprise security operations. Opportunity: packaged security compliance dashboards for AI-first SOC teams.</div>
-    <div class="card-tags">
-        <span class="tag">cybersecurity</span>
-        <span class="tag">AI</span>
-        <span class="tag">enterprise</span>
-        <span class="tag tag-origem">GitHub Trending</span>
+        <span class="tag">AI</span><span class="tag">video</span><span class="tag">creator-tools</span><span class="tag origem">GitHub Trending</span>
     </div>
 </div>
 
@@ -1008,16 +498,14 @@
         <div class="card-badge">+1500%</div>
     </div>
     <div class="card-meta">
-        <span>🔊 <span class="vol">40.5K</span> searches</span>
+        <span>📊 <span class="vol">40.5K</span></span>
         <span>📈 <span class="growth">+1500%</span></span>
-        <span>🌐 global (BR origin)</span>
+        
+        <span>🌐 brasil</span>
     </div>
     <div class="card-desc">Brazilian longevity company developing products targeting skin aging at the cellular level using aging science principles. Raised significant funding. The longevity beauty trend is exploding globally — opportunity for Brazilian founders in the anti-aging skincare space with scientific backing.</div>
     <div class="card-tags">
-        <span class="tag">longevity</span>
-        <span class="tag">beauty-tech</span>
-        <span class="tag">biotech</span>
-        <span class="tag tag-origem">Exploding Topics</span>
+        <span class="tag">longevity</span><span class="tag">beauty-tech</span><span class="tag">biotech</span><span class="tag origem">Exploding Topics</span>
     </div>
 </div>
 
@@ -1026,46 +514,7 @@
 
         <div class="section" id="sectionOportunidades">
             <div class="section-title">💼 Oportunidades de Negócio</div>
-            <div id="oportunidadesList">
-                <div class="date-header" style="background:#1a1a2e;padding:12px 16px;border-radius:8px;margin-bottom:15px;border-left:4px solid #f59e0b;">
-                    <span style="font-weight:700;color:#f59e0b;">📅 28/05/2026 — 06:30 BRT</span>
-                </div>
-
-<div class="card" data-categoria="negocio" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">🎨 Micro-SaaS: Social Card Generator para Xiaohongshu</div>
-        <div class="card-badge">💼 555 stars</div>
-    </div>
-    <div class="card-meta">
-        <span>⭐ <span class="vol">555</span> stars</span>
-        <span>🌐 global (China-focused)</span>
-        <span>💰 Freemium</span>
-    </div>
-    <div class="card-desc">Ferramenta de geracao de cards/carrosséis para Xiaohongshu e WeChat. Integracao com Claude Code/Codex. Receita: R$37-R$197/mês para templates premium.</div>
-    <div class="card-tags">
-        <span class="tag tag-categoria">micro-saas</span>
-        <span class="tag tag-categoria">social-media</span>
-        <span class="tag tag-origem">GitHub Trending</span>
-    </div>
-</div>
-
-<div class="card" data-categoria="negocio" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">🏗️ SaaS de Arquitetura de Software (Pattern Library)</div>
-        <div class="card-badge">💼 660 stars</div>
-    </div>
-    <div class="card-meta">
-        <span>⭐ <span class="vol">660</span> stars</span>
-        <span>🌐 global</span>
-        <span>💰 B2B/Enterprise</span>
-    </div>
-    <div class="card-desc">Biblioteca de mapas de arquitetura para sistemas modernos: AI gateway, RAG, agents, vector DB. Oportunidade: plataforma SaaS com templates interativos.</div>
-    <div class="card-tags">
-        <span class="tag tag-categoria">architecture</span>
-        <span class="tag tag-categoria">saas</span>
-        <span class="tag tag-origem">GitHub Trending</span>
-    </div>
-</div>
+            <div id="negociosList">
 
 <div class="card" data-categoria="negocio" data-origem="global">
     <div class="card-header">
@@ -1073,16 +522,31 @@
         <div class="card-badge">💼 +940% crescimento</div>
     </div>
     <div class="card-meta">
-        <span>🔊 <span class="vol">1M</span> searches</span>
+        <span>📊 <span class="vol">1M</span></span>
         <span>📈 <span class="growth">+940%</span></span>
+        
         <span>🌐 global</span>
-        <span>💰 D2C</span>
     </div>
     <div class="card-desc">Marca propria de creatina monohidratada com storytelling cientifico e influencer marketing. Margens de 60-70% em D2C.</div>
     <div class="card-tags">
-        <span class="tag tag-categoria">fitness</span>
-        <span class="tag tag-categoria">D2C</span>
-        <span class="tag tag-origem">Exploding Topics</span>
+        <span class="tag origem">Exploding Topics</span>
+    </div>
+</div>
+
+<div class="card" data-categoria="negocio" data-origem="global">
+    <div class="card-header">
+        <div class="card-title">🤖 Micro-SaaS: markitdown Integration API</div>
+        <div class="card-badge">💼 131K stars</div>
+    </div>
+    <div class="card-meta">
+        <span>📊 <span class="vol">131K</span></span>
+        
+        <span>⭐ 131,320</span>
+        <span>🌐 global</span>
+    </div>
+    <div class="card-desc">API wrapper para markitdown — converter documentos Office para Markdown como serviço. Receita: R$29-R$199/mês baseado em volume. Nicho: desenvolvedores, technical writers, empresas com legacy documents.</div>
+    <div class="card-tags">
+        <span class="tag">micro-saas</span><span class="tag">AI</span><span class="tag">document-processing</span><span class="tag origem">GitHub Trending</span>
     </div>
 </div>
 
@@ -1092,22 +556,16 @@
         <div class="card-badge">💼 +1017% interesse</div>
     </div>
     <div class="card-meta">
-        <span>🔊 <span class="vol">74K</span> searches</span>
+        <span>📊 <span class="vol">74K</span></span>
         <span>📈 <span class="growth">+1017%</span></span>
+        
         <span>🌐 global</span>
-        <span>💰 Services</span>
     </div>
     <div class="card-desc">Estudio especializado em tratamento capilar Nanoplastia. Modelo: agendamento online + assinatura de manutencao + produtos domicilares.</div>
     <div class="card-tags">
-        <span class="tag tag-categoria">beauty</span>
-        <span class="tag tag-categoria">haircare</span>
-        <span class="tag tag-origem">Exploding Topics</span>
+        <span class="tag origem">Exploding Topics</span>
     </div>
 </div>
-
-                <div class="date-header" style="background:#1a1a2e;padding:12px 16px;border-radius:8px;margin-bottom:15px;border-left:4px solid #f59e0b;">
-                    <span style="font-weight:700;color:#f59e0b;">📅 27/05/2026 — 20:35 BRT</span>
-                </div>
 
 <div class="card" data-categoria="negocio" data-origem="global">
     <div class="card-header">
@@ -1115,32 +573,14 @@
         <div class="card-badge">💼 Alta demanda</div>
     </div>
     <div class="card-meta">
-        <span>📊 <span class="vol">61.9K</span> stars no GitHub</span>
+        <span>📊 <span class="vol">61.9K</span></span>
+        
+        
         <span>🌐 global</span>
-        <span>💰 Freemium</span>
     </div>
     <div class="card-desc">Plataforma que automatiza criação de vídeos curtos com IA (TikTok, Reels, Shorts). Geração automática de script + visual + voiceover. Receita: assinaturas mensais (R$47-R$197) + API para agências. Mercado: creators, marketers, e-commerces. Concorrentes: InVideo, Kapwing, mas há espaço para nichos especializados.</div>
     <div class="card-tags">
-        <span class="tag">micro-saas</span>
-        <span class="tag">AI</span>
-        <span class="tag tag-origem">GitHub Trending</span>
-    </div>
-</div>
-
-<div class="card" data-categoria="negocio" data-origem="brasil">
-    <div class="card-header">
-        <div class="card-title">🔐 IAM SaaS para PMEs Brasileiras</div>
-        <div class="card-badge">💼 +1000% crescimento</div>
-    </div>
-    <div class="card-meta">
-        <span>📈 <span class="growth">+1000%</span> demanda</span>
-        <span>🇧🇷 Brasil</span>
-        <span>💰 B2B</span>
-    </div>
-    <div class="card-desc">Feramenta de Identity & Access Management focada em PMEs brasileiras —.simple, acessível, compliance com LGPD. Funcionalidades: SSO, provisionamento de usuários, relatórios de auditoria. Preço: R$299-R$999/mês. Diferencial: Interface simples em português + suporte local + preço acessível vs. Okta/Microsoft.</div>
-    <div class="card-tags">
-        <span class="tag tag-categoria">cybersecurity</span>
-        <span class="tag tag-origem">Exploding Topics</span>
+        <span class="tag">micro-saas</span><span class="tag">AI</span><span class="tag origem">GitHub Trending</span>
     </div>
 </div>
 
@@ -1150,70 +590,14 @@
         <div class="card-badge">💼 +469% interesse</div>
     </div>
     <div class="card-meta">
-        <span>🔊 <span class="vol">40.5K</span> searches</span>
+        <span>📊 <span class="vol">40.5K</span></span>
         <span>📈 <span class="growth">+469%</span></span>
-        <span>🇧🇷 Brasil</span>
-        <span>💰 Freemium</span>
+        
+        <span>🌐 brasil</span>
     </div>
     <div class="card-desc">App de bem-estar focado no movimento Slow Living: rotinas intencionais, journal, minimalismo digital, produtividade humanizada. Diferencial: foco no mercado brasileiro com conteúdo em português + integração com apps locais ( Nubank, Spotify). Receitas: assinaturas premium + marketplace de produtos slow living.</div>
     <div class="card-tags">
-        <span class="tag tag-categoria">mindfulness</span>
-        <span class="tag tag-origem">Exploding Topics</span>
-    </div>
-</div>
-
-<div class="card" data-categoria="negocio" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">🧠 Plugin de Produtividade para AI Coworkers</div>
-        <div class="card-badge">💼 17K stars</div>
-    </div>
-    <div class="card-meta">
-        <span>⭐ <span class="vol">17,265</span> stars</span>
-        <span>🌐 global</span>
-        <span>💰 B2B/API</span>
-    </div>
-    <div class="card-desc">Marketplace de plugins para AI agents de produtividade — automação de research, email, planilhas, CRM, agenda. Inspirado no Anthropic knowledge-work-plugins. Oportunidade: curadoria + marketplace + upgrades pagos. Público: empresas usando AI agents (Claude, Copilot, Cursor).</div>
-    <div class="card-tags">
-        <span class="tag tag-categoria">AI</span>
-        <span class="tag tag-categoria">productivity</span>
-        <span class="tag tag-origem">GitHub Trending</span>
-    </div>
-</div>
-
-<div class="card" data-categoria="negocio" data-origem="brasil">
-    <div class="card-header">
-        <div class="card-title">🇧🇷 API de IA para Mercado Financeiro Brasileiro</div>
-        <div class="card-badge">💼 27K stars</div>
-    </div>
-    <div class="card-meta">
-        <span>⭐ <span class="vol">26,879</span> stars</span>
-        <span>🌐 global</span>
-        <span>💰 API SaaS</span>
-    </div>
-    <div class="card-desc">API de IA especializada em linguagem de mercados financeiros — análise de balanços B3, relatórios do Banco Central, políticas do governo. Adaptar Kronos (Financial Markets LM) para o contexto brasileiro. Receita: tokens por requisição + planos enterprise para corretoras e gestoras.</div>
-    <div class="card-tags">
-        <span class="tag tag-categoria">fintech</span>
-        <span class="tag tag-categoria">AI</span>
-        <span class="tag tag-origem">GitHub Trending</span>
-    </div>
-</div>
-
-<div class="card" data-categoria="negocio" data-origem="global">
-    <div class="card-header">
-        <div class="card-title">🧊 Smart Fridge API — IoT as a Service</div>
-        <div class="card-badge">💼 +3000%</div>
-    </div>
-    <div class="card-meta">
-        <span>🔊 <span class="vol">2.4K</span> searches</span>
-        <span>📈 <span class="growth">+3000%</span></span>
-        <span>🌐 global</span>
-        <span>💰 B2B</span>
-    </div>
-    <div class="card-desc">API/SDK para fabricantes de geladeiras conectarem funcionalidades de IA: rastreamento de inventário, monitoramento de freshness, sugestões de receita. Oportunidade de licensing para OEM. Mercado: fabricantes de eletrodomésticos na América Latina buscando diferenciacao.</div>
-    <div class="card-tags">
-        <span class="tag tag-categoria">IoT</span>
-        <span class="tag tag-categoria">AI</span>
-        <span class="tag tag-origem">Exploding Topics</span>
+        <span class="tag origem">Exploding Topics</span>
     </div>
 </div>
 
@@ -1223,28 +607,39 @@
 
     <script>
         function filtrar() {
-            const termo = document.getElementById('searchInput').value.toLowerCase();
-            const cat = document.getElementById('categoriaFilter').value;
-            const orig = document.getElementById('origemFilter').value;
-            const cards = document.querySelectorAll('.card');
-            let visiveis = 0;
-            cards.forEach(c => {
-                const texto = c.textContent.toLowerCase();
-                const cats = c.dataset.categoria || '';
-                const ors = c.dataset.origem || '';
-                const mostrar = texto.includes(termo) && (cat === '' || cats === cat) && (orig === '' || ors === orig);
-                c.style.display = mostrar ? 'block' : 'none';
-                if (mostrar) visiveis++;
+            const search = document.getElementById('searchInput').value.toLowerCase();
+            const categoria = document.getElementById('categoriaFilter').value;
+            const origem = document.getElementById('origemFilter').value;
+            
+            document.querySelectorAll('.card').forEach(card => {
+                const text = card.textContent.toLowerCase();
+                const cat = card.dataset.categoria;
+                const orig = card.dataset.origem;
+                
+                const matchSearch = text.includes(search);
+                const matchCat = !categoria || cat === categoria;
+                const matchOrig = !origem || orig === origem;
+                
+                card.style.display = (matchSearch && matchCat && matchOrig) ? 'block' : 'none';
             });
-            document.getElementById('metaInfo').textContent = `${visiveis} entrada(s) encontrada(s) | Atualizado: ${new Date().toLocaleString('pt-BR')}`;
+            
+            updateMetaInfo();
         }
+        
         function limparFiltros() {
             document.getElementById('searchInput').value = '';
             document.getElementById('categoriaFilter').value = '';
             document.getElementById('origemFilter').value = '';
             filtrar();
         }
-        filtrar();
+        
+        function updateMetaInfo() {
+            const visible = document.querySelectorAll('.card[style="display: block"], .card:not([style])').length;
+            const total = document.querySelectorAll('.card').length;
+            document.getElementById('metaInfo').textContent = `Mostrando ${visible} de ${total} oportunidades`;
+        }
+        
+        updateMetaInfo();
     </script>
 </body>
 </html>
