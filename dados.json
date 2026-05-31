@@ -277,6 +277,65 @@
   {
     "categoria": "tendencia",
     "origem": "global",
+    "titulo": "🧴 Kojic Acid Scrub — Skin Brightening Product",
+    "badge": "+7000%",
+    "volume": "1K",
+    "crescimento": "+7000%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Skincare product containing kojic acid (derived from fungi or fermented rice wine) for improving skin tone. Inhibits tyrosinase enzyme to fade dark spots, acne scars, and sun damage. For even skin tone and hyperpigmentation reduction.",
+    "tags": [
+      "beauty",
+      "skincare",
+      "pigmentation",
+      "wellness"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "31/05/2026 18:50"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🎧 AI Translator Headphones — Real-Time Language Translation",
+    "badge": "+2900%",
+    "volume": "880",
+    "crescimento": "+2900%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Wearable audio devices using AI for real-time language translation during conversations. Support multiple languages, feature noise-canceling, and integrate with cloud services for accuracy. Target: international travelers, business professionals, multilingual users.",
+    "tags": [
+      "AI",
+      "translation",
+      "wearable",
+      "travel",
+      "productivity"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "31/05/2026 18:50"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "global",
+    "titulo": "📝 Onewill — Australian Will-Writing Platform",
+    "badge": "+2600%",
+    "volume": "2.4K",
+    "crescimento": "+2600%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Australia's most advanced Will-writing platform for creating legally binding Wills online. User-friendly interface with comprehensive guidance. Target: individuals seeking convenient Will preparation without traditional legal services.",
+    "tags": [
+      "legal-tech",
+      "fintech",
+      "saas",
+      "australia",
+      "B2C"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "31/05/2026 18:50"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
     "titulo": "💄 Bakuchiol Eye Cream — Anti-Aging Skincare",
     "badge": "+2000%",
     "volume": "2.4K",
@@ -443,113 +502,62 @@
     "fonte": "Exploding Topics"
   },
   {
-    "categoria": "negocio",
+    "categoria": "tendencia",
     "origem": "global",
-    "titulo": "🧳 Micro-SaaS: Travel Shoe Bag + Shoe Pouch",
-    "badge": "💼 +1333% interesse",
-    "volume": "1.9K",
-    "crescimento": "+1333%",
+    "titulo": "📊 Seeq — Process Manufacturing Analytics",
+    "badge": "+863%",
+    "volume": "18.1K",
+    "crescimento": "+863%",
     "stars": "",
     "forks": "",
-    "descricao": "E-commerce de organizadores de sapatos para viagem. Nicho: viajantes e minimalistas. Dropshipping ou produção própria com diferencial de design sustentável.",
+    "descricao": "Advanced analytics for process manufacturing data. Industries: oil and gas, pharmaceuticals, chemicals. Features: time-series data handling, predictive analytics, data cleansing, collaboration tools.",
     "tags": [
-      "e-commerce",
-      "travel",
-      "nicho",
-      "dropshipping",
-      "B2C"
+      "analytics",
+      "manufacturing",
+      "B2B",
+      "data-science",
+      "industrial"
     ],
     "fonte": "Exploding Topics",
-    "data_publicacao": "31/05/2026 12:00"
+    "data_publicacao": "31/05/2026 18:50"
   },
   {
     "categoria": "tendencia",
     "origem": "global",
-    "titulo": "💎 Statement Earrings — Fashion Jewelry Trend",
-    "badge": "+1067%",
-    "volume": "27.1K",
-    "crescimento": "+1067%",
+    "titulo": "🧩 AI Puzzle — Search Algorithms Teaching Tool",
+    "badge": "Growth",
+    "volume": "590",
+    "crescimento": "",
     "stars": "",
     "forks": "",
-    "descricao": "Bold, noticeable pieces of jewelry designed to make an impact. Various styles and materials for fashion-forward individuals expressing personal style.",
-    "tags": [
-      "fashion",
-      "jewelry",
-      "accessories",
-      "social-media"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "31/05/2026 18:05"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "💇 Nanoplastia Hair Treatment",
-    "badge": "+1017%",
-    "volume": "74K",
-    "crescimento": "+1017%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Innovative hair treatment repairing damaged hair, reducing frizz, and improving texture using advanced nanotechnology.",
-    "tags": [
-      "beauty",
-      "haircare",
-      "wellness"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "negocio",
-    "origem": "global",
-    "titulo": "💇 Beauty Tech — Nanoplastia Hair Studio",
-    "badge": "💼 +1017% interesse",
-    "volume": "74K",
-    "crescimento": "+1017%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Estúdio especializado em tratamento capilar Nanoplastia. Modelo: agendamento online + assinatura de manutenção + produtos domicíliares.",
-    "tags": [
-      "beauty-tech",
-      "haircare",
-      "servicos"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🛡️ Sensity AI — Deepfake Detection Platform",
-    "badge": "+1000%",
-    "volume": "3.6K",
-    "crescimento": "+1000%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Company specializing in the detection and mitigation of deepfake content and other visual threats, offering solutions to identify manipulated media.",
+    "descricao": "Classic AI problem (8 Puzzle Problem) for teaching search algorithms and heuristics. Used by AI students and researchers to understand and develop problem-solving strategies.",
     "tags": [
       "AI",
-      "security",
-      "deepfake",
-      "media-integrity"
+      "education",
+      "algorithms",
+      "research"
     ],
-    "fonte": "Exploding Topics"
+    "fonte": "Exploding Topics",
+    "data_publicacao": "31/05/2026 18:50"
   },
   {
     "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "🍳 Infrared Air Fryer — Carbon Fiber Kitchen Tech",
-    "badge": "+822%",
-    "volume": "2.4K",
-    "crescimento": "+822%",
+    "origem": "brasil",
+    "titulo": "🫒 Andiroba Oil — Amazonian Skincare Ingredient",
+    "badge": "Growth",
+    "volume": "880",
+    "crescimento": "",
     "stars": "",
     "forks": "",
-    "descricao": "Kitchen appliance using carbon fiber heating technology reaching 750°F in 45 seconds with reduced energy consumption.",
+    "descricao": "Natural oil from Carapa guianensis tree seeds, recognized for moisturizing, anti-inflammatory, and insect-repelling properties. Used in traditional medicine and cosmetic products. Beneficial for natural skincare and organic cosmetics.",
     "tags": [
-      "kitchen",
-      "appliance",
-      "cooking",
-      "consumer-goods"
+      "beauty",
+      "natural",
+      "skincare",
+      "brasil",
+      "amazon"
     ],
     "fonte": "Exploding Topics",
-    "data_publicacao": "31/05/2026 06:30"
+    "data_publicacao": "31/05/2026 18:50"
   }
 ]
