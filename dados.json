@@ -1,216 +1,5 @@
 [
   {
-    "categoria": "teste",
-    "origem": "global",
-    "titulo": "🧪 TESTE — Item Novo de Hoje (31/05/2026)",
-    "badge": "TEST",
-    "volume": "999K",
-    "crescimento": "+999%",
-    "stars": "999",
-    "forks": "99",
-    "descricao": "Este item foi adicionado agora para testar se a tag NOVO funciona. Se voce ver um badge VERDE com '🎯 NOVO', funcionou!",
-    "tags": [
-      "teste",
-      "debug",
-      "novo"
-    ],
-    "fonte": "Teste",
-    "data_publicacao": "31/05/2026 03:15"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "💄 Bakuchiol Eye Cream — Anti-Aging Skincare",
-    "badge": "+2000%",
-    "volume": "2.4K",
-    "crescimento": "+2000%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Eye cream formulated with bakuchiol and peptides, aimed at firming skin, smoothing wrinkles, and hydrating the delicate area around the eyes. Results in about 10 minutes, suitable for all skin types.",
-    "tags": [
-      "beauty",
-      "skincare",
-      "anti-aging",
-      "wellness"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "30/05/2026 18:52"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "📄 Intelligent Document Processing — AI Automation",
-    "badge": "+814%",
-    "volume": "6.6K",
-    "crescimento": "+814%",
-    "stars": "",
-    "forks": "",
-    "descricao": "AI technology that automates extraction, interpretation, and processing of data from documents. Uses ML and NLP for unstructured data. Benefits: finance, healthcare, legal sectors.",
-    "tags": [
-      "AI",
-      "automation",
-      "document-processing",
-      "MLOps"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "30/05/2026 18:52"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "🔥 Self Heating Bag — Portable Heating Solution",
-    "badge": "+5000%",
-    "volume": "110",
-    "crescimento": "+5000%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Portable container using integrated chemical or thermal reaction to generate heat without external sources. For campers, military, emergency responders, and remote environments.",
-    "tags": [
-      "outdoor",
-      "emergency",
-      "consumer",
-      "portable"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "30/05/2026 18:52"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "📈 Stock Bits — Fractional Stock Investing Platform",
-    "badge": "+422%",
-    "volume": "201K",
-    "crescimento": "+422%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Feature allowing investors to purchase and sell fractional shares of stocks. Makes high-priced stocks accessible to smaller investors. Benefits new investors and portfolio diversification.",
-    "tags": [
-      "fintech",
-      "investing",
-      "fractional-shares",
-      "B2C"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "30/05/2026 18:52"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "🚲 Lightweight Ebike — Urban Micro-Mobility",
-    "badge": "+1850%",
-    "volume": "12.1K",
-    "crescimento": "+1850%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Electric bicycle engineered to minimize weight while maintaining motorized assistance. Uses carbon fiber or aluminum, compact motors and batteries. Target: urban commuters and fitness enthusiasts.",
-    "tags": [
-      "mobility",
-      "ebike",
-      "urban",
-      "clean-energy"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "30/05/2026 18:52"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "🧣 Neck Sweater — Versatile Fashion Essential",
-    "badge": "+809%",
-    "volume": "1.9K",
-    "crescimento": "+809%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Garment with varying neckline styles (crew, V-neck, turtleneck). Provides warmth and comfort with versatile fashion appeal. Broad demographic appeal.",
-    "tags": [
-      "fashion",
-      "apparel",
-      "e-commerce"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "30/05/2026 18:52"
-  },
-  {
-    "categoria": "negocio",
-    "origem": "global",
-    "titulo": "📄 Micro-SaaS: Intelligent Document Processing API",
-    "badge": "💼 +814% interesse",
-    "volume": "6.6K",
-    "crescimento": "+814%",
-    "stars": "",
-    "forks": "",
-    "descricao": "API de processamento inteligente de documentos. Automatiza extração de dados de contratos, faturas, notas fiscais. Faturamento: R$99-R$999/mês baseado em volume de páginas.",
-    "tags": [
-      "micro-saas",
-      "AI",
-      "automation",
-      "document-processing",
-      "legaltech"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "30/05/2026 18:52"
-  },
-  {
-    "categoria": "negocio",
-    "origem": "global",
-    "titulo": "🚲 Micro-SaaS: Lightweight Ebike Fleet Management (B2B)",
-    "badge": "💼 +1850% interesse",
-    "volume": "12.1K",
-    "crescimento": "+1850%",
-    "stars": "",
-    "forks": "",
-    "descricao": "SaaS de gestão de frotas de e-bikes leves para empresas de delivery e micrologística urbana. Monitoramento GPS + manutenção preditiva + gestão de bateria.",
-    "tags": [
-      "micro-saas",
-      "mobility",
-      "B2B",
-      "fleet-management",
-      "logistics"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "30/05/2026 18:52"
-  },
-  {
-    "categoria": "negocio",
-    "origem": "global",
-    "titulo": "💄 Micro-SaaS: Bakuchiol Skincare Formulation Platform",
-    "badge": "💼 +2000% interesse",
-    "volume": "2.4K",
-    "crescimento": "+2000%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Plataforma D2C de formulações personalizadas com bakuchiol para cuidados com a pele. Assinatura mensal de produtos customizados + diagnóstico por foto IA.",
-    "tags": [
-      "micro-saas",
-      "beauty-tech",
-      "D2C",
-      "personalized",
-      "skincare"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "30/05/2026 18:52"
-  },
-  {
-    "categoria": "negocio",
-    "origem": "global",
-    "titulo": "📈 Fintech: Stock Bits-like Fractional Investing API",
-    "badge": "💼 +422% interesse",
-    "volume": "201K",
-    "crescimento": "+422%",
-    "stars": "",
-    "forks": "",
-    "descricao": "API de frações de ações para fintechs e bancos digitais. Permite que corretoras ofereçam fractional shares. Modelo B2B2C por transação.",
-    "tags": [
-      "fintech",
-      "investing",
-      "API",
-      "B2B",
-      "fractional-shares"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "30/05/2026 18:52"
-  },
-  {
     "categoria": "app",
     "origem": "global",
     "titulo": "⚡ Superpowers — Agentic Skills Framework",
@@ -226,6 +15,26 @@
       "developer-tools"
     ],
     "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "⚡ ECC — Agent Harness Performance Optimization",
+    "badge": "🔥 199K ★",
+    "volume": "199K",
+    "crescimento": "908 stars/dia",
+    "stars": "199,748",
+    "forks": "30,662",
+    "descricao": "Agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+    "tags": [
+      "AI",
+      "agent",
+      "claude-code",
+      "optimization",
+      "developer-tools"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "31/05/2026 06:30"
   },
   {
     "categoria": "app",
@@ -247,6 +56,42 @@
   {
     "categoria": "app",
     "origem": "global",
+    "titulo": "📄 markitdown — Python Office Docs to Markdown",
+    "badge": "🔥 133K ★",
+    "volume": "133K",
+    "crescimento": "2,470 stars/dia",
+    "stars": "133,684",
+    "forks": "9,142",
+    "descricao": "Python tool for converting files and office documents to Markdown. Supports Word, Excel, PowerPoint, PDF and more.",
+    "tags": [
+      "python",
+      "markdown",
+      "document-conversion",
+      "productivity"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "31/05/2026 06:30"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "global",
+    "titulo": "🤖 Micro-SaaS: markitdown Integration API",
+    "badge": "💼 131K stars",
+    "volume": "131K",
+    "crescimento": "",
+    "stars": "131,320",
+    "forks": "",
+    "descricao": "API wrapper para markitdown — converter documentos Office para Markdown como servico. Receita: R$29-R$199/mês baseado em volume.",
+    "tags": [
+      "micro-saas",
+      "AI",
+      "document-processing"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
     "titulo": "🤖 claude-code — Anthropic Terminal AI Agent",
     "badge": "🔥 128K ★",
     "volume": "",
@@ -258,23 +103,6 @@
       "AI",
       "developer-tools",
       "agents"
-    ],
-    "fonte": "GitHub Trending"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "💻 markitdown — Python Office Docs to Markdown",
-    "badge": "🔥 131K ★",
-    "volume": "131K",
-    "crescimento": "",
-    "stars": "131,320",
-    "forks": "8,995",
-    "descricao": "Python tool for converting files and office documents to Markdown. Supports Word, Excel, PowerPoint, PDF and more. Massive productivity tool for developers and technical writers.",
-    "tags": [
-      "AI",
-      "productivity",
-      "document-processing"
     ],
     "fonte": "GitHub Trending"
   },
@@ -368,22 +196,23 @@
     "fonte": "GitHub Trending"
   },
   {
-    "categoria": "app",
+    "categoria": "tendencia",
     "origem": "global",
-    "titulo": "🛡️ Sensity AI — Deepfake Detection Platform",
-    "badge": "+1000%",
-    "volume": "3.6K",
-    "crescimento": "+1000%",
+    "titulo": "🔫 Self Heating Bag — Portable Heating Solution",
+    "badge": "+5000%",
+    "volume": "110",
+    "crescimento": "+5000%",
     "stars": "",
     "forks": "",
-    "descricao": "Company specializing in the detection and mitigation of deepfake content and other visual threats, offering solutions to identify manipulated media.",
+    "descricao": "Portable container using integrated chemical or thermal reaction to generate heat without external sources. For campers, military, emergency responders.",
     "tags": [
-      "AI",
-      "security",
-      "deepfake",
-      "media-integrity"
+      "outdoor",
+      "emergency",
+      "consumer",
+      "portable"
     ],
-    "fonte": "Exploding Topics"
+    "fonte": "Exploding Topics",
+    "data_publicacao": "31/05/2026 06:30"
   },
   {
     "categoria": "app",
@@ -404,71 +233,37 @@
     "fonte": "Exploding Topics"
   },
   {
-    "categoria": "app",
+    "categoria": "negocio",
     "origem": "global",
-    "titulo": "🩺 MDacne — Personalized Skincare Treatment",
-    "badge": "+62%",
-    "volume": "12.1K",
-    "crescimento": "+62%",
+    "titulo": "⚙️ Micro-SaaS: ZenML-as-a-Service for ML Teams",
+    "badge": "💼 +4400% interesse",
+    "volume": "2.9K",
+    "crescimento": "+4400%",
     "stars": "",
     "forks": "",
-    "descricao": "Personalized skincare service that formulates customized anti-acne treatment creams. Targets individuals seeking tailored skincare solutions.",
+    "descricao": "ML pipeline orchestration como servico. Gerencia fluxos de ML sem lock-in de vendor. Subscription por pipeline + compute usage.",
     "tags": [
-      "health",
-      "beauty",
-      "personalized",
-      "D2C"
+      "micro-saas",
+      "MLOps",
+      "AI",
+      "developer-tools"
     ],
     "fonte": "Exploding Topics"
   },
   {
     "categoria": "tendencia",
     "origem": "global",
-    "titulo": "🧠 Transcranial Magnetic Stimulation",
-    "badge": "+240%",
-    "volume": "550K",
-    "crescimento": "+240%",
+    "titulo": "🧳 Leather Tote Bag",
+    "badge": "+3650%",
+    "volume": "49.5K",
+    "crescimento": "+3650%",
     "stars": "",
     "forks": "",
-    "descricao": "Non-invasive procedure using magnetic fields to stimulate nerve cells in the brain. Primarily used to treat depression, especially treatment-resistant cases.",
+    "descricao": "Large open-top handbag crafted from leather, offering style and functionality for daily essentials.",
     "tags": [
-      "health",
-      "mental-health",
-      "medtech"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "📈 Tradovate — Futures Trading Platform",
-    "badge": "+1675%",
-    "volume": "450K",
-    "crescimento": "+1675%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Modern, cloud-based futures trading platform registered as a futures commission merchant with the NFA. Commission-free trading for a flat price.",
-    "tags": [
-      "fintech",
-      "trading",
-      "investing"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "💇 Nanoplastia Hair Treatment",
-    "badge": "+1017%",
-    "volume": "74K",
-    "crescimento": "+1017%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Innovative hair treatment repairing damaged hair, reducing frizz, and improving texture using advanced nanotechnology.",
-    "tags": [
-      "beauty",
-      "haircare",
-      "wellness"
+      "fashion",
+      "accessories",
+      "e-commerce"
     ],
     "fonte": "Exploding Topics"
   },
@@ -492,6 +287,120 @@
   {
     "categoria": "tendencia",
     "origem": "global",
+    "titulo": "💄 Bakuchiol Eye Cream — Anti-Aging Skincare",
+    "badge": "+2000%",
+    "volume": "2.4K",
+    "crescimento": "+2000%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Eye cream formulated with bakuchiol and peptides, aimed at firming skin, smoothing wrinkles, and hydrating the delicate area around the eyes. Results in about 10 minutes, suitable for all skin types.",
+    "tags": [
+      "beauty",
+      "skincare",
+      "anti-aging",
+      "wellness"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "30/05/2026 18:52"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "global",
+    "titulo": "💄 Micro-SaaS: Bakuchiol Skincare Formulation Platform",
+    "badge": "💼 +2000% interesse",
+    "volume": "2.4K",
+    "crescimento": "+2000%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Plataforma D2C de formulações personalizadas com bakuchiol para cuidados com a pele. Assinatura mensal de produtos customizados + diagnóstico por foto IA.",
+    "tags": [
+      "micro-saas",
+      "beauty-tech",
+      "D2C",
+      "personalized",
+      "skincare"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "30/05/2026 18:52"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🧬 Molecular Machine — Nanotech Applications",
+    "badge": "+1867%",
+    "volume": "1.3K",
+    "crescimento": "+1867%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Molecular machines (nanomachines) produce quasi-mechanical movements in response to specific stimuli. Applications in medicine and materials science.",
+    "tags": [
+      "nanotech",
+      "biotech",
+      "medicine",
+      "materials-science"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "31/05/2026 06:30"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🚲 Lightweight Ebike — Urban Micro-Mobility",
+    "badge": "+1850%",
+    "volume": "12.1K",
+    "crescimento": "+1850%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Electric bicycle engineered to minimize weight while maintaining motorized assistance. Uses carbon fiber or aluminum, compact motors and batteries. Target: urban commuters and fitness enthusiasts.",
+    "tags": [
+      "mobility",
+      "ebike",
+      "urban",
+      "clean-energy"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "30/05/2026 18:52"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "global",
+    "titulo": "🚲 Micro-SaaS: Lightweight Ebike Fleet Management (B2B)",
+    "badge": "💼 +1850% interesse",
+    "volume": "12.1K",
+    "crescimento": "+1850%",
+    "stars": "",
+    "forks": "",
+    "descricao": "SaaS de gestão de frotas de e-bikes leves para empresas de delivery e micrologística urbana. Monitoramento GPS + manutenção preditiva + gestão de bateria.",
+    "tags": [
+      "micro-saas",
+      "mobility",
+      "B2B",
+      "fleet-management",
+      "logistics"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "30/05/2026 18:52"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "📈 Tradovate — Futures Trading Platform",
+    "badge": "+1675%",
+    "volume": "450K",
+    "crescimento": "+1675%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Modern, cloud-based futures trading platform registered as a futures commission merchant with the NFA. Commission-free trading for a flat price.",
+    "tags": [
+      "fintech",
+      "trading",
+      "investing"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
     "titulo": "🇿🇦 Paymenow — Earned Wage Access Fintech (ZA)",
     "badge": "+1567%",
     "volume": "246K",
@@ -504,6 +413,24 @@
       "EWA",
       "financial-wellness",
       "B2B"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "global",
+    "titulo": "🇿🇦 Fintech: Paymenow-like EWA Platform (Brasil)",
+    "badge": "💼 +1567% interesse",
+    "volume": "246K",
+    "crescimento": "+1567%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Plataforma de Earned Wage Access para o Brasil. Salário auferido disponível antes do payday. Modelo B2B2C.",
+    "tags": [
+      "fintech",
+      "EWA",
+      "B2B",
+      "brasil"
     ],
     "fonte": "Exploding Topics"
   },
@@ -528,102 +455,17 @@
   {
     "categoria": "tendencia",
     "origem": "global",
-    "titulo": "🌿 Slow Living Movement",
-    "badge": "+469%",
-    "volume": "40.5K",
-    "crescimento": "+469%",
+    "titulo": "💇 Nanoplastia Hair Treatment",
+    "badge": "+1017%",
+    "volume": "74K",
+    "crescimento": "+1017%",
     "stars": "",
     "forks": "",
-    "descricao": "Lifestyle movement encouraging mindful, intentional, and sustainable approach to daily life.",
+    "descricao": "Innovative hair treatment repairing damaged hair, reducing frizz, and improving texture using advanced nanotechnology.",
     "tags": [
-      "lifestyle",
-      "mindfulness",
+      "beauty",
+      "haircare",
       "wellness"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "🧳 Leather Tote Bag",
-    "badge": "+3650%",
-    "volume": "49.5K",
-    "crescimento": "+3650%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Large open-top handbag crafted from leather, offering style and functionality for daily essentials.",
-    "tags": [
-      "fashion",
-      "accessories",
-      "e-commerce"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "negocio",
-    "origem": "global",
-    "titulo": "🤖 Micro-SaaS: markitdown Integration API",
-    "badge": "💼 131K stars",
-    "volume": "131K",
-    "crescimento": "",
-    "stars": "131,320",
-    "forks": "",
-    "descricao": "API wrapper para markitdown — converter documentos Office para Markdown como servico. Receita: R$29-R$199/mês baseado em volume.",
-    "tags": [
-      "micro-saas",
-      "AI",
-      "document-processing"
-    ],
-    "fonte": "GitHub Trending"
-  },
-  {
-    "categoria": "negocio",
-    "origem": "global",
-    "titulo": "🎬 Micro-SaaS: AI Short Video Automation Platform",
-    "badge": "💼 Alta demanda",
-    "volume": "61.9K",
-    "crescimento": "",
-    "stars": "",
-    "forks": "",
-    "descricao": "Plataforma que automatiza criacao de videos curtos com IA (TikTok, Reels, Shorts). Geração automática de script + visual + voiceover.",
-    "tags": [
-      "micro-saas",
-      "AI",
-      "video"
-    ],
-    "fonte": "GitHub Trending"
-  },
-  {
-    "categoria": "negocio",
-    "origem": "global",
-    "titulo": "⚖️ Legal Tech — EvenUp-like AI Platform",
-    "badge": "💼 +627% interesse",
-    "volume": "14.8K",
-    "crescimento": "+627%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Plataforma de IA para advogados injury law. Automatiza demanda, análise de dados médicos, e otimização de settlements.",
-    "tags": [
-      "legal-tech",
-      "AI",
-      "B2B"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "negocio",
-    "origem": "global",
-    "titulo": "📱 SaaS: Breakroom para Deskless Workers",
-    "badge": "💼 +81% interesse",
-    "volume": "40.5K",
-    "crescimento": "+81%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Plataforma SaaS de comunicação e agendamento para workers sem mesa. Modelo: B2B subscription (R$8-R$15/funcionário/mês).",
-    "tags": [
-      "SaaS",
-      "workforce-management",
-      "B2B"
     ],
     "fonte": "Exploding Topics"
   },
@@ -645,93 +487,59 @@
     "fonte": "Exploding Topics"
   },
   {
-    "categoria": "negocio",
+    "categoria": "app",
     "origem": "global",
-    "titulo": "🛡️ Micro-SaaS: Deepfake Detection API",
-    "badge": "💼 +1000% interesse",
+    "titulo": "🛡️ Sensity AI — Deepfake Detection Platform",
+    "badge": "+1000%",
     "volume": "3.6K",
     "crescimento": "+1000%",
     "stars": "",
     "forks": "",
-    "descricao": "API de detecção de deepfakes para empresas de mídia, jurídicas e corporativas. Verificação de identidade + análise de video authenticity.",
+    "descricao": "Company specializing in the detection and mitigation of deepfake content and other visual threats, offering solutions to identify manipulated media.",
     "tags": [
-      "micro-saas",
       "AI",
       "security",
-      "deepfake"
+      "deepfake",
+      "media-integrity"
     ],
     "fonte": "Exploding Topics"
   },
   {
-    "categoria": "negocio",
+    "categoria": "tendencia",
     "origem": "global",
-    "titulo": "⚙️ Micro-SaaS: ZenML-as-a-Service for ML Teams",
-    "badge": "💼 +4400% interesse",
+    "titulo": "🍳 Infrared Air Fryer — Carbon Fiber Kitchen Tech",
+    "badge": "+822%",
+    "volume": "2.4K",
+    "crescimento": "+822%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Kitchen appliance using carbon fiber heating technology reaching 750°F in 45 seconds with reduced energy consumption.",
+    "tags": [
+      "kitchen",
+      "appliance",
+      "cooking",
+      "consumer-goods"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "31/05/2026 06:30"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🐕 Pet Odor Eliminator Spray — Natural Cleaning",
+    "badge": "+660%",
     "volume": "2.9K",
-    "crescimento": "+4400%",
+    "crescimento": "+660%",
     "stars": "",
     "forks": "",
-    "descricao": "ML pipeline orchestration como servico. Gerencia fluxos de ML sem lock-in de vendor. Subscription por pipeline + compute usage.",
+    "descricao": "Cleaning product to neutralize pet odors using natural, non-toxic ingredients. Safe for dog beds, couches, car seats.",
     "tags": [
-      "micro-saas",
-      "MLOps",
-      "AI",
-      "developer-tools"
+      "pet-care",
+      "cleaning",
+      "natural",
+      "B2C"
     ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "negocio",
-    "origem": "global",
-    "titulo": "🇿🇦 Fintech: Paymenow-like EWA Platform (Brasil)",
-    "badge": "💼 +1567% interesse",
-    "volume": "246K",
-    "crescimento": "+1567%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Plataforma de Earned Wage Access para o Brasil. Salário auferido disponível antes do payday. Modelo B2B2C.",
-    "tags": [
-      "fintech",
-      "EWA",
-      "B2B",
-      "brasil"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "negocio",
-    "origem": "brasil",
-    "titulo": "🌿 App de Slow Living & Mindfulness (Brasil)",
-    "badge": "💼 +469% interesse",
-    "volume": "40.5K",
-    "crescimento": "+469%",
-    "stars": "",
-    "forks": "",
-    "descricao": "App de bem-estar focado no movimento Slow Living: rotinas intencionais, journal, minimalismo digital, produtividade humanizada.",
-    "tags": [
-      "app",
-      "wellness",
-      "brasil",
-      "mindfulness"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "negocio",
-    "origem": "global",
-    "titulo": "📣 Micro-SaaS: Teleprompter as a Service",
-    "badge": "💼 +24% interesse",
-    "volume": "4.4K",
-    "crescimento": "+24%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Plataforma de teleprompter na nuvem para criadores de video. Freemium: R$0-R$47/mês. Nicho: YouTubers, podcasters, webinar hosts.",
-    "tags": [
-      "micro-saas",
-      "video",
-      "content-creation",
-      "productivity"
-    ],
-    "fonte": "Exploding Topics"
+    "fonte": "Exploding Topics",
+    "data_publicacao": "31/05/2026 06:30"
   }
 ]
