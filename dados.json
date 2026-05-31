@@ -126,6 +126,26 @@
   {
     "categoria": "app",
     "origem": "global",
+    "titulo": "🕷️ Scrapling — Adaptive Web Scraping Framework",
+    "badge": "🔥 56K ★",
+    "volume": "56.3K",
+    "crescimento": "639 stars/dia",
+    "stars": "56,294",
+    "forks": "5,460",
+    "descricao": "An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl! Handles anti-bot measures and dynamic content.",
+    "tags": [
+      "scraping",
+      "web",
+      "AI",
+      "developer-tools",
+      "automation"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "31/05/2026 12:00"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
     "titulo": "🗣️ VoxCPM — Tokenizer-Free Multilingual TTS",
     "badge": "🔥 22.6K ★",
     "volume": "",
@@ -158,6 +178,26 @@
       "plugin"
     ],
     "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🌐 hermes-webui — Hermes Web Interface",
+    "badge": "🔥 9.7K ★",
+    "volume": "9.7K",
+    "crescimento": "320 stars/dia",
+    "stars": "9,714",
+    "forks": "1,339",
+    "descricao": "Hermes WebUI: The best way to use Hermes Agent from the web or from your phone! Browser-based interface for the Hermes Agent.",
+    "tags": [
+      "AI",
+      "agent",
+      "web-ui",
+      "hermes",
+      "developer-tools"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "31/05/2026 12:00"
   },
   {
     "categoria": "app",
@@ -198,91 +238,22 @@
   {
     "categoria": "tendencia",
     "origem": "global",
-    "titulo": "🔫 Self Heating Bag — Portable Heating Solution",
-    "badge": "+5000%",
-    "volume": "110",
-    "crescimento": "+5000%",
+    "titulo": "🤖 Claude Ai — Anthropic AI Assistant",
+    "badge": "🔥 +9700%",
+    "volume": "37.2M",
+    "crescimento": "+9700%",
     "stars": "",
     "forks": "",
-    "descricao": "Portable container using integrated chemical or thermal reaction to generate heat without external sources. For campers, military, emergency responders.",
+    "descricao": "AI assistant developed by Anthropic, designed to generate natural, human-like responses. Handles both text and image-based inputs. Accessible via web and mobile app.",
     "tags": [
-      "outdoor",
-      "emergency",
-      "consumer",
-      "portable"
+      "AI",
+      "LLM",
+      "assistant",
+      "Anthropic",
+      "generative-ai"
     ],
     "fonte": "Exploding Topics",
-    "data_publicacao": "31/05/2026 06:30"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "⚙️ Zenml — ML Pipeline Orchestration",
-    "badge": "+4400%",
-    "volume": "2.9K",
-    "crescimento": "+4400%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Tool designed to orchestrate machine learning (ML) pipelines independently of any specific infrastructure. Helps ML teams avoid vendor lock-in.",
-    "tags": [
-      "MLOps",
-      "AI",
-      "pipelines",
-      "developer-tools"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "negocio",
-    "origem": "global",
-    "titulo": "⚙️ Micro-SaaS: ZenML-as-a-Service for ML Teams",
-    "badge": "💼 +4400% interesse",
-    "volume": "2.9K",
-    "crescimento": "+4400%",
-    "stars": "",
-    "forks": "",
-    "descricao": "ML pipeline orchestration como servico. Gerencia fluxos de ML sem lock-in de vendor. Subscription por pipeline + compute usage.",
-    "tags": [
-      "micro-saas",
-      "MLOps",
-      "AI",
-      "developer-tools"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "🧳 Leather Tote Bag",
-    "badge": "+3650%",
-    "volume": "49.5K",
-    "crescimento": "+3650%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Large open-top handbag crafted from leather, offering style and functionality for daily essentials.",
-    "tags": [
-      "fashion",
-      "accessories",
-      "e-commerce"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "🍓 Strawberry Matcha",
-    "badge": "+2025%",
-    "volume": "135K",
-    "crescimento": "+2025%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Combination of matcha green tea and strawberry flavor, popular in beverages and desserts. Earthy matcha notes with sweet fruity essence.",
-    "tags": [
-      "food-beverage",
-      "health-trend",
-      "tea"
-    ],
-    "fonte": "Exploding Topics"
+    "data_publicacao": "31/05/2026 12:00"
   },
   {
     "categoria": "tendencia",
@@ -453,6 +424,26 @@
     "fonte": "Exploding Topics"
   },
   {
+    "categoria": "negocio",
+    "origem": "global",
+    "titulo": "🧳 Micro-SaaS: Travel Shoe Bag + Shoe Pouch",
+    "badge": "💼 +1333% interesse",
+    "volume": "1.9K",
+    "crescimento": "+1333%",
+    "stars": "",
+    "forks": "",
+    "descricao": "E-commerce de organizadores de sapatos para viagem. Nicho: viajantes e minimalistas. Dropshipping ou produção própria com diferencial de design sustentável.",
+    "tags": [
+      "e-commerce",
+      "travel",
+      "nicho",
+      "dropshipping",
+      "B2C"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "31/05/2026 12:00"
+  },
+  {
     "categoria": "tendencia",
     "origem": "global",
     "titulo": "💇 Nanoplastia Hair Treatment",
@@ -541,5 +532,25 @@
     ],
     "fonte": "Exploding Topics",
     "data_publicacao": "31/05/2026 06:30"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "☕ Cometeer — Flash-Frozen Premium Coffee",
+    "badge": "🔥 +479%",
+    "volume": "27.1K",
+    "crescimento": "+479%",
+    "stars": "",
+    "forks": "",
+    "descricao": "American coffee technology company using flash-freezing process and advanced brewing tech. Ships premium beans from Intelligentsia/Counter Culture in recyclable aluminum capsules.",
+    "tags": [
+      "food-tech",
+      "coffee",
+      "consumer-goods",
+      "sustainability",
+      "D2C"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "31/05/2026 12:00"
   }
 ]
