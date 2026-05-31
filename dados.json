@@ -1,5 +1,23 @@
 [
   {
+    "categoria": "teste",
+    "origem": "global",
+    "titulo": "🧪 TESTE — Item Novo de Hoje (31/05/2026)",
+    "badge": "TEST",
+    "volume": "999K",
+    "crescimento": "+999%",
+    "stars": "999",
+    "forks": "99",
+    "descricao": "Este item foi adicionado agora para testar se a tag NOVO funciona. Se voce ver um badge VERDE com '🎯 NOVO', funcionou!",
+    "tags": [
+      "teste",
+      "debug",
+      "novo"
+    ],
+    "fonte": "Teste",
+    "data_publicacao": "31/05/2026 03:15"
+  },
+  {
     "categoria": "tendencia",
     "origem": "global",
     "titulo": "💄 Bakuchiol Eye Cream — Anti-Aging Skincare",
