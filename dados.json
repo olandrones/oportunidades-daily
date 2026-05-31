@@ -2,6 +2,25 @@
   {
     "categoria": "app",
     "origem": "global",
+    "titulo": "🦞 openclaw — Personal AI Assistant (Any OS)",
+    "badge": "🔥 376K ★",
+    "volume": "376K",
+    "crescimento": "",
+    "stars": "375,868",
+    "forks": "78,478",
+    "descricao": "Your own personal AI assistant. Any OS. Any Platform. Open-source personal AI assistant with data ownership. Built by openclaw team.",
+    "tags": [
+      "AI",
+      "assistant",
+      "personal",
+      "open-source"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "31/05/2026 18:05"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
     "titulo": "⚡ Superpowers — Agentic Skills Framework",
     "badge": "🔥 211K ★",
     "volume": "",
@@ -446,6 +465,25 @@
   {
     "categoria": "tendencia",
     "origem": "global",
+    "titulo": "💎 Statement Earrings — Fashion Jewelry Trend",
+    "badge": "+1067%",
+    "volume": "27.1K",
+    "crescimento": "+1067%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Bold, noticeable pieces of jewelry designed to make an impact. Various styles and materials for fashion-forward individuals expressing personal style.",
+    "tags": [
+      "fashion",
+      "jewelry",
+      "accessories",
+      "social-media"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "31/05/2026 18:05"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
     "titulo": "💇 Nanoplastia Hair Treatment",
     "badge": "+1017%",
     "volume": "74K",
@@ -513,44 +551,5 @@
     ],
     "fonte": "Exploding Topics",
     "data_publicacao": "31/05/2026 06:30"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "🐕 Pet Odor Eliminator Spray — Natural Cleaning",
-    "badge": "+660%",
-    "volume": "2.9K",
-    "crescimento": "+660%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Cleaning product to neutralize pet odors using natural, non-toxic ingredients. Safe for dog beds, couches, car seats.",
-    "tags": [
-      "pet-care",
-      "cleaning",
-      "natural",
-      "B2C"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "31/05/2026 06:30"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "☕ Cometeer — Flash-Frozen Premium Coffee",
-    "badge": "🔥 +479%",
-    "volume": "27.1K",
-    "crescimento": "+479%",
-    "stars": "",
-    "forks": "",
-    "descricao": "American coffee technology company using flash-freezing process and advanced brewing tech. Ships premium beans from Intelligentsia/Counter Culture in recyclable aluminum capsules.",
-    "tags": [
-      "food-tech",
-      "coffee",
-      "consumer-goods",
-      "sustainability",
-      "D2C"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "31/05/2026 12:00"
   }
 ]
