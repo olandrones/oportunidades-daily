@@ -165,6 +165,46 @@
   {
     "categoria": "app",
     "origem": "global",
+    "titulo": "✨ impeccable — AI Harness Design Language",
+    "badge": "🔥 32.2K ★",
+    "volume": "32.2K",
+    "crescimento": "317 stars/dia",
+    "stars": "32,221",
+    "forks": "1,759",
+    "descricao": "The design language that makes your AI harness better at design. Improves AI agent UI/UX, interaction patterns, and visual outputs.",
+    "tags": [
+      "AI",
+      "developer-tools",
+      "design",
+      "UI",
+      "agents"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "01/06/2026 06:30"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🧠 supermemoryai — AI Memory Engine & API",
+    "badge": "🔥 23.6K ★",
+    "volume": "23.6K",
+    "crescimento": "264 stars/dia",
+    "stars": "23,645",
+    "forks": "2,128",
+    "descricao": "Memory engine and app that is extremely fast, scalable. The Memory API for the AI era. Provides persistent memory for AI agents and applications.",
+    "tags": [
+      "AI",
+      "memory",
+      "API",
+      "agents",
+      "developer-tools"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "01/06/2026 06:30"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
     "titulo": "🗣️ VoxCPM — Tokenizer-Free Multilingual TTS",
     "badge": "🔥 22.6K ★",
     "volume": "",
@@ -257,45 +297,6 @@
   {
     "categoria": "tendencia",
     "origem": "global",
-    "titulo": "🤖 Claude Ai — Anthropic AI Assistant",
-    "badge": "🔥 +9700%",
-    "volume": "37.2M",
-    "crescimento": "+9700%",
-    "stars": "",
-    "forks": "",
-    "descricao": "AI assistant developed by Anthropic, designed to generate natural, human-like responses. Handles both text and image-based inputs. Accessible via web and mobile app.",
-    "tags": [
-      "AI",
-      "LLM",
-      "assistant",
-      "Anthropic",
-      "generative-ai"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "31/05/2026 12:00"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "🧴 Kojic Acid Scrub — Skin Brightening Product",
-    "badge": "+7000%",
-    "volume": "1K",
-    "crescimento": "+7000%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Skincare product containing kojic acid (derived from fungi or fermented rice wine) for improving skin tone. Inhibits tyrosinase enzyme to fade dark spots, acne scars, and sun damage. For even skin tone and hyperpigmentation reduction.",
-    "tags": [
-      "beauty",
-      "skincare",
-      "pigmentation",
-      "wellness"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "31/05/2026 18:50"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
     "titulo": "🎧 AI Translator Headphones — Real-Time Language Translation",
     "badge": "+2900%",
     "volume": "880",
@@ -312,6 +313,98 @@
     ],
     "fonte": "Exploding Topics",
     "data_publicacao": "31/05/2026 18:50"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "brasil",
+    "titulo": "🫒 Andiroba Oil — Amazonian Skincare Ingredient",
+    "badge": "Growth",
+    "volume": "880",
+    "crescimento": "",
+    "stars": "",
+    "forks": "",
+    "descricao": "Natural oil from Carapa guianensis tree seeds, recognized for moisturizing, anti-inflammatory, and insect-repelling properties. Used in traditional medicine and cosmetic products. Beneficial for natural skincare and organic cosmetics.",
+    "tags": [
+      "beauty",
+      "natural",
+      "skincare",
+      "brasil",
+      "amazon"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "31/05/2026 18:50"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "📈 Tradovate — Futures Trading Platform",
+    "badge": "+1675%",
+    "volume": "450K",
+    "crescimento": "+1675%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Modern, cloud-based futures trading platform registered as a futures commission merchant with the NFA. Commission-free trading for a flat price.",
+    "tags": [
+      "fintech",
+      "trading",
+      "investing"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🧩 AI Puzzle — Search Algorithms Teaching Tool",
+    "badge": "Growth",
+    "volume": "590",
+    "crescimento": "",
+    "stars": "",
+    "forks": "",
+    "descricao": "Classic AI problem (8 Puzzle Problem) for teaching search algorithms and heuristics. Used by AI students and researchers to understand and develop problem-solving strategies.",
+    "tags": [
+      "AI",
+      "education",
+      "algorithms",
+      "research"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "31/05/2026 18:50"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🇿🇦 Paymenow — Earned Wage Access Fintech (ZA)",
+    "badge": "+1567%",
+    "volume": "246K",
+    "crescimento": "+1567%",
+    "stars": "",
+    "forks": "",
+    "descricao": "South African fintech platform offering Earned Wage Access (EWA) and financial wellness tools to employees through employer partnerships.",
+    "tags": [
+      "fintech",
+      "EWA",
+      "financial-wellness",
+      "B2B"
+    ],
+    "fonte": "Exploding Topics"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "global",
+    "titulo": "🇿🇦 Fintech: Paymenow-like EWA Platform (Brasil)",
+    "badge": "💼 +1567% interesse",
+    "volume": "246K",
+    "crescimento": "+1567%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Plataforma de Earned Wage Access para o Brasil. Salário auferido disponível antes do payday. Modelo B2B2C.",
+    "tags": [
+      "fintech",
+      "EWA",
+      "B2B",
+      "brasil"
+    ],
+    "fonte": "Exploding Topics"
   },
   {
     "categoria": "negocio",
@@ -375,25 +468,6 @@
   {
     "categoria": "tendencia",
     "origem": "global",
-    "titulo": "🧬 Molecular Machine — Nanotech Applications",
-    "badge": "+1867%",
-    "volume": "1.3K",
-    "crescimento": "+1867%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Molecular machines (nanomachines) produce quasi-mechanical movements in response to specific stimuli. Applications in medicine and materials science.",
-    "tags": [
-      "nanotech",
-      "biotech",
-      "medicine",
-      "materials-science"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "31/05/2026 06:30"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
     "titulo": "🚲 Lightweight Ebike — Urban Micro-Mobility",
     "badge": "+1850%",
     "volume": "12.1K",
@@ -432,59 +506,6 @@
   },
   {
     "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "📈 Tradovate — Futures Trading Platform",
-    "badge": "+1675%",
-    "volume": "450K",
-    "crescimento": "+1675%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Modern, cloud-based futures trading platform registered as a futures commission merchant with the NFA. Commission-free trading for a flat price.",
-    "tags": [
-      "fintech",
-      "trading",
-      "investing"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "🇿🇦 Paymenow — Earned Wage Access Fintech (ZA)",
-    "badge": "+1567%",
-    "volume": "246K",
-    "crescimento": "+1567%",
-    "stars": "",
-    "forks": "",
-    "descricao": "South African fintech platform offering Earned Wage Access (EWA) and financial wellness tools to employees through employer partnerships.",
-    "tags": [
-      "fintech",
-      "EWA",
-      "financial-wellness",
-      "B2B"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "negocio",
-    "origem": "global",
-    "titulo": "🇿🇦 Fintech: Paymenow-like EWA Platform (Brasil)",
-    "badge": "💼 +1567% interesse",
-    "volume": "246K",
-    "crescimento": "+1567%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Plataforma de Earned Wage Access para o Brasil. Salário auferido disponível antes do payday. Modelo B2B2C.",
-    "tags": [
-      "fintech",
-      "EWA",
-      "B2B",
-      "brasil"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "tendencia",
     "origem": "brasil",
     "titulo": "🇧🇷 OneSkin — Brazilian Longevity Skincare",
     "badge": "+1500%",
@@ -504,6 +525,25 @@
   {
     "categoria": "tendencia",
     "origem": "global",
+    "titulo": "🧬 Molecular Machine — Nanotech Applications",
+    "badge": "+1867%",
+    "volume": "1.3K",
+    "crescimento": "+1867%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Molecular machines (nanomachines) produce quasi-mechanical movements in response to specific stimuli. Applications in medicine and materials science.",
+    "tags": [
+      "nanotech",
+      "biotech",
+      "medicine",
+      "materials-science"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "31/05/2026 06:30"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
     "titulo": "📊 Seeq — Process Manufacturing Analytics",
     "badge": "+863%",
     "volume": "18.1K",
@@ -517,45 +557,6 @@
       "B2B",
       "data-science",
       "industrial"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "31/05/2026 18:50"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "🧩 AI Puzzle — Search Algorithms Teaching Tool",
-    "badge": "Growth",
-    "volume": "590",
-    "crescimento": "",
-    "stars": "",
-    "forks": "",
-    "descricao": "Classic AI problem (8 Puzzle Problem) for teaching search algorithms and heuristics. Used by AI students and researchers to understand and develop problem-solving strategies.",
-    "tags": [
-      "AI",
-      "education",
-      "algorithms",
-      "research"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "31/05/2026 18:50"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "brasil",
-    "titulo": "🫒 Andiroba Oil — Amazonian Skincare Ingredient",
-    "badge": "Growth",
-    "volume": "880",
-    "crescimento": "",
-    "stars": "",
-    "forks": "",
-    "descricao": "Natural oil from Carapa guianensis tree seeds, recognized for moisturizing, anti-inflammatory, and insect-repelling properties. Used in traditional medicine and cosmetic products. Beneficial for natural skincare and organic cosmetics.",
-    "tags": [
-      "beauty",
-      "natural",
-      "skincare",
-      "brasil",
-      "amazon"
     ],
     "fonte": "Exploding Topics",
     "data_publicacao": "31/05/2026 18:50"
