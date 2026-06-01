@@ -263,6 +263,25 @@
   {
     "categoria": "app",
     "origem": "global",
+    "titulo": "⚡ Odysseus — Self-hosted AI workspace",
+    "badge": "🔥 20K ★",
+    "volume": "20K",
+    "crescimento": "",
+    "stars": "19,979",
+    "forks": "",
+    "descricao": "Self-hosted AI workspace — run AI agents locally with full control and privacy",
+    "tags": [
+      "AI",
+      "workspace",
+      "self-hosted",
+      "local"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "01/06/2026 18:00"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
     "titulo": "🔧 compound-engineering-plugin — Claude Code Plugin",
     "badge": "🔥 18.3K ★",
     "volume": "",
@@ -277,6 +296,45 @@
       "plugin"
     ],
     "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "⚡ DS4 — DeepSeek 4 Flash Local Inference",
+    "badge": "🔥 13K ★",
+    "volume": "13K",
+    "crescimento": "",
+    "stars": "12,691",
+    "forks": "",
+    "descricao": "DeepSeek 4 Flash local inference engine for Metal and CUDA — fast local AI execution",
+    "tags": [
+      "AI",
+      "inference",
+      "local",
+      "deepseek",
+      "cuda"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "01/06/2026 18:00"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "⚡ CodexPlusPlus — Enhanced Codex Experience",
+    "badge": "🔥 11K ★",
+    "volume": "11K",
+    "crescimento": "",
+    "stars": "10,575",
+    "forks": "",
+    "descricao": "Enhanced tool for CodexApp — makes Codex better and more comfortable to use",
+    "tags": [
+      "AI",
+      "codex",
+      "developer-tools",
+      "productivity"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "01/06/2026 18:00"
   },
   {
     "categoria": "app",
@@ -301,6 +359,26 @@
   {
     "categoria": "app",
     "origem": "global",
+    "titulo": "⚡ HTML-Anything — Agentic HTML Editor",
+    "badge": "🔥 5.8K ★",
+    "volume": "5.8K",
+    "crescimento": "",
+    "stars": "5,752",
+    "forks": "",
+    "descricao": "The agentic HTML editor — AI agent writes the HTML, you ship it. 75 Skills × 9 Frameworks",
+    "tags": [
+      "AI",
+      "html",
+      "agentic",
+      "developer-tools",
+      "no-code"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "01/06/2026 18:00"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
     "titulo": "🧠 harness — Meta-Skill Agent Teams",
     "badge": "🔥 4.1K ★",
     "volume": "",
@@ -315,6 +393,43 @@
       "meta-skills"
     ],
     "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🔌 cursor/plugins — Cursor Plugin Spec & Official Plugins",
+    "badge": "🔥 1.4K ★",
+    "volume": "",
+    "crescimento": "",
+    "stars": "1,437",
+    "forks": "118",
+    "descricao": "Cursor plugin specification and official plugins. Extends the Cursor IDE with custom functionality.",
+    "tags": [
+      "AI",
+      "developer-tools",
+      "IDE",
+      "plugins"
+    ],
+    "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "global",
+    "titulo": "📈 Carbon Xyz",
+    "badge": "📊 10 | +8300%",
+    "volume": "10",
+    "crescimento": "+8300%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Multi-sector company in travel, lifestyle, consumer products, fashion, financial services and blockchain",
+    "tags": [
+      "startup",
+      "multi-sector",
+      "blockchain",
+      "diversified"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "01/06/2026 18:00"
   },
   {
     "categoria": "tendencia",
@@ -358,20 +473,41 @@
   {
     "categoria": "app",
     "origem": "global",
-    "titulo": "🔌 cursor/plugins — Cursor Plugin Spec & Official Plugins",
-    "badge": "🔥 1.4K ★",
-    "volume": "",
-    "crescimento": "",
-    "stars": "1,437",
-    "forks": "118",
-    "descricao": "Cursor plugin specification and official plugins. Extends the Cursor IDE with custom functionality.",
+    "titulo": "📈 3DLOOK — AI Body Scanning",
+    "badge": "📊 1.9K | +3800%",
+    "volume": "1.9K",
+    "crescimento": "+3800%",
+    "stars": "",
+    "forks": "",
+    "descricao": "AI-powered mobile body scanning and visualization for apparel retail and digital health",
     "tags": [
       "AI",
-      "developer-tools",
-      "IDE",
-      "plugins"
+      "body-scanning",
+      "retail",
+      "health",
+      "fashion"
     ],
-    "fonte": "GitHub Trending"
+    "fonte": "Exploding Topics",
+    "data_publicacao": "01/06/2026 18:00"
+  },
+  {
+    "categoria": "negocio",
+    "origem": "global",
+    "titulo": "📈 Data Center In Space",
+    "badge": "📊 6.6K | +3150%",
+    "volume": "6.6K",
+    "crescimento": "+3150%",
+    "stars": "",
+    "forks": "",
+    "descricao": "Data storage and processing facilities in outer space for reduced latency and enhanced security",
+    "tags": [
+      "space-tech",
+      "data-center",
+      "infrastructure",
+      "b2b"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "01/06/2026 18:00"
   },
   {
     "categoria": "tendencia",
@@ -431,136 +567,5 @@
     ],
     "fonte": "Exploding Topics",
     "data_publicacao": "30/05/2026 18:52"
-  },
-  {
-    "categoria": "negocio",
-    "origem": "global",
-    "titulo": "💄 Micro-SaaS: Bakuchiol Skincare Formulation Platform",
-    "badge": "💼 +2000% interesse",
-    "volume": "2.4K",
-    "crescimento": "+2000%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Plataforma D2C de formulações personalizadas com bakuchiol para cuidados com a pele. Assinatura mensal de produtos customizados + diagnóstico por foto IA.",
-    "tags": [
-      "micro-saas",
-      "beauty-tech",
-      "D2C",
-      "personalized",
-      "skincare"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "30/05/2026 18:52"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "🧬 Molecular Machine — Nanotech Applications",
-    "badge": "+1867%",
-    "volume": "1.3K",
-    "crescimento": "+1867%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Molecular machines (nanomachines) produce quasi-mechanical movements in response to specific stimuli. Applications in medicine and materials science.",
-    "tags": [
-      "nanotech",
-      "biotech",
-      "medicine",
-      "materials-science"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "31/05/2026 06:30"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "🚲 Lightweight Ebike — Urban Micro-Mobility",
-    "badge": "+1850%",
-    "volume": "12.1K",
-    "crescimento": "+1850%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Electric bicycle engineered to minimize weight while maintaining motorized assistance. Uses carbon fiber or aluminum, compact motors and batteries. Target: urban commuters and fitness enthusiasts.",
-    "tags": [
-      "mobility",
-      "ebike",
-      "urban",
-      "clean-energy"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "30/05/2026 18:52"
-  },
-  {
-    "categoria": "negocio",
-    "origem": "global",
-    "titulo": "🚲 Micro-SaaS: Lightweight Ebike Fleet Management (B2B)",
-    "badge": "💼 +1850% interesse",
-    "volume": "12.1K",
-    "crescimento": "+1850%",
-    "stars": "",
-    "forks": "",
-    "descricao": "SaaS de gestão de frotas de e-bikes leves para empresas de delivery e micrologística urbana. Monitoramento GPS + manutenção preditiva + gestão de bateria.",
-    "tags": [
-      "micro-saas",
-      "mobility",
-      "B2B",
-      "fleet-management",
-      "logistics"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "30/05/2026 18:52"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "📈 Tradovate — Futures Trading Platform",
-    "badge": "+1675%",
-    "volume": "450K",
-    "crescimento": "+1675%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Modern, cloud-based futures trading platform registered as a futures commission merchant with the NFA. Commission-free trading for a flat price.",
-    "tags": [
-      "fintech",
-      "trading",
-      "investing"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "🇿🇦 Paymenow — Earned Wage Access Fintech (ZA)",
-    "badge": "+1567%",
-    "volume": "246K",
-    "crescimento": "+1567%",
-    "stars": "",
-    "forks": "",
-    "descricao": "South African fintech platform offering Earned Wage Access (EWA) and financial wellness tools to employees through employer partnerships.",
-    "tags": [
-      "fintech",
-      "EWA",
-      "financial-wellness",
-      "B2B"
-    ],
-    "fonte": "Exploding Topics"
-  },
-  {
-    "categoria": "negocio",
-    "origem": "global",
-    "titulo": "🇿🇦 Fintech: Paymenow-like EWA Platform (Brasil)",
-    "badge": "💼 +1567% interesse",
-    "volume": "246K",
-    "crescimento": "+1567%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Plataforma de Earned Wage Access para o Brasil. Salário auferido disponível antes do payday. Modelo B2B2C.",
-    "tags": [
-      "fintech",
-      "EWA",
-      "B2B",
-      "brasil"
-    ],
-    "fonte": "Exploding Topics"
   }
 ]
