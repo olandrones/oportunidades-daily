@@ -75,6 +75,44 @@
   {
     "categoria": "app",
     "origem": "global",
+    "titulo": "🦞 claw-code — Fastest Repo in History",
+    "badge": "🔥 193K ★",
+    "volume": "193K",
+    "crescimento": "unlocked",
+    "stars": "193,083",
+    "forks": "",
+    "descricao": "The repo is finally unlocked. Enjoy the party! The fastest repo in history to reach this star count.",
+    "tags": [
+      "AI",
+      "coding",
+      "agents",
+      "developer-tools"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "01/06/2026 18:50"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "📄 andrej-karpathy-skills — Karpathy Claude Code Setup",
+    "badge": "🔥 164K ★",
+    "volume": "164K",
+    "crescimento": "",
+    "stars": "164,715",
+    "forks": "",
+    "descricao": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's workflow and best practices.",
+    "tags": [
+      "AI",
+      "claude-code",
+      "skills",
+      "developer-tools"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "01/06/2026 18:50"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
     "titulo": "📄 markitdown — Python Office Docs to Markdown",
     "badge": "🔥 133K ★",
     "volume": "133K",
@@ -128,6 +166,45 @@
   {
     "categoria": "app",
     "origem": "global",
+    "titulo": "⚡ gstack — Garry Tan's Claude Code Setup",
+    "badge": "🔥 105K ★",
+    "volume": "105K",
+    "crescimento": "",
+    "stars": "105,693",
+    "forks": "",
+    "descricao": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, engineer, and researcher.",
+    "tags": [
+      "AI",
+      "claude-code",
+      "setup",
+      "developer-tools"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "01/06/2026 18:50"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🧠 autoresearch — Auto Single-GPU Nanochat Training",
+    "badge": "🔥 84K ★",
+    "volume": "84K",
+    "crescimento": "",
+    "stars": "84,556",
+    "forks": "",
+    "descricao": "AI agents running research on single-GPU nanochat training automatically. Automated fine-tuning research pipeline.",
+    "tags": [
+      "AI",
+      "training",
+      "research",
+      "agents",
+      "GPU"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "01/06/2026 18:50"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
     "titulo": "📈 TradingAgents — Multi-Agent LLM Financial Trading",
     "badge": "🔥 81.5K ★",
     "volume": "81.5K",
@@ -144,6 +221,45 @@
     ],
     "fonte": "GitHub Trending",
     "data_publicacao": "01/06/2026 12:00"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "📋 paperclip — Open-Source Agent Management",
+    "badge": "🔥 68K ★",
+    "volume": "68K",
+    "crescimento": "",
+    "stars": "68,664",
+    "forks": "",
+    "descricao": "The open-source app everyone uses to manage agents at work. Team collaboration for AI agent workflows.",
+    "tags": [
+      "AI",
+      "agents",
+      "management",
+      "collaboration"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "01/06/2026 18:50"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🪨 caveman — Claude Code Token Optimizer",
+    "badge": "🔥 67K ★",
+    "volume": "67K",
+    "crescimento": "65% token reduction",
+    "stars": "67,423",
+    "forks": "",
+    "descricao": "Why use many token when few token do trick — Claude Code skill that cuts 65% of token usage on common dev commands.",
+    "tags": [
+      "AI",
+      "claude-code",
+      "optimization",
+      "tokens",
+      "developer-tools"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "01/06/2026 18:50"
   },
   {
     "categoria": "app",
@@ -165,6 +281,26 @@
   {
     "categoria": "app",
     "origem": "global",
+    "titulo": "⚡ rtk — CLI Proxy Token Reducer 60-90%",
+    "badge": "🔥 57K ★",
+    "volume": "57K",
+    "crescimento": "60-90% token reduction",
+    "stars": "57,428",
+    "forks": "",
+    "descricao": "CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Works with Claude Code, Codex, and more.",
+    "tags": [
+      "AI",
+      "cli",
+      "token-reduction",
+      "developer-tools",
+      "optimization"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "01/06/2026 18:50"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
     "titulo": "🕷️ Scrapling — Adaptive Web Scraping Framework",
     "badge": "🔥 56K ★",
     "volume": "56.3K",
@@ -181,6 +317,46 @@
     ],
     "fonte": "GitHub Trending",
     "data_publicacao": "31/05/2026 12:00"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🌐 open-design — Local-First Claude Design",
+    "badge": "🔥 56K ★",
+    "volume": "56K",
+    "crescimento": "",
+    "stars": "56,998",
+    "forks": "",
+    "descricao": "Local-first, open-source Claude Design alternative. Native desktop app with 2-second average response time.",
+    "tags": [
+      "AI",
+      "design",
+      "local-first",
+      "desktop",
+      "open-source"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "01/06/2026 18:50"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🌍 worldmonitor — Real-Time Global Intelligence",
+    "badge": "🔥 55K ★",
+    "volume": "55K",
+    "crescimento": "",
+    "stars": "55,356",
+    "forks": "",
+    "descricao": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical analysis, and market monitoring.",
+    "tags": [
+      "AI",
+      "news",
+      "intelligence",
+      "dashboard",
+      "geopolitics"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "01/06/2026 18:50"
   },
   {
     "categoria": "app",
@@ -320,25 +496,6 @@
   {
     "categoria": "app",
     "origem": "global",
-    "titulo": "⚡ CodexPlusPlus — Enhanced Codex Experience",
-    "badge": "🔥 11K ★",
-    "volume": "11K",
-    "crescimento": "",
-    "stars": "10,575",
-    "forks": "",
-    "descricao": "Enhanced tool for CodexApp — makes Codex better and more comfortable to use",
-    "tags": [
-      "AI",
-      "codex",
-      "developer-tools",
-      "productivity"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 18:00"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
     "titulo": "🌐 hermes-webui — Hermes Web Interface",
     "badge": "🔥 9.7K ★",
     "volume": "9.7K",
@@ -355,6 +512,25 @@
     ],
     "fonte": "GitHub Trending",
     "data_publicacao": "31/05/2026 12:00"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "⚡ CodexPlusPlus — Enhanced Codex Experience",
+    "badge": "🔥 11K ★",
+    "volume": "11K",
+    "crescimento": "",
+    "stars": "10,575",
+    "forks": "",
+    "descricao": "Enhanced tool for CodexApp — makes Codex better and more comfortable to use",
+    "tags": [
+      "AI",
+      "codex",
+      "developer-tools",
+      "productivity"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "01/06/2026 18:00"
   },
   {
     "categoria": "app",
@@ -393,179 +569,5 @@
       "meta-skills"
     ],
     "fonte": "GitHub Trending"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🔌 cursor/plugins — Cursor Plugin Spec & Official Plugins",
-    "badge": "🔥 1.4K ★",
-    "volume": "",
-    "crescimento": "",
-    "stars": "1,437",
-    "forks": "118",
-    "descricao": "Cursor plugin specification and official plugins. Extends the Cursor IDE with custom functionality.",
-    "tags": [
-      "AI",
-      "developer-tools",
-      "IDE",
-      "plugins"
-    ],
-    "fonte": "GitHub Trending"
-  },
-  {
-    "categoria": "negocio",
-    "origem": "global",
-    "titulo": "📈 Carbon Xyz",
-    "badge": "📊 10 | +8300%",
-    "volume": "10",
-    "crescimento": "+8300%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Multi-sector company in travel, lifestyle, consumer products, fashion, financial services and blockchain",
-    "tags": [
-      "startup",
-      "multi-sector",
-      "blockchain",
-      "diversified"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "01/06/2026 18:00"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "🎮 Redhill Games — AAA Tactical Shooter Studio",
-    "badge": "+5800%",
-    "volume": "390",
-    "crescimento": "+5800%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Game development studio in Helsinki and Nicosia. Known for 'Nine to Five' tactical team-based shooter. Targets hardcore gamers and tactical shooter fans.",
-    "tags": [
-      "gaming",
-      "indie-studio",
-      "tactical-shooter",
-      "AAA"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "01/06/2026 12:00"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "👶 Biloba App — On-Demand Pediatric Medical Advice",
-    "badge": "+4300%",
-    "volume": "40",
-    "crescimento": "+4300%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Mobile application that provides on-demand access to pediatric medical advice through instant messaging. Parents connect with a pediatric medical team without appointments.",
-    "tags": [
-      "healthcare",
-      "pediatric",
-      "mobile-app",
-      "telemedicine",
-      "parents"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "01/06/2026 12:00"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "📈 3DLOOK — AI Body Scanning",
-    "badge": "📊 1.9K | +3800%",
-    "volume": "1.9K",
-    "crescimento": "+3800%",
-    "stars": "",
-    "forks": "",
-    "descricao": "AI-powered mobile body scanning and visualization for apparel retail and digital health",
-    "tags": [
-      "AI",
-      "body-scanning",
-      "retail",
-      "health",
-      "fashion"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "01/06/2026 18:00"
-  },
-  {
-    "categoria": "negocio",
-    "origem": "global",
-    "titulo": "📈 Data Center In Space",
-    "badge": "📊 6.6K | +3150%",
-    "volume": "6.6K",
-    "crescimento": "+3150%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Data storage and processing facilities in outer space for reduced latency and enhanced security",
-    "tags": [
-      "space-tech",
-      "data-center",
-      "infrastructure",
-      "b2b"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "01/06/2026 18:00"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "🎧 AI Translator Headphones — Real-Time Language Translation",
-    "badge": "+2900%",
-    "volume": "880",
-    "crescimento": "+2900%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Wearable audio devices using AI for real-time language translation during conversations. Support multiple languages, feature noise-canceling, and integrate with cloud services for accuracy. Target: international travelers, business professionals, multilingual users.",
-    "tags": [
-      "AI",
-      "translation",
-      "wearable",
-      "travel",
-      "productivity"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "31/05/2026 18:50"
-  },
-  {
-    "categoria": "negocio",
-    "origem": "global",
-    "titulo": "📝 Onewill — Australian Will-Writing Platform",
-    "badge": "+2600%",
-    "volume": "2.4K",
-    "crescimento": "+2600%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Australia's most advanced Will-writing platform for creating legally binding Wills online. User-friendly interface with comprehensive guidance. Target: individuals seeking convenient Will preparation without traditional legal services.",
-    "tags": [
-      "legal-tech",
-      "fintech",
-      "saas",
-      "australia",
-      "B2C"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "31/05/2026 18:50"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "💄 Bakuchiol Eye Cream — Anti-Aging Skincare",
-    "badge": "+2000%",
-    "volume": "2.4K",
-    "crescimento": "+2000%",
-    "stars": "",
-    "forks": "",
-    "descricao": "Eye cream formulated with bakuchiol and peptides, aimed at firming skin, smoothing wrinkles, and hydrating the delicate area around the eyes. Results in about 10 minutes, suitable for all skin types.",
-    "tags": [
-      "beauty",
-      "skincare",
-      "anti-aging",
-      "wellness"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "30/05/2026 18:52"
   }
 ]
