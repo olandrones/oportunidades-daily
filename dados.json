@@ -359,6 +359,26 @@
     "data_publicacao": "01/06/2026 18:50"
   },
   {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🧠 mempalace — Open-Source AI Memory System",
+    "badge": "🔥 53.3K ★",
+    "volume": "53.3K",
+    "crescimento": "",
+    "stars": 53308,
+    "forks": "",
+    "descricao": "The best-benchmarked open-source AI memory system. And it's free. Enables AI agents to retain context across sessions with persistent memory.",
+    "tags": [
+      "AI",
+      "memory",
+      "agent",
+      "open-source",
+      "context"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "02/06/2026 12:06"
+  },
+  {
     "titulo": "💼 career-ops — AI-Powered Job Search System",
     "descricao": "AI-powered job search system built on Claude Code. 14 skill modes, Google Drive integration, automated applications.",
     "Fonte": "github.com",
@@ -531,23 +551,5 @@
     ],
     "fonte": "GitHub Trending",
     "data_publicacao": "01/06/2026 12:00"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🗣️ VoxCPM — Tokenizer-Free Multilingual TTS",
-    "badge": "🔥 22.6K ★",
-    "volume": "",
-    "crescimento": "",
-    "stars": 22616,
-    "forks": "2,657",
-    "descricao": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning.",
-    "tags": [
-      "AI",
-      "audio",
-      "speech-synthesis",
-      "multilingual"
-    ],
-    "fonte": "GitHub Trending"
   }
 ]
