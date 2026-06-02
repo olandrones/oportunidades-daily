@@ -1,5 +1,125 @@
 [
   {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "👖 Stovepipe Jeans — Fashion Trend Revival",
+    "badge": "📈 +800%",
+    "volume": "22.2K",
+    "crescimento": "+800% growth",
+    "stars": 9000,
+    "forks": "",
+    "descricao": "Straight-cut jeans from hip to hem. Classic silhouette seeing renewed interest.",
+    "tags": [
+      "fashion",
+      "denim",
+      "trend",
+      "style"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "02/06/2026 18:50"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "⏳ Epitalon — Anti-Aging Peptide Research",
+    "badge": "📈 +900%",
+    "volume": "27.1K",
+    "crescimento": "+900% growth",
+    "stars": 12000,
+    "forks": "",
+    "descricao": "Synthetic peptide with potential anti-aging properties. Stimulates telomerase production.",
+    "tags": [
+      "anti-aging",
+      "longevity",
+      "peptide",
+      "research",
+      "telomerase"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "02/06/2026 18:50"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "💊 Weight Loss Peptides — GLP-1 Market",
+    "badge": "📈 +900%",
+    "volume": "40.5K",
+    "crescimento": "+900% growth",
+    "stars": 18000,
+    "forks": "",
+    "descricao": "Peptides that mimic GLP-1 hormone for appetite regulation. Growing market in obesity treatment.",
+    "tags": [
+      "health",
+      "weight-loss",
+      "peptides",
+      "GLP-1",
+      "metabolism"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "02/06/2026 18:50"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "💉 Therapeutic Plasma Exchange — Medical Trend",
+    "badge": "📈 +1400%",
+    "volume": "4.4K",
+    "crescimento": "+1400% growth",
+    "stars": 10000,
+    "forks": "",
+    "descricao": "Medical procedure for plasma replacement to eliminate harmful substances. Used for autoimmune diseases and neurological disorders.",
+    "tags": [
+      "medical",
+      "treatment",
+      "autoimmune",
+      "neurology",
+      "health"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "02/06/2026 18:50"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🌐 hermes-webui — Hermes Agent Web Interface",
+    "badge": "🆕 12.5K ★",
+    "volume": "12.5K",
+    "crescimento": "1,725 stars/dia",
+    "stars": 12505,
+    "forks": "1,536",
+    "descricao": "The best way to use Hermes Agent from the web or from your phone!",
+    "tags": [
+      "AI",
+      "agent",
+      "web",
+      "UI",
+      "hermes"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "02/06/2026 18:50"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "💾 headroom — LLM Output Compressor (60-95% tokens)",
+    "badge": "🆕 6.2K ★",
+    "volume": "6.2K",
+    "crescimento": "1,266 stars/dia",
+    "stars": 6227,
+    "forks": "434",
+    "descricao": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.",
+    "tags": [
+      "AI",
+      "LLM",
+      "compression",
+      "tokens",
+      "developer-tools",
+      "RAG"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "02/06/2026 18:50"
+  },
+  {
     "categoria": "app",
     "origem": "global",
     "titulo": "🦞 openclaw — Personal AI Assistant (Any OS)",
@@ -443,108 +563,6 @@
     ],
     "categoria": "app",
     "stars": 47717,
-    "origem": "global",
-    "badge": "New"
-  },
-  {
-    "titulo": "🤖 nanobot — Lightweight Open-Source AI Agent",
-    "descricao": "Lightweight, open-source AI agent for tools, chats, and workflows. Minimal resource footprint with maximum capability.",
-    "Fonte": "github.com",
-    "tags": [
-      "AI",
-      "agent",
-      "open-source",
-      "lightweight",
-      "workflows"
-    ],
-    "categoria": "app",
-    "stars": 43525,
-    "origem": "global",
-    "badge": "New"
-  },
-  {
-    "titulo": "🌐 agent-browser — Browser Automation CLI for AI Agents",
-    "descricao": "Browser automation CLI for AI agents. Let AI control web browsers for gathering data and performing tasks.",
-    "Fonte": "github.com",
-    "tags": [
-      "AI",
-      "browser",
-      "automation",
-      "web",
-      "agents",
-      "cli"
-    ],
-    "categoria": "app",
-    "stars": 34999,
-    "origem": "global",
-    "badge": "New"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "✨ impeccable — AI Harness Design Language",
-    "badge": "🔥 32.2K ★",
-    "volume": "32.2K",
-    "crescimento": "317 stars/dia",
-    "stars": 32221,
-    "forks": "1,759",
-    "descricao": "The design language that makes your AI harness better at design. Improves AI agent UI/UX, interaction patterns, and visual outputs.",
-    "tags": [
-      "AI",
-      "developer-tools",
-      "design",
-      "UI",
-      "agents"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 06:30"
-  },
-  {
-    "titulo": "📈 marketingskills — CRO & SEO Skills for Claude Code",
-    "descricao": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO — AI-powered marketing automation.",
-    "Fonte": "github.com",
-    "tags": [
-      "AI",
-      "marketing",
-      "SEO",
-      "CRO",
-      "claude-code",
-      "automation"
-    ],
-    "categoria": "negocio",
-    "stars": 31572,
-    "origem": "global",
-    "badge": "New"
-  },
-  {
-    "titulo": "🚀 ai-engineering-from-scratch — Learn Build Ship AI",
-    "descricao": "Learn it. Build it. Ship it for others. Complete curriculum for AI engineering from zero to production.",
-    "Fonte": "github.com",
-    "tags": [
-      "AI",
-      "learning",
-      "engineering",
-      "course",
-      "tutorial"
-    ],
-    "categoria": "tendencia",
-    "stars": 27108,
-    "origem": "global",
-    "badge": "New"
-  },
-  {
-    "titulo": "🔬 last30days-skill — Cross-Platform Research AI",
-    "descricao": "AI agent skill that researches any topic across Reddit, X, YouTube, HN. Comprehensive market research in one command.",
-    "Fonte": "github.com",
-    "tags": [
-      "AI",
-      "research",
-      "social-media",
-      "agents",
-      "market-research"
-    ],
-    "categoria": "app",
-    "stars": 26958,
     "origem": "global",
     "badge": "New"
   }
