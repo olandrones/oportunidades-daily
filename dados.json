@@ -281,6 +281,24 @@
   {
     "categoria": "app",
     "origem": "global",
+    "titulo": "📊 graphify — Interactive Code Knowledge Graphs",
+    "badge": "🔥 58K ★",
+    "volume": "58K",
+    "crescimento": "",
+    "stars": 58378,
+    "forks": "4,892",
+    "descricao": "Transform any code into interactive knowledge graphs. AI coding assistant skill for Claude Code, Codex, OpenCode, Cursor, Gemini CLI.",
+    "tags": [
+      "ai",
+      "coding",
+      "knowledge-graph",
+      "developer-tools"
+    ],
+    "fonte": "github.com"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
     "titulo": "⚡ rtk — CLI Proxy Token Reducer 60-90%",
     "badge": "🔥 57K ★",
     "volume": "57K",
@@ -377,6 +395,24 @@
     ],
     "fonte": "GitHub Trending",
     "data_publicacao": "02/06/2026 12:06"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🧠 Understand-Anything — Interactive Code Learning",
+    "badge": "🔥 50K ★",
+    "volume": "50K",
+    "crescimento": "",
+    "stars": 50034,
+    "forks": "3,104",
+    "descricao": "Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph.",
+    "tags": [
+      "ai",
+      "education",
+      "code-analysis",
+      "developer-tools"
+    ],
+    "fonte": "github.com"
   },
   {
     "titulo": "💼 career-ops — AI-Powered Job Search System",
@@ -511,45 +547,5 @@
     "stars": 26958,
     "origem": "global",
     "badge": "New"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🧠 supermemoryai — AI Memory Engine & API",
-    "badge": "🔥 23.6K ★",
-    "volume": "23.6K",
-    "crescimento": "264 stars/dia",
-    "stars": 23645,
-    "forks": "2,128",
-    "descricao": "Memory engine and app that is extremely fast, scalable. The Memory API for the AI era. Provides persistent memory for AI agents and applications.",
-    "tags": [
-      "AI",
-      "memory",
-      "API",
-      "agents",
-      "developer-tools"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 06:30"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "😈 heretic — Censorship Removal for Language Models",
-    "badge": "🔥 22.9K ★",
-    "volume": "22.9K",
-    "crescimento": "241 stars/dia",
-    "stars": 22939,
-    "forks": "2,455",
-    "descricao": "Fully automatic censorship removal for language models. Removes safety guidelines and restrictions from AI models.",
-    "tags": [
-      "AI",
-      "llm",
-      "uncensored",
-      "open-source",
-      "safety"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 12:00"
   }
 ]
