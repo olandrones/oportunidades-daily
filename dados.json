@@ -6,7 +6,7 @@
     "badge": "🔥 376K ★",
     "volume": "376K",
     "crescimento": "",
-    "stars": "375,868",
+    "stars": 375868,
     "forks": "78,478",
     "descricao": "Your own personal AI assistant. Any OS. Any Platform. Open-source personal AI assistant with data ownership. Built by openclaw team.",
     "tags": [
@@ -25,7 +25,7 @@
     "badge": "🔥 211K ★",
     "volume": "",
     "crescimento": "",
-    "stars": "210,781",
+    "stars": 210781,
     "forks": "18,760",
     "descricao": "An agentic skills framework & software development methodology that works. Enables AI agents to use structured skills for reliable task execution across development workflows.",
     "tags": [
@@ -42,7 +42,7 @@
     "badge": "🔥 199K ★",
     "volume": "199K",
     "crescimento": "908 stars/dia",
-    "stars": "199,748",
+    "stars": 199748,
     "forks": "30,662",
     "descricao": "Agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
     "tags": [
@@ -62,7 +62,7 @@
     "badge": "🔥 197K ★",
     "volume": "",
     "crescimento": "",
-    "stars": "196,952",
+    "stars": 196952,
     "forks": "30,288",
     "descricao": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
     "tags": [
@@ -79,7 +79,7 @@
     "badge": "🔥 193K ★",
     "volume": "193K",
     "crescimento": "unlocked",
-    "stars": "193,083",
+    "stars": 193083,
     "forks": "",
     "descricao": "The repo is finally unlocked. Enjoy the party! The fastest repo in history to reach this star count.",
     "tags": [
@@ -98,7 +98,7 @@
     "badge": "🔥 164K ★",
     "volume": "164K",
     "crescimento": "",
-    "stars": "164,715",
+    "stars": 164715,
     "forks": "",
     "descricao": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's workflow and best practices.",
     "tags": [
@@ -117,7 +117,7 @@
     "badge": "🔥 133K ★",
     "volume": "133K",
     "crescimento": "2,470 stars/dia",
-    "stars": "133,684",
+    "stars": 133684,
     "forks": "9,142",
     "descricao": "Python tool for converting files and office documents to Markdown. Supports Word, Excel, PowerPoint, PDF and more.",
     "tags": [
@@ -136,7 +136,7 @@
     "badge": "💼 131K stars",
     "volume": "131K",
     "crescimento": "",
-    "stars": "131,320",
+    "stars": 131320,
     "forks": "",
     "descricao": "API wrapper para markitdown — converter documentos Office para Markdown como servico. Receita: R$29-R$199/mês baseado em volume.",
     "tags": [
@@ -153,7 +153,7 @@
     "badge": "🔥 128K ★",
     "volume": "",
     "crescimento": "",
-    "stars": "128,218",
+    "stars": 128218,
     "forks": "20,931",
     "descricao": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows.",
     "tags": [
@@ -170,7 +170,7 @@
     "badge": "🔥 105K ★",
     "volume": "105K",
     "crescimento": "",
-    "stars": "105,693",
+    "stars": 105693,
     "forks": "",
     "descricao": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, engineer, and researcher.",
     "tags": [
@@ -189,7 +189,7 @@
     "badge": "🔥 84K ★",
     "volume": "84K",
     "crescimento": "",
-    "stars": "84,556",
+    "stars": 84556,
     "forks": "",
     "descricao": "AI agents running research on single-GPU nanochat training automatically. Automated fine-tuning research pipeline.",
     "tags": [
@@ -209,7 +209,7 @@
     "badge": "🔥 81.5K ★",
     "volume": "81.5K",
     "crescimento": "1,200 stars/dia",
-    "stars": "81,565",
+    "stars": 81565,
     "forks": "15,865",
     "descricao": "TradingAgents: Multi-Agents LLM Financial Trading Framework. Uses multi-agent systems for automated trading strategies and market analysis.",
     "tags": [
@@ -229,7 +229,7 @@
     "badge": "🔥 68K ★",
     "volume": "68K",
     "crescimento": "",
-    "stars": "68,664",
+    "stars": 68664,
     "forks": "",
     "descricao": "The open-source app everyone uses to manage agents at work. Team collaboration for AI agent workflows.",
     "tags": [
@@ -248,7 +248,7 @@
     "badge": "🔥 67K ★",
     "volume": "67K",
     "crescimento": "65% token reduction",
-    "stars": "67,423",
+    "stars": 67423,
     "forks": "",
     "descricao": "Why use many token when few token do trick — Claude Code skill that cuts 65% of token usage on common dev commands.",
     "tags": [
@@ -268,7 +268,7 @@
     "badge": "🔥 62K ★",
     "volume": "",
     "crescimento": "",
-    "stars": "61,951",
+    "stars": 61951,
     "forks": "9,053",
     "descricao": "One-click AI-powered high-definition short video generation. Uses LLMs to auto-generate scripts, visuals, and voiceovers for short-form content (TikTok, Reels, Shorts).",
     "tags": [
@@ -285,7 +285,7 @@
     "badge": "🔥 57K ★",
     "volume": "57K",
     "crescimento": "60-90% token reduction",
-    "stars": "57,428",
+    "stars": 57428,
     "forks": "",
     "descricao": "CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Works with Claude Code, Codex, and more.",
     "tags": [
@@ -301,31 +301,11 @@
   {
     "categoria": "app",
     "origem": "global",
-    "titulo": "🕷️ Scrapling — Adaptive Web Scraping Framework",
-    "badge": "🔥 56K ★",
-    "volume": "56.3K",
-    "crescimento": "639 stars/dia",
-    "stars": "56,294",
-    "forks": "5,460",
-    "descricao": "An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl! Handles anti-bot measures and dynamic content.",
-    "tags": [
-      "scraping",
-      "web",
-      "AI",
-      "developer-tools",
-      "automation"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "31/05/2026 12:00"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
     "titulo": "🌐 open-design — Local-First Claude Design",
     "badge": "🔥 56K ★",
     "volume": "56K",
     "crescimento": "",
-    "stars": "56,998",
+    "stars": 56998,
     "forks": "",
     "descricao": "Local-first, open-source Claude Design alternative. Native desktop app with 2-second average response time.",
     "tags": [
@@ -341,11 +321,31 @@
   {
     "categoria": "app",
     "origem": "global",
+    "titulo": "🕷️ Scrapling — Adaptive Web Scraping Framework",
+    "badge": "🔥 56K ★",
+    "volume": "56.3K",
+    "crescimento": "639 stars/dia",
+    "stars": 56294,
+    "forks": "5,460",
+    "descricao": "An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl! Handles anti-bot measures and dynamic content.",
+    "tags": [
+      "scraping",
+      "web",
+      "AI",
+      "developer-tools",
+      "automation"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "31/05/2026 12:00"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
     "titulo": "🌍 worldmonitor — Real-Time Global Intelligence",
     "badge": "🔥 55K ★",
     "volume": "55K",
     "crescimento": "",
-    "stars": "55,356",
+    "stars": 55356,
     "forks": "",
     "descricao": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical analysis, and market monitoring.",
     "tags": [
@@ -359,13 +359,78 @@
     "data_publicacao": "01/06/2026 18:50"
   },
   {
+    "titulo": "💼 career-ops — AI-Powered Job Search System",
+    "descricao": "AI-powered job search system built on Claude Code. 14 skill modes, Google Drive integration, automated applications.",
+    "Fonte": "github.com",
+    "tags": [
+      "AI",
+      "job-search",
+      "career",
+      "automation",
+      "claude-code"
+    ],
+    "categoria": "negocio",
+    "stars": 48281,
+    "origem": "global",
+    "badge": "New"
+  },
+  {
+    "titulo": "📋 agent-skills — Production-Grade AI Coding Skills",
+    "descricao": "Production-grade engineering skills for AI coding agents. Ready to deploy in real-world development workflows.",
+    "Fonte": "github.com",
+    "tags": [
+      "AI",
+      "agents",
+      "developer-tools",
+      "production",
+      "engineering"
+    ],
+    "categoria": "app",
+    "stars": 47717,
+    "origem": "global",
+    "badge": "New"
+  },
+  {
+    "titulo": "🤖 nanobot — Lightweight Open-Source AI Agent",
+    "descricao": "Lightweight, open-source AI agent for tools, chats, and workflows. Minimal resource footprint with maximum capability.",
+    "Fonte": "github.com",
+    "tags": [
+      "AI",
+      "agent",
+      "open-source",
+      "lightweight",
+      "workflows"
+    ],
+    "categoria": "app",
+    "stars": 43525,
+    "origem": "global",
+    "badge": "New"
+  },
+  {
+    "titulo": "🌐 agent-browser — Browser Automation CLI for AI Agents",
+    "descricao": "Browser automation CLI for AI agents. Let AI control web browsers for gathering data and performing tasks.",
+    "Fonte": "github.com",
+    "tags": [
+      "AI",
+      "browser",
+      "automation",
+      "web",
+      "agents",
+      "cli"
+    ],
+    "categoria": "app",
+    "stars": 34999,
+    "origem": "global",
+    "badge": "New"
+  },
+  {
     "categoria": "app",
     "origem": "global",
     "titulo": "✨ impeccable — AI Harness Design Language",
     "badge": "🔥 32.2K ★",
     "volume": "32.2K",
     "crescimento": "317 stars/dia",
-    "stars": "32,221",
+    "stars": 32221,
     "forks": "1,759",
     "descricao": "The design language that makes your AI harness better at design. Improves AI agent UI/UX, interaction patterns, and visual outputs.",
     "tags": [
@@ -379,13 +444,62 @@
     "data_publicacao": "01/06/2026 06:30"
   },
   {
+    "titulo": "📈 marketingskills — CRO & SEO Skills for Claude Code",
+    "descricao": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO — AI-powered marketing automation.",
+    "Fonte": "github.com",
+    "tags": [
+      "AI",
+      "marketing",
+      "SEO",
+      "CRO",
+      "claude-code",
+      "automation"
+    ],
+    "categoria": "negocio",
+    "stars": 31572,
+    "origem": "global",
+    "badge": "New"
+  },
+  {
+    "titulo": "🚀 ai-engineering-from-scratch — Learn Build Ship AI",
+    "descricao": "Learn it. Build it. Ship it for others. Complete curriculum for AI engineering from zero to production.",
+    "Fonte": "github.com",
+    "tags": [
+      "AI",
+      "learning",
+      "engineering",
+      "course",
+      "tutorial"
+    ],
+    "categoria": "tendencia",
+    "stars": 27108,
+    "origem": "global",
+    "badge": "New"
+  },
+  {
+    "titulo": "🔬 last30days-skill — Cross-Platform Research AI",
+    "descricao": "AI agent skill that researches any topic across Reddit, X, YouTube, HN. Comprehensive market research in one command.",
+    "Fonte": "github.com",
+    "tags": [
+      "AI",
+      "research",
+      "social-media",
+      "agents",
+      "market-research"
+    ],
+    "categoria": "app",
+    "stars": 26958,
+    "origem": "global",
+    "badge": "New"
+  },
+  {
     "categoria": "app",
     "origem": "global",
     "titulo": "🧠 supermemoryai — AI Memory Engine & API",
     "badge": "🔥 23.6K ★",
     "volume": "23.6K",
     "crescimento": "264 stars/dia",
-    "stars": "23,645",
+    "stars": 23645,
     "forks": "2,128",
     "descricao": "Memory engine and app that is extremely fast, scalable. The Memory API for the AI era. Provides persistent memory for AI agents and applications.",
     "tags": [
@@ -405,7 +519,7 @@
     "badge": "🔥 22.9K ★",
     "volume": "22.9K",
     "crescimento": "241 stars/dia",
-    "stars": "22,939",
+    "stars": 22939,
     "forks": "2,455",
     "descricao": "Fully automatic censorship removal for language models. Removes safety guidelines and restrictions from AI models.",
     "tags": [
@@ -425,7 +539,7 @@
     "badge": "🔥 22.6K ★",
     "volume": "",
     "crescimento": "",
-    "stars": "22,616",
+    "stars": 22616,
     "forks": "2,657",
     "descricao": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning.",
     "tags": [
@@ -433,140 +547,6 @@
       "audio",
       "speech-synthesis",
       "multilingual"
-    ],
-    "fonte": "GitHub Trending"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "⚡ Odysseus — Self-hosted AI workspace",
-    "badge": "🔥 20K ★",
-    "volume": "20K",
-    "crescimento": "",
-    "stars": "19,979",
-    "forks": "",
-    "descricao": "Self-hosted AI workspace — run AI agents locally with full control and privacy",
-    "tags": [
-      "AI",
-      "workspace",
-      "self-hosted",
-      "local"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 18:00"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🔧 compound-engineering-plugin — Claude Code Plugin",
-    "badge": "🔥 18.3K ★",
-    "volume": "",
-    "crescimento": "",
-    "stars": "18,346",
-    "forks": "1,387",
-    "descricao": "Official Compound Engineering plugin for Claude Code, Codex, Cursor and beyond. Enables compound agent architectures and multi-agent collaboration.",
-    "tags": [
-      "AI",
-      "developer-tools",
-      "agents",
-      "plugin"
-    ],
-    "fonte": "GitHub Trending"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "⚡ DS4 — DeepSeek 4 Flash Local Inference",
-    "badge": "🔥 13K ★",
-    "volume": "13K",
-    "crescimento": "",
-    "stars": "12,691",
-    "forks": "",
-    "descricao": "DeepSeek 4 Flash local inference engine for Metal and CUDA — fast local AI execution",
-    "tags": [
-      "AI",
-      "inference",
-      "local",
-      "deepseek",
-      "cuda"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 18:00"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🌐 hermes-webui — Hermes Web Interface",
-    "badge": "🔥 9.7K ★",
-    "volume": "9.7K",
-    "crescimento": "320 stars/dia",
-    "stars": "9,714",
-    "forks": "1,339",
-    "descricao": "Hermes WebUI: The best way to use Hermes Agent from the web or from your phone! Browser-based interface for the Hermes Agent.",
-    "tags": [
-      "AI",
-      "agent",
-      "web-ui",
-      "hermes",
-      "developer-tools"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "31/05/2026 12:00"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "⚡ CodexPlusPlus — Enhanced Codex Experience",
-    "badge": "🔥 11K ★",
-    "volume": "11K",
-    "crescimento": "",
-    "stars": "10,575",
-    "forks": "",
-    "descricao": "Enhanced tool for CodexApp — makes Codex better and more comfortable to use",
-    "tags": [
-      "AI",
-      "codex",
-      "developer-tools",
-      "productivity"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 18:00"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "⚡ HTML-Anything — Agentic HTML Editor",
-    "badge": "🔥 5.8K ★",
-    "volume": "5.8K",
-    "crescimento": "",
-    "stars": "5,752",
-    "forks": "",
-    "descricao": "The agentic HTML editor — AI agent writes the HTML, you ship it. 75 Skills × 9 Frameworks",
-    "tags": [
-      "AI",
-      "html",
-      "agentic",
-      "developer-tools",
-      "no-code"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 18:00"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🧠 harness — Meta-Skill Agent Teams",
-    "badge": "🔥 4.1K ★",
-    "volume": "",
-    "crescimento": "",
-    "stars": "4,159",
-    "forks": "617",
-    "descricao": "A meta-skill that designs domain-specific agent teams, defines specialized agents, and generates the skills they use.",
-    "tags": [
-      "AI",
-      "agents",
-      "developer-tools",
-      "meta-skills"
     ],
     "fonte": "GitHub Trending"
   }
