@@ -475,88 +475,87 @@
     "fonte": "github.com"
   },
   {
-    "titulo": "💼 career-ops — AI-Powered Job Search System",
-    "descricao": "AI-powered job search system built on Claude Code. 14 skill modes, Google Drive integration, automated applications.",
-    "Fonte": "github.com",
-    "tags": [
-      "AI",
-      "job-search",
-      "career",
-      "automation",
-      "claude-code"
-    ],
+    "titulo": "⚕️ Therapeutic Plasma Exchange — Medical Plasma Treatment Trend",
+    "descricao": "Medical procedure for autoimmune and neurological disorders with +1400% search growth. Emerging trend in medical tourism and health tech.",
+    "stars": "15000",
+    "forks": "0",
+    "crescimento": "+1400%",
     "categoria": "negocio",
-    "stars": 48281,
+    "tags": [
+      "medical",
+      "health-tech",
+      "plasma",
+      "autoimmune",
+      "trend"
+    ],
     "origem": "global",
-    "badge": "New"
+    "url": "https://explodingtopics.com",
+    "badge": "📈 +1400% рост"
   },
   {
-    "titulo": "📋 agent-skills — Production-Grade AI Coding Skills",
-    "descricao": "Production-grade engineering skills for AI coding agents. Ready to deploy in real-world development workflows.",
-    "Fonte": "github.com",
+    "titulo": "🌐 Konigle — AI Website & Email Marketing Platform",
+    "descricao": "AI-powered platform for building websites and managing email marketing campaigns. Targets SMBs and entrepreneurs. +1400% growth.",
+    "stars": "15000",
+    "forks": "0",
+    "crescimento": "+1400%",
+    "categoria": "app",
     "tags": [
       "AI",
-      "agents",
-      "developer-tools",
-      "production",
-      "engineering"
+      "saas",
+      "website-builder",
+      "email-marketing",
+      "smb"
     ],
-    "categoria": "app",
-    "stars": 47717,
     "origem": "global",
-    "badge": "New"
+    "url": "https://explodingtopics.com",
+    "badge": "🌟 AI SaaS"
   },
   {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "💻 Odysseus — Self-hosted AI workspace.",
-    "badge": "★ 37,942",
-    "volume": "",
-    "crescimento": "",
-    "stars": 37942,
-    "forks": "",
-    "descricao": "Self-hosted AI workspace.",
-    "tags": [
-      "ai",
-      "workspace",
-      "self-hosted",
-      "javascript"
-    ],
-    "fonte": "GitHub API",
-    "data_publicacao": "03/06/2026 07:32"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "📈 Lovescape — Growth Trend",
-    "badge": "📈 +3233%",
-    "volume": "60.5K",
-    "crescimento": "+3233% growth",
-    "stars": 30000,
-    "forks": "",
-    "descricao": "AI-based platform that generates photorealistic, uncensored adult content with full control and privacy.",
-    "tags": [
-      "ai",
-      "adult-content",
-      "privacy",
-      "photorealistic"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "03/06/2026 07:32"
-  },
-  {
-    "titulo": "🎙️ VoxCPM — Tokenizer-Free Multilingual TTS & Voice Cloning",
-    "descricao": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning.",
-    "stars": "25,521",
-    "forks": "2,907",
-    "crescimento": "713 stars today",
+    "titulo": "💻 ds4 — DeepSeek 4 Flash local inference engine for Metal and CUDA",
+    "descricao": "DeepSeek 4 Flash local inference engine for Metal and CUDA",
+    "stars": "12864",
+    "forks": "1123",
+    "crescimento": "128 stars/dia",
     "categoria": "app",
     "tags": [
-      "tts",
-      "voice-cloning",
-      "multilingual",
-      "audio"
+      "AI",
+      "github",
+      "trending"
     ],
-    "fonte": "github.com/OpenBMB/VoxCPM"
+    "origem": "global",
+    "url": "https://github.com/antirez/ds4",
+    "badge": "🔥 Новый GitHub-тренд"
+  },
+  {
+    "titulo": "💻 CodexPlusPlus — An enhanced tool for CodexApp, striving to make Codex better to use and more comfortable 一个CodexApp的增强工具，努力让Codex变得更好用更舒",
+    "descricao": "An enhanced tool for CodexApp, striving to make Codex better to use and more comfortable 一个CodexApp的增强工具，努力让Codex变得更好用更舒",
+    "stars": "12387",
+    "forks": "776",
+    "crescimento": "123 stars/dia",
+    "categoria": "app",
+    "tags": [
+      "AI",
+      "github",
+      "trending"
+    ],
+    "origem": "global",
+    "url": "https://github.com/BigPizzaV3/CodexPlusPlus",
+    "badge": "🔥 Новый GitHub-тренд"
+  },
+  {
+    "titulo": "💻 html-anything — ✨ The agentic HTML editor — your local AI agent writes the HTML, you ship it. 🚀 75 Skills × 9 Surfaces (magazine · deck ",
+    "descricao": "✨ The agentic HTML editor — your local AI agent writes the HTML, you ship it. 🚀 75 Skills × 9 Surfaces (magazine · deck ",
+    "stars": "5974",
+    "forks": "578",
+    "crescimento": "59 stars/dia",
+    "categoria": "app",
+    "tags": [
+      "AI",
+      "github",
+      "trending"
+    ],
+    "origem": "global",
+    "url": "https://github.com/nexu-io/html-anything",
+    "badge": "🔥 Новый GitHub-тренд"
   }
 ]
