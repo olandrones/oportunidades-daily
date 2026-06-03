@@ -545,23 +545,18 @@
     "data_publicacao": "03/06/2026 07:32"
   },
   {
+    "titulo": "🎙️ VoxCPM — Tokenizer-Free Multilingual TTS & Voice Cloning",
+    "descricao": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning.",
+    "stars": "25,521",
+    "forks": "2,907",
+    "crescimento": "713 stars today",
     "categoria": "app",
-    "origem": "global",
-    "titulo": "💻 Voxcpm — Tokenizer-Free TTS for Multilingual Speech Generation, ",
-    "badge": "★ 25,422",
-    "volume": "",
-    "crescimento": "",
-    "stars": 25422,
-    "forks": "2903",
-    "descricao": "Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning",
     "tags": [
       "tts",
-      "speech",
-      "voice-clone",
+      "voice-cloning",
       "multilingual",
-      "ai-audio"
+      "audio"
     ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "03/06/2026 07:32"
+    "fonte": "github.com/OpenBMB/VoxCPM"
   }
 ]

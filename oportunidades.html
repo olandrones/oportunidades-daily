@@ -29,11 +29,10 @@
         .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; gap: 10px; }
         .card-title { font-size: 1.1em; font-weight: 700; color: #fff; flex: 1; }
         .card-badge { font-size: 0.75em; padding: 4px 10px; border-radius: 20px; background: #7c3aed20; color: #a78bfa; border: 1px solid #7c3aed40; }
-        .card-header-right { display: flex; align-items: center; gap: 8px; }
-        .tag.novo { background: #1e40af; color: #fb923c; border: 1px solid #fb923c; font-weight: 700; }
+        .tag.novo { background: #10b98130; color: #34d399; border: 1px solid #10b98160; font-weight: 700; }
         .card-meta { font-size: 0.8em; color: #666; margin-bottom: 10px; display: flex; gap: 15px; flex-wrap: wrap; }
         .card-meta span { display: flex; align-items: center; gap: 4px; }
-        .card-desc { color: #aaa; line-height: 1.6; font-size: 0.95em; }
+        .card-desc { color: #aaa; line-height: 1.6; font-size: 0.95em; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: visible; }
         .card-tags { margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
         .tag { font-size: 0.75em; padding: 3px 10px; border-radius: 6px; background: #2a2a4a; color: #888; }
         .tag.origem { background: #3b82f620; color: #60a5fa; border: 1px solid #3b82f640; }
@@ -49,152 +48,183 @@
 <body>
     <div class="container">
         <header>
-            <h1>💼 Oportunidades de Negócio</h1>
-            <p class="subtitle">Tendências, ferramentas e ideias para renda extra — atualizado automaticamente</p>
+            <h1>📊 Oportunidades Diárias</h1>
+            <p class="subtitle">Relatório automático de tendências e oportunidades — atualizado 3x ao dia</p>
         </header>
 
         <div class="filters">
-            <input type="text" id="searchInput" placeholder="Buscar..." onkeyup="filterCards()">
-            <select id="categoriaFilter" onchange="filterCards()">
+            <input type="text" id="searchInput" placeholder="Buscar por termo..." onkeyup="filtrar()">
+            <select id="categoriaFilter" onchange="filtrar()">
                 <option value="">Todas Categorias</option>
-                <option value="app">App / Ferramenta</option>
-                <option value="tendencia">Tendência</option>
-                <option value="negocio">Micro-SaaS / Negócio</option>
+                <option value="tendencia">🔥 Tendência</option>
+                <option value="app">🚀 App/Produto</option>
+                <option value="negocio">💼 Oportunidade</option>
             </select>
-            <select id="origemFilter" onchange="filterCards()">
+            <select id="origemFilter" onchange="filtrar()">
                 <option value="">Todas Origens</option>
                 <option value="global">Global</option>
-                <option value="brasil">Brasil</option>
+                <option value="brasil">🇧🇷 Brasil</option>
             </select>
-            <button class="active" id="allBtn" onclick="showAll()">Todos</button>
-            <button id="novoBtn" onclick="showNew()">Novos</button>
+            <button onclick="toggleNovos()" id="btn-novo">🎯 Só Novos</button>
+            <button onclick="limparFiltros()">Limpar</button>
             <div class="sort-group">
                 <span>Ordenar:</span>
-                <button onclick="sortCards('stars')">★ Stars</button>
-                <button onclick="sortCards('crescimento')">📈 Crescimento</button>
-                <button onclick="sortCards('volume')">📊 Volume</button>
-                <button onclick="sortCards('data')">🕐 Data</button>
+                <button onclick="ordenar('crescimento', 'desc')" id="btn-ord-cresc">↑ Crescimento</button>
+                <button onclick="ordenar('crescimento', 'asc')" id="btn-ord-cresc-asc">↓ Crescimento</button>
+                <button onclick="ordenar('volume', 'desc')" id="btn-ord-vol">↑ Volume</button>
+                <button onclick="ordenar('volume', 'asc')" id="btn-ord-vol-asc">↓ Volume</button>
+                <button onclick="ordenar('data', 'desc')" id="btn-ord-data">↑ Data</button>
+                <button onclick="ordenar('data', 'asc')" id="btn-ord-data-asc">↓ Data</button>
             </div>
         </div>
 
-        <p class="meta-info" id="metaInfo">Carregando...</p>
-        <div id="cardsGrid"></div>
+        <div class="meta-info" id="metaInfo">Carregando...</div>
+
+        <div class="section">
+            <div class="section-title">📋 Todas as Oportunidades</div>
+            <div id="cardsContainer"></div>
+        </div>
     </div>
 
     <script>
-    let allCards = [];
-    let currentFilter = 'all';
-    let currentSort = 'stars';
+        let allData = [];
+        let currentSort = { field: null, dir: null };
+        let filterNovos = false;
 
-    const DATA_URL = 'dados.json';
-
-    async function loadData() {
-        try {
-            const res = await fetch(DATA_URL + '?t=' + Date.now());
-            const data = await res.json();
-            allCards = data;
-            renderCards(allCards);
-            document.getElementById('metaInfo').textContent = data.length + ' oportunidades carregadas em ''' + new Date().toLocaleString('pt-BR') + '''';
-        } catch (e) {
-            document.getElementById('cardsGrid').innerHTML = '<p class="empty-state">Erro ao carregar dados. Tente novamente.</p>';
+        function parseVolume(v) {
+            if (!v) return 0;
+            v = v.toString().replace(/[,\.\s]/g, '');
+            if (v.endsWith('K')) return parseFloat(v) * 1000;
+            if (v.endsWith('M')) return parseFloat(v) * 1000000;
+            return parseFloat(v) || 0;
         }
-    }
 
-    function renderCards(cards) {
-        const grid = document.getElementById('cardsGrid');
-        if (cards.length === 0) {
-            grid.innerHTML = '<p class="empty-state">Nenhuma oportunidade encontrada.</p>';
-            return;
+        function parseGrowth(v) {
+            if (!v) return 0;
+            v = v.toString().replace(/[^0-9.]/g, '');
+            return parseFloat(v) || 0;
         }
-        grid.innerHTML = cards.map((item, i) => {
-            const isNew = item.data_publicacao && item.data_publicacao.includes('31/05/2026');
-            const stars = item.stars ? '<span>★ ' + item.stars + '</span>' : '';
-            const forks = item.forks ? '<span>⑂ ' + item.forks + '</span>' : '';
-            const vol = item.volume ? '<span class="vol">Vol: ' + item.volume + '</span>' : '';
-            const cresc = item.crescimento ? '<span class="growth">' + item.crescimento + '</span>' : '';
-            const data = item.data_publicacao ? '<span>🕐 ' + item.data_publicacao + '</span>' : '';
-            const tags = (item.tags || []).map(t => '<span class="tag">' + t + '</span>').join('');
-            const novoTag = isNew ? '<span class="tag novo">NOVO</span>' : '';
-            return '<div class="card" data-categoria="' + (item.categoria||'') + '" data-origem="' + (item.origem||'') + '" data-new="' + isNew + '">' +
-                '<div class="card-header">' +
-                    '<div class="card-title">' + item.titulo + '</div>' +
-                    '<div class="card-header-right">' + novoTag + '<span class="card-badge">' + item.badge + '</span></div>' +
-                '</div>' +
-                '<div class="card-meta">' + stars + forks + vol + cresc + data + '</div>' +
-                '<p class="card-desc">' + item.descricao + '</p>' +
-                '<div class="card-tags">' +
-                    '<span class="tag origem">' + (item.origem||'') + '</span>' +
-                    '<span class="tag categoria">' + (item.categoria||'') + '</span>' +
-                    tags +
-                '</div>' +
-            '</div>';
-        }).join('');
-    }
 
-    function filterCards() {
-        const search = document.getElementById('searchInput').value.toLowerCase();
-        const cat = document.getElementById('categoriaFilter').value;
-        const orig = document.getElementById('origemFilter').value;
-        const filtered = allCards.filter(item => {
-            const matchSearch = !search || item.titulo.toLowerCase().includes(search) || item.descricao.toLowerCase().includes(search) || (item.tags||[]).some(t=>t.toLowerCase().includes(search));
-            const matchCat = !cat || item.categoria === cat;
-            const matchOrig = !orig || item.origem === orig;
-            return matchSearch && matchCat && matchOrig;
-        });
-        renderCards(filtered);
-    }
-
-    function showAll() {
-        currentFilter = 'all';
-        document.getElementById('allBtn').classList.add('active');
-        document.getElementById('novoBtn').classList.remove('active');
-        document.getElementById('categoriaFilter').value = '';
-        document.getElementById('origemFilter').value = '';
-        document.getElementById('searchInput').value = '';
-        renderCards(allCards);
-    }
-
-    function showNew() {
-        currentFilter = 'new';
-        document.getElementById('allBtn').classList.remove('active');
-        document.getElementById('novoBtn').classList.add('active');
-        document.getElementById('novoBtn').classList.add('novo-active');
-        const novos = allCards.filter(item => item.data_publicacao && item.data_publicacao.includes('31/05/2026'));
-        renderCards(novos);
-    }
-
-    function sortCards(by) {
-        currentSort = by;
-        let sorted = [...allCards];
-        if (by === 'stars') {
-            sorted.sort((a, b) => {
-                const sa = parseFloat((a.stars||'0').replace(/[^0-9.]/g,'')) || 0;
-                const sb = parseFloat((b.stars||'0').replace(/[^0-9.]/g,'')) || 0;
-                return sb - sa;
-            });
-        } else if (by === 'crescimento') {
-            sorted.sort((a, b) => {
-                const ca = parseFloat((a.crescimento||'0').replace(/[^0-9]/g,'')) || 0;
-                const cb = parseFloat((b.crescimento||'0').replace(/[^0-9]/g,'')) || 0;
-                return cb - ca;
-            });
-        } else if (by === 'volume') {
-            sorted.sort((a, b) => {
-                const va = parseFloat((a.volume||'0').replace(/[^0-9]/g,'')) || 0;
-                const vb = parseFloat((b.volume||'0').replace(/[^0-9]/g,'')) || 0;
-                return vb - va;
-            });
-        } else if (by === 'data') {
-            sorted.sort((a, b) => {
-                const da = a.data_publicacao || '';
-                const db = b.data_publicacao || '';
-                return db.localeCompare(da);
-            });
+        function parseDate(v) {
+            if (!v) return 0;
+            const parts = v.match(/(\d{2})\/(\d{2})\/(\d{4})\s+(\d{2}):(\d{2})/);
+            if (parts) {
+                return new Date(parts[3], parts[2]-1, parts[1], parts[4], parts[5]).getTime();
+            }
+            return 0;
         }
-        renderCards(sorted);
-    }
 
-    loadData();
+        function isNovo(item) {
+            if (!item.data_publicacao) return false;
+            const parts = item.data_publicacao.match(/(\d{2})\/(\d{2})\/(\d{4})\s+(\d{2}):(\d{2})/);
+            if (!parts) return false;
+            const itemDate = new Date(parts[3], parts[2]-1, parts[1], parts[4], parts[5]);
+            const agora = new Date();
+            const diffHoras = (agora - itemDate) / (1000 * 60 * 60);
+            return diffHoras <= 48;
+        }
+
+        function renderCard(item) {
+            const novo = isNovo(item);
+            const tags = (item.tags || []).map(t => `<span class="tag">${t}</span>`).join('');
+            const catBadge = item.categoria ? `<span class="tag categoria">${item.categoria}</span>` : '';
+            const origBadge = item.origem ? `<span class="tag origem">${item.origem === 'brasil' ? '🇧🇷 Brasil' : '🌐 Global'}</span>` : '';
+            const novoBadge = novo ? `<span class="tag novo">🎯 NOVO</span>` : '';
+            const linkBadge = item.link ? `<a href="${item.link}" target="_blank" class="link-btn">🔗 link</a>` : '';
+            return `<div class="card" data-categoria="${item.categoria || ''}" data-origem="${item.origem || ''}" data-volume="${parseVolume(item.volume)}" data-crescimento="${parseGrowth(item.crescimento)}" data-data="${parseDate(item.data_publicacao)}" data-novo="${novo}">
+                <div class="card-header">
+                    <div class="card-title">${item.titulo || ''}</div>
+                    <div class="card-badge">${item.badge || ''}</div>
+                </div>
+                <div class="card-meta">
+                    ${item.volume ? `<span class="vol">📊 ${item.volume}</span>` : ''}
+                    ${item.crescimento ? `<span class="growth">🚀 ${item.crescimento}</span>` : ''}
+                    ${item.fonte ? `<span>📌 ${item.fonte}</span>` : ''}
+                    ${item.data_publicacao ? `<span>📅 ${item.data_publicacao}</span>` : ''}
+                </div>
+                <div class="card-desc">${item.descricao || ''}</div>
+                <div class="card-tags">${novoBadge}${catBadge}${origBadge}${tags}${linkBadge}</div>
+            </div>`;
+        }
+
+        function renderAll() {
+            const container = document.getElementById('cardsContainer');
+            container.innerHTML = allData.map(renderCard).join('');
+            filtrar();
+        }
+
+        function toggleNovos() {
+            filterNovos = !filterNovos;
+            const btn = document.getElementById('btn-novo');
+            if (filterNovos) { btn.classList.add('novo-active'); } else { btn.classList.remove('novo-active'); }
+            filtrar();
+        }
+
+        function filtrar() {
+            const termo = document.getElementById('searchInput').value.toLowerCase();
+            const cat = document.getElementById('categoriaFilter').value;
+            const orig = document.getElementById('origemFilter').value;
+            const cards = document.querySelectorAll('#cardsContainer .card');
+            let visiveis = 0;
+            cards.forEach(c => {
+                const texto = c.textContent.toLowerCase();
+                const cats = c.dataset.categoria || '';
+                const ors = c.dataset.origem || '';
+                const ehNovo = c.dataset.novo === 'true';
+                const mostrar = texto.includes(termo) && (cat === '' || cats === cat) && (orig === '' || ors === orig) && (!filterNovos || ehNovo);
+                c.style.display = mostrar ? 'block' : 'none';
+                if (mostrar) visiveis++;
+            });
+            const dataAtual = allData.length > 0 ? (allData[0].data_publicacao || 'N/A') : 'N/A';
+            const filtroTexto = filterNovos ? ' | 🎯 Filtrado: só novos' : '';
+            document.getElementById('metaInfo').textContent = `${visiveis} entrada(s) encontrada(s) | Dados de: ${dataAtual}${filtroTexto}`;
+        }
+
+        function limparFiltros() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('categoriaFilter').value = '';
+            document.getElementById('origemFilter').value = '';
+            filterNovos = false;
+            document.getElementById('btn-novo').classList.remove('novo-active');
+            filtrar();
+        }
+
+        function ordenar(campo, direcao) {
+            currentSort = { field: campo, dir: direcao };
+            document.querySelectorAll('.sort-group button').forEach(b => b.classList.remove('active'));
+            const btnId = direcao === 'desc' ? `btn-ord-${campo}` : `btn-ord-${campo}-${direcao}`;
+            const btn = document.getElementById(btnId);
+            if (btn) btn.classList.add('active');
+
+            allData.sort((a, b) => {
+                let valA, valB;
+                if (campo === 'volume') {
+                    valA = parseVolume(a.volume);
+                    valB = parseVolume(b.volume);
+                } else if (campo === 'crescimento') {
+                    valA = parseGrowth(a.crescimento);
+                    valB = parseGrowth(b.crescimento);
+                } else if (campo === 'data') {
+                    valA = parseDate(a.data_publicacao);
+                    valB = parseDate(b.data_publicacao);
+                }
+                if (direcao === 'desc') return valB - valA;
+                return valA - valB;
+            });
+            renderAll();
+        }
+
+        async function loadData() {
+            try {
+                const resp = await fetch('dados.json');
+                allData = await resp.json();
+                renderAll();
+            } catch (e) {
+                document.getElementById('metaInfo').textContent = 'Erro ao carregar dados: ' + e.message;
+            }
+        }
+
+        loadData();
     </script>
 </body>
 </html>
