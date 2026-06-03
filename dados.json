@@ -1,125 +1,5 @@
 [
   {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "👖 Stovepipe Jeans — Fashion Trend Revival",
-    "badge": "📈 +800%",
-    "volume": "22.2K",
-    "crescimento": "+800% growth",
-    "stars": 9000,
-    "forks": "",
-    "descricao": "Straight-cut jeans from hip to hem. Classic silhouette seeing renewed interest.",
-    "tags": [
-      "fashion",
-      "denim",
-      "trend",
-      "style"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "02/06/2026 18:50"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "⏳ Epitalon — Anti-Aging Peptide Research",
-    "badge": "📈 +900%",
-    "volume": "27.1K",
-    "crescimento": "+900% growth",
-    "stars": 12000,
-    "forks": "",
-    "descricao": "Synthetic peptide with potential anti-aging properties. Stimulates telomerase production.",
-    "tags": [
-      "anti-aging",
-      "longevity",
-      "peptide",
-      "research",
-      "telomerase"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "02/06/2026 18:50"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "💊 Weight Loss Peptides — GLP-1 Market",
-    "badge": "📈 +900%",
-    "volume": "40.5K",
-    "crescimento": "+900% growth",
-    "stars": 18000,
-    "forks": "",
-    "descricao": "Peptides that mimic GLP-1 hormone for appetite regulation. Growing market in obesity treatment.",
-    "tags": [
-      "health",
-      "weight-loss",
-      "peptides",
-      "GLP-1",
-      "metabolism"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "02/06/2026 18:50"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "💉 Therapeutic Plasma Exchange — Medical Trend",
-    "badge": "📈 +1400%",
-    "volume": "4.4K",
-    "crescimento": "+1400% growth",
-    "stars": 10000,
-    "forks": "",
-    "descricao": "Medical procedure for plasma replacement to eliminate harmful substances. Used for autoimmune diseases and neurological disorders.",
-    "tags": [
-      "medical",
-      "treatment",
-      "autoimmune",
-      "neurology",
-      "health"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "02/06/2026 18:50"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🌐 hermes-webui — Hermes Agent Web Interface",
-    "badge": "🆕 12.5K ★",
-    "volume": "12.5K",
-    "crescimento": "1,725 stars/dia",
-    "stars": 12505,
-    "forks": "1,536",
-    "descricao": "The best way to use Hermes Agent from the web or from your phone!",
-    "tags": [
-      "AI",
-      "agent",
-      "web",
-      "UI",
-      "hermes"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "02/06/2026 18:50"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "💾 headroom — LLM Output Compressor (60-95% tokens)",
-    "badge": "🆕 6.2K ★",
-    "volume": "6.2K",
-    "crescimento": "1,266 stars/dia",
-    "stars": 6227,
-    "forks": "434",
-    "descricao": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.",
-    "tags": [
-      "AI",
-      "LLM",
-      "compression",
-      "tokens",
-      "developer-tools",
-      "RAG"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "02/06/2026 18:50"
-  },
-  {
     "categoria": "app",
     "origem": "global",
     "titulo": "🦞 openclaw — Personal AI Assistant (Any OS)",
@@ -154,6 +34,26 @@
       "developer-tools"
     ],
     "fonte": "GitHub Trending"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "💻 Ecc — The agent harness performance optimization system for A",
+    "badge": "★ 204,865",
+    "volume": "",
+    "crescimento": "",
+    "stars": 204865,
+    "forks": "31432",
+    "descricao": "The agent harness performance optimization system for AI coding agents (Claude, Codex, Cursor).",
+    "tags": [
+      "ai-agent",
+      "claude",
+      "cursor",
+      "optimization",
+      "coding-agent"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "03/06/2026 07:32"
   },
   {
     "categoria": "app",
@@ -229,6 +129,26 @@
     ],
     "fonte": "GitHub Trending",
     "data_publicacao": "01/06/2026 18:50"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "💻 Markitdown — Python tool for converting files and office documents t",
+    "badge": "★ 142,179",
+    "volume": "",
+    "crescimento": "",
+    "stars": 142179,
+    "forks": "9696",
+    "descricao": "Python tool for converting files and office documents to Markdown.",
+    "tags": [
+      "markdown",
+      "converter",
+      "documents",
+      "python",
+      "office"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "03/06/2026 07:32"
   },
   {
     "categoria": "app",
@@ -401,6 +321,26 @@
   {
     "categoria": "app",
     "origem": "global",
+    "titulo": "💻 Scrapling — An adaptive Web Scraping framework that handles everyth",
+    "badge": "★ 59,703",
+    "volume": "",
+    "crescimento": "",
+    "stars": 59703,
+    "forks": "5756",
+    "descricao": "An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!",
+    "tags": [
+      "scraping",
+      "web",
+      "crawl",
+      "framework",
+      "automation"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "03/06/2026 07:32"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
     "titulo": "📊 graphify — Interactive Code Knowledge Graphs",
     "badge": "🔥 58K ★",
     "volume": "58K",
@@ -565,5 +505,63 @@
     "stars": 47717,
     "origem": "global",
     "badge": "New"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "💻 Odysseus — Self-hosted AI workspace.",
+    "badge": "★ 37,942",
+    "volume": "",
+    "crescimento": "",
+    "stars": 37942,
+    "forks": "",
+    "descricao": "Self-hosted AI workspace.",
+    "tags": [
+      "ai",
+      "workspace",
+      "self-hosted",
+      "javascript"
+    ],
+    "fonte": "GitHub API",
+    "data_publicacao": "03/06/2026 07:32"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "📈 Lovescape — Growth Trend",
+    "badge": "📈 +3233%",
+    "volume": "60.5K",
+    "crescimento": "+3233% growth",
+    "stars": 30000,
+    "forks": "",
+    "descricao": "AI-based platform that generates photorealistic, uncensored adult content with full control and privacy.",
+    "tags": [
+      "ai",
+      "adult-content",
+      "privacy",
+      "photorealistic"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "03/06/2026 07:32"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "💻 Voxcpm — Tokenizer-Free TTS for Multilingual Speech Generation, ",
+    "badge": "★ 25,422",
+    "volume": "",
+    "crescimento": "",
+    "stars": 25422,
+    "forks": "2903",
+    "descricao": "Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning",
+    "tags": [
+      "tts",
+      "speech",
+      "voice-clone",
+      "multilingual",
+      "ai-audio"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "03/06/2026 07:32"
   }
 ]
