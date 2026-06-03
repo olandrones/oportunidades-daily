@@ -475,6 +475,40 @@
     "fonte": "github.com"
   },
   {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "📈 Lovescape — AI-based platform that generates photorealistic, uncensored adult cont",
+    "badge": "Exploding Topics",
+    "volume": "60.5K",
+    "crescimento": "+3233%",
+    "descricao": "AI-based platform that generates photorealistic, uncensored adult content with full control and privacy",
+    "tags": [
+      "AI",
+      "adult-content",
+      "privacy"
+    ],
+    "fonte": "https://explodingtopics.com",
+    "stars": "50000",
+    "data_publicacao": "2026-06-03"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "💻 odysseus — Self-hosted AI workspace",
+    "badge": "GitHub",
+    "volume": "",
+    "crescimento": "43058 stars",
+    "descricao": "Self-hosted AI workspace",
+    "tags": [
+      "AI",
+      "open-source",
+      "developer-tools"
+    ],
+    "fonte": "https://github.com/odysseus/odysseus",
+    "stars": "43058",
+    "data_publicacao": "2026-06-03"
+  },
+  {
     "titulo": "⚕️ Therapeutic Plasma Exchange — Medical Plasma Treatment Trend",
     "descricao": "Medical procedure for autoimmune and neurological disorders with +1400% search growth. Emerging trend in medical tourism and health tech.",
     "stars": "15000",
@@ -511,51 +545,21 @@
     "badge": "🌟 AI SaaS"
   },
   {
-    "titulo": "💻 ds4 — DeepSeek 4 Flash local inference engine for Metal and CUDA",
-    "descricao": "DeepSeek 4 Flash local inference engine for Metal and CUDA",
-    "stars": "12864",
-    "forks": "1123",
-    "crescimento": "128 stars/dia",
-    "categoria": "app",
-    "tags": [
-      "AI",
-      "github",
-      "trending"
-    ],
+    "categoria": "tendencia",
     "origem": "global",
-    "url": "https://github.com/antirez/ds4",
-    "badge": "🔥 Новый GitHub-тренд"
-  },
-  {
-    "titulo": "💻 CodexPlusPlus — An enhanced tool for CodexApp, striving to make Codex better to use and more comfortable 一个CodexApp的增强工具，努力让Codex变得更好用更舒",
-    "descricao": "An enhanced tool for CodexApp, striving to make Codex better to use and more comfortable 一个CodexApp的增强工具，努力让Codex变得更好用更舒",
-    "stars": "12387",
-    "forks": "776",
-    "crescimento": "123 stars/dia",
-    "categoria": "app",
+    "titulo": "📈 Weight Loss Peptides — GLP-1 peptide medications for weight management",
+    "badge": "Exploding Topics",
+    "volume": "40.5K",
+    "crescimento": "+900%",
+    "descricao": "Peptides that mimic the GLP-1 hormone for appetite regulation and metabolism - used in weight loss medications.",
     "tags": [
-      "AI",
-      "github",
-      "trending"
+      "health",
+      "weight-loss",
+      "peptides",
+      "GLP-1"
     ],
-    "origem": "global",
-    "url": "https://github.com/BigPizzaV3/CodexPlusPlus",
-    "badge": "🔥 Новый GitHub-тренд"
-  },
-  {
-    "titulo": "💻 html-anything — ✨ The agentic HTML editor — your local AI agent writes the HTML, you ship it. 🚀 75 Skills × 9 Surfaces (magazine · deck ",
-    "descricao": "✨ The agentic HTML editor — your local AI agent writes the HTML, you ship it. 🚀 75 Skills × 9 Surfaces (magazine · deck ",
-    "stars": "5974",
-    "forks": "578",
-    "crescimento": "59 stars/dia",
-    "categoria": "app",
-    "tags": [
-      "AI",
-      "github",
-      "trending"
-    ],
-    "origem": "global",
-    "url": "https://github.com/nexu-io/html-anything",
-    "badge": "🔥 Новый GitHub-тренд"
+    "fonte": "https://explodingtopics.com",
+    "stars": "14000",
+    "data_publicacao": "2026-06-03"
   }
 ]
