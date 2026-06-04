@@ -19,6 +19,20 @@
     "data_publicacao": "31/05/2026 18:05"
   },
   {
+    "titulo": "💻 coding-interview-university — A complete computer science study plan to become a software ",
+    "descricao": "A complete computer science study plan to become a software engineer.",
+    "stars": "349406",
+    "forks": "83198",
+    "crescimento": "trending",
+    "categoria": "app",
+    "tags": [],
+    "origem": "global",
+    "badge": "🔥 GitHub Trending",
+    "url": "https://github.com/jwasham/coding-interview-university",
+    "volume": "",
+    "fonte": "github-trending"
+  },
+  {
     "categoria": "app",
     "origem": "global",
     "titulo": "⚡ Superpowers — Agentic Skills Framework",
@@ -34,6 +48,22 @@
       "developer-tools"
     ],
     "fonte": "GitHub Trending"
+  },
+  {
+    "titulo": "💻 ECC — The agent harness performance optimization system. Skills, i",
+    "descricao": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+    "stars": "206528",
+    "forks": "31711",
+    "crescimento": "trending",
+    "categoria": "app",
+    "tags": [
+      "JavaScript"
+    ],
+    "origem": "global",
+    "badge": "🔥 GitHub Trending",
+    "url": "https://github.com/affaan-m/ECC",
+    "volume": "JavaScript",
+    "fonte": "github-trending"
   },
   {
     "categoria": "app",
@@ -110,6 +140,22 @@
     ],
     "fonte": "GitHub Trending",
     "data_publicacao": "01/06/2026 18:50"
+  },
+  {
+    "titulo": "💻 hermes-agent — The agent that grows with you",
+    "descricao": "The agent that grows with you",
+    "stars": "180103",
+    "forks": "30866",
+    "crescimento": "trending",
+    "categoria": "app",
+    "tags": [
+      "Python"
+    ],
+    "origem": "global",
+    "badge": "🔥 GitHub Trending",
+    "url": "https://github.com/NousResearch/hermes-agent",
+    "volume": "Python",
+    "fonte": "github-trending"
   },
   {
     "categoria": "app",
@@ -204,6 +250,22 @@
     "fonte": "GitHub Trending"
   },
   {
+    "titulo": "💻 spec-kit — Toolkit to help you get started with Spec-Driven Development",
+    "descricao": "Toolkit to help you get started with Spec-Driven Development",
+    "stars": "108243",
+    "forks": "9579",
+    "crescimento": "trending",
+    "categoria": "app",
+    "tags": [
+      "Python"
+    ],
+    "origem": "global",
+    "badge": "🔥 GitHub Trending",
+    "url": "https://github.com/github/spec-kit",
+    "volume": "Python",
+    "fonte": "github-trending"
+  },
+  {
     "categoria": "app",
     "origem": "global",
     "titulo": "⚡ gstack — Garry Tan's Claude Code Setup",
@@ -261,6 +323,22 @@
     ],
     "fonte": "GitHub Trending",
     "data_publicacao": "01/06/2026 12:00"
+  },
+  {
+    "titulo": "💻 PaddleOCR — Turn any PDF or image document into structured data for your",
+    "descricao": "Turn any PDF or image document into structured data for your AI. A powerful, lightweight OCR toolkit that bridges the gap between images/PDFs and LLMs. Supports 100+ languages.",
+    "stars": "79549",
+    "forks": "10581",
+    "crescimento": "trending",
+    "categoria": "app",
+    "tags": [
+      "Python"
+    ],
+    "origem": "global",
+    "badge": "🔥 GitHub Trending",
+    "url": "https://github.com/PaddlePaddle/PaddleOCR",
+    "volume": "Python",
+    "fonte": "github-trending"
   },
   {
     "categoria": "app",
@@ -473,93 +551,5 @@
       "developer-tools"
     ],
     "fonte": "github.com"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "📈 Lovescape — AI-based platform that generates photorealistic, uncensored adult cont",
-    "badge": "Exploding Topics",
-    "volume": "60.5K",
-    "crescimento": "+3233%",
-    "descricao": "AI-based platform that generates photorealistic, uncensored adult content with full control and privacy",
-    "tags": [
-      "AI",
-      "adult-content",
-      "privacy"
-    ],
-    "fonte": "https://explodingtopics.com",
-    "stars": "50000",
-    "data_publicacao": "2026-06-03"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "💻 odysseus — Self-hosted AI workspace",
-    "badge": "GitHub",
-    "volume": "",
-    "crescimento": "43058 stars",
-    "descricao": "Self-hosted AI workspace",
-    "tags": [
-      "AI",
-      "open-source",
-      "developer-tools"
-    ],
-    "fonte": "https://github.com/odysseus/odysseus",
-    "stars": "43058",
-    "data_publicacao": "2026-06-03"
-  },
-  {
-    "titulo": "⚕️ Therapeutic Plasma Exchange — Medical Plasma Treatment Trend",
-    "descricao": "Medical procedure for autoimmune and neurological disorders with +1400% search growth. Emerging trend in medical tourism and health tech.",
-    "stars": "15000",
-    "forks": "0",
-    "crescimento": "+1400%",
-    "categoria": "negocio",
-    "tags": [
-      "medical",
-      "health-tech",
-      "plasma",
-      "autoimmune",
-      "trend"
-    ],
-    "origem": "global",
-    "url": "https://explodingtopics.com",
-    "badge": "📈 +1400% рост"
-  },
-  {
-    "titulo": "🌐 Konigle — AI Website & Email Marketing Platform",
-    "descricao": "AI-powered platform for building websites and managing email marketing campaigns. Targets SMBs and entrepreneurs. +1400% growth.",
-    "stars": "15000",
-    "forks": "0",
-    "crescimento": "+1400%",
-    "categoria": "app",
-    "tags": [
-      "AI",
-      "saas",
-      "website-builder",
-      "email-marketing",
-      "smb"
-    ],
-    "origem": "global",
-    "url": "https://explodingtopics.com",
-    "badge": "🌟 AI SaaS"
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "📈 Weight Loss Peptides — GLP-1 peptide medications for weight management",
-    "badge": "Exploding Topics",
-    "volume": "40.5K",
-    "crescimento": "+900%",
-    "descricao": "Peptides that mimic the GLP-1 hormone for appetite regulation and metabolism - used in weight loss medications.",
-    "tags": [
-      "health",
-      "weight-loss",
-      "peptides",
-      "GLP-1"
-    ],
-    "fonte": "https://explodingtopics.com",
-    "stars": "14000",
-    "data_publicacao": "2026-06-03"
   }
 ]
