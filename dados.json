@@ -382,6 +382,26 @@
   {
     "categoria": "app",
     "origem": "global",
+    "titulo": "🔮 MiroFish — Swarm Intelligence Engine",
+    "badge": "trending",
+    "stars": 64670,
+    "forks": 10084,
+    "volume": "64.7K",
+    "crescimento": "+324/dia",
+    "descricao": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. Multi-agent collective intelligence for any prediction task.",
+    "tags": [
+      "AI",
+      "swarm",
+      "multi-agent",
+      "intelligence",
+      "prediction"
+    ],
+    "fonte": "github.com/666ghj/MiroFish",
+    "data_publicacao": "2026-06-05"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
     "titulo": "🌊 MiroFish — Swarm Intelligence Prediction Engine",
     "badge": "🔥 64.5K ★",
     "volume": "64.5K",
@@ -516,41 +536,20 @@
   {
     "categoria": "app",
     "origem": "global",
-    "titulo": "🌍 worldmonitor — Real-Time Global Intelligence",
-    "badge": "🔥 55K ★",
-    "volume": "55K",
-    "crescimento": "",
-    "stars": 55356,
-    "forks": "",
-    "descricao": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical analysis, and market monitoring.",
+    "titulo": "🤖 odysseus — Self-hosted AI Workspace",
+    "badge": "trending",
+    "stars": 55487,
+    "forks": "0",
+    "volume": "55.5K",
+    "crescimento": "+hot",
+    "descricao": "Self-hosted AI workspace — complete AI development environment you run on your own infrastructure.",
     "tags": [
       "AI",
-      "news",
-      "intelligence",
-      "dashboard",
-      "geopolitics"
+      "workspace",
+      "self-hosted",
+      "agents"
     ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 18:50"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🧠 mempalace — Open-Source AI Memory System",
-    "badge": "🔥 53.3K ★",
-    "volume": "53.3K",
-    "crescimento": "",
-    "stars": 53308,
-    "forks": "",
-    "descricao": "The best-benchmarked open-source AI memory system. And it's free. Enables AI agents to retain context across sessions with persistent memory.",
-    "tags": [
-      "AI",
-      "memory",
-      "agent",
-      "open-source",
-      "context"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "02/06/2026 12:06"
+    "fonte": "github.com/odysseus",
+    "data_publicacao": "2026-06-05"
   }
 ]
