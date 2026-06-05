@@ -1,75 +1,94 @@
 # Padrão Visual — Oportunidades Daily
 
-## 🎯 Regra de Ouro
+## ⚠️ REGRA DE OURO
 
-> **Cronjob toca SOMENTE dados.json. HTML é intocável.**
+> **Cronjob/edição toca SOMENTE dados.json. HTML é intocável.**
+> Se alguém editar HTML, restaurar: `git restore index.html`
 
-Se um cronjob reescrever o HTML, restaurar imediatamente com `git restore`.
+---
+
+## 🌐 Site Oficial
+
+**URL:** https://olandrones.github.io/oportunidades-daily/
+
+> ⚠️ NÃO usar daridaclaw.github.io — está desatualizado.
 
 ---
 
 ## 🏗️ Layout Padrão
 
-O site viver em: `https://olandrones.github.io/oportunidades-daily/`
+**Header:**
+- Título: "📊 Oportunidades Diárias"
+- Subtítulo: "Relatório automático de tendências e oportunidades — atualizado 3x ao dia"
 
-**Estrutura:**
-1. **Header** — título "📊 Oportunidades Diárias" + subtítulo com frequência de atualização
-2. **Resumo** — bloco no topo com stats do dia (total oportunidades, categorias, tendências)
-3. **Filtros** — botões de categoria (Todas | 🔥 Tendência | 🚀 App | 💼 Negócio)
-4. **Região** — botões de origem (Todas | 🌐 Global | 🇧🇷 Brasil)
-5. **Ordenação** — "🔥 Ordenar por calor"
-6. **Cards** — grid de oportunidades com: título, badge, metrics, descrição, tags
+**Resumo Semântico (TOPO):**
+Bloco clicável com stats:
+- Total de entradas
+- Por categoria (🔥 tendência, 🚀 app, 💼 negócio)
+- Por origem (🌐 global, 🇧🇷 brasil)
+- Top 6 tags
+
+**Filtros:**
+- Categoria: Todas | 🔥 Tendência | 🚀 App | 💼 Negócio
+- Origem: Todas | 🌐 Global | 🇧🇷 Brasil
+- Ordenar: 🔥 Ordenar por calor
+
+**Cards:**
+- Título + badge
+- Metrics: volume, crescimento, fonte
+- Descrição (2 linhas)
+- Tags
+- Origem (🌐/🇧🇷)
 
 ---
 
-## 📋 Estrutura do Card
+## 📦 Arquivos Válidos
 
 ```
-┌─────────────────────────────────────────────┐
-│ [Badge]                           [Volume]  │
-│ Título do Card                              │
-│                                             │
-│ 📊 376K  🚀 908 stars/dia  📌 GitHub Trending│
-│                                             │
-│ Descrição do card em até 4 linhas...        │
-│                                             │
-│ [NOVO] [categoria] [origem] tag1 tag2 tag3  │
-└─────────────────────────────────────────────┘
+oportunidades/
+├── index.html              ← ✅ Template oficial
+├── dados.json              ← ✅ Dados
+├── STANDARDS.md            ← ✅ Este arquivo
+└── DATA_MANAGEMENT_SOP.md  ← ✅ SOP de gestão
+```
+
+### ❌ ARQUIVOS PROIBIDOS (apagados)
+- oportunidades.html — DELETE
+- template.html — DELETE
+- test.txt — DELETE
+
+---
+
+## 📝 Schema de Dados (dados.json)
+
+```json
+{
+  "categoria": "tendencia|app|negocio",
+  "origem": "global|brasil",
+  "titulo": "string",
+  "badge": "string",
+  "volume": "string (ex: '376K')",
+  "crescimento": "string (ex: '908 stars/dia')",
+  "stars": 375868,
+  "forks": "78,478",
+  "descricao": "string",
+  "tags": ["AI", "assistant"],
+  "fonte": "GitHub Trending",
+  "data_publicacao": "DD/MM/YYYY HH:MM"
+}
 ```
 
 ---
 
-## 🔴 Nunca Fazer
+## 🔄 Publicação
 
-- ❌ Editar index.html manualmente (é o template de produção)
-- ❌ Gerar novo HTML a partir do cronjob
-- ❌ Remover seção de resumo do topo
-- ❌ Mudar estilo CSS (cores, fontes, espaçamento)
-- ❌ Publicar em daridaclaw.github.io (usar olandrones)
-
----
-
-## ✅ Sempre Fazer
-
-- ✅ Atualizar dados.json com novos itens
-- ✅ Manter campos: titulo, descricao, badge, volume, crescimento, tags, categoria, origem, data_publicacao
-- ✅ Push para origin após atualizar dados.json
-- ✅ Verificar site no ar após push
-
----
-
-## 📦 Publicação
-
-1. Editar `dados.json` na pasta `oportunidades/`
-2. `cd oportunidades && git add . && git commit -m "Update $(date +%d/%m/%Y)" && git push`
-3. GitHub Pages atualiza automaticamente em ~1 min
-
----
-
-## 👥 Times
-
-- **IAA (Conteúdo)**: pesquisa e adiciona itens em dados.json
-- **Manutenção**: verifica se HTML não foi sobrescrito, mantém padrão visual
+```bash
+cd oportunidades
+git add .
+git commit -m "Update $(date +%d/%m/%Y)"
+git push
+# GitHub Pages atualiza em ~1 min
+```
 
 ---
 
