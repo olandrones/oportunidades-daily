@@ -34,9 +34,8 @@
         @media (max-width: 400px) { .cards-grid { grid-template-columns: 1fr; } }
 
         /* ── CARD ── */
-        .card { background: #1a1a2e; border-radius: 10px; padding: 14px; border: 1px solid #2a2a4a; transition: border-color 0.2s; cursor: pointer; display: flex; flex-direction: column; gap: 6px; max-height: 130px; overflow: hidden; position: relative; }
+        .card { background: #1a1a2e; border-radius: 10px; padding: 14px; border: 1px solid #2a2a4a; transition: border-color 0.2s; display: flex; flex-direction: column; gap: 6px; }
         .card:hover { border-color: #7c3aed; }
-        .card.expanded { max-height: none; }
         .card.hidden { display: none; }
 
         /* Card: header row */
@@ -54,15 +53,11 @@
         .card-tag.origem-tag { background: #3b82f620; color: #60a5fa; }
 
         /* Card: description */
-        .card-desc { font-size: 0.78em; color: #999; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-        .card.expanded .card-desc { -webkit-line-clamp: unset; display: block; }
-        .card-expand-hint { font-size: 0.68em; color: #555; text-align: center; margin-top: 2px; }
-        .card.expanded .card-expand-hint { display: none; }
+        .card-desc { font-size: 0.78em; color: #999; line-height: 1.5; }
 
-        /* Card: footer link */
-        .card-link { display: none; align-items: center; gap: 5px; font-size: 0.72em; color: #7c3aed; text-decoration: none; padding-top: 6px; border-top: 1px solid #2a2a4a; margin-top: 4px; }
-        .card-link:hover { color: #a78bfa; }
-        .card.expanded .card-link { display: flex; }
+        /* Card: link (inline, looks like a tag) */
+        .card-link { display: inline-flex; align-items: center; gap: 3px; font-size: 0.68em; padding: 2px 7px; border-radius: 5px; background: #2a2a4a; color: #a78bfa; text-decoration: none; }
+        .card-link:hover { background: #7c3aed; color: #fff; }
 
         /* ── EMPTY STATE ── */
         .empty-state { text-align: center; padding: 60px; color: #555; grid-column: 1 / -1; }
@@ -271,7 +266,6 @@
             const tagsHtml = (item.tags || []).slice(0, 3).map(t => `<span class="card-tag">${t}</span>`).join('');
             const fonteHtml = item.fonte ? `<span class="card-tag origem-tag">${item.fonte}</span>` : '';
             const url = gerarUrl(item);
-            const shortDesc = item.descricao.length > 120 ? item.descricao.slice(0, 120) + '…' : item.descricao;
 
             return `<div class="card" data-categoria="${item.categoria}" data-origem="${item.origem}" data-tags="${(item.tags || []).join(',')}">
                 <div class="card-header">
@@ -282,12 +276,9 @@
                     ${metaHtml}
                     ${tagsHtml}
                     ${fonteHtml}
+                    <a class="card-link" href="${url}" target="_blank" rel="noopener">🔗 link</a>
                 </div>
-                <div class="card-desc">${shortDesc}</div>
-                <div class="card-expand-hint">▸ clique para expandir</div>
-                <a class="card-link" href="${url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">
-                    🔗 Ver mais detalhes →
-                </a>
+                <div class="card-desc">${item.descricao}</div>
             </div>`;
         }
 
@@ -338,18 +329,6 @@
                     renderFiltros();
                     const grid = document.getElementById('cardsGrid');
                     grid.innerHTML = dados.map(renderCard).join('');
-
-                    // Click to expand
-                    document.querySelectorAll('.card').forEach(card => {
-                        card.addEventListener('click', (e) => {
-                            if (e.target.tag !== 'A') card.classList.toggle('expanded');
-                        });
-                    });
-
-                    // Auto-expand if only 1-3 items
-                    if (dados.length <= 3) {
-                        document.querySelectorAll('.card').forEach(c => c.classList.add('expanded'));
-                    }
 
                     atualizarFiltros();
                     if (ordenacao === 'calor') ordenarCards();
