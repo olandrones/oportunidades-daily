@@ -25,6 +25,8 @@
         .growth {color:var(--growth);font-weight:bold;}
         .tags {display:flex;gap:0.3rem;flex-wrap:wrap;}
         .tag {font-size:0.7rem;background:#1c2128;color:var(--muted);padding:0.15rem 0.4rem;border-radius:4px;border:1px solid var(--border);}
+        .tag-link {font-size:0.7rem;background:transparent;color:var(--accent);padding:0.15rem 0.5rem;border-radius:4px;border:1px solid var(--accent);text-decoration:none;margin-left:auto;}
+        .tag-link:hover {background:var(--accent);color:#000;}
         footer {text-align:center;color:var(--muted);font-size:0.8rem;margin-top:2rem;padding-top:1rem;border-top:1px solid var(--border);}
         .manchete{background:linear-gradient(135deg, rgba(88,166,255,0.18) 0%, rgba(63,185,80,0.08) 100%);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:8px;padding:14px 20px;margin:0 0 1.5rem 0;text-align:left;}
         .manchete-label{font-size:0.7rem;text-transform:uppercase;letter-spacing:2px;color:var(--accent);margin-bottom:6px;font-weight:700;}
@@ -103,7 +105,15 @@
         else if(type==='growth')dados.sort((a,b)=>{let ga=parseFloat((a.crescimento||'0').replace(/[^0-9.]/g,''))||0;let gb=parseFloat((b.crescimento||'0').replace(/[^0-9.]/g,''))||0;return gb-ga;});
         else dados.sort((a,b)=>normalizeInt(b.stars)-normalizeInt(a.stars));
         render(dados);}
-    function render(items){const c=document.getElementById('cards');c.innerHTML=items.map(it=>`<article class="card"><div class="card-header"><h3>${it.titulo}</h3>${it.badge?`<span class="badge">${it.badge}</span>`:''}</div><p class="desc">${it.descricao||''}</p><div class="metrics"><span>⭐ ${it.stars}</span><span>🍴 ${it.forks||'0'}</span>${it.crescimento?`<span class="growth">📈 ${it.crescimento}</span>`:''}</div><div class="tags">${(it.tags||[]).slice(0,4).map(t=>`<span class="tag">${t}</span>`).join('')}</div></article>`).join('');}
+function getItemUrl(it) {
+        if (it.url) return it.url;
+        // Heurística: extrai "owner/repo" do título quando for repo conhecido do GitHub Trending
+        const t = it.titulo || '';
+        const m = t.match(/^([\w.-]+)\/([\w.-]+)/);
+        if (m) return 'https://github.com/' + m[1] + '/' + m[2];
+        return 'https://github.com/trending';
+    }
+    function render(items){const c=document.getElementById('cards');c.innerHTML=items.map(it=>`<article class="card"><div class="card-header"><h3>${it.titulo}</h3>${it.badge?`<span class="badge">${it.badge}</span>`:''}</div><p class="desc">${it.descricao||''}</p><div class="metrics"><span>⭐ ${it.stars}</span><span>🍴 ${it.forks||'0'}</span>${it.crescimento?`<span class="growth">📈 ${it.crescimento}</span>`:''}</div><div class="tags">${(it.tags||[]).slice(0,4).map(t=>`<span class="tag">${t}</span>`).join('')}<a class="tag-link" href="${getItemUrl(it)}" target="_blank" rel="noopener">↗ ver</a></div></article>`).join('');}
     renderManchete();
     </script>
 </body>
