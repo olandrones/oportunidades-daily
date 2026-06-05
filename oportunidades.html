@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oportunidades Diárias — Lyriane</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0f0f1a; color: #e0e0e0; min-height: 100vh; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 16px; }
+        header { text-align: center; padding: 20px 0 16px; border-bottom: 1px solid #2a2a4a; margin-bottom: 20px; }
+        h1 { color: #7c3aed; font-size: 1.6em; margin-bottom: 4px; }
+        .subtitle { color: #666; font-size: 0.8em; }
+        .resumo-semantico { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 16px; padding: 12px; background: #13132a; border-radius: 10px; border: 1px solid #2a2a4a; }
+        .resumo-stat { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; background: #1a1a2e; border: 1px solid #2a2a4a; cursor: pointer; font-size: 0.78em; transition: all 0.2s; color: #888; }
+        .resumo-stat:hover { border-color: #7c3aed; color: #e0e0e0; }
+        .resumo-stat.active { background: #7c3aed20; border-color: #7c3aed; color: #a78bfa; }
+        .resumo-stat .num { font-weight: 700; color: #fff; }
+        .resumo-stat.all-stat { border-color: #444; }
+        .filters { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 20px; }
+        .filter-group { display: flex; gap: 4px; background: #1a1a2e; padding: 4px; border-radius: 10px; }
+        .filter-btn { padding: 7px 14px; border: none; border-radius: 7px; background: transparent; color: #888; font-size: 0.8em; cursor: pointer; transition: all 0.2s; font-weight: 500; }
+        .filter-btn:hover { color: #e0e0e0; background: #2a2a4a; }
+        .filter-btn.active { background: #7c3aed; color: #fff; }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 12px; }
+        @media (max-width: 400px) { .cards-grid { grid-template-columns: 1fr; } }
+        .card { background: #1a1a2e; border-radius: 10px; padding: 14px; border: 1px solid #2a2a4a; transition: border-color 0.2s; display: flex; flex-direction: column; gap: 8px; }
+        .card:hover { border-color: #7c3aed; }
+        .card.hidden { display: none; }
+        .card-header { display: flex; align-items: flex-start; gap: 8px; }
+        .card-title { font-size: 0.9em; font-weight: 700; color: #fff; flex: 1; line-height: 1.3; }
+        .card-badge { font-size: 0.7em; padding: 3px 8px; border-radius: 12px; background: #7c3aed20; color: #a78bfa; border: 1px solid #7c3aed40; white-space: nowrap; flex-shrink: 0; }
+        .card-meta-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+        .card-meta-item { font-size: 0.72em; color: #666; display: flex; align-items: center; gap: 3px; }
+        .card-meta-item .vol { color: #10b981; font-weight: 700; }
+        .card-meta-item .growth { color: #f59e0b; font-weight: 600; }
+        .card-meta-item .sep { color: #333; }
+        .card-tag { font-size: 0.68em; padding: 2px 7px; border-radius: 5px; background: #2a2a4a; color: #777; }
+        .card-tag.origem-tag { background: #3b82f620; color: #60a5fa; }
+        .card-desc { font-size: 0.78em; color: #999; line-height: 1.45; }
+        .card-link { display: inline-flex; align-items: center; gap: 5px; font-size: 0.72em; color: #7c3aed; text-decoration: none; padding: 3px 8px; border-radius: 5px; background: #7c3aed20; border: 1px solid #7c3aed40; flex-shrink: 0; }
+        .card-link:hover { background: #7c3aed40; }
+        .empty-state { text-align: center; padding: 60px; color: #555; grid-column: 1 / -1; }
+        .page-meta { text-align: center; color: #444; font-size: 0.75em; padding: 20px 0; margin-top: 20px; border-top: 1px solid #1a1a2e; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 Oportunidades Diárias</h1>
+            <p class="subtitle">Relatório automático de tendências e oportunidades — atualizado 05/06/2026 19:04</p>
+        </header>
+        <div class="resumo-semantico" id="resumoSemantico"></div>
+        <div class="filters">
+            <div class="filter-group" id="filterCategoria"></div>
+            <div class="filter-group" id="filterOrigem"></div>
+            <button class="filter-btn" id="btnOrdenar">🔥 Ordenar por calor</button>
+        </div>
+        <div class="cards-grid" id="cardsGrid"></div>
+    </div>
+    <div class="page-meta" id="pageMeta"></div>
+
+    <script>
+        let dados = [];
+        let filtroCat = "";
+        let filtroOrigem = "";
+        let filtroTag = "";
+        let ordenacao = "default";
+
+        function parseNumero(str) {
+            if (!str) return 0;
+            str = str.replace(/,/g, "");
+            if (str.includes("K")) return parseFloat(str) * 1000;
+            if (str.includes("M")) return parseFloat(str) * 1000000;
+            return parseFloat(str) || 0;
+        }
+
+        function calcularCalor(item) {
+            const cresc = parseNumero(item.crescimento);
+            const stars = parseNumero(item.stars);
+            if (stars > 0) return Math.log10(stars + 1) * 10;
+            if (cresc > 0) return Math.log10(cresc + 1) * 5;
+            return 0;
+        }
+
+        function ordenarCards() {
+            if (ordenacao === "default") return;
+            const grid = document.getElementById("cardsGrid");
+            const cards = Array.from(grid.querySelectorAll(".card:not(.hidden)"));
+            cards.sort((a, b) => {
+                const tituloA = a.querySelector(".card-title").textContent.trim();
+                const tituloB = b.querySelector(".card-title").textContent.trim();
+                const ia = dados.find(d => d.titulo.trim() === tituloA);
+                const ib = dados.find(d => d.titulo.trim() === tituloB);
+                if (!ia || !ib) return 0;
+                return calcularCalor(ib) - calcularCalor(ia);
+            });
+            cards.forEach(c => grid.appendChild(c));
+        }
+
+        function gerarUrl(item) {
+            const nome = item.titulo
+                .replace(/[^\w\s]/g, " ")
+                .replace(/\s+/g, " ")
+                .trim()
+                .split(" ")
+                .slice(0, 4)
+                .join(" ");
+            if (item.fonte === "GitHub Trending") {
+                return "https://github.com/search?q=" + encodeURIComponent(nome) + "&s=stars&type=repositories";
+            }
+            return "https://www.google.com/search?q=" + encodeURIComponent(nome + " " + (item.fonte || ""));
+        }
+
+        function renderResumoSemantico() {
+            const total = dados.length;
+            const cats = { tendencia: 0, app: 0, negocio: 0 };
+            const origens = { global: 0, brasil: 0 };
+            const todasTags = {};
+            dados.forEach(d => {
+                cats[d.categoria] = (cats[d.categoria] || 0) + 1;
+                origens[d.origem] = (origens[d.origem] || 0) + 1;
+                (d.tags || []).forEach(t => { todasTags[t] = (todasTags[t] || 0) + 1; });
+            });
+            const topTags = Object.entries(todasTags).sort((a, b) => b[1] - a[1]).slice(0, 6);
+            let html = "<div class="resumo-stat all-stat " + ((!filtroCat && !filtroOrigem && !filtroTag) ? "active" : "") + "" data-filter="all"><span class="num">" + total + "</span> total</div>" +
+                "<div class="resumo-stat " + (filtroCat === "tendencia" ? "active" : "") + "" data-filter="cat:tendencia"><span class="num">" + (cats.tendencia||0) + "</span> 🔥 tendências</div>" +
+                "<div class="resumo-stat " + (filtroCat === "app" ? "active" : "") + "" data-filter="cat:app"><span class="num">" + (cats.app||0) + "</span> 🚀 apps</div>" +
+                "<div class="resumo-stat " + (filtroCat === "negocio" ? "active" : "") + "" data-filter="cat:negocio"><span class="num">" + (cats.negocio||0) + "</span> 💼 negócios</div>" +
+                "<div class="resumo-stat " + (filtroOrigem === "global" ? "active" : "") + "" data-filter="origem:global"><span class="num">" + (origens.global||0) + "</span> 🌐 global</div>" +
+                "<div class="resumo-stat " + (filtroOrigem === "brasil" ? "active" : "") + "" data-filter="origem:brasil"><span class="num">" + (origens.brasil||0) + "</span> 🇧🇷 brasil</div>";
+            if (topTags.length) {
+                html += "<div style="width:1px;background:#2a2a4a;margin:0 4px;"></div>";
+                topTags.forEach(([tag, count]) => {
+                    html += "<div class="resumo-stat " + (filtroTag === tag ? "active" : "") + "" data-filter="tag:" + tag + ""><span class="num">" + count + "</span> " + tag + "</div>";
+                });
+            }
+            document.getElementById("resumoSemantico").innerHTML = html;
+            document.querySelectorAll(".resumo-stat[data-filter]").forEach(el => {
+                el.addEventListener("click", () => {
+                    const f = el.dataset.filter;
+                    if (f === "all") { filtroCat = ""; filtroOrigem = ""; filtroTag = ""; }
+                    else if (f.startsWith("cat:")) { filtroCat = filtroCat === f.slice(4) ? "" : f.slice(4); }
+                    else if (f.startsWith("origem:")) { filtroOrigem = filtroOrigem === f.slice(7) ? "" : f.slice(7); }
+                    else if (f.startsWith("tag:")) { filtroTag = filtroTag === f.slice(4) ? "" : f.slice(4); }
+                    renderCards();
+                    renderResumoSemantico();
+                });
+            });
+        }
+
+        function renderCards() {
+            const grid = document.getElementById("cardsGrid");
+            let filtered = dados;
+            if (filtroCat) filtered = filtered.filter(d => d.categoria === filtroCat);
+            if (filtroOrigem) filtered = filtered.filter(d => d.origem === filtroOrigem);
+            if (filtroTag) filtered = filtered.filter(d => (d.tags || []).includes(filtroTag));
+            if (!filtered.length) {
+                grid.innerHTML = "<div class="empty-state">Nenhuma oportunidade encontrada com os filtros atuais.</div>";
+                return;
+            }
+            grid.innerHTML = filtered.map(item => {
+                const stars = item.stars || "0";
+                const forks = item.forks || "0";
+                const cresc = item.crescimento || "";
+                const badge = item.badge || item.categoria || "";
+                const tags = (item.tags || []).slice(0, 4).map(t => "<span class="card-tag">" + t + "</span>").join("");
+                const origemTag = item.origem === "brasil" ? "<span class="card-tag origem-tag">🇧🇷</span>" : "<span class="card-tag origem-tag">🌐</span>";
+                const url = gerarUrl(item);
+                const desc = item.descricao || "";
+                const crescHtml = cresc ? "<span class="card-meta-item"><span class="sep">·</span></span><span class="card-meta-item"><span class="growth">📈 " + cresc + "</span></span>" : "";
+                return "<div class="card" data-cat="" + item.categoria + "" data-origem="" + item.origem + "">" +
+                    "<div class="card-header"><span class="card-title">" + item.titulo + "</span><span class="card-badge">" + badge + "</span></div>" +
+                    "<div class="card-meta-row">" +
+                    "<span class="card-meta-item"><span class="vol">⭐ " + stars + "</span></span>" +
+                    "<span class="card-meta-item"><span class="sep">·</span></span>" +
+                    "<span class="card-meta-item">🍴 " + forks + "</span>" + crescHtml + " " + tags + " " + origemTag +
+                    "</div>" + (desc ? "<p class="card-desc">" + desc + "</p>" : "") +
+                    "<a class="card-link" href="" + url + "" target="_blank" rel="noopener">🔍 Ver mais →</a></div>";
+            }).join("");
+            if (ordenacao !== "default") ordenarCards();
+        }
+
+        fetch("dados.json")
+            .then(r => r.json())
+            .then(data => {
+                dados = data;
+                renderResumoSemantico();
+                renderCards();
+                document.getElementById("pageMeta").textContent = "Dados atualizados em 05/06/2026 19:04 — " + dados.length + " oportunidades carregadas";
+            })
+            .catch(() => {
+                document.getElementById("cardsGrid").innerHTML = "<div class="empty-state">Erro ao carregar dados.</div>";
+            });
+
+        document.getElementById("btnOrdenar").addEventListener("click", () => {
+            ordenacao = ordenacao === "default" ? "calor" : "default";
+            const btn = document.getElementById("btnOrdenar");
+            btn.classList.toggle("active", ordenacao !== "default");
+            btn.textContent = ordenacao === "default" ? "🔥 Ordenar por calor" : "↩️ Restaurar ordem";
+            renderCards();
+        });
+
+        const cats = ["tendencia", "app", "negocio"];
+        const catLabels = { tendencia: "🔥 Tendência", app: "🚀 App", negocio: "💼 Negócio" };
+        document.getElementById("filterCategoria").innerHTML = cats.map(c =>
+            "<button class="filter-btn " + (filtroCat === c ? "active" : "") + "" data-cat="" + c + "">" + catLabels[c] + "</button>"
+        ).join("");
+        document.getElementById("filterCategoria").querySelectorAll(".filter-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                filtroCat = filtroCat === btn.dataset.cat ? "" : btn.dataset.cat;
+                renderCards();
+                renderResumoSemantico();
+                document.getElementById("filterCategoria").querySelectorAll(".filter-btn").forEach(b => {
+                    b.classList.toggle("active", filtroCat === b.dataset.cat);
+                });
+            });
+        });
+
+        const origens = ["global", "brasil"];
+        const origLabels = { global: "🌐 Global", brasil: "🇧🇷 Brasil" };
+        document.getElementById("filterOrigem").innerHTML = origens.map(o =>
+            "<button class="filter-btn " + (filtroOrigem === o ? "active" : "") + "" data-origem="" + o + "">" + origLabels[o] + "</button>"
+        ).join("");
+        document.getElementById("filterOrigem").querySelectorAll(".filter-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                filtroOrigem = filtroOrigem === btn.dataset.origem ? "" : btn.dataset.origem;
+                renderCards();
+                renderResumoSemantico();
+                document.getElementById("filterOrigem").querySelectorAll(".filter-btn").forEach(b => {
+                    b.classList.toggle("active", filtroOrigem === b.dataset.origem);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

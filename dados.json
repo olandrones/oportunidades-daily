@@ -325,6 +325,21 @@
     "data_publicacao": "01/06/2026 12:00"
   },
   {
+    "titulo": "📄 PaddleOCR — Turn PDFs into structured data",
+    "descricao": "Turn any PDF or image document into structured data for your AI. Supports 100+ languages.",
+    "stars": "80,513",
+    "forks": "10,631",
+    "categoria": "app",
+    "tags": [
+      "ocr",
+      "pdf",
+      "ai",
+      "document-processing"
+    ],
+    "badge": "Doc AI",
+    "origem": "global"
+  },
+  {
     "titulo": "💻 PaddleOCR — Turn any PDF or image document into structured data for your",
     "descricao": "Turn any PDF or image document into structured data for your AI. A powerful, lightweight OCR toolkit that bridges the gap between images/PDFs and LLMs. Supports 100+ languages.",
     "stars": "79549",
@@ -532,24 +547,5 @@
     ],
     "fonte": "GitHub Trending",
     "data_publicacao": "31/05/2026 12:00"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🤖 odysseus — Self-hosted AI Workspace",
-    "badge": "trending",
-    "stars": 55487,
-    "forks": "0",
-    "volume": "55.5K",
-    "crescimento": "+hot",
-    "descricao": "Self-hosted AI workspace — complete AI development environment you run on your own infrastructure.",
-    "tags": [
-      "AI",
-      "workspace",
-      "self-hosted",
-      "agents"
-    ],
-    "fonte": "github.com/odysseus",
-    "data_publicacao": "2026-06-05"
   }
 ]
