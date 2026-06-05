@@ -382,6 +382,25 @@
   {
     "categoria": "app",
     "origem": "global",
+    "titulo": "🌊 MiroFish — Swarm Intelligence Prediction Engine",
+    "badge": "🔥 64.5K ★",
+    "volume": "64.5K",
+    "crescimento": "324 stars hoje",
+    "stars": 64530,
+    "forks": "10,071",
+    "descricao": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物.",
+    "tags": [
+      "AI",
+      "swarm-intelligence",
+      "prediction",
+      "agents"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "05/06/2026 12:00"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
     "titulo": "🎬 MoneyPrinterTurbo — AI Short Video Generator",
     "badge": "🔥 62K ★",
     "volume": "",
@@ -533,23 +552,5 @@
     ],
     "fonte": "GitHub Trending",
     "data_publicacao": "02/06/2026 12:06"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🧠 Understand-Anything — Interactive Code Learning",
-    "badge": "🔥 50K ★",
-    "volume": "50K",
-    "crescimento": "",
-    "stars": 50034,
-    "forks": "3,104",
-    "descricao": "Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph.",
-    "tags": [
-      "ai",
-      "education",
-      "code-analysis",
-      "developer-tools"
-    ],
-    "fonte": "github.com"
   }
 ]
