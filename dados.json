@@ -2,6 +2,207 @@
   {
     "categoria": "app",
     "origem": "global",
+    "titulo": "🔍 last30days-skill — AI Research Agent (Reddit, X, HN, Polymarket)",
+    "badge": "🔥 28.8K ★",
+    "volume": "28.8K",
+    "crescimento": "441 stars hoje",
+    "stars": 28774,
+    "forks": "2,438",
+    "descricao": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary.",
+    "tags": [
+      "AI",
+      "research",
+      "agents",
+      "reddit",
+      "polymarket",
+      "synthesis"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "06/06/2026 19:56"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "⚡ CopilotKit — Frontend Stack for AI Agents & Generative UI",
+    "badge": "🔥 33.2K ★",
+    "volume": "33.2K",
+    "crescimento": "613 stars hoje",
+    "stars": 33194,
+    "forks": "4,238",
+    "descricao": "The Frontend Stack for Agents & Generative UI. React, Angular, Mobile, Slack, and more. Makers of the AG-UI Protocol.",
+    "tags": [
+      "AI",
+      "generative-ui",
+      "react",
+      "agents",
+      "frontend"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "06/06/2026 19:56"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🧠 MemPalace — Open-Source AI Memory System",
+    "badge": "🔥 54.3K ★",
+    "volume": "54.3K",
+    "crescimento": "441 stars hoje",
+    "stars": 54266,
+    "forks": "7,109",
+    "descricao": "The best-benchmarked open-source AI memory system. Gives AI agents persistent, searchable memory.",
+    "tags": [
+      "AI",
+      "memory",
+      "agents",
+      "open-source",
+      "persistence"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "06/06/2026 19:56"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🌐 Personal AI Infrastructure — Daniel Miesslers Agentic Setup",
+    "badge": "⭐ 14.9K ★",
+    "volume": "14.9K",
+    "crescimento": "63 stars hoje",
+    "stars": 14949,
+    "forks": "2,122",
+    "descricao": "Agentic AI Infrastructure for magnifying HUMAN capabilities. Daniel Miesslers complete personal AI stack setup.",
+    "tags": [
+      "AI",
+      "agentic",
+      "infrastructure",
+      "productivity",
+      "setup"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "06/06/2026 19:56"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🌍 Agent-Reach — AI Agent Web Browsing (Twitter, Reddit, GitHub...)",
+    "badge": "🔥 22.3K ★",
+    "volume": "22.3K",
+    "crescimento": "700 stars hoje",
+    "stars": 22301,
+    "forks": "1,906",
+    "descricao": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu - one CLI, zero API fees.",
+    "tags": [
+      "AI",
+      "agents",
+      "web-scraping",
+      "browser",
+      "automation"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "06/06/2026 19:56"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🎙️ VibeVoice — Microsoft Open-Source Frontier Voice AI",
+    "badge": "⭐ 48.5K ★",
+    "volume": "48.5K",
+    "crescimento": "219 stars hoje",
+    "stars": 48466,
+    "forks": "5,391",
+    "descricao": "Open-Source Frontier Voice AI by Microsoft. State-of-the-art speech recognition and generation.",
+    "tags": [
+      "AI",
+      "voice",
+      "speech",
+      "microsoft",
+      "audio"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "06/06/2026 19:56"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🧠 Khoj — Self-Hostable AI Second Brain",
+    "badge": "⭐ 34.9K ★",
+    "volume": "34.9K",
+    "crescimento": "53 stars hoje",
+    "stars": 34932,
+    "forks": "2,227",
+    "descricao": "Your AI second brain. Self-hostable. Get answers from web or your docs. Build custom agents, schedule automations, do deep research.",
+    "tags": [
+      "AI",
+      "second-brain",
+      "self-hosted",
+      "research",
+      "agents"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "06/06/2026 19:56"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "📈 Snail Mucin Eye Cream — +4400% Growth",
+    "badge": "📈 +4400%",
+    "volume": "1.3K",
+    "crescimento": "+4400% Growth",
+    "stars": null,
+    "forks": null,
+    "descricao": "Eye cream with snail mucin to hydrate, nourish, and brighten the under-eye area. Viral in skincare communities.",
+    "tags": [
+      "skincare",
+      "beauty",
+      "viral",
+      "trending",
+      "niche"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "06/06/2026 19:56"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "🌿 True Sea Moss — +9100% Growth",
+    "badge": "📈 +9100%",
+    "volume": "33.1K",
+    "crescimento": "+9100% Growth",
+    "stars": null,
+    "forks": null,
+    "descricao": "Rich antioxidant content, supports cellular health and enhances digestion. Viral health supplement trending in wellness communities.",
+    "tags": [
+      "supplements",
+      "health",
+      "wellness",
+      "viral",
+      "trending"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "06/06/2026 19:56"
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "💍 Waterproof Jewelry — +2700% Growth",
+    "badge": "📈 +2700%",
+    "volume": "40.5K",
+    "crescimento": "+2700% Growth",
+    "stars": null,
+    "forks": null,
+    "descricao": "Jewelry designed to maintain appearance and durability when exposed to water. Ideal for active lifestyles.",
+    "tags": [
+      "fashion",
+      "jewelry",
+      "accessories",
+      "trending",
+      "lifestyle"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "06/06/2026 19:56"
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
     "titulo": "🦞 openclaw — Personal AI Assistant (Any OS)",
     "badge": "🔥 376K ★",
     "volume": "376K",
@@ -354,198 +555,5 @@
     "url": "https://github.com/PaddlePaddle/PaddleOCR",
     "volume": "Python",
     "fonte": "github-trending"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "📋 paperclip — Open-Source Agent Management",
-    "badge": "🔥 68K ★",
-    "volume": "68K",
-    "crescimento": "",
-    "stars": 68664,
-    "forks": "",
-    "descricao": "The open-source app everyone uses to manage agents at work. Team collaboration for AI agent workflows.",
-    "tags": [
-      "AI",
-      "agents",
-      "management",
-      "collaboration"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 18:50"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🪨 caveman — Claude Code Token Optimizer",
-    "badge": "🔥 67K ★",
-    "volume": "67K",
-    "crescimento": "65% token reduction",
-    "stars": 67423,
-    "forks": "",
-    "descricao": "Why use many token when few token do trick — Claude Code skill that cuts 65% of token usage on common dev commands.",
-    "tags": [
-      "AI",
-      "claude-code",
-      "optimization",
-      "tokens",
-      "developer-tools"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 18:50"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🔮 MiroFish — Swarm Intelligence Engine",
-    "badge": "trending",
-    "stars": 64670,
-    "forks": 10084,
-    "volume": "64.7K",
-    "crescimento": "+324/dia",
-    "descricao": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. Multi-agent collective intelligence for any prediction task.",
-    "tags": [
-      "AI",
-      "swarm",
-      "multi-agent",
-      "intelligence",
-      "prediction"
-    ],
-    "fonte": "github.com/666ghj/MiroFish",
-    "data_publicacao": "2026-06-05"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🌊 MiroFish — Swarm Intelligence Prediction Engine",
-    "badge": "🔥 64.5K ★",
-    "volume": "64.5K",
-    "crescimento": "324 stars hoje",
-    "stars": 64530,
-    "forks": "10,071",
-    "descricao": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物.",
-    "tags": [
-      "AI",
-      "swarm-intelligence",
-      "prediction",
-      "agents"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "05/06/2026 12:00"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🎬 MoneyPrinterTurbo — AI Short Video Generator",
-    "badge": "🔥 62K ★",
-    "volume": "",
-    "crescimento": "",
-    "stars": 61951,
-    "forks": "9,053",
-    "descricao": "One-click AI-powered high-definition short video generation. Uses LLMs to auto-generate scripts, visuals, and voiceovers for short-form content (TikTok, Reels, Shorts).",
-    "tags": [
-      "AI",
-      "video",
-      "content-creation"
-    ],
-    "fonte": "GitHub Trending"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "💻 Scrapling — An adaptive Web Scraping framework that handles everyth",
-    "badge": "★ 59,703",
-    "volume": "",
-    "crescimento": "",
-    "stars": 59703,
-    "forks": "5756",
-    "descricao": "An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!",
-    "tags": [
-      "scraping",
-      "web",
-      "crawl",
-      "framework",
-      "automation"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "03/06/2026 07:32"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "📊 graphify — Interactive Code Knowledge Graphs",
-    "badge": "🔥 58K ★",
-    "volume": "58K",
-    "crescimento": "",
-    "stars": 58378,
-    "forks": "4,892",
-    "descricao": "Transform any code into interactive knowledge graphs. AI coding assistant skill for Claude Code, Codex, OpenCode, Cursor, Gemini CLI.",
-    "tags": [
-      "ai",
-      "coding",
-      "knowledge-graph",
-      "developer-tools"
-    ],
-    "fonte": "github.com"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "⚡ rtk — CLI Proxy Token Reducer 60-90%",
-    "badge": "🔥 57K ★",
-    "volume": "57K",
-    "crescimento": "60-90% token reduction",
-    "stars": 57428,
-    "forks": "",
-    "descricao": "CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Works with Claude Code, Codex, and more.",
-    "tags": [
-      "AI",
-      "cli",
-      "token-reduction",
-      "developer-tools",
-      "optimization"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 18:50"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🌐 open-design — Local-First Claude Design",
-    "badge": "🔥 56K ★",
-    "volume": "56K",
-    "crescimento": "",
-    "stars": 56998,
-    "forks": "",
-    "descricao": "Local-first, open-source Claude Design alternative. Native desktop app with 2-second average response time.",
-    "tags": [
-      "AI",
-      "design",
-      "local-first",
-      "desktop",
-      "open-source"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 18:50"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🕷️ Scrapling — Adaptive Web Scraping Framework",
-    "badge": "🔥 56K ★",
-    "volume": "56.3K",
-    "crescimento": "639 stars/dia",
-    "stars": 56294,
-    "forks": "5,460",
-    "descricao": "An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl! Handles anti-bot measures and dynamic content.",
-    "tags": [
-      "scraping",
-      "web",
-      "AI",
-      "developer-tools",
-      "automation"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "31/05/2026 12:00"
   }
 ]
