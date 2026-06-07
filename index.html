@@ -75,10 +75,31 @@
 
         /* ── FOOTER META ── */
         .page-meta { text-align: center; color: #444; font-size: 0.75em; padding: 20px 0; margin-top: 20px; border-top: 1px solid #1a1a2e; }
+
+        /* ── HERO HOJE (manchete grande) ── */
+        .hero-hoje { display: flex; align-items: center; justify-content: space-between; padding: 16px 22px; margin: 0 auto 20px; max-width: 1400px; background: linear-gradient(135deg, #1e40af30 0%, #7c3aed25 50%, #fb923c15 100%); border: 1px solid #7c3aed; border-radius: 14px; gap: 16px; flex-wrap: wrap; }
+        .hero-hoje.is-empty { background: #13132a; border-color: #2a2a4a; }
+        .hero-num { font-size: 1.6em; font-weight: 800; color: #fb923c; line-height: 1.1; }
+        .hero-hoje.is-empty .hero-num { color: #666; font-size: 1.2em; }
+        .hero-text { font-size: 0.78em; color: #aaa; margin-top: 4px; }
+        .hero-text strong { color: #fff; font-weight: 600; }
+        .hero-cta { padding: 12px 20px; background: #fb923c; color: #0a0a14; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 0.88em; transition: all 0.15s; white-space: nowrap; font-family: inherit; }
+        .hero-cta:hover { background: #fdba74; transform: translateY(-1px); }
+        .hero-cta.is-secondary { background: transparent; color: #a78bfa; border: 1px solid #7c3aed; }
+        .hero-cta.is-secondary:hover { background: #7c3aed20; }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- HERO HOJE — manchete grande no topo -->
+        <div class="hero-hoje" id="heroHoje">
+            <div>
+                <div class="hero-num" id="heroNum">🆕 — novos HOJE</div>
+                <div class="hero-text" id="heroText">Carregando…</div>
+            </div>
+            <button class="hero-cta" id="heroCta">Ver só novidades de hoje →</button>
+        </div>
+
         <header>
             <h1>📊 Oportunidades Diárias</h1>
             <p class="subtitle">Relatório automático de tendências e oportunidades — atualizado 3x ao dia</p>
@@ -362,6 +383,45 @@
             </div>`;
         }
 
+        function atualizarHero() {
+            const hoje = dados.filter(d => isHoje(parseDataPub(d.data_publicacao)));
+            const total = dados.length;
+            const num = hoje.length;
+            const hero = document.getElementById('heroHoje');
+            const heroNum = document.getElementById('heroNum');
+            const heroText = document.getElementById('heroText');
+            const heroCta = document.getElementById('heroCta');
+
+            if (num === 0) {
+                hero.classList.add('is-empty');
+                heroNum.textContent = '⏳ Nada novo HOJE ainda';
+                const ultimaData = dados.find(d => d.data_publicacao);
+                heroText.innerHTML = 'Aguardando o próximo ciclo de pesquisa. <strong>Última atualização:</strong> ' + (ultimaData ? (ultimaData.data_publicacao || '—') : '—') + ' · ' + total + ' items no total';
+                heroCta.textContent = 'Ver últimos 7 dias →';
+                heroCta.classList.add('is-secondary');
+            } else {
+                hero.classList.remove('is-empty');
+                heroNum.textContent = '🆕 ' + num + (num === 1 ? ' novo HOJE' : ' novos HOJE');
+                // Pegar o horário mais recente entre os novos
+                const maisRecente = hoje
+                    .map(d => parseDataPub(d.data_publicacao))
+                    .filter(Boolean)
+                    .sort((a, b) => Date.UTC(b.y, b.m-1, b.d, b.h, b.mi) - Date.UTC(a.y, a.m-1, a.d, a.h, a.mi))[0];
+                const hr = maisRecente ? String(maisRecente.h).padStart(2, '0') + ':' + String(maisRecente.mi).padStart(2, '0') : '';
+                heroText.innerHTML = 'Adicionados <strong>hoje</strong>' + (hr ? ' por volta das <strong>' + hr + '</strong>' : '') + ' · <strong>' + total + '</strong> items no total';
+                heroCta.textContent = 'Ver só novidades de hoje →';
+                heroCta.classList.remove('is-secondary');
+            }
+
+            // CTA: ativar o filtro HOJE (ou 7d se vazio)
+            heroCta.onclick = () => {
+                filtroPeriodo = num === 0 ? '7d' : 'hoje';
+                atualizarFiltros();
+                // Scroll suave até os cards
+                document.getElementById('cardsGrid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            };
+        }
+
         function atualizarFiltros() {
             // Atualiza estado visual dos botões
             document.querySelectorAll('[data-cat]').forEach(btn => {
@@ -423,6 +483,7 @@
                     const grid = document.getElementById('cardsGrid');
                     grid.innerHTML = dados.map(renderCard).join('');
 
+                    atualizarHero();
                     atualizarFiltros();
                     if (ordenacao === 'calor') ordenarCards();
                 })
