@@ -14,6 +14,17 @@
         h1 { color: #7c3aed; font-size: 1.6em; margin-bottom: 4px; }
         .subtitle { color: #666; font-size: 0.8em; }
 
+        /* ── VIEW SWITCH (cards / tabela) ── */
+        .view-switch { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 10px; }
+        .view-link { font-size: 0.75em; color: #888; text-decoration: none; padding: 4px 12px; border-radius: 7px; border: 1px solid #2a2a4a; transition: all 0.15s; }
+        .view-link:hover { color: #fff; border-color: #7c3aed; }
+        .view-link.active { color: #a78bfa; border-color: #7c3aed; background: #7c3aed20; }
+        .hoje-count { font-size: 0.72em; color: #fb923c; font-weight: 700; padding: 3px 10px; border-radius: 12px; background: #1e40af30; border: 1px solid #1e40af60; margin-left: 6px; }
+
+        /* ── CARD: badge HOJE ── */
+        .card.is-hoje { border-color: #1e40af; background: #13133a; }
+        .card-badge.is-hoje { background: #1e40af; color: #fb923c; font-weight: 700; }
+
         /* ── RESUMO SEMÂNTICO ── */
         .resumo-semantico { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 16px; padding: 12px; background: #13132a; border-radius: 10px; border: 1px solid #2a2a4a; }
         .resumo-stat { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 20px; background: #1a1a2e; border: 1px solid #2a2a4a; cursor: pointer; font-size: 0.78em; transition: all 0.2s; color: #888; }
@@ -71,6 +82,11 @@
         <header>
             <h1>📊 Oportunidades Diárias</h1>
             <p class="subtitle">Relatório automático de tendências e oportunidades — atualizado 3x ao dia</p>
+            <div class="view-switch">
+                <a class="view-link active" href="./">🃏 Cards</a>
+                <a class="view-link" href="./tabela.html">📋 Tabela</a>
+                <span class="hoje-count" id="hojeCount"></span>
+            </div>
         </header>
 
         <!-- Resumo semântico clicável -->
@@ -78,6 +94,12 @@
 
         <!-- Toggle filters -->
         <div class="filters">
+            <div class="filter-group" id="filterPeriodo">
+                <button class="filter-btn" data-periodo="tudo">Tudo</button>
+                <button class="filter-btn" data-periodo="hoje">🆕 Hoje</button>
+                <button class="filter-btn" data-periodo="7d">7 dias</button>
+                <button class="filter-btn" data-periodo="30d">30 dias</button>
+            </div>
             <div class="filter-group" id="filterCategoria"></div>
             <div class="filter-group" id="filterOrigem"></div>
             <button class="filter-btn" id="btnOrdenar">🔥 Ordenar por calor</button>
@@ -94,6 +116,7 @@
         let filtroCat = '';
         let filtroOrigem = '';
         let filtroTag = '';
+        let filtroPeriodo = 'tudo'; // tudo | hoje | 7d | 30d
         let ordenacao = 'default';
 
         function parseNumero(str) {
@@ -102,6 +125,25 @@
             if (str.includes('K')) return parseFloat(str) * 1000;
             if (str.includes('M')) return parseFloat(str) * 1000000;
             return parseFloat(str) || 0;
+        }
+
+        function parseDataPub(str) {
+            if (!str) return new Date(0);
+            const m = str.match(/^(\d{2})\/(\d{2})\/(\d{4})\s+(\d{2}):(\d{2})/);
+            if (!m) return new Date(0);
+            return new Date(+m[3], +m[2]-1, +m[1], +m[4], +m[5]);
+        }
+        function isHoje(date) {
+            const hoje = new Date();
+            return date.getFullYear() === hoje.getFullYear() && date.getMonth() === hoje.getMonth() && date.getDate() === hoje.getDate();
+        }
+        function isUltimos7Dias(date) {
+            const diff = (Date.now() - date.getTime()) / (1000*60*60*24);
+            return diff >= 0 && diff <= 7;
+        }
+        function isUltimos30Dias(date) {
+            const diff = (Date.now() - date.getTime()) / (1000*60*60*24);
+            return diff >= 0 && diff <= 30;
         }
 
         function calcularCalor(item) {
@@ -237,6 +279,13 @@
                     if (ordenacao === 'calor') ordenarCards();
                 });
             });
+            document.querySelectorAll('[data-periodo]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filtroPeriodo = btn.dataset.periodo;
+                    atualizarFiltros();
+                    if (ordenacao === 'calor') ordenarCards();
+                });
+            });
 
             // Ordenar por calor
             document.getElementById('btnOrdenar').addEventListener('click', () => {
@@ -253,6 +302,8 @@
         }
 
         function renderCard(item) {
+            const dp = parseDataPub(item.data_publicacao);
+            const hoj = isHoje(dp);
             let metaHtml = '';
             if (item.stars) {
                 metaHtml += `<span class="card-meta-item">⭐ <span class="vol">${item.stars}</span></span>`;
@@ -262,15 +313,19 @@
                 if (item.crescimento) metaHtml += `<span class="sep">·</span><span class="card-meta-item">📈 <span class="growth">${item.crescimento}</span></span>`;
             }
             metaHtml += `<span class="sep">·</span><span class="card-meta-item">${item.origem === 'brasil' ? '🇧🇷' : '🌐'}</span>`;
+            metaHtml += `<span class="sep">·</span><span class="card-meta-item">📅 ${item.data_publicacao ? item.data_publicacao.split(' ').slice(0,2).join(' ') : ''}</span>`;
 
             const tagsHtml = (item.tags || []).slice(0, 3).map(t => `<span class="card-tag">${t}</span>`).join('');
             const fonteHtml = item.fonte ? `<span class="card-tag origem-tag">${item.fonte}</span>` : '';
             const url = gerarUrl(item);
+            const badgeClass = hoj ? 'card-badge is-hoje' : 'card-badge';
+            const badgeText = hoj ? '🆕 HOJE' : item.badge;
+            const cardClass = hoj ? 'card is-hoje' : 'card';
 
-            return `<div class="card" data-categoria="${item.categoria}" data-origem="${item.origem}" data-tags="${(item.tags || []).join(',')}">
+            return `<div class="${cardClass}" data-categoria="${item.categoria}" data-origem="${item.origem}" data-tags="${(item.tags || []).join(',')}" data-data="${item.data_publicacao || ''}">
                 <div class="card-header">
                     <div class="card-title">${item.titulo}</div>
-                    <div class="card-badge">${item.badge}</div>
+                    <div class="${badgeClass}">${badgeText}</div>
                 </div>
                 <div class="card-meta-row">
                     ${metaHtml}
@@ -290,10 +345,13 @@
             document.querySelectorAll('[data-origem]').forEach(btn => {
                 btn.classList.toggle('active', filtroOrigem === btn.dataset.origem);
             });
+            document.querySelectorAll('[data-periodo]').forEach(btn => {
+                btn.classList.toggle('active', filtroPeriodo === btn.dataset.periodo);
+            });
             document.querySelectorAll('.resumo-stat').forEach(el => {
                 const f = el.dataset.filter;
                 let active = false;
-                if (f === 'all') active = !filtroCat && !filtroOrigem && !filtroTag;
+                if (f === 'all') active = !filtroCat && !filtroOrigem && !filtroTag && filtroPeriodo === 'tudo';
                 else if (f.startsWith('cat:')) active = filtroCat === f.slice(4);
                 else if (f.startsWith('origem:')) active = filtroOrigem === f.slice(7);
                 else if (f.startsWith('tag:')) active = filtroTag === f.slice(4);
@@ -307,15 +365,25 @@
                 const cat = c.dataset.categoria;
                 const orig = c.dataset.origem;
                 const tags = c.dataset.tags.split(',');
+                const dataStr = c.dataset.data || '';
                 const matchCat = !filtroCat || cat === filtroCat;
                 const matchOrig = !filtroOrigem || orig === filtroOrigem;
                 const matchTag = !filtroTag || tags.includes(filtroTag);
-                const mostrar = matchCat && matchOrig && matchTag;
+                let matchPeriodo = true;
+                if (filtroPeriodo !== 'tudo') {
+                    const dp = parseDataPub(dataStr);
+                    if (filtroPeriodo === 'hoje') matchPeriodo = isHoje(dp);
+                    else if (filtroPeriodo === '7d') matchPeriodo = isUltimos7Dias(dp);
+                    else if (filtroPeriodo === '30d') matchPeriodo = isUltimos30Dias(dp);
+                }
+                const mostrar = matchCat && matchOrig && matchTag && matchPeriodo;
                 c.classList.toggle('hidden', !mostrar);
                 if (mostrar) visiveis++;
             });
 
             const total = dados.length;
+            const novosHoje = dados.filter(d => isHoje(parseDataPub(d.data_publicacao))).length;
+            document.getElementById('hojeCount').textContent = novosHoje > 0 ? `🆕 ${novosHoje} HOJE` : '';
             document.getElementById('pageMeta').textContent =
                 `${visiveis} de ${total} entradas | Atualizado: ${new Date().toLocaleString('pt-BR')}`;
         }
