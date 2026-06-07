@@ -42,7 +42,17 @@
 
         /* ── TABELA (fininha, moderna) ── */
         .table-wrap { max-width: 1400px; margin: 6px auto 0; padding: 0 16px 32px; overflow-x: auto; }
-        table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 0.78em; table-layout: fixed; }
+        table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 0.78em; }
+        col.col-titulo { width: 220px; }
+        col.col-cat { width: 90px; }
+        col.col-origem { width: 60px; }
+        col.col-vol { width: 80px; }
+        col.col-cresc { width: 100px; }
+        col.col-stars { width: 80px; }
+        col.col-data { width: 110px; }
+        col.col-fonte { width: 120px; }
+        col.col-desc { width: 280px; }
+        col.col-link { width: 40px; }
         thead th { position: sticky; top: 60px; background: #0a0a14; text-align: left; padding: 8px 10px; font-weight: 600; color: #888; border-bottom: 1px solid #1a1a2e; cursor: pointer; user-select: none; white-space: nowrap; transition: color 0.15s; z-index: 5; }
         thead th:hover { color: #fff; }
         thead th .sort-arrow { display: inline-block; width: 10px; margin-left: 4px; color: #444; }
@@ -61,7 +71,7 @@
         tbody tr.row-hoje td { background: #1e40af08; }
         tbody tr.row-hoje:hover td { background: #1e40af15; }
 
-        .col-titulo { width: 240px; }
+        .col-titulo { min-width: 200px; }
         .titulo-cell { display: flex; align-items: flex-start; gap: 6px; }
         .titulo-texto { color: #fff; font-weight: 500; line-height: 1.35; }
         .badge-hoje { font-size: 0.72em; padding: 1px 6px; border-radius: 4px; background: #1e40af; color: #fb923c; font-weight: 700; white-space: nowrap; flex-shrink: 0; }
@@ -141,14 +151,26 @@
 
 <div class="table-wrap">
     <table id="tabela">
+        <colgroup>
+            <col class="col-titulo">
+            <col class="col-cat">
+            <col class="col-origem">
+            <col class="col-vol">
+            <col class="col-cresc">
+            <col class="col-stars">
+            <col class="col-data">
+            <col class="col-fonte">
+            <col class="col-desc">
+            <col class="col-link">
+        </colgroup>
         <thead>
             <tr>
                 <th data-sort="titulo" class="col-titulo"><span class="col-icon">📌</span>Título<span class="sort-arrow">↕</span></th>
                 <th data-sort="categoria" class="col-cat"><span class="col-icon">🏷</span>Cat<span class="sort-arrow">↕</span></th>
                 <th data-sort="origem" class="col-origem"><span class="col-icon">🌐</span>Origem<span class="sort-arrow">↕</span></th>
-                <th data-sort="volume" class="col-num"><span class="col-icon">🔊</span>Volume<span class="sort-arrow">↕</span></th>
-                <th data-sort="crescimento" class="col-num"><span class="col-icon">📈</span>Δ Crescimento<span class="sort-arrow">↕</span></th>
-                <th data-sort="stars" class="col-num"><span class="col-icon">⭐</span>Stars<span class="sort-arrow">↕</span></th>
+                <th data-sort="volume" class="col-num col-vol"><span class="col-icon">🔊</span>Volume<span class="sort-arrow">↕</span></th>
+                <th data-sort="crescimento" class="col-num col-cresc"><span class="col-icon">📈</span>Δ Crescimento<span class="sort-arrow">↕</span></th>
+                <th data-sort="stars" class="col-num col-stars"><span class="col-icon">⭐</span>Stars<span class="sort-arrow">↕</span></th>
                 <th data-sort="data_publicacao" class="col-data"><span class="col-icon">📅</span>Data<span class="sort-arrow">↕</span></th>
                 <th data-sort="fonte" class="col-fonte"><span class="col-icon">📰</span>Fonte<span class="sort-arrow">↕</span></th>
                 <th data-sort="descricao" class="col-desc-th"><span class="col-icon">📝</span>Descrição<span class="sort-arrow">↕</span></th>
