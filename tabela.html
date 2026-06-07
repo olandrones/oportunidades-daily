@@ -55,6 +55,7 @@
         tbody tr.row-hoje:hover td { background: #1e40af15; }
 
         .col-titulo { min-width: 200px; }
+        .col-idx { color: #555; font-size: 0.78em; font-variant-numeric: tabular-nums; min-width: 36px; text-align: right; padding-right: 12px !important; }
         .titulo-cell { display: flex; align-items: flex-start; gap: 6px; }
         .titulo-texto { color: #fff; font-weight: 500; line-height: 1.35; }
         .badge-hoje { font-size: 0.72em; padding: 1px 6px; border-radius: 4px; background: #1e40af; color: #fb923c; font-weight: 700; white-space: nowrap; flex-shrink: 0; }
@@ -149,6 +150,7 @@
     <table id="tabela">
         <thead>
             <tr>
+                <th class="col-num" title="Índice sequencial do card na base"><span class="col-icon">#</span></th>
                 <th data-sort="titulo" class="col-titulo"><span class="col-icon">📌</span>Título<span class="sort-arrow">↕</span></th>
                 <th data-sort="categoria" class="col-cat"><span class="col-icon">🏷</span>Cat<span class="sort-arrow">↕</span></th>
                 <th data-sort="origem" class="col-origem"><span class="col-icon">🌐</span>Origem<span class="sort-arrow">↕</span></th>
@@ -368,7 +370,7 @@
             empty.style.display = 'block';
         } else {
             empty.style.display = 'none';
-            tbody.innerHTML = sorted.map(d => {
+            tbody.innerHTML = sorted.map((d, idx) => {
                 const dp = parseDataPub(d.data_publicacao);
                 const idAt = Number(d.id_atualizacao) || 0;
                 const isUltima = idAt === maxId && maxId > 0;
@@ -385,7 +387,11 @@
                 const dataLabel = d.data_publicacao ? d.data_publicacao.split(' ').slice(0,2).join(' ') : '—';
                 const dataClass = isUltima ? 'col-data hoje' : 'col-data';
 
+                // Índice sequencial (#) baseado na posição do card NO dados.json original (não na lista filtrada)
+                const numOriginal = dados.findIndex(x => x === d) + 1;
+
                 return `<tr class="${isUltima ? 'row-hoje' : ''}">
+                    <td class="col-num col-idx" title="Índice na base original">${numOriginal}</td>
                     <td class="col-titulo">
                         <div class="titulo-cell">
                             ${badges}
@@ -519,7 +525,7 @@
                 render();
             })
             .catch(err => {
-                document.getElementById('tbody').innerHTML = `<tr><td colspan="10" class="empty">Erro ao carregar dados: ${err.message}</td></tr>`;
+                document.getElementById('tbody').innerHTML = `<tr><td colspan="11" class="empty">Erro ao carregar dados: ${err.message}</td></tr>`;
             });
     }
 

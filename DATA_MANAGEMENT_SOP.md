@@ -62,6 +62,17 @@ Cada execução do agente de pesquisa **incrementa um contador** que vira o `id_
 }
 ```
 
+### ⚠️ Validação obrigatória antes do commit
+
+**100% dos cards NOVOS devem ter:**
+- `data_publicacao` no formato `DD/MM/YYYY HH:MM` (string NÃO-VAZIA)
+- `id_atualizacao` numérico ≥ 1
+- `categoria` ∈ {tendencia, app, negocio}
+- `origem` ∈ {global, brasil}
+- `titulo` não-vazio
+
+**Antes de commitar, o agente DEVE validar e REJEITAR** o commit se algum card novo estiver sem data ou sem `id_atualizacao`. Cards legados sem data são migrados UMA vez (com fallback `data_fallback: true` no `_meta`); novos cards sem data = bug.
+
 ### Como o agente calcula o próximo ID
 
 Antes de fazer merge, calcular:

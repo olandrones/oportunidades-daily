@@ -63,6 +63,10 @@
         .card-tag { font-size: 0.68em; padding: 2px 7px; border-radius: 5px; background: #2a2a4a; color: #777; }
         .card-tag.origem-tag { background: #3b82f620; color: #60a5fa; }
 
+        /* Card: index badge (canto) */
+        .card-num-badge { position: absolute; top: 6px; left: 6px; font-size: 0.62em; color: #555; font-weight: 600; padding: 1px 5px; border-radius: 4px; background: #0a0a14; border: 1px solid #1a1a2e; }
+        .card { position: relative; }
+
         /* Card: description */
         .card-desc { font-size: 0.78em; color: #999; line-height: 1.5; }
 
@@ -381,6 +385,8 @@
             const maxId = getMaxId();
             const idAt = Number(item.id_atualizacao) || 0;
             const isUltima = idAt === maxId && maxId > 0;
+            // Índice sequencial (#) — posição do card no dados.json original
+            const numOriginal = dados.indexOf(item) + 1;
             let metaHtml = '';
             if (item.stars) {
                 metaHtml += `<span class="card-meta-item">⭐ <span class="vol">${item.stars}</span></span>`;
@@ -404,6 +410,7 @@
                     <div class="card-title">${item.titulo}</div>
                     <div class="${badgeClass}">${badgeText}</div>
                 </div>
+                <div class="card-num-badge" title="Índice do card na base">#${numOriginal}</div>
                 <div class="card-meta-row">
                     ${metaHtml}
                     ${tagsHtml}

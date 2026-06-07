@@ -243,7 +243,11 @@
     "url": "https://github.com/jwasham/coding-interview-university",
     "volume": "",
     "fonte": "github-trending",
-    "id_atualizacao": 1
+    "id_atualizacao": 1,
+    "data_publicacao": "30/05/2026 12:00",
+    "_meta": {
+      "data_fallback": true
+    }
   },
   {
     "categoria": "app",
@@ -261,7 +265,11 @@
       "developer-tools"
     ],
     "fonte": "GitHub Trending",
-    "id_atualizacao": 1
+    "id_atualizacao": 1,
+    "data_publicacao": "30/05/2026 12:00",
+    "_meta": {
+      "data_fallback": true
+    }
   },
   {
     "titulo": "💻 ECC — The agent harness performance optimization system. Skills, i",
@@ -278,7 +286,11 @@
     "url": "https://github.com/affaan-m/ECC",
     "volume": "JavaScript",
     "fonte": "github-trending",
-    "id_atualizacao": 1
+    "id_atualizacao": 1,
+    "data_publicacao": "30/05/2026 12:00",
+    "_meta": {
+      "data_fallback": true
+    }
   },
   {
     "categoria": "app",
@@ -338,7 +350,11 @@
       "agents"
     ],
     "fonte": "GitHub Trending",
-    "id_atualizacao": 1
+    "id_atualizacao": 1,
+    "data_publicacao": "30/05/2026 12:00",
+    "_meta": {
+      "data_fallback": true
+    }
   },
   {
     "categoria": "app",
@@ -375,7 +391,11 @@
     "url": "https://github.com/NousResearch/hermes-agent",
     "volume": "Python",
     "fonte": "github-trending",
-    "id_atualizacao": 1
+    "id_atualizacao": 1,
+    "data_publicacao": "30/05/2026 12:00",
+    "_meta": {
+      "data_fallback": true
+    }
   },
   {
     "categoria": "app",
@@ -454,7 +474,11 @@
       "document-processing"
     ],
     "fonte": "GitHub Trending",
-    "id_atualizacao": 1
+    "id_atualizacao": 1,
+    "data_publicacao": "30/05/2026 12:00",
+    "_meta": {
+      "data_fallback": true
+    }
   },
   {
     "categoria": "app",
@@ -472,7 +496,11 @@
       "agents"
     ],
     "fonte": "GitHub Trending",
-    "id_atualizacao": 1
+    "id_atualizacao": 1,
+    "data_publicacao": "30/05/2026 12:00",
+    "_meta": {
+      "data_fallback": true
+    }
   },
   {
     "titulo": "💻 spec-kit — Toolkit to help you get started with Spec-Driven Development",
@@ -489,7 +517,11 @@
     "url": "https://github.com/github/spec-kit",
     "volume": "Python",
     "fonte": "github-trending",
-    "id_atualizacao": 1
+    "id_atualizacao": 1,
+    "data_publicacao": "30/05/2026 12:00",
+    "_meta": {
+      "data_fallback": true
+    }
   },
   {
     "categoria": "app",
@@ -567,7 +599,11 @@
     ],
     "badge": "Doc AI",
     "origem": "global",
-    "id_atualizacao": 1
+    "id_atualizacao": 1,
+    "data_publicacao": "30/05/2026 12:00",
+    "_meta": {
+      "data_fallback": true
+    }
   },
   {
     "titulo": "💻 PaddleOCR — Turn any PDF or image document into structured data for your",
@@ -584,6 +620,10 @@
     "url": "https://github.com/PaddlePaddle/PaddleOCR",
     "volume": "Python",
     "fonte": "github-trending",
-    "id_atualizacao": 1
+    "id_atualizacao": 1,
+    "data_publicacao": "30/05/2026 12:00",
+    "_meta": {
+      "data_fallback": true
+    }
   }
 ]
