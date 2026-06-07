@@ -114,11 +114,21 @@
 
         .empty { text-align: center; padding: 60px; color: #555; font-size: 0.9em; }
 
+        /* ── TOP TAGS (mapa de calor implícito) ── */
+        .tags-row { display: flex; align-items: center; gap: 5px; max-width: 1400px; margin: 6px auto 0; flex-wrap: wrap; padding-top: 6px; border-top: 1px solid #1a1a2e44; }
+        .tags-row .label { font-size: 0.7em; color: #555; margin-right: 4px; }
+        .tag-chip { font-size: 0.7em; color: #999; background: #13132a; border: 1px solid #1a1a2e; padding: 3px 8px; border-radius: 12px; cursor: pointer; transition: all 0.15s; font-family: inherit; display: inline-flex; align-items: center; gap: 4px; }
+        .tag-chip:hover { color: #fff; border-color: #7c3aed; }
+        .tag-chip.active { color: #fb923c; background: #1e40af; border-color: #fb923c; font-weight: 600; }
+        .tag-chip .tag-n { color: #555; font-size: 0.95em; }
+        .tag-chip.active .tag-n { color: #fdba74; }
+        .tag-clear { font-size: 0.7em; color: #ef4444; background: transparent; border: 1px solid #ef444440; padding: 3px 8px; border-radius: 12px; cursor: pointer; font-family: inherit; }
+        .tag-clear:hover { background: #ef444420; }
+
         /* ── MOBILE ── */
         @media (max-width: 700px) {
             .topbar-row { flex-wrap: wrap; }
             .topbar h1 { width: 100%; margin-bottom: 4px; }
-            .search { order: 10; width: 100%; }
             thead th { font-size: 0.95em; padding: 6px 6px; }
             tbody td { padding: 6px 6px; }
             .col-titulo { min-width: 200px; }
@@ -132,9 +142,6 @@
         <h1>📊 Oportunidades</h1>
         <a class="nav-link" href="./">🃏 Cards</a>
         <a class="nav-link active" href="./tabela.html">📋 Tabela</a>
-        <div class="search">
-            <input type="text" id="searchInput" placeholder="🔍 buscar título, tag, fonte…" autocomplete="off">
-        </div>
         <div class="ctrl-group">
             <button class="ctrl" id="btnRefresh" title="Recarregar dados">↻</button>
         </div>
@@ -154,6 +161,10 @@
         <button class="chip active" data-origem="">Todas</button>
         <button class="chip" data-origem="global">🌐 Global</button>
         <button class="chip" data-origem="brasil">🇧🇷 Brasil</button>
+    </div>
+    <div class="tags-row" id="tagsRow">
+        <span class="label">🏷 Top tags:</span>
+        <span id="tagChips"></span>
     </div>
 </div>
 
@@ -209,11 +220,11 @@
     let dados = [];
     let sortCol = 'data_publicacao';
     let sortDir = 'desc'; // 'asc' | 'desc'
-    let searchQuery = '';
     let filtroPeriodo = 'tudo'; // tudo | hoje | 7d | 30d
     let filtroCat = '';
     let filtroOrigem = '';
     let filtrosCol = {}; // { titulo: '...', categoria: '...', ... } — filtros por coluna
+    let filtroTags = new Set(); // multi-select de tags (OR)
 
     // ── Helpers ──
     function parseNumero(str) {
@@ -300,7 +311,6 @@
 
     // ── Filtros ──
     function getFiltered() {
-        const sq = searchQuery.toLowerCase().trim();
         // Normalizar filtros de coluna (lowercase, sem espaço nas pontas)
         const fcols = {};
         Object.keys(filtrosCol).forEach(k => {
@@ -314,15 +324,17 @@
             if (filtroPeriodo === 'hoje' && !isHoje(dp)) return false;
             if (filtroPeriodo === '7d' && !isUltimos7Dias(dp)) return false;
             if (filtroPeriodo === '30d' && !isUltimos30Dias(dp)) return false;
-            if (sq) {
-                const hay = [d.titulo, d.descricao, d.fonte, (d.tags||[]).join(' '), d.badge, d.crescimento].join(' ').toLowerCase();
-                if (!hay.includes(sq)) return false;
-            }
             // Filtros por coluna (substring, case-insensitive)
             for (const col in fcols) {
                 const val = d[col];
                 const strVal = val === null || val === undefined ? '' : String(val).toLowerCase();
                 if (!strVal.includes(fcols[col])) return false;
+            }
+            // Filtro de tags (multi-select, OR — basta ter 1 das tags selecionadas)
+            if (filtroTags.size > 0) {
+                const itemTags = d.tags || [];
+                const hasAny = itemTags.some(t => filtroTags.has(t));
+                if (!hasAny) return false;
             }
             return true;
         });
@@ -355,6 +367,7 @@
 
     // ── Render ──
     function render() {
+        renderTags(); // atualiza top tags (e estado visual de ativos)
         const filtered = getFiltered();
         const sorted = getSorted(filtered);
         const tbody = document.getElementById('tbody');
@@ -436,12 +449,6 @@
             });
         });
 
-        // Search
-        document.getElementById('searchInput').addEventListener('input', e => {
-            searchQuery = e.target.value;
-            render();
-        });
-
         // Filtros por coluna (input no thead)
         document.querySelectorAll('.col-filter').forEach(inp => {
             inp.addEventListener('input', e => {
@@ -483,6 +490,45 @@
 
         // Refresh
         document.getElementById('btnRefresh').addEventListener('click', () => carregarDados(true));
+    }
+
+    // ── TOP TAGS (mapa de calor implícito) ──
+    const TOP_TAGS_N = 18;
+
+    function getTopTags() {
+        const counts = {};
+        dados.forEach(d => {
+            (d.tags || []).forEach(t => {
+                counts[t] = (counts[t] || 0) + 1;
+            });
+        });
+        return Object.entries(counts)
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, TOP_TAGS_N);
+    }
+
+    function renderTags() {
+        const top = getTopTags();
+        const container = document.getElementById('tagChips');
+        if (top.length === 0) { container.innerHTML = '<span style="color:#444;font-size:0.7em">— sem tags</span>'; return; }
+        container.innerHTML = top.map(([tag, n]) =>
+            `<button class="tag-chip ${filtroTags.has(tag) ? 'active' : ''}" data-tag="${escapeHtml(tag)}">
+                ${escapeHtml(tag)}<span class="tag-n">${n}</span>
+            </button>`
+        ).join('') + (filtroTags.size > 0
+            ? `<button class="tag-clear" id="tagClear">✕ limpar (${filtroTags.size})</button>`
+            : '');
+        // Bind clicks
+        container.querySelectorAll('.tag-chip').forEach(b => {
+            b.addEventListener('click', () => {
+                const t = b.dataset.tag;
+                if (filtroTags.has(t)) filtroTags.delete(t);
+                else filtroTags.add(t);
+                render();
+            });
+        });
+        const clr = document.getElementById('tagClear');
+        if (clr) clr.addEventListener('click', () => { filtroTags.clear(); render(); });
     }
 
     // ── Data load ──
