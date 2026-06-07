@@ -43,38 +43,11 @@
         /* ── TABELA (fininha, moderna) ── */
         .table-wrap { max-width: 1400px; margin: 6px auto 0; padding: 0 16px 32px; overflow-x: auto; }
         table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 0.78em; }
-        col.col-titulo { width: 220px; }
-        col.col-cat { width: 90px; }
-        col.col-origem { width: 60px; }
-        col.col-vol { width: 80px; }
-        col.col-cresc { width: 100px; }
-        col.col-stars { width: 80px; }
-        col.col-data { width: 110px; }
-        col.col-fonte { width: 120px; }
-        col.col-desc { width: 280px; }
-        col.col-link { width: 40px; }
         thead th { position: sticky; top: 60px; background: #0a0a14; text-align: left; padding: 8px 10px; font-weight: 600; color: #888; border-bottom: 1px solid #1a1a2e; cursor: pointer; user-select: none; white-space: nowrap; transition: color 0.15s; z-index: 5; }
         thead th:hover { color: #fff; }
         thead th .sort-arrow { display: inline-block; width: 10px; margin-left: 4px; color: #444; }
         thead th.sorted .sort-arrow { color: #7c3aed; }
         thead th .col-icon { margin-right: 4px; opacity: 0.6; }
-
-        /* Filtros inputs no thead (linha abaixo do header) */
-        thead tr.filter-row th { position: sticky; top: 88px; padding: 4px 6px; background: #0a0a14; border-bottom: 1px solid #1a1a2e; cursor: default; box-sizing: border-box; }
-        thead tr.filter-row th:nth-child(1) { width: 220px; }
-        thead tr.filter-row th:nth-child(2) { width: 90px; }
-        thead tr.filter-row th:nth-child(3) { width: 60px; }
-        thead tr.filter-row th:nth-child(4) { width: 80px; }
-        thead tr.filter-row th:nth-child(5) { width: 100px; }
-        thead tr.filter-row th:nth-child(6) { width: 80px; }
-        thead tr.filter-row th:nth-child(7) { width: 110px; }
-        thead tr.filter-row th:nth-child(8) { width: 120px; }
-        thead tr.filter-row th:nth-child(9) { width: 280px; }
-        thead tr.filter-row th:nth-child(10) { width: 40px; }
-        thead tr.filter-row th:hover { color: #888; }
-        .col-filter { width: 100%; padding: 3px 6px; border: 1px solid #1a1a2e; border-radius: 4px; background: #13132a; color: #e0e0e0; font-size: 0.95em; outline: none; font-family: inherit; }
-        .col-filter:focus { border-color: #7c3aed; }
-        .col-filter::placeholder { color: #555; }
 
         tbody td { padding: 7px 10px; border-bottom: 1px solid #13132a; color: #ccc; vertical-align: top; }
         tbody tr:hover td { background: #13132a; }
@@ -142,6 +115,9 @@
         <h1>📊 Oportunidades</h1>
         <a class="nav-link" href="./">🃏 Cards</a>
         <a class="nav-link active" href="./tabela.html">📋 Tabela</a>
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="🔍 buscar título, tag, fonte…" autocomplete="off">
+        </div>
         <div class="ctrl-group">
             <button class="ctrl" id="btnRefresh" title="Recarregar dados">↻</button>
         </div>
@@ -172,18 +148,6 @@
 
 <div class="table-wrap">
     <table id="tabela">
-        <colgroup>
-            <col class="col-titulo">
-            <col class="col-cat">
-            <col class="col-origem">
-            <col class="col-vol">
-            <col class="col-cresc">
-            <col class="col-stars">
-            <col class="col-data">
-            <col class="col-fonte">
-            <col class="col-desc">
-            <col class="col-link">
-        </colgroup>
         <thead>
             <tr>
                 <th data-sort="titulo" class="col-titulo"><span class="col-icon">📌</span>Título<span class="sort-arrow">↕</span></th>
@@ -197,18 +161,6 @@
                 <th data-sort="descricao" class="col-desc-th"><span class="col-icon">📝</span>Descrição<span class="sort-arrow">↕</span></th>
                 <th class="col-link"></th>
             </tr>
-            <tr class="filter-row">
-                <th><input class="col-filter" data-filter-col="titulo" placeholder="título…"></th>
-                <th><input class="col-filter" data-filter-col="categoria" placeholder="cat…"></th>
-                <th><input class="col-filter" data-filter-col="origem" placeholder="origem…"></th>
-                <th><input class="col-filter" data-filter-col="volume" placeholder="vol…"></th>
-                <th><input class="col-filter" data-filter-col="crescimento" placeholder="cresc…"></th>
-                <th><input class="col-filter" data-filter-col="stars" placeholder="stars…"></th>
-                <th><input class="col-filter" data-filter-col="data_publicacao" placeholder="data…"></th>
-                <th><input class="col-filter" data-filter-col="fonte" placeholder="fonte…"></th>
-                <th><input class="col-filter" data-filter-col="descricao" placeholder="buscar na descrição…"></th>
-                <th></th>
-            </tr>
         </thead>
         <tbody id="tbody"></tbody>
     </table>
@@ -220,10 +172,10 @@
     let dados = [];
     let sortCol = 'data_publicacao';
     let sortDir = 'desc'; // 'asc' | 'desc'
+    let searchQuery = '';
     let filtroPeriodo = 'tudo'; // tudo | hoje | 7d | 30d
     let filtroCat = '';
     let filtroOrigem = '';
-    let filtrosCol = {}; // { titulo: '...', categoria: '...', ... } — filtros por coluna
     let filtroTags = new Set(); // multi-select de tags (OR)
 
     // ── Helpers ──
@@ -311,12 +263,7 @@
 
     // ── Filtros ──
     function getFiltered() {
-        // Normalizar filtros de coluna (lowercase, sem espaço nas pontas)
-        const fcols = {};
-        Object.keys(filtrosCol).forEach(k => {
-            const v = (filtrosCol[k] || '').toLowerCase().trim();
-            if (v) fcols[k] = v;
-        });
+        const sq = searchQuery.toLowerCase().trim();
         return dados.filter(d => {
             if (filtroCat && d.categoria !== filtroCat) return false;
             if (filtroOrigem && d.origem !== filtroOrigem) return false;
@@ -324,11 +271,9 @@
             if (filtroPeriodo === 'hoje' && !isHoje(dp)) return false;
             if (filtroPeriodo === '7d' && !isUltimos7Dias(dp)) return false;
             if (filtroPeriodo === '30d' && !isUltimos30Dias(dp)) return false;
-            // Filtros por coluna (substring, case-insensitive)
-            for (const col in fcols) {
-                const val = d[col];
-                const strVal = val === null || val === undefined ? '' : String(val).toLowerCase();
-                if (!strVal.includes(fcols[col])) return false;
+            if (sq) {
+                const hay = [d.titulo, d.descricao, d.fonte, (d.tags||[]).join(' '), d.badge, d.crescimento].join(' ').toLowerCase();
+                if (!hay.includes(sq)) return false;
             }
             // Filtro de tags (multi-select, OR — basta ter 1 das tags selecionadas)
             if (filtroTags.size > 0) {
@@ -449,16 +394,10 @@
             });
         });
 
-        // Filtros por coluna (input no thead)
-        document.querySelectorAll('.col-filter').forEach(inp => {
-            inp.addEventListener('input', e => {
-                const col = inp.dataset.filterCol;
-                filtrosCol[col] = e.target.value;
-                render();
-            });
-            // Impedir propagação do click pro th (senão ativaria sort)
-            inp.addEventListener('click', e => e.stopPropagation());
-            inp.addEventListener('keydown', e => e.stopPropagation());
+        // Search global (busca em título, descrição, fonte, tags, badge)
+        document.getElementById('searchInput').addEventListener('input', e => {
+            searchQuery = e.target.value;
+            render();
         });
 
         // Período
