@@ -167,28 +167,58 @@
         return parseFloat(str) || 0;
     }
 
+    // Timezone de referência: Manaus (onde o Renato vive e os crons geram os dados)
+    const TZ = 'America/Manaus';
+
     function parseDataPub(str) {
-        // "06/06/2026 19:56" → Date
-        if (!str) return new Date(0);
+        if (!str) return null;
         const m = str.match(/^(\d{2})\/(\d{2})\/(\d{4})\s+(\d{2}):(\d{2})/);
-        if (!m) return new Date(0);
-        return new Date(+m[3], +m[2]-1, +m[1], +m[4], +m[5]);
+        if (!m) return null;
+        // Cria string ISO forçando Manaus, depois converte. Evita drift de fuso.
+        const iso = `${m[3]}-${m[2]}-${m[1]}T${m[4]}:${m[5]}:00`;
+        // O truque: pegar as componentes em Manaus usando Intl
+        return parseManausDate(iso);
     }
 
-    function isHoje(date) {
-        const hoje = new Date();
-        return date.getFullYear() === hoje.getFullYear()
-            && date.getMonth() === hoje.getMonth()
-            && date.getDate() === hoje.getDate();
+    function parseManausDate(iso) {
+        // Retorna { y, m, d, h, mi } extraído do instante em Manaus
+        const fmt = new Intl.DateTimeFormat('en-CA', {
+            timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit',
+            hour: '2-digit', minute: '2-digit', hour12: false
+        });
+        const parts = Object.fromEntries(fmt.formatToParts(new Date(iso)).filter(p => p.type !== 'literal').map(p => [p.type, p.value]));
+        return {
+            y: +parts.year, m: +parts.month, d: +parts.day,
+            h: +parts.hour % 24, mi: +parts.minute
+        };
     }
 
-    function isUltimos7Dias(date) {
-        const diff = (Date.now() - date.getTime()) / (1000*60*60*24);
+    function nowManaus() {
+        return parseManausDate(new Date().toISOString());
+    }
+
+    function isHoje(dataPub) {
+        if (!dataPub) return false;
+        const now = nowManaus();
+        return dataPub.y === now.y && dataPub.m === now.m && dataPub.d === now.d;
+    }
+
+    function isUltimos7Dias(dataPub) {
+        if (!dataPub) return false;
+        const now = nowManaus();
+        // Converter para um timestamp arbitrário em Manaus, em dias desde epoch local
+        const a = Date.UTC(dataPub.y, dataPub.m-1, dataPub.d);
+        const b = Date.UTC(now.y, now.m-1, now.d);
+        const diff = (b - a) / 86400000;
         return diff >= 0 && diff <= 7;
     }
 
-    function isUltimos30Dias(date) {
-        const diff = (Date.now() - date.getTime()) / (1000*60*60*24);
+    function isUltimos30Dias(dataPub) {
+        if (!dataPub) return false;
+        const now = nowManaus();
+        const a = Date.UTC(dataPub.y, dataPub.m-1, dataPub.d);
+        const b = Date.UTC(now.y, now.m-1, now.d);
+        const diff = (b - a) / 86400000;
         return diff >= 0 && diff <= 30;
     }
 
@@ -237,7 +267,15 @@
             if (col === 'volume') { va = parseNumero(a.volume); vb = parseNumero(b.volume); }
             else if (col === 'crescimento') { va = parseNumero(a.crescimento); vb = parseNumero(b.crescimento); }
             else if (col === 'stars') { va = a.stars || 0; vb = b.stars || 0; }
-            else if (col === 'data_publicacao') { va = parseDataPub(a.data_publicacao).getTime(); vb = parseDataPub(b.data_publicacao).getTime(); }
+            else if (col === 'data_publicacao') {
+                const da = parseDataPub(a.data_publicacao);
+                const db = parseDataPub(b.data_publicacao);
+                if (!da && !db) return 0;
+                if (!da) return 1;  // sem data vai pro fim em desc
+                if (!db) return -1;
+                va = Date.UTC(da.y, da.m-1, da.d, da.h, da.mi);
+                vb = Date.UTC(db.y, db.m-1, db.d, db.h, db.mi);
+            }
             else { va = String(a[col]||'').toLowerCase(); vb = String(b[col]||'').toLowerCase(); }
             if (va < vb) return -1 * dir;
             if (va > vb) return 1 * dir;
