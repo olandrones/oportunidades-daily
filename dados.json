@@ -18,7 +18,8 @@
       "synthesis"
     ],
     "fonte": "GitHub Trending",
-    "data_publicacao": "06/06/2026 19:56"
+    "data_publicacao": "06/06/2026 19:56",
+    "id_atualizacao": 1
   },
   {
     "categoria": "app",
@@ -38,7 +39,8 @@
       "frontend"
     ],
     "fonte": "GitHub Trending",
-    "data_publicacao": "06/06/2026 19:56"
+    "data_publicacao": "06/06/2026 19:56",
+    "id_atualizacao": 1
   },
   {
     "categoria": "app",
@@ -58,7 +60,8 @@
       "persistence"
     ],
     "fonte": "GitHub Trending",
-    "data_publicacao": "06/06/2026 19:56"
+    "data_publicacao": "06/06/2026 19:56",
+    "id_atualizacao": 1
   },
   {
     "categoria": "app",
@@ -78,7 +81,8 @@
       "setup"
     ],
     "fonte": "GitHub Trending",
-    "data_publicacao": "06/06/2026 19:56"
+    "data_publicacao": "06/06/2026 19:56",
+    "id_atualizacao": 1
   },
   {
     "categoria": "app",
@@ -98,7 +102,8 @@
       "automation"
     ],
     "fonte": "GitHub Trending",
-    "data_publicacao": "06/06/2026 19:56"
+    "data_publicacao": "06/06/2026 19:56",
+    "id_atualizacao": 1
   },
   {
     "categoria": "app",
@@ -118,7 +123,8 @@
       "audio"
     ],
     "fonte": "GitHub Trending",
-    "data_publicacao": "06/06/2026 19:56"
+    "data_publicacao": "06/06/2026 19:56",
+    "id_atualizacao": 1
   },
   {
     "categoria": "app",
@@ -138,7 +144,8 @@
       "agents"
     ],
     "fonte": "GitHub Trending",
-    "data_publicacao": "06/06/2026 19:56"
+    "data_publicacao": "06/06/2026 19:56",
+    "id_atualizacao": 1
   },
   {
     "categoria": "tendencia",
@@ -158,7 +165,8 @@
       "niche"
     ],
     "fonte": "Exploding Topics",
-    "data_publicacao": "06/06/2026 19:56"
+    "data_publicacao": "06/06/2026 19:56",
+    "id_atualizacao": 1
   },
   {
     "categoria": "tendencia",
@@ -178,7 +186,8 @@
       "trending"
     ],
     "fonte": "Exploding Topics",
-    "data_publicacao": "06/06/2026 19:56"
+    "data_publicacao": "06/06/2026 19:56",
+    "id_atualizacao": 1
   },
   {
     "categoria": "tendencia",
@@ -198,7 +207,8 @@
       "lifestyle"
     ],
     "fonte": "Exploding Topics",
-    "data_publicacao": "06/06/2026 19:56"
+    "data_publicacao": "06/06/2026 19:56",
+    "id_atualizacao": 1
   },
   {
     "categoria": "app",
@@ -217,7 +227,8 @@
       "open-source"
     ],
     "fonte": "GitHub Trending",
-    "data_publicacao": "31/05/2026 18:05"
+    "data_publicacao": "31/05/2026 18:05",
+    "id_atualizacao": 1
   },
   {
     "titulo": "💻 coding-interview-university — A complete computer science study plan to become a software ",
@@ -231,7 +242,8 @@
     "badge": "🔥 GitHub Trending",
     "url": "https://github.com/jwasham/coding-interview-university",
     "volume": "",
-    "fonte": "github-trending"
+    "fonte": "github-trending",
+    "id_atualizacao": 1
   },
   {
     "categoria": "app",
@@ -248,7 +260,8 @@
       "agents",
       "developer-tools"
     ],
-    "fonte": "GitHub Trending"
+    "fonte": "GitHub Trending",
+    "id_atualizacao": 1
   },
   {
     "titulo": "💻 ECC — The agent harness performance optimization system. Skills, i",
@@ -264,7 +277,8 @@
     "badge": "🔥 GitHub Trending",
     "url": "https://github.com/affaan-m/ECC",
     "volume": "JavaScript",
-    "fonte": "github-trending"
+    "fonte": "github-trending",
+    "id_atualizacao": 1
   },
   {
     "categoria": "app",
@@ -284,7 +298,8 @@
       "coding-agent"
     ],
     "fonte": "GitHub Trending",
-    "data_publicacao": "03/06/2026 07:32"
+    "data_publicacao": "03/06/2026 07:32",
+    "id_atualizacao": 1
   },
   {
     "categoria": "app",
@@ -304,7 +319,8 @@
       "developer-tools"
     ],
     "fonte": "GitHub Trending",
-    "data_publicacao": "31/05/2026 06:30"
+    "data_publicacao": "31/05/2026 06:30",
+    "id_atualizacao": 1
   },
   {
     "categoria": "app",
@@ -321,7 +337,8 @@
       "developer-tools",
       "agents"
     ],
-    "fonte": "GitHub Trending"
+    "fonte": "GitHub Trending",
+    "id_atualizacao": 1
   },
   {
     "categoria": "app",
@@ -340,7 +357,8 @@
       "developer-tools"
     ],
     "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 18:50"
+    "data_publicacao": "01/06/2026 18:50",
+    "id_atualizacao": 1
   },
   {
     "titulo": "💻 hermes-agent — The agent that grows with you",
@@ -356,7 +374,8 @@
     "badge": "🔥 GitHub Trending",
     "url": "https://github.com/NousResearch/hermes-agent",
     "volume": "Python",
-    "fonte": "github-trending"
+    "fonte": "github-trending",
+    "id_atualizacao": 1
   },
   {
     "categoria": "app",
@@ -375,7 +394,8 @@
       "developer-tools"
     ],
     "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 18:50"
+    "data_publicacao": "01/06/2026 18:50",
+    "id_atualizacao": 1
   },
   {
     "categoria": "app",
@@ -395,7 +415,8 @@
       "office"
     ],
     "fonte": "GitHub Trending",
-    "data_publicacao": "03/06/2026 07:32"
+    "data_publicacao": "03/06/2026 07:32",
+    "id_atualizacao": 1
   },
   {
     "categoria": "app",
@@ -414,7 +435,8 @@
       "productivity"
     ],
     "fonte": "GitHub Trending",
-    "data_publicacao": "31/05/2026 06:30"
+    "data_publicacao": "31/05/2026 06:30",
+    "id_atualizacao": 1
   },
   {
     "categoria": "negocio",
@@ -431,7 +453,8 @@
       "AI",
       "document-processing"
     ],
-    "fonte": "GitHub Trending"
+    "fonte": "GitHub Trending",
+    "id_atualizacao": 1
   },
   {
     "categoria": "app",
@@ -448,7 +471,8 @@
       "developer-tools",
       "agents"
     ],
-    "fonte": "GitHub Trending"
+    "fonte": "GitHub Trending",
+    "id_atualizacao": 1
   },
   {
     "titulo": "💻 spec-kit — Toolkit to help you get started with Spec-Driven Development",
@@ -464,7 +488,8 @@
     "badge": "🔥 GitHub Trending",
     "url": "https://github.com/github/spec-kit",
     "volume": "Python",
-    "fonte": "github-trending"
+    "fonte": "github-trending",
+    "id_atualizacao": 1
   },
   {
     "categoria": "app",
@@ -483,7 +508,8 @@
       "developer-tools"
     ],
     "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 18:50"
+    "data_publicacao": "01/06/2026 18:50",
+    "id_atualizacao": 1
   },
   {
     "categoria": "app",
@@ -503,7 +529,8 @@
       "GPU"
     ],
     "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 18:50"
+    "data_publicacao": "01/06/2026 18:50",
+    "id_atualizacao": 1
   },
   {
     "categoria": "app",
@@ -523,7 +550,8 @@
       "llm"
     ],
     "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 12:00"
+    "data_publicacao": "01/06/2026 12:00",
+    "id_atualizacao": 1
   },
   {
     "titulo": "📄 PaddleOCR — Turn PDFs into structured data",
@@ -538,7 +566,8 @@
       "document-processing"
     ],
     "badge": "Doc AI",
-    "origem": "global"
+    "origem": "global",
+    "id_atualizacao": 1
   },
   {
     "titulo": "💻 PaddleOCR — Turn any PDF or image document into structured data for your",
@@ -554,6 +583,7 @@
     "badge": "🔥 GitHub Trending",
     "url": "https://github.com/PaddlePaddle/PaddleOCR",
     "volume": "Python",
-    "fonte": "github-trending"
+    "fonte": "github-trending",
+    "id_atualizacao": 1
   }
 ]

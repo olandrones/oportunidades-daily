@@ -124,10 +124,9 @@
     </div>
     <div class="filter-row">
         <span class="label">Período:</span>
-        <button class="chip active" data-periodo="tudo">Tudo</button>
-        <button class="chip" data-periodo="hoje">🆕 Hoje</button>
-        <button class="chip" data-periodo="7d">7 dias</button>
-        <button class="chip" data-periodo="30d">30 dias</button>
+        <span id="chipsPeriodo" style="display:inline-flex;gap:4px;">
+            <!-- Chips de período são gerados dinamicamente por JS baseando-se nos IDs de atualização presentes em dados.json -->
+        </span>
         <span class="label" style="margin-left:14px">Categoria:</span>
         <button class="chip active" data-cat="">Todas</button>
         <button class="chip" data-cat="tendencia">🔥 Tendência</button>
@@ -218,10 +217,12 @@
         return parseManausDate(new Date().toISOString());
     }
 
-    function isHoje(dataPub) {
-        if (!dataPub) return false;
-        const now = nowManaus();
-        return dataPub.y === now.y && dataPub.m === now.m && dataPub.d === now.d;
+    // ── SISTEMA DE IDs DE ATUALIZAÇÃO ──
+    // Cada execução do agente de pesquisa adiciona cards com um id_atualizacao.
+    // Os cards do passado (sem id) recebem id=1 na migração inicial do dados.json.
+    // "Última" = max(id), "Anterior" = max-1, e assim por diante.
+    function getMaxId() {
+        return dados.reduce((m, d) => Math.max(m, Number(d.id_atualizacao) || 0), 0);
     }
 
     function isUltimos7Dias(dataPub) {
@@ -261,16 +262,59 @@
         return `https://www.google.com/search?q=${encodeURIComponent(nome + ' ' + (item.fonte || ''))}`;
     }
 
+    // ── Render chips de período (baseado nos IDs de atualização) ──
+    function renderChipsPeriodo() {
+        const maxId = getMaxId();
+        const chips = [];
+        // "Tudo" sempre primeiro, ativo por padrão
+        chips.push({ val: 'tudo', label: 'Tudo', active: filtroPeriodo === 'tudo' });
+        if (maxId >= 1) {
+            // IDs únicos presentes nos dados, do maior pro menor
+            const idsPresentes = [...new Set(dados.map(d => d.id_atualizacao).filter(x => x != null))].sort((a, b) => b - a);
+            idsPresentes.slice(0, 4).forEach((id, i) => {
+                let label;
+                if (i === 0) label = `🆕 Última (#${id})`;
+                else if (i === 1) label = `◀ Ant. (#${id})`;
+                else label = `Há ${i} (#${id})`;
+                chips.push({ val: `id:${id}`, label, active: filtroPeriodo === `id:${id}` });
+            });
+        }
+        // Filtros clássicos de data mantidos como complementares
+        chips.push({ val: '7d', label: '7 dias', active: filtroPeriodo === '7d' });
+        chips.push({ val: '30d', label: '30 dias', active: filtroPeriodo === '30d' });
+
+        const container = document.getElementById('chipsPeriodo');
+        container.innerHTML = chips.map(c =>
+            `<button class="chip ${c.active ? 'active' : ''}" data-periodo="${c.val}">${c.label}</button>`
+        ).join('');
+
+        // Re-bind clicks
+        container.querySelectorAll('.chip[data-periodo]').forEach(b => {
+            b.addEventListener('click', () => {
+                filtroPeriodo = b.dataset.periodo;
+                container.querySelectorAll('.chip[data-periodo]').forEach(x => x.classList.toggle('active', x === b));
+                render();
+            });
+        });
+    }
+
     // ── Filtros ──
     function getFiltered() {
         const sq = searchQuery.toLowerCase().trim();
         return dados.filter(d => {
             if (filtroCat && d.categoria !== filtroCat) return false;
             if (filtroOrigem && d.origem !== filtroOrigem) return false;
-            const dp = parseDataPub(d.data_publicacao);
-            if (filtroPeriodo === 'hoje' && !isHoje(dp)) return false;
-            if (filtroPeriodo === '7d' && !isUltimos7Dias(dp)) return false;
-            if (filtroPeriodo === '30d' && !isUltimos30Dias(dp)) return false;
+            // Filtro de período
+            if (filtroPeriodo !== 'tudo') {
+                if (filtroPeriodo.startsWith('id:')) {
+                    const target = Number(filtroPeriodo.slice(3));
+                    if ((Number(d.id_atualizacao) || 0) !== target) return false;
+                } else {
+                    const dp = parseDataPub(d.data_publicacao);
+                    if (filtroPeriodo === '7d' && !isUltimos7Dias(dp)) return false;
+                    if (filtroPeriodo === '30d' && !isUltimos30Dias(dp)) return false;
+                }
+            }
             if (sq) {
                 const hay = [d.titulo, d.descricao, d.fonte, (d.tags||[]).join(' '), d.badge, d.crescimento].join(' ').toLowerCase();
                 if (!hay.includes(sq)) return false;
@@ -312,6 +356,7 @@
 
     // ── Render ──
     function render() {
+        const maxId = getMaxId();
         renderTags(); // atualiza top tags (e estado visual de ativos)
         const filtered = getFiltered();
         const sorted = getSorted(filtered);
@@ -323,13 +368,13 @@
             empty.style.display = 'block';
         } else {
             empty.style.display = 'none';
-            const hojeCount = sorted.filter(d => isHoje(parseDataPub(d.data_publicacao))).length;
             tbody.innerHTML = sorted.map(d => {
                 const dp = parseDataPub(d.data_publicacao);
-                const hoj = isHoje(dp);
+                const idAt = Number(d.id_atualizacao) || 0;
+                const isUltima = idAt === maxId && maxId > 0;
                 const rec7 = isUltimos7Dias(dp);
                 let badges = '';
-                if (hoj) badges += '<span class="badge-hoje">🆕 HOJE</span>';
+                if (isUltima) badges += `<span class="badge-hoje">🆕 #${idAt}</span>`;
                 else if (rec7) badges += '<span class="badge-new7">7d</span>';
 
                 const catLabel = { tendencia: '🔥 tendência', app: '🚀 app', negocio: '💼 negócio' }[d.categoria] || d.categoria;
@@ -338,9 +383,9 @@
                 const cresc = d.crescimento ? `<span class="num-cresc">${escapeHtml(d.crescimento)}</span>` : '<span class="num-na">—</span>';
                 const stars = d.stars ? d.stars.toLocaleString('pt-BR') : '<span class="num-na">—</span>';
                 const dataLabel = d.data_publicacao ? d.data_publicacao.split(' ').slice(0,2).join(' ') : '—';
-                const dataClass = hoj ? 'col-data hoje' : 'col-data';
+                const dataClass = isUltima ? 'col-data hoje' : 'col-data';
 
-                return `<tr class="${hoj ? 'row-hoje' : ''}">
+                return `<tr class="${isUltima ? 'row-hoje' : ''}">
                     <td class="col-titulo">
                         <div class="titulo-cell">
                             ${badges}
@@ -369,12 +414,12 @@
         });
 
         // Stats
-        const totalHoje = dados.filter(d => isHoje(parseDataPub(d.data_publicacao))).length;
+        const totalUltima = dados.filter(d => (Number(d.id_atualizacao) || 0) === maxId && maxId > 0).length;
         const total7d = dados.filter(d => isUltimos7Dias(parseDataPub(d.data_publicacao))).length;
         const total30d = dados.filter(d => isUltimos30Dias(parseDataPub(d.data_publicacao))).length;
         document.getElementById('statsStrip').innerHTML = `
             <span>📦 <span class="visible-num">${sorted.length}</span> visíveis / ${dados.length} total</span>
-            <span>🆕 <span class="hoje-num">${totalHoje}</span> novos hoje</span>
+            <span>🆕 <span class="hoje-num">${totalUltima}</span> na última (#${maxId})</span>
             <span>📅 ${total7d} nos últimos 7d</span>
             <span>📆 ${total30d} nos últimos 30d</span>
             <span>·</span>
@@ -400,14 +445,7 @@
             render();
         });
 
-        // Período
-        document.querySelectorAll('.chip[data-periodo]').forEach(b => {
-            b.addEventListener('click', () => {
-                filtroPeriodo = b.dataset.periodo;
-                document.querySelectorAll('.chip[data-periodo]').forEach(x => x.classList.toggle('active', x === b));
-                render();
-            });
-        });
+        // [data-periodo] é tratado por renderChipsPeriodo() (gera chips dinamicamente)
 
         // Categoria
         document.querySelectorAll('.chip[data-cat]').forEach(b => {
@@ -477,6 +515,7 @@
             .then(r => r.json())
             .then(data => {
                 dados = data;
+                renderChipsPeriodo();
                 render();
             })
             .catch(err => {
