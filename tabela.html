@@ -42,23 +42,35 @@
 
         /* ── TABELA (fininha, moderna) ── */
         .table-wrap { max-width: 1400px; margin: 6px auto 0; padding: 0 16px 32px; overflow-x: auto; }
-        table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 0.78em; }
+        table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 0.78em; table-layout: fixed; }
         thead th { position: sticky; top: 60px; background: #0a0a14; text-align: left; padding: 8px 10px; font-weight: 600; color: #888; border-bottom: 1px solid #1a1a2e; cursor: pointer; user-select: none; white-space: nowrap; transition: color 0.15s; z-index: 5; }
         thead th:hover { color: #fff; }
         thead th .sort-arrow { display: inline-block; width: 10px; margin-left: 4px; color: #444; }
         thead th.sorted .sort-arrow { color: #7c3aed; }
         thead th .col-icon { margin-right: 4px; opacity: 0.6; }
 
+        /* Filtros inputs no thead (linha abaixo do header) */
+        thead.filter-row th { position: sticky; top: 88px; padding: 4px 6px; background: #0a0a14; border-bottom: 1px solid #1a1a2e; cursor: default; }
+        thead.filter-row th:hover { color: #888; }
+        .col-filter { width: 100%; padding: 3px 6px; border: 1px solid #1a1a2e; border-radius: 4px; background: #13132a; color: #e0e0e0; font-size: 0.95em; outline: none; font-family: inherit; }
+        .col-filter:focus { border-color: #7c3aed; }
+        .col-filter::placeholder { color: #555; }
+
         tbody td { padding: 7px 10px; border-bottom: 1px solid #13132a; color: #ccc; vertical-align: top; }
         tbody tr:hover td { background: #13132a; }
         tbody tr.row-hoje td { background: #1e40af08; }
         tbody tr.row-hoje:hover td { background: #1e40af15; }
 
-        .col-titulo { min-width: 280px; }
+        .col-titulo { width: 240px; }
         .titulo-cell { display: flex; align-items: flex-start; gap: 6px; }
         .titulo-texto { color: #fff; font-weight: 500; line-height: 1.35; }
         .badge-hoje { font-size: 0.72em; padding: 1px 6px; border-radius: 4px; background: #1e40af; color: #fb923c; font-weight: 700; white-space: nowrap; flex-shrink: 0; }
         .badge-new7 { font-size: 0.72em; padding: 1px 6px; border-radius: 4px; background: #7c3aed20; color: #a78bfa; border: 1px solid #7c3aed40; font-weight: 600; white-space: nowrap; flex-shrink: 0; }
+
+        .col-desc { color: #999; font-size: 0.92em; line-height: 1.45; max-width: 320px; }
+        .col-desc-full { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+        .col-desc-toggle { color: #7c3aed; cursor: pointer; font-size: 0.9em; font-weight: 600; }
+        .col-desc-toggle:hover { color: #a78bfa; text-decoration: underline; }
 
         .col-cat { white-space: nowrap; }
         .cat-tag { font-size: 0.9em; padding: 1px 7px; border-radius: 4px; font-weight: 500; }
@@ -139,7 +151,20 @@
                 <th data-sort="stars" class="col-num"><span class="col-icon">⭐</span>Stars<span class="sort-arrow">↕</span></th>
                 <th data-sort="data_publicacao" class="col-data"><span class="col-icon">📅</span>Data<span class="sort-arrow">↕</span></th>
                 <th data-sort="fonte" class="col-fonte"><span class="col-icon">📰</span>Fonte<span class="sort-arrow">↕</span></th>
+                <th data-sort="descricao" class="col-desc-th"><span class="col-icon">📝</span>Descrição<span class="sort-arrow">↕</span></th>
                 <th class="col-link"></th>
+            </tr>
+            <tr class="filter-row">
+                <th><input class="col-filter" data-filter-col="titulo" placeholder="título…"></th>
+                <th><input class="col-filter" data-filter-col="categoria" placeholder="cat…"></th>
+                <th><input class="col-filter" data-filter-col="origem" placeholder="origem…"></th>
+                <th><input class="col-filter" data-filter-col="volume" placeholder="vol…"></th>
+                <th><input class="col-filter" data-filter-col="crescimento" placeholder="cresc…"></th>
+                <th><input class="col-filter" data-filter-col="stars" placeholder="stars…"></th>
+                <th><input class="col-filter" data-filter-col="data_publicacao" placeholder="data…"></th>
+                <th><input class="col-filter" data-filter-col="fonte" placeholder="fonte…"></th>
+                <th><input class="col-filter" data-filter-col="descricao" placeholder="buscar na descrição…"></th>
+                <th></th>
             </tr>
         </thead>
         <tbody id="tbody"></tbody>
@@ -156,6 +181,7 @@
     let filtroPeriodo = 'tudo'; // tudo | hoje | 7d | 30d
     let filtroCat = '';
     let filtroOrigem = '';
+    let filtrosCol = {}; // { titulo: '...', categoria: '...', ... } — filtros por coluna
 
     // ── Helpers ──
     function parseNumero(str) {
@@ -243,6 +269,12 @@
     // ── Filtros ──
     function getFiltered() {
         const sq = searchQuery.toLowerCase().trim();
+        // Normalizar filtros de coluna (lowercase, sem espaço nas pontas)
+        const fcols = {};
+        Object.keys(filtrosCol).forEach(k => {
+            const v = (filtrosCol[k] || '').toLowerCase().trim();
+            if (v) fcols[k] = v;
+        });
         return dados.filter(d => {
             if (filtroCat && d.categoria !== filtroCat) return false;
             if (filtroOrigem && d.origem !== filtroOrigem) return false;
@@ -253,6 +285,12 @@
             if (sq) {
                 const hay = [d.titulo, d.descricao, d.fonte, (d.tags||[]).join(' '), d.badge, d.crescimento].join(' ').toLowerCase();
                 if (!hay.includes(sq)) return false;
+            }
+            // Filtros por coluna (substring, case-insensitive)
+            for (const col in fcols) {
+                const val = d[col];
+                const strVal = val === null || val === undefined ? '' : String(val).toLowerCase();
+                if (!strVal.includes(fcols[col])) return false;
             }
             return true;
         });
@@ -326,6 +364,7 @@
                     <td class="col-num">${stars}</td>
                     <td class="${dataClass}">${dataLabel}</td>
                     <td class="col-fonte">${escapeHtml(d.fonte || '—')}</td>
+                    <td class="col-desc"><div class="col-desc-full">${escapeHtml(d.descricao || '—')}</div></td>
                     <td class="col-link"><a href="${gerarUrl(d)}" target="_blank" rel="noopener" title="Abrir">🔗</a></td>
                 </tr>`;
             }).join('');
@@ -371,6 +410,18 @@
             render();
         });
 
+        // Filtros por coluna (input no thead)
+        document.querySelectorAll('.col-filter').forEach(inp => {
+            inp.addEventListener('input', e => {
+                const col = inp.dataset.filterCol;
+                filtrosCol[col] = e.target.value;
+                render();
+            });
+            // Impedir propagação do click pro th (senão ativaria sort)
+            inp.addEventListener('click', e => e.stopPropagation());
+            inp.addEventListener('keydown', e => e.stopPropagation());
+        });
+
         // Período
         document.querySelectorAll('.chip[data-periodo]').forEach(b => {
             b.addEventListener('click', () => {
@@ -412,7 +463,7 @@
                 render();
             })
             .catch(err => {
-                document.getElementById('tbody').innerHTML = `<tr><td colspan="9" class="empty">Erro ao carregar dados: ${err.message}</td></tr>`;
+                document.getElementById('tbody').innerHTML = `<tr><td colspan="10" class="empty">Erro ao carregar dados: ${err.message}</td></tr>`;
             });
     }
 
