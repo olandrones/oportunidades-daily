@@ -1,13 +1,115 @@
 [
   {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "⚙️ Model-Driven Engineering — +8300% Growth",
+    "badge": "📈 +8300%",
+    "volume": "590",
+    "crescimento": "+8300% Growth",
+    "stars": null,
+    "forks": null,
+    "descricao": "Software development methodology that emphasizes the use of high-level domain models to describe various aspects of a system. Automates code generation from models.",
+    "tags": [
+      "MDE",
+      "software-engineering",
+      "automation",
+      "models",
+      "trending"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "07/06/2026 18:50",
+    "id_atualizacao": 1
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "✍️ Trinka AI — AI Grammar Checker (+6500%)",
+    "badge": "📈 +6500%",
+    "volume": "9.9K",
+    "crescimento": "+6500% Growth",
+    "stars": null,
+    "forks": null,
+    "descricao": "AI-powered English grammar checker and language enhancement writing assistant designed for academic and technical writing.",
+    "tags": [
+      "AI",
+      "writing",
+      "grammar",
+      "academic",
+      "trending"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "07/06/2026 18:50",
+    "id_atualizacao": 1
+  },
+  {
     "categoria": "app",
     "origem": "global",
-    "titulo": "🔍 last30days-skill — AI Research Agent (Reddit, X, HN, Polymarket)",
-    "badge": "🔥 28.8K ★",
-    "volume": "28.8K",
-    "crescimento": "441 stars hoje",
-    "stars": 28774,
-    "forks": "2,438",
+    "titulo": "🦅 taste-skill — AI Good Taste Framework",
+    "badge": "🔥 36.5K ★",
+    "volume": "36.5K",
+    "crescimento": "1,104 stars hoje",
+    "stars": 36515,
+    "forks": "2,639",
+    "descricao": "Taste-Skill - gives your AI good taste. Stops the AI from generating boring, generic slop.",
+    "tags": [
+      "AI",
+      "agents",
+      "quality",
+      "prompting"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "07/06/2026 18:50",
+    "id_atualizacao": 1
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🪶 goose — Extensible AI Agent (Beyond Code Suggestions)",
+    "badge": "🔥 47.5K ★",
+    "volume": "47.5K",
+    "crescimento": "338 stars hoje",
+    "stars": 47453,
+    "forks": "5,006",
+    "descricao": "An open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM.",
+    "tags": [
+      "AI",
+      "agents",
+      "coding",
+      "open-source"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "07/06/2026 18:50",
+    "id_atualizacao": 1
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "📓 open-notebook — Open Source Notebook LM",
+    "badge": "🔥 27.2K ★",
+    "volume": "27.2K",
+    "crescimento": "555 stars hoje",
+    "stars": 27194,
+    "forks": "3,091",
+    "descricao": "An Open Source implementation of Notebook LM with more flexibility and features.",
+    "tags": [
+      "AI",
+      "notebook",
+      "open-source",
+      "research"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "07/06/2026 18:50",
+    "id_atualizacao": 1
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🎯 last30days-skill — AI Research Agent (Reddit, X, HN, Polymarket)",
+    "badge": "🔥 30.7K ★",
+    "volume": "30.7K",
+    "crescimento": "1,097 stars hoje",
+    "stars": 30748,
+    "forks": "2,576",
     "descricao": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary.",
     "tags": [
       "AI",
@@ -18,7 +120,147 @@
       "synthesis"
     ],
     "fonte": "GitHub Trending",
-    "data_publicacao": "06/06/2026 19:56",
+    "data_publicacao": "07/06/2026 18:50",
+    "id_atualizacao": 1
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "💰 AiToEarn — Use AI to Earn!",
+    "badge": "🔥 18.7K ★",
+    "volume": "18.7K",
+    "crescimento": "180 stars hoje",
+    "stars": 18723,
+    "forks": "2,904",
+    "descricao": "Let's use AI to Earn!",
+    "tags": [
+      "AI",
+      "earning",
+      "automation",
+      "trending"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "07/06/2026 18:50",
+    "id_atualizacao": 1
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🏕️ project-nomad — Offline Survival Computer",
+    "badge": "🔥 29.7K ★",
+    "volume": "29.7K",
+    "crescimento": "304 stars hoje",
+    "stars": 29685,
+    "forks": "2,941",
+    "descricao": "Project N.O.M.A.D, is a self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered—anytime, anywhere.",
+    "tags": [
+      "AI",
+      "offline",
+      "survival",
+      "tools"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "07/06/2026 18:50",
+    "id_atualizacao": 1
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "☕ Single Serve Coffee Maker — +1650% Growth",
+    "badge": "📈 +1650%",
+    "volume": "74K",
+    "crescimento": "+1650% Growth",
+    "stars": null,
+    "forks": null,
+    "descricao": "Compact appliance designed to brew one cup of coffee at a time using pods or capsules. Ideal for busy professionals.",
+    "tags": [
+      "coffee",
+      "appliances",
+      "trending",
+      "convenience"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "07/06/2026 18:50",
+    "id_atualizacao": 1
+  },
+  {
+    "categoria": "app",
+    "origem": "global",
+    "titulo": "🤖 hermes-agent — The Agent That Grows With You",
+    "badge": "🔥 185.9K ★",
+    "volume": "185.9K",
+    "crescimento": "1,117 stars hoje",
+    "stars": 185851,
+    "forks": "31,966",
+    "descricao": "The agent that grows with you. NousResearch open-source AI agent framework.",
+    "tags": [
+      "AI",
+      "agents",
+      "open-source",
+      "framework"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "07/06/2026 18:50",
+    "id_atualizacao": 1
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "💍 Alexandrite Engagement Ring — +208% Growth",
+    "badge": "📈 +208%",
+    "volume": "12.1K",
+    "crescimento": "+208% Growth",
+    "stars": null,
+    "forks": null,
+    "descricao": "Rare gemstone known for unique color-changing properties (green in daylight, red under incandescent light). Symbolizes change and transformation.",
+    "tags": [
+      "jewelry",
+      "gemstone",
+      "trending",
+      "luxury"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "07/06/2026 18:50",
+    "id_atualizacao": 1
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "💊 HPMC — +180% Growth (Pharmaceutical)",
+    "badge": "📈 +180%",
+    "volume": "22.2K",
+    "crescimento": "+180% Growth",
+    "stars": null,
+    "forks": null,
+    "descricao": "Hydroxypropyl methylcellulose - soluble methylcellulose ether used in pharmaceuticals, food, and construction materials.",
+    "tags": [
+      "pharmaceutical",
+      "ingredients",
+      "trending",
+      "industrial"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "07/06/2026 18:50",
+    "id_atualizacao": 1
+  },
+  {
+    "categoria": "tendencia",
+    "origem": "global",
+    "titulo": "📱 TestFlight — iOS Beta Testing Platform +156%",
+    "badge": "📈 +156%",
+    "volume": "90.5K",
+    "crescimento": "+156% Growth",
+    "stars": null,
+    "forks": null,
+    "descricao": "Apple platform for distributing iOS apps to beta testers before App Store release. Supports iOS, iPadOS, watchOS, tvOS apps.",
+    "tags": [
+      "iOS",
+      "beta",
+      "testing",
+      "developer-tools"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "07/06/2026 18:50",
     "id_atualizacao": 1
   },
   {
@@ -231,25 +473,6 @@
     "id_atualizacao": 1
   },
   {
-    "titulo": "💻 coding-interview-university — A complete computer science study plan to become a software ",
-    "descricao": "A complete computer science study plan to become a software engineer.",
-    "stars": "349406",
-    "forks": "83198",
-    "crescimento": "trending",
-    "categoria": "app",
-    "tags": [],
-    "origem": "global",
-    "badge": "🔥 GitHub Trending",
-    "url": "https://github.com/jwasham/coding-interview-university",
-    "volume": "",
-    "fonte": "github-trending",
-    "id_atualizacao": 1,
-    "data_publicacao": "30/05/2026 12:00",
-    "_meta": {
-      "data_fallback": true
-    }
-  },
-  {
     "categoria": "app",
     "origem": "global",
     "titulo": "⚡ Superpowers — Agentic Skills Framework",
@@ -272,30 +495,9 @@
     }
   },
   {
-    "titulo": "💻 ECC — The agent harness performance optimization system. Skills, i",
-    "descricao": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-    "stars": "206528",
-    "forks": "31711",
-    "crescimento": "trending",
-    "categoria": "app",
-    "tags": [
-      "JavaScript"
-    ],
-    "origem": "global",
-    "badge": "🔥 GitHub Trending",
-    "url": "https://github.com/affaan-m/ECC",
-    "volume": "JavaScript",
-    "fonte": "github-trending",
-    "id_atualizacao": 1,
-    "data_publicacao": "30/05/2026 12:00",
-    "_meta": {
-      "data_fallback": true
-    }
-  },
-  {
     "categoria": "app",
     "origem": "global",
-    "titulo": "💻 Ecc — The agent harness performance optimization system for A",
+    "titulo": "💻 Ecc — The Agent Harness Performance Optimization System",
     "badge": "★ 204,865",
     "volume": "",
     "crescimento": "",
@@ -337,28 +539,6 @@
   {
     "categoria": "app",
     "origem": "global",
-    "titulo": "💻 ECC — Agent Harness Optimization",
-    "badge": "🔥 197K ★",
-    "volume": "",
-    "crescimento": "",
-    "stars": 196952,
-    "forks": "30,288",
-    "descricao": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-    "tags": [
-      "AI",
-      "developer-tools",
-      "agents"
-    ],
-    "fonte": "GitHub Trending",
-    "id_atualizacao": 1,
-    "data_publicacao": "30/05/2026 12:00",
-    "_meta": {
-      "data_fallback": true
-    }
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
     "titulo": "🦞 claw-code — Fastest Repo in History",
     "badge": "🔥 193K ★",
     "volume": "193K",
@@ -375,27 +555,6 @@
     "fonte": "GitHub Trending",
     "data_publicacao": "01/06/2026 18:50",
     "id_atualizacao": 1
-  },
-  {
-    "titulo": "💻 hermes-agent — The agent that grows with you",
-    "descricao": "The agent that grows with you",
-    "stars": "180103",
-    "forks": "30866",
-    "crescimento": "trending",
-    "categoria": "app",
-    "tags": [
-      "Python"
-    ],
-    "origem": "global",
-    "badge": "🔥 GitHub Trending",
-    "url": "https://github.com/NousResearch/hermes-agent",
-    "volume": "Python",
-    "fonte": "github-trending",
-    "id_atualizacao": 1,
-    "data_publicacao": "30/05/2026 12:00",
-    "_meta": {
-      "data_fallback": true
-    }
   },
   {
     "categoria": "app",
@@ -420,27 +579,6 @@
   {
     "categoria": "app",
     "origem": "global",
-    "titulo": "💻 Markitdown — Python tool for converting files and office documents t",
-    "badge": "★ 142,179",
-    "volume": "",
-    "crescimento": "",
-    "stars": 142179,
-    "forks": "9696",
-    "descricao": "Python tool for converting files and office documents to Markdown.",
-    "tags": [
-      "markdown",
-      "converter",
-      "documents",
-      "python",
-      "office"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "03/06/2026 07:32",
-    "id_atualizacao": 1
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
     "titulo": "📄 markitdown — Python Office Docs to Markdown",
     "badge": "🔥 133K ★",
     "volume": "133K",
@@ -456,112 +594,6 @@
     ],
     "fonte": "GitHub Trending",
     "data_publicacao": "31/05/2026 06:30",
-    "id_atualizacao": 1
-  },
-  {
-    "categoria": "negocio",
-    "origem": "global",
-    "titulo": "🤖 Micro-SaaS: markitdown Integration API",
-    "badge": "💼 131K stars",
-    "volume": "131K",
-    "crescimento": "",
-    "stars": 131320,
-    "forks": "",
-    "descricao": "API wrapper para markitdown — converter documentos Office para Markdown como servico. Receita: R$29-R$199/mês baseado em volume.",
-    "tags": [
-      "micro-saas",
-      "AI",
-      "document-processing"
-    ],
-    "fonte": "GitHub Trending",
-    "id_atualizacao": 1,
-    "data_publicacao": "30/05/2026 12:00",
-    "_meta": {
-      "data_fallback": true
-    }
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🤖 claude-code — Anthropic Terminal AI Agent",
-    "badge": "🔥 128K ★",
-    "volume": "",
-    "crescimento": "",
-    "stars": 128218,
-    "forks": "20,931",
-    "descricao": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows.",
-    "tags": [
-      "AI",
-      "developer-tools",
-      "agents"
-    ],
-    "fonte": "GitHub Trending",
-    "id_atualizacao": 1,
-    "data_publicacao": "30/05/2026 12:00",
-    "_meta": {
-      "data_fallback": true
-    }
-  },
-  {
-    "titulo": "💻 spec-kit — Toolkit to help you get started with Spec-Driven Development",
-    "descricao": "Toolkit to help you get started with Spec-Driven Development",
-    "stars": "108243",
-    "forks": "9579",
-    "crescimento": "trending",
-    "categoria": "app",
-    "tags": [
-      "Python"
-    ],
-    "origem": "global",
-    "badge": "🔥 GitHub Trending",
-    "url": "https://github.com/github/spec-kit",
-    "volume": "Python",
-    "fonte": "github-trending",
-    "id_atualizacao": 1,
-    "data_publicacao": "30/05/2026 12:00",
-    "_meta": {
-      "data_fallback": true
-    }
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "⚡ gstack — Garry Tan's Claude Code Setup",
-    "badge": "🔥 105K ★",
-    "volume": "105K",
-    "crescimento": "",
-    "stars": 105693,
-    "forks": "",
-    "descricao": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, engineer, and researcher.",
-    "tags": [
-      "AI",
-      "claude-code",
-      "setup",
-      "developer-tools"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 18:50",
-    "id_atualizacao": 1
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🧠 autoresearch — Auto Single-GPU Nanochat Training",
-    "badge": "🔥 84K ★",
-    "volume": "84K",
-    "crescimento": "",
-    "stars": 84556,
-    "forks": "",
-    "descricao": "AI agents running research on single-GPU nanochat training automatically. Automated fine-tuning research pipeline.",
-    "tags": [
-      "AI",
-      "training",
-      "research",
-      "agents",
-      "GPU"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 18:50",
     "id_atualizacao": 1
   },
   {
@@ -584,46 +616,5 @@
     "fonte": "GitHub Trending",
     "data_publicacao": "01/06/2026 12:00",
     "id_atualizacao": 1
-  },
-  {
-    "titulo": "📄 PaddleOCR — Turn PDFs into structured data",
-    "descricao": "Turn any PDF or image document into structured data for your AI. Supports 100+ languages.",
-    "stars": "80,513",
-    "forks": "10,631",
-    "categoria": "app",
-    "tags": [
-      "ocr",
-      "pdf",
-      "ai",
-      "document-processing"
-    ],
-    "badge": "Doc AI",
-    "origem": "global",
-    "id_atualizacao": 1,
-    "data_publicacao": "30/05/2026 12:00",
-    "_meta": {
-      "data_fallback": true
-    }
-  },
-  {
-    "titulo": "💻 PaddleOCR — Turn any PDF or image document into structured data for your",
-    "descricao": "Turn any PDF or image document into structured data for your AI. A powerful, lightweight OCR toolkit that bridges the gap between images/PDFs and LLMs. Supports 100+ languages.",
-    "stars": "79549",
-    "forks": "10581",
-    "crescimento": "trending",
-    "categoria": "app",
-    "tags": [
-      "Python"
-    ],
-    "origem": "global",
-    "badge": "🔥 GitHub Trending",
-    "url": "https://github.com/PaddlePaddle/PaddleOCR",
-    "volume": "Python",
-    "fonte": "github-trending",
-    "id_atualizacao": 1,
-    "data_publicacao": "30/05/2026 12:00",
-    "_meta": {
-      "data_fallback": true
-    }
   }
 ]
