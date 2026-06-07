@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oportunidades — Tabela · Lyriane</title>
+    <link rel="alternate" type="application/json" href="dados.json" title="Dados">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #0a0a14; color: #e0e0e0; }
+        body { min-height: 100vh; padding: 0; }
+
+        /* ── TOP BAR (enxuto, 2 linhas) ── */
+        .topbar { position: sticky; top: 0; z-index: 50; background: #0a0a14ee; backdrop-filter: blur(10px); border-bottom: 1px solid #1a1a2e; padding: 10px 16px; }
+        .topbar-row { display: flex; align-items: center; gap: 10px; max-width: 1400px; margin: 0 auto; }
+        .topbar h1 { font-size: 0.95em; color: #7c3aed; font-weight: 600; margin-right: 8px; white-space: nowrap; }
+        .topbar .nav-link { font-size: 0.72em; color: #888; text-decoration: none; padding: 4px 10px; border-radius: 6px; border: 1px solid #1a1a2e; transition: all 0.15s; }
+        .topbar .nav-link:hover { color: #fff; border-color: #7c3aed; }
+        .topbar .nav-link.active { color: #a78bfa; border-color: #7c3aed; background: #7c3aed15; }
+
+        .search { flex: 1; min-width: 200px; }
+        .search input { width: 100%; padding: 6px 12px; border: 1px solid #1a1a2e; border-radius: 7px; background: #13132a; color: #e0e0e0; font-size: 0.82em; outline: none; transition: border-color 0.15s; }
+        .search input:focus { border-color: #7c3aed; }
+        .search input::placeholder { color: #555; }
+
+        .ctrl-group { display: flex; gap: 4px; }
+        .ctrl { font-size: 0.72em; color: #888; background: #13132a; border: 1px solid #1a1a2e; padding: 4px 10px; border-radius: 6px; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+        .ctrl:hover { color: #fff; border-color: #7c3aed; }
+        .ctrl.active { color: #a78bfa; border-color: #7c3aed; background: #7c3aed15; }
+
+        .filter-row { display: flex; align-items: center; gap: 6px; max-width: 1400px; margin: 6px auto 0; flex-wrap: wrap; }
+        .filter-row .label { font-size: 0.68em; color: #555; margin-right: 4px; }
+        .chip { font-size: 0.7em; color: #888; background: #13132a; border: 1px solid #1a1a2e; padding: 3px 9px; border-radius: 12px; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+        .chip:hover { color: #fff; border-color: #7c3aed; }
+        .chip.active { color: #a78bfa; border-color: #7c3aed; background: #7c3aed15; }
+
+        /* ── STATS STRIP (enxuto) ── */
+        .stats-strip { display: flex; gap: 0; max-width: 1400px; margin: 8px auto 0; padding: 0 16px; font-size: 0.7em; color: #555; }
+        .stats-strip span { margin-right: 14px; }
+        .stats-strip .hoje-num { color: #fb923c; font-weight: 700; }
+        .stats-strip .visible-num { color: #a78bfa; font-weight: 700; }
+
+        /* ── TABELA (fininha, moderna) ── */
+        .table-wrap { max-width: 1400px; margin: 6px auto 0; padding: 0 16px 32px; overflow-x: auto; }
+        table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 0.78em; }
+        thead th { position: sticky; top: 60px; background: #0a0a14; text-align: left; padding: 8px 10px; font-weight: 600; color: #888; border-bottom: 1px solid #1a1a2e; cursor: pointer; user-select: none; white-space: nowrap; transition: color 0.15s; z-index: 5; }
+        thead th:hover { color: #fff; }
+        thead th .sort-arrow { display: inline-block; width: 10px; margin-left: 4px; color: #444; }
+        thead th.sorted .sort-arrow { color: #7c3aed; }
+        thead th .col-icon { margin-right: 4px; opacity: 0.6; }
+
+        tbody td { padding: 7px 10px; border-bottom: 1px solid #13132a; color: #ccc; vertical-align: top; }
+        tbody tr:hover td { background: #13132a; }
+        tbody tr.row-hoje td { background: #1e40af08; }
+        tbody tr.row-hoje:hover td { background: #1e40af15; }
+
+        .col-titulo { min-width: 280px; }
+        .titulo-cell { display: flex; align-items: flex-start; gap: 6px; }
+        .titulo-texto { color: #fff; font-weight: 500; line-height: 1.35; }
+        .badge-hoje { font-size: 0.72em; padding: 1px 6px; border-radius: 4px; background: #1e40af; color: #fb923c; font-weight: 700; white-space: nowrap; flex-shrink: 0; }
+        .badge-new7 { font-size: 0.72em; padding: 1px 6px; border-radius: 4px; background: #7c3aed20; color: #a78bfa; border: 1px solid #7c3aed40; font-weight: 600; white-space: nowrap; flex-shrink: 0; }
+
+        .col-cat { white-space: nowrap; }
+        .cat-tag { font-size: 0.9em; padding: 1px 7px; border-radius: 4px; font-weight: 500; }
+        .cat-tendencia { background: #f59e0b20; color: #fbbf24; }
+        .cat-app { background: #10b98120; color: #34d399; }
+        .cat-negocio { background: #3b82f620; color: #60a5fa; }
+
+        .col-origem { white-space: nowrap; }
+        .col-num { text-align: right; font-variant-numeric: tabular-nums; }
+        .num-vol { color: #10b981; font-weight: 600; }
+        .num-cresc { color: #f59e0b; font-weight: 500; }
+        .num-na { color: #444; }
+
+        .col-data { white-space: nowrap; color: #888; font-size: 0.95em; }
+        .col-data.hoje { color: #fb923c; font-weight: 600; }
+
+        .col-fonte { color: #777; font-size: 0.95em; }
+        .col-link { white-space: nowrap; }
+        .col-link a { color: #a78bfa; text-decoration: none; font-size: 0.95em; }
+        .col-link a:hover { color: #fff; text-decoration: underline; }
+
+        .empty { text-align: center; padding: 60px; color: #555; font-size: 0.9em; }
+
+        /* ── MOBILE ── */
+        @media (max-width: 700px) {
+            .topbar-row { flex-wrap: wrap; }
+            .topbar h1 { width: 100%; margin-bottom: 4px; }
+            .search { order: 10; width: 100%; }
+            thead th { font-size: 0.95em; padding: 6px 6px; }
+            tbody td { padding: 6px 6px; }
+            .col-titulo { min-width: 200px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="topbar">
+    <div class="topbar-row">
+        <h1>📊 Oportunidades</h1>
+        <a class="nav-link" href="./">🃏 Cards</a>
+        <a class="nav-link active" href="./tabela.html">📋 Tabela</a>
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="🔍 buscar título, tag, fonte…" autocomplete="off">
+        </div>
+        <div class="ctrl-group">
+            <button class="ctrl" id="btnRefresh" title="Recarregar dados">↻</button>
+        </div>
+    </div>
+    <div class="filter-row">
+        <span class="label">Período:</span>
+        <button class="chip active" data-periodo="tudo">Tudo</button>
+        <button class="chip" data-periodo="hoje">🆕 Hoje</button>
+        <button class="chip" data-periodo="7d">7 dias</button>
+        <button class="chip" data-periodo="30d">30 dias</button>
+        <span class="label" style="margin-left:14px">Categoria:</span>
+        <button class="chip active" data-cat="">Todas</button>
+        <button class="chip" data-cat="tendencia">🔥 Tendência</button>
+        <button class="chip" data-cat="app">🚀 App</button>
+        <button class="chip" data-cat="negocio">💼 Negócio</button>
+        <span class="label" style="margin-left:14px">Origem:</span>
+        <button class="chip active" data-origem="">Todas</button>
+        <button class="chip" data-origem="global">🌐 Global</button>
+        <button class="chip" data-origem="brasil">🇧🇷 Brasil</button>
+    </div>
+</div>
+
+<div class="stats-strip" id="statsStrip"></div>
+
+<div class="table-wrap">
+    <table id="tabela">
+        <thead>
+            <tr>
+                <th data-sort="titulo" class="col-titulo"><span class="col-icon">📌</span>Título<span class="sort-arrow">↕</span></th>
+                <th data-sort="categoria" class="col-cat"><span class="col-icon">🏷</span>Cat<span class="sort-arrow">↕</span></th>
+                <th data-sort="origem" class="col-origem"><span class="col-icon">🌐</span>Origem<span class="sort-arrow">↕</span></th>
+                <th data-sort="volume" class="col-num"><span class="col-icon">🔊</span>Volume<span class="sort-arrow">↕</span></th>
+                <th data-sort="crescimento" class="col-num"><span class="col-icon">📈</span>Δ Crescimento<span class="sort-arrow">↕</span></th>
+                <th data-sort="stars" class="col-num"><span class="col-icon">⭐</span>Stars<span class="sort-arrow">↕</span></th>
+                <th data-sort="data_publicacao" class="col-data"><span class="col-icon">📅</span>Data<span class="sort-arrow">↕</span></th>
+                <th data-sort="fonte" class="col-fonte"><span class="col-icon">📰</span>Fonte<span class="sort-arrow">↕</span></th>
+                <th class="col-link"></th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+    <div class="empty" id="emptyState" style="display:none">Nenhum item encontrado com esses filtros.</div>
+</div>
+
+<script>
+    // ── Estado ──
+    let dados = [];
+    let sortCol = 'data_publicacao';
+    let sortDir = 'desc'; // 'asc' | 'desc'
+    let searchQuery = '';
+    let filtroPeriodo = 'tudo'; // tudo | hoje | 7d | 30d
+    let filtroCat = '';
+    let filtroOrigem = '';
+
+    // ── Helpers ──
+    function parseNumero(str) {
+        if (str === null || str === undefined) return 0;
+        if (typeof str === 'number') return str;
+        str = String(str).replace(/,/g, '');
+        if (str.includes('K')) return parseFloat(str) * 1000;
+        if (str.includes('M')) return parseFloat(str) * 1000000;
+        return parseFloat(str) || 0;
+    }
+
+    function parseDataPub(str) {
+        // "06/06/2026 19:56" → Date
+        if (!str) return new Date(0);
+        const m = str.match(/^(\d{2})\/(\d{2})\/(\d{4})\s+(\d{2}):(\d{2})/);
+        if (!m) return new Date(0);
+        return new Date(+m[3], +m[2]-1, +m[1], +m[4], +m[5]);
+    }
+
+    function isHoje(date) {
+        const hoje = new Date();
+        return date.getFullYear() === hoje.getFullYear()
+            && date.getMonth() === hoje.getMonth()
+            && date.getDate() === hoje.getDate();
+    }
+
+    function isUltimos7Dias(date) {
+        const diff = (Date.now() - date.getTime()) / (1000*60*60*24);
+        return diff >= 0 && diff <= 7;
+    }
+
+    function isUltimos30Dias(date) {
+        const diff = (Date.now() - date.getTime()) / (1000*60*60*24);
+        return diff >= 0 && diff <= 30;
+    }
+
+    function escapeHtml(s) {
+        return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    }
+
+    function gerarUrl(item) {
+        const nome = item.titulo
+            .replace(/[^\w\s]/g, ' ')
+            .replace(/\s+/g, ' ')
+            .trim()
+            .split(' ')
+            .slice(0, 4)
+            .join(' ');
+        if (item.fonte === 'GitHub Trending') {
+            return `https://github.com/search?q=${encodeURIComponent(nome)}&s=stars&type=repositories`;
+        }
+        return `https://www.google.com/search?q=${encodeURIComponent(nome + ' ' + (item.fonte || ''))}`;
+    }
+
+    // ── Filtros ──
+    function getFiltered() {
+        const sq = searchQuery.toLowerCase().trim();
+        return dados.filter(d => {
+            if (filtroCat && d.categoria !== filtroCat) return false;
+            if (filtroOrigem && d.origem !== filtroOrigem) return false;
+            const dp = parseDataPub(d.data_publicacao);
+            if (filtroPeriodo === 'hoje' && !isHoje(dp)) return false;
+            if (filtroPeriodo === '7d' && !isUltimos7Dias(dp)) return false;
+            if (filtroPeriodo === '30d' && !isUltimos30Dias(dp)) return false;
+            if (sq) {
+                const hay = [d.titulo, d.descricao, d.fonte, (d.tags||[]).join(' '), d.badge, d.crescimento].join(' ').toLowerCase();
+                if (!hay.includes(sq)) return false;
+            }
+            return true;
+        });
+    }
+
+    // ── Sort ──
+    function getSorted(arr) {
+        const dir = sortDir === 'asc' ? 1 : -1;
+        const col = sortCol;
+        return arr.slice().sort((a, b) => {
+            let va, vb;
+            if (col === 'volume') { va = parseNumero(a.volume); vb = parseNumero(b.volume); }
+            else if (col === 'crescimento') { va = parseNumero(a.crescimento); vb = parseNumero(b.crescimento); }
+            else if (col === 'stars') { va = a.stars || 0; vb = b.stars || 0; }
+            else if (col === 'data_publicacao') { va = parseDataPub(a.data_publicacao).getTime(); vb = parseDataPub(b.data_publicacao).getTime(); }
+            else { va = String(a[col]||'').toLowerCase(); vb = String(b[col]||'').toLowerCase(); }
+            if (va < vb) return -1 * dir;
+            if (va > vb) return 1 * dir;
+            return 0;
+        });
+    }
+
+    // ── Render ──
+    function render() {
+        const filtered = getFiltered();
+        const sorted = getSorted(filtered);
+        const tbody = document.getElementById('tbody');
+        const empty = document.getElementById('emptyState');
+
+        if (sorted.length === 0) {
+            tbody.innerHTML = '';
+            empty.style.display = 'block';
+        } else {
+            empty.style.display = 'none';
+            const hojeCount = sorted.filter(d => isHoje(parseDataPub(d.data_publicacao))).length;
+            tbody.innerHTML = sorted.map(d => {
+                const dp = parseDataPub(d.data_publicacao);
+                const hoj = isHoje(dp);
+                const rec7 = isUltimos7Dias(dp);
+                let badges = '';
+                if (hoj) badges += '<span class="badge-hoje">🆕 HOJE</span>';
+                else if (rec7) badges += '<span class="badge-new7">7d</span>';
+
+                const catLabel = { tendencia: '🔥 tendência', app: '🚀 app', negocio: '💼 negócio' }[d.categoria] || d.categoria;
+                const catClass = 'cat-' + (d.categoria || '');
+                const vol = d.volume ? `<span class="num-vol">${escapeHtml(d.volume)}</span>` : '<span class="num-na">—</span>';
+                const cresc = d.crescimento ? `<span class="num-cresc">${escapeHtml(d.crescimento)}</span>` : '<span class="num-na">—</span>';
+                const stars = d.stars ? d.stars.toLocaleString('pt-BR') : '<span class="num-na">—</span>';
+                const dataLabel = d.data_publicacao ? d.data_publicacao.split(' ').slice(0,2).join(' ') : '—';
+                const dataClass = hoj ? 'col-data hoje' : 'col-data';
+
+                return `<tr class="${hoj ? 'row-hoje' : ''}">
+                    <td class="col-titulo">
+                        <div class="titulo-cell">
+                            ${badges}
+                            <span class="titulo-texto">${escapeHtml(d.titulo)}</span>
+                        </div>
+                    </td>
+                    <td class="col-cat"><span class="cat-tag ${catClass}">${catLabel}</span></td>
+                    <td class="col-origem">${d.origem === 'brasil' ? '🇧🇷' : '🌐'}</td>
+                    <td class="col-num">${vol}</td>
+                    <td class="col-num">${cresc}</td>
+                    <td class="col-num">${stars}</td>
+                    <td class="${dataClass}">${dataLabel}</td>
+                    <td class="col-fonte">${escapeHtml(d.fonte || '—')}</td>
+                    <td class="col-link"><a href="${gerarUrl(d)}" target="_blank" rel="noopener" title="Abrir">🔗</a></td>
+                </tr>`;
+            }).join('');
+        }
+
+        // Sort arrows
+        document.querySelectorAll('thead th[data-sort]').forEach(th => {
+            th.classList.toggle('sorted', th.dataset.sort === sortCol);
+            const arrow = th.querySelector('.sort-arrow');
+            if (th.dataset.sort === sortCol) arrow.textContent = sortDir === 'asc' ? '↑' : '↓';
+            else arrow.textContent = '↕';
+        });
+
+        // Stats
+        const totalHoje = dados.filter(d => isHoje(parseDataPub(d.data_publicacao))).length;
+        const total7d = dados.filter(d => isUltimos7Dias(parseDataPub(d.data_publicacao))).length;
+        const total30d = dados.filter(d => isUltimos30Dias(parseDataPub(d.data_publicacao))).length;
+        document.getElementById('statsStrip').innerHTML = `
+            <span>📦 <span class="visible-num">${sorted.length}</span> visíveis / ${dados.length} total</span>
+            <span>🆕 <span class="hoje-num">${totalHoje}</span> novos hoje</span>
+            <span>📅 ${total7d} nos últimos 7d</span>
+            <span>📆 ${total30d} nos últimos 30d</span>
+            <span>·</span>
+            <span>⏰ Atualizado: ${new Date().toLocaleString('pt-BR')}</span>
+        `;
+    }
+
+    // ── Bindings ──
+    function bind() {
+        // Sort
+        document.querySelectorAll('thead th[data-sort]').forEach(th => {
+            th.addEventListener('click', () => {
+                const col = th.dataset.sort;
+                if (sortCol === col) sortDir = sortDir === 'asc' ? 'desc' : 'asc';
+                else { sortCol = col; sortDir = 'desc'; }
+                render();
+            });
+        });
+
+        // Search
+        document.getElementById('searchInput').addEventListener('input', e => {
+            searchQuery = e.target.value;
+            render();
+        });
+
+        // Período
+        document.querySelectorAll('.chip[data-periodo]').forEach(b => {
+            b.addEventListener('click', () => {
+                filtroPeriodo = b.dataset.periodo;
+                document.querySelectorAll('.chip[data-periodo]').forEach(x => x.classList.toggle('active', x === b));
+                render();
+            });
+        });
+
+        // Categoria
+        document.querySelectorAll('.chip[data-cat]').forEach(b => {
+            b.addEventListener('click', () => {
+                filtroCat = b.dataset.cat;
+                document.querySelectorAll('.chip[data-cat]').forEach(x => x.classList.toggle('active', x === b));
+                render();
+            });
+        });
+
+        // Origem
+        document.querySelectorAll('.chip[data-origem]').forEach(b => {
+            b.addEventListener('click', () => {
+                filtroOrigem = b.dataset.origem;
+                document.querySelectorAll('.chip[data-origem]').forEach(x => x.classList.toggle('active', x === b));
+                render();
+            });
+        });
+
+        // Refresh
+        document.getElementById('btnRefresh').addEventListener('click', () => carregarDados(true));
+    }
+
+    // ── Data load ──
+    function carregarDados(force) {
+        const url = force ? `dados.json?ts=${Date.now()}` : 'dados.json';
+        fetch(url, { cache: force ? 'no-cache' : 'default' })
+            .then(r => r.json())
+            .then(data => {
+                dados = data;
+                render();
+            })
+            .catch(err => {
+                document.getElementById('tbody').innerHTML = `<tr><td colspan="9" class="empty">Erro ao carregar dados: ${err.message}</td></tr>`;
+            });
+    }
+
+    bind();
+    carregarDados();
+
+    // Auto-refresh a cada 5 min (pegar updates do dia sem F5)
+    setInterval(() => carregarDados(true), 5 * 60 * 1000);
+</script>
+
+</body>
+</html>
