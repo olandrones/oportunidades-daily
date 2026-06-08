@@ -1,620 +1,552 @@
 [
   {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "⚙️ Model-Driven Engineering — +8300% Growth",
-    "badge": "📈 +8300%",
-    "volume": "590",
-    "crescimento": "+8300% Growth",
-    "stars": null,
-    "forks": null,
-    "descricao": "Software development methodology that emphasizes the use of high-level domain models to describe various aspects of a system. Automates code generation from models.",
-    "tags": [
-      "MDE",
-      "software-engineering",
-      "automation",
-      "models",
-      "trending"
-    ],
+    "id": "1",
+    "titulo": "Airplane Foot Hammock",
+    "descricao": "A travel accessory designed to enhance comfort during flights by allowing passengers to elevate their feet and legs. Attaches to tray table, improves circulation and reduces swelling during long flights.",
     "fonte": "Exploding Topics",
-    "data_publicacao": "07/06/2026 18:50",
-    "id_atualizacao": 1
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "✍️ Trinka AI — AI Grammar Checker (+6500%)",
-    "badge": "📈 +6500%",
-    "volume": "9.9K",
-    "crescimento": "+6500% Growth",
-    "stars": null,
-    "forks": null,
-    "descricao": "AI-powered English grammar checker and language enhancement writing assistant designed for academic and technical writing.",
     "tags": [
-      "AI",
-      "writing",
-      "grammar",
-      "academic",
-      "trending"
+      "travel",
+      "accessories",
+      "flight",
+      "comfort",
+      "hardware"
     ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "07/06/2026 18:50",
-    "id_atualizacao": 1
-  },
-  {
-    "categoria": "app",
+    "categoria": "negocio",
     "origem": "global",
-    "titulo": "🦅 taste-skill — AI Good Taste Framework",
-    "badge": "🔥 36.5K ★",
-    "volume": "36.5K",
-    "crescimento": "1,104 stars hoje",
-    "stars": 36515,
-    "forks": "2,639",
-    "descricao": "Taste-Skill - gives your AI good taste. Stops the AI from generating boring, generic slop.",
-    "tags": [
-      "AI",
-      "agents",
-      "quality",
-      "prompting"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "07/06/2026 18:50",
-    "id_atualizacao": 1
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🪶 goose — Extensible AI Agent (Beyond Code Suggestions)",
-    "badge": "🔥 47.5K ★",
-    "volume": "47.5K",
-    "crescimento": "338 stars hoje",
-    "stars": 47453,
-    "forks": "5,006",
-    "descricao": "An open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM.",
-    "tags": [
-      "AI",
-      "agents",
-      "coding",
-      "open-source"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "07/06/2026 18:50",
-    "id_atualizacao": 1
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "📓 open-notebook — Open Source Notebook LM",
-    "badge": "🔥 27.2K ★",
-    "volume": "27.2K",
-    "crescimento": "555 stars hoje",
-    "stars": 27194,
-    "forks": "3,091",
-    "descricao": "An Open Source implementation of Notebook LM with more flexibility and features.",
-    "tags": [
-      "AI",
-      "notebook",
-      "open-source",
-      "research"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "07/06/2026 18:50",
-    "id_atualizacao": 1
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🎯 last30days-skill — AI Research Agent (Reddit, X, HN, Polymarket)",
-    "badge": "🔥 30.7K ★",
-    "volume": "30.7K",
-    "crescimento": "1,097 stars hoje",
-    "stars": 30748,
-    "forks": "2,576",
-    "descricao": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary.",
-    "tags": [
-      "AI",
-      "research",
-      "agents",
-      "reddit",
-      "polymarket",
-      "synthesis"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "07/06/2026 18:50",
-    "id_atualizacao": 1
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "💰 AiToEarn — Use AI to Earn!",
-    "badge": "🔥 18.7K ★",
-    "volume": "18.7K",
-    "crescimento": "180 stars hoje",
-    "stars": 18723,
-    "forks": "2,904",
-    "descricao": "Let's use AI to Earn!",
-    "tags": [
-      "AI",
-      "earning",
-      "automation",
-      "trending"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "07/06/2026 18:50",
-    "id_atualizacao": 1
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🏕️ project-nomad — Offline Survival Computer",
-    "badge": "🔥 29.7K ★",
-    "volume": "29.7K",
-    "crescimento": "304 stars hoje",
-    "stars": 29685,
-    "forks": "2,941",
-    "descricao": "Project N.O.M.A.D, is a self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered—anytime, anywhere.",
-    "tags": [
-      "AI",
-      "offline",
-      "survival",
-      "tools"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "07/06/2026 18:50",
-    "id_atualizacao": 1
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "☕ Single Serve Coffee Maker — +1650% Growth",
-    "badge": "📈 +1650%",
-    "volume": "74K",
-    "crescimento": "+1650% Growth",
-    "stars": null,
-    "forks": null,
-    "descricao": "Compact appliance designed to brew one cup of coffee at a time using pods or capsules. Ideal for busy professionals.",
-    "tags": [
-      "coffee",
-      "appliances",
-      "trending",
-      "convenience"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "07/06/2026 18:50",
-    "id_atualizacao": 1
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🤖 hermes-agent — The Agent That Grows With You",
-    "badge": "🔥 185.9K ★",
-    "volume": "185.9K",
-    "crescimento": "1,117 stars hoje",
-    "stars": 185851,
-    "forks": "31,966",
-    "descricao": "The agent that grows with you. NousResearch open-source AI agent framework.",
-    "tags": [
-      "AI",
-      "agents",
-      "open-source",
-      "framework"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "07/06/2026 18:50",
-    "id_atualizacao": 1
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "💍 Alexandrite Engagement Ring — +208% Growth",
-    "badge": "📈 +208%",
+    "stars": 0,
+    "forks": 0,
     "volume": "12.1K",
-    "crescimento": "+208% Growth",
-    "stars": null,
-    "forks": null,
-    "descricao": "Rare gemstone known for unique color-changing properties (green in daylight, red under incandescent light). Symbolizes change and transformation.",
-    "tags": [
-      "jewelry",
-      "gemstone",
-      "trending",
-      "luxury"
-    ],
+    "crescimento": "+6600%",
+    "badge": "✈️ 12.1K Volume +6600% Growth - Foot Hammock"
+  },
+  {
+    "id": "2",
+    "titulo": "Pandaear",
+    "descricao": "Brand offering a variety of baby and toddler products, including silicone feeding sets, waterproof baby bibs, and portable baby seats. Practical and travel-friendly designs.",
     "fonte": "Exploding Topics",
-    "data_publicacao": "07/06/2026 18:50",
-    "id_atualizacao": 1
+    "tags": [
+      "baby",
+      "toddler",
+      "products",
+      "silicon",
+      "e-commerce"
+    ],
+    "categoria": "negocio",
+    "origem": "global",
+    "stars": 0,
+    "forks": 0,
+    "volume": "2.9K",
+    "crescimento": "+5900%",
+    "badge": "🐼 2.9K Volume +5900% Growth - Baby Products"
   },
   {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "💊 HPMC — +180% Growth (Pharmaceutical)",
-    "badge": "📈 +180%",
-    "volume": "22.2K",
-    "crescimento": "+180% Growth",
-    "stars": null,
-    "forks": null,
-    "descricao": "Hydroxypropyl methylcellulose - soluble methylcellulose ether used in pharmaceuticals, food, and construction materials.",
-    "tags": [
-      "pharmaceutical",
-      "ingredients",
-      "trending",
-      "industrial"
-    ],
+    "id": "3",
+    "titulo": "Pdrn Ampoule",
+    "descricao": "Skincare products containing Polydeoxyribonucleotide, known for regenerative properties used for skin healing and rejuvenation. Promotes cellular regeneration and hydration.",
     "fonte": "Exploding Topics",
-    "data_publicacao": "07/06/2026 18:50",
-    "id_atualizacao": 1
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "📱 TestFlight — iOS Beta Testing Platform +156%",
-    "badge": "📈 +156%",
-    "volume": "90.5K",
-    "crescimento": "+156% Growth",
-    "stars": null,
-    "forks": null,
-    "descricao": "Apple platform for distributing iOS apps to beta testers before App Store release. Supports iOS, iPadOS, watchOS, tvOS apps.",
-    "tags": [
-      "iOS",
-      "beta",
-      "testing",
-      "developer-tools"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "07/06/2026 18:50",
-    "id_atualizacao": 1
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "⚡ CopilotKit — Frontend Stack for AI Agents & Generative UI",
-    "badge": "🔥 33.2K ★",
-    "volume": "33.2K",
-    "crescimento": "613 stars hoje",
-    "stars": 33194,
-    "forks": "4,238",
-    "descricao": "The Frontend Stack for Agents & Generative UI. React, Angular, Mobile, Slack, and more. Makers of the AG-UI Protocol.",
-    "tags": [
-      "AI",
-      "generative-ui",
-      "react",
-      "agents",
-      "frontend"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "06/06/2026 19:56",
-    "id_atualizacao": 1
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🧠 MemPalace — Open-Source AI Memory System",
-    "badge": "🔥 54.3K ★",
-    "volume": "54.3K",
-    "crescimento": "441 stars hoje",
-    "stars": 54266,
-    "forks": "7,109",
-    "descricao": "The best-benchmarked open-source AI memory system. Gives AI agents persistent, searchable memory.",
-    "tags": [
-      "AI",
-      "memory",
-      "agents",
-      "open-source",
-      "persistence"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "06/06/2026 19:56",
-    "id_atualizacao": 1
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🌐 Personal AI Infrastructure — Daniel Miesslers Agentic Setup",
-    "badge": "⭐ 14.9K ★",
-    "volume": "14.9K",
-    "crescimento": "63 stars hoje",
-    "stars": 14949,
-    "forks": "2,122",
-    "descricao": "Agentic AI Infrastructure for magnifying HUMAN capabilities. Daniel Miesslers complete personal AI stack setup.",
-    "tags": [
-      "AI",
-      "agentic",
-      "infrastructure",
-      "productivity",
-      "setup"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "06/06/2026 19:56",
-    "id_atualizacao": 1
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🌍 Agent-Reach — AI Agent Web Browsing (Twitter, Reddit, GitHub...)",
-    "badge": "🔥 22.3K ★",
-    "volume": "22.3K",
-    "crescimento": "700 stars hoje",
-    "stars": 22301,
-    "forks": "1,906",
-    "descricao": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu - one CLI, zero API fees.",
-    "tags": [
-      "AI",
-      "agents",
-      "web-scraping",
-      "browser",
-      "automation"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "06/06/2026 19:56",
-    "id_atualizacao": 1
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🎙️ VibeVoice — Microsoft Open-Source Frontier Voice AI",
-    "badge": "⭐ 48.5K ★",
-    "volume": "48.5K",
-    "crescimento": "219 stars hoje",
-    "stars": 48466,
-    "forks": "5,391",
-    "descricao": "Open-Source Frontier Voice AI by Microsoft. State-of-the-art speech recognition and generation.",
-    "tags": [
-      "AI",
-      "voice",
-      "speech",
-      "microsoft",
-      "audio"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "06/06/2026 19:56",
-    "id_atualizacao": 1
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🧠 Khoj — Self-Hostable AI Second Brain",
-    "badge": "⭐ 34.9K ★",
-    "volume": "34.9K",
-    "crescimento": "53 stars hoje",
-    "stars": 34932,
-    "forks": "2,227",
-    "descricao": "Your AI second brain. Self-hostable. Get answers from web or your docs. Build custom agents, schedule automations, do deep research.",
-    "tags": [
-      "AI",
-      "second-brain",
-      "self-hosted",
-      "research",
-      "agents"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "06/06/2026 19:56",
-    "id_atualizacao": 1
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "📈 Snail Mucin Eye Cream — +4400% Growth",
-    "badge": "📈 +4400%",
-    "volume": "1.3K",
-    "crescimento": "+4400% Growth",
-    "stars": null,
-    "forks": null,
-    "descricao": "Eye cream with snail mucin to hydrate, nourish, and brighten the under-eye area. Viral in skincare communities.",
     "tags": [
       "skincare",
       "beauty",
-      "viral",
-      "trending",
-      "niche"
-    ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "06/06/2026 19:56",
-    "id_atualizacao": 1
-  },
-  {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "🌿 True Sea Moss — +9100% Growth",
-    "badge": "📈 +9100%",
-    "volume": "33.1K",
-    "crescimento": "+9100% Growth",
-    "stars": null,
-    "forks": null,
-    "descricao": "Rich antioxidant content, supports cellular health and enhances digestion. Viral health supplement trending in wellness communities.",
-    "tags": [
-      "supplements",
+      "regenerative",
       "health",
-      "wellness",
-      "viral",
-      "trending"
+      "anti-aging"
     ],
-    "fonte": "Exploding Topics",
-    "data_publicacao": "06/06/2026 19:56",
-    "id_atualizacao": 1
+    "categoria": "negocio",
+    "origem": "global",
+    "stars": 0,
+    "forks": 0,
+    "volume": "1.9K",
+    "crescimento": "+5600%",
+    "badge": "💎 1.9K Volume +5600% Growth - Skincare"
   },
   {
-    "categoria": "tendencia",
-    "origem": "global",
-    "titulo": "💍 Waterproof Jewelry — +2700% Growth",
-    "badge": "📈 +2700%",
-    "volume": "40.5K",
-    "crescimento": "+2700% Growth",
-    "stars": null,
-    "forks": null,
-    "descricao": "Jewelry designed to maintain appearance and durability when exposed to water. Ideal for active lifestyles.",
-    "tags": [
-      "fashion",
-      "jewelry",
-      "accessories",
-      "trending",
-      "lifestyle"
-    ],
+    "id": "4",
+    "titulo": "Ocrmypdf",
+    "descricao": "Software tool that adds an optical character recognition (OCR) text layer to scanned PDF files, making them searchable. Command-line interface supporting multiple languages.",
     "fonte": "Exploding Topics",
-    "data_publicacao": "06/06/2026 19:56",
-    "id_atualizacao": 1
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🦞 openclaw — Personal AI Assistant (Any OS)",
-    "badge": "🔥 376K ★",
-    "volume": "376K",
-    "crescimento": "",
-    "stars": 375868,
-    "forks": "78,478",
-    "descricao": "Your own personal AI assistant. Any OS. Any Platform. Open-source personal AI assistant with data ownership. Built by openclaw team.",
     "tags": [
-      "AI",
-      "assistant",
-      "personal",
+      "ocr",
+      "pdf",
+      "document",
+      "automation",
       "open-source"
     ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "31/05/2026 18:05",
-    "id_atualizacao": 1
-  },
-  {
     "categoria": "app",
     "origem": "global",
-    "titulo": "⚡ Superpowers — Agentic Skills Framework",
-    "badge": "🔥 211K ★",
-    "volume": "",
-    "crescimento": "",
-    "stars": 210781,
-    "forks": "18,760",
-    "descricao": "An agentic skills framework & software development methodology that works. Enables AI agents to use structured skills for reliable task execution across development workflows.",
+    "stars": 0,
+    "forks": 0,
+    "volume": "9.9K",
+    "crescimento": "+1150%",
+    "badge": "📄 9.9K Volume +1150% Growth - OCR Tool"
+  },
+  {
+    "id": "5",
+    "titulo": "Generative Adversarial Networks",
+    "descricao": "Machine learning frameworks involving two neural networks (generator and discriminator) trained simultaneously through adversarial processes to generate realistic data samples.",
+    "fonte": "Exploding Topics",
     "tags": [
-      "AI",
-      "agents",
-      "developer-tools"
+      "ai",
+      "machine-learning",
+      "neural-networks",
+      "deep-learning",
+      "research"
     ],
-    "fonte": "GitHub Trending",
-    "id_atualizacao": 1,
-    "data_publicacao": "30/05/2026 12:00",
-    "_meta": {
-      "data_fallback": true
-    }
+    "categoria": "tendencia",
+    "origem": "global",
+    "stars": 0,
+    "forks": 0,
+    "volume": "450K",
+    "crescimento": "+258%",
+    "badge": "🧠 450K Volume +258% Growth - GANs"
   },
   {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "💻 Ecc — The Agent Harness Performance Optimization System",
-    "badge": "★ 204,865",
-    "volume": "",
-    "crescimento": "",
-    "stars": 204865,
-    "forks": "31432",
-    "descricao": "The agent harness performance optimization system for AI coding agents (Claude, Codex, Cursor).",
+    "id": "6",
+    "titulo": "Quadplex",
+    "descricao": "Multi-family home consisting of four separate living spaces, each with its own entrance. Can be arranged in various configurations. Ideal for property investors and multi-generational living.",
+    "fonte": "Exploding Topics",
     "tags": [
-      "ai-agent",
-      "claude",
-      "cursor",
-      "optimization",
-      "coding-agent"
+      "real-estate",
+      "property",
+      "investment",
+      "multi-family",
+      "rental"
     ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "03/06/2026 07:32",
-    "id_atualizacao": 1
+    "categoria": "negocio",
+    "origem": "global",
+    "stars": 0,
+    "forks": 0,
+    "volume": "12.1K",
+    "crescimento": "+71%",
+    "badge": "🏠 12.1K Volume +71% Growth - Quadplex"
   },
   {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "⚡ ECC — Agent Harness Performance Optimization",
-    "badge": "🔥 199K ★",
-    "volume": "199K",
-    "crescimento": "908 stars/dia",
-    "stars": 199748,
-    "forks": "30,662",
-    "descricao": "Agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+    "id": "7",
+    "titulo": "hermes-agent",
+    "descricao": "The agent that grows with you",
+    "fonte": "GitHub Trending",
     "tags": [
-      "AI",
+      "ai",
       "agent",
-      "claude-code",
-      "optimization",
-      "developer-tools"
+      "open-source",
+      "framework"
     ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "31/05/2026 06:30",
-    "id_atualizacao": 1
-  },
-  {
     "categoria": "app",
     "origem": "global",
-    "titulo": "🦞 claw-code — Fastest Repo in History",
-    "badge": "🔥 193K ★",
-    "volume": "193K",
-    "crescimento": "unlocked",
-    "stars": 193083,
-    "forks": "",
-    "descricao": "The repo is finally unlocked. Enjoy the party! The fastest repo in history to reach this star count.",
-    "tags": [
-      "AI",
-      "coding",
-      "agents",
-      "developer-tools"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 18:50",
-    "id_atualizacao": 1
+    "stars": 185826,
+    "forks": 31960,
+    "badge": "🤖 185.8K stars - AI Agent Framework"
   },
   {
+    "id": "8",
+    "titulo": "llama.cpp",
+    "descricao": "LLM inference in C/C++",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "ai",
+      "llm",
+      "c++",
+      "inference",
+      "open-source"
+    ],
     "categoria": "app",
     "origem": "global",
-    "titulo": "📄 andrej-karpathy-skills — Karpathy Claude Code Setup",
-    "badge": "🔥 164K ★",
-    "volume": "164K",
-    "crescimento": "",
-    "stars": 164715,
-    "forks": "",
-    "descricao": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's workflow and best practices.",
-    "tags": [
-      "AI",
-      "claude-code",
-      "skills",
-      "developer-tools"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 18:50",
-    "id_atualizacao": 1
+    "stars": 115289,
+    "forks": 19295,
+    "badge": "⚡ 115.3K stars - LLM Inference"
   },
   {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "📄 markitdown — Python Office Docs to Markdown",
-    "badge": "🔥 133K ★",
-    "volume": "133K",
-    "crescimento": "2,470 stars/dia",
-    "stars": 133684,
-    "forks": "9,142",
-    "descricao": "Python tool for converting files and office documents to Markdown. Supports Word, Excel, PowerPoint, PDF and more.",
+    "id": "9",
+    "titulo": "OpenCV",
+    "descricao": "Open Source Computer Vision Library - real-time computer vision and ML",
+    "fonte": "GitHub Trending",
     "tags": [
+      "cv",
+      "computer-vision",
+      "ai",
       "python",
-      "markdown",
-      "document-conversion",
-      "productivity"
+      "c++",
+      "open-source"
     ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "31/05/2026 06:30",
-    "id_atualizacao": 1
-  },
-  {
     "categoria": "app",
     "origem": "global",
-    "titulo": "📈 TradingAgents — Multi-Agent LLM Financial Trading",
-    "badge": "🔥 81.5K ★",
-    "volume": "81.5K",
-    "crescimento": "1,200 stars/dia",
-    "stars": 81565,
-    "forks": "15,865",
-    "descricao": "TradingAgents: Multi-Agents LLM Financial Trading Framework. Uses multi-agent systems for automated trading strategies and market analysis.",
-    "tags": [
-      "AI",
-      "trading",
-      "finance",
-      "agents",
-      "llm"
-    ],
+    "stars": 88042,
+    "forks": 56596,
+    "badge": "👁️ 88K stars - Computer Vision"
+  },
+  {
+    "id": "10",
+    "titulo": "Svelte",
+    "descricao": "Web development for the rest of us",
     "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 12:00",
-    "id_atualizacao": 1
+    "tags": [
+      "javascript",
+      "framework",
+      "web",
+      "svelte"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 87097,
+    "forks": 4940,
+    "badge": "⚡ 87.1K stars - Web Framework"
+  },
+  {
+    "id": "11",
+    "titulo": "Vite",
+    "descricao": "Next generation frontend tooling. It's fast!",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "javascript",
+      "tooling",
+      "build",
+      "typescript"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 81178,
+    "forks": 8274,
+    "badge": "⚡ 81.2K stars - Frontend Tooling"
+  },
+  {
+    "id": "12",
+    "titulo": "Ulanzi",
+    "descricao": "Company specializing in research, development, production, and sales of accessories for mobile phone and camera photography",
+    "fonte": "Exploding Topics",
+    "tags": [
+      "photography",
+      "accessories",
+      "hardware",
+      "content-creator"
+    ],
+    "categoria": "negocio",
+    "origem": "global",
+    "stars": 0,
+    "forks": 0,
+    "volume": "74K",
+    "crescimento": "+271%",
+    "badge": "📷 74K Volume +271% - Photo Accessories"
+  },
+  {
+    "id": "13",
+    "titulo": "MemPalace",
+    "descricao": "The best-benchmarked open-source AI memory system. And it's free.",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "ai",
+      "memory",
+      "python",
+      "open-source"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 54532,
+    "forks": 7127,
+    "badge": "🔥 54.5K stars - AI Memory"
+  },
+  {
+    "id": "14",
+    "titulo": "Maybe",
+    "descricao": "The personal finance app for everyone - open source finance management",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "finance",
+      "personal-finance",
+      "ruby",
+      "open-source"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 54151,
+    "forks": 5605,
+    "badge": "💰 54.2K stars - Personal Finance"
+  },
+  {
+    "id": "15",
+    "titulo": "career-ops",
+    "descricao": "AI-powered job search system built on Claude Code. 14 skill modes, Go dashboard, PDF generation, batch processing.",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "ai",
+      "job-search",
+      "claude-code",
+      "automation",
+      "career"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 50457,
+    "forks": 10332,
+    "badge": "💼 50.4K stars - AI Job Search"
+  },
+  {
+    "id": "16",
+    "titulo": "Luminance",
+    "descricao": "UK-based legal technology company providing AI solutions for contract analysis, negotiation, and eDiscovery",
+    "fonte": "Exploding Topics",
+    "tags": [
+      "legal",
+      "ai",
+      "contracts",
+      "automation"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 0,
+    "forks": 0,
+    "volume": "49.5K",
+    "crescimento": "+257%",
+    "badge": "⚖️ 49.5K Volume +257% - Legal AI"
+  },
+  {
+    "id": "17",
+    "titulo": "VibeVoice",
+    "descricao": "Open-Source Frontier Voice AI from Microsoft",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "ai",
+      "voice",
+      "python",
+      "microsoft"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 48467,
+    "forks": 5391,
+    "badge": "🎙️ 48.5K stars - Voice AI"
+  },
+  {
+    "id": "18",
+    "titulo": "goose",
+    "descricao": "An open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "ai",
+      "agent",
+      "extensible",
+      "python"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 47432,
+    "forks": 5005,
+    "badge": "🦆 47.4K stars - AI Agent"
+  },
+  {
+    "id": "19",
+    "titulo": "Weight Loss Peptides",
+    "descricao": "Peptides that mimic the GLP-1 hormone for regulating appetite and metabolism in weight management",
+    "fonte": "Exploding Topics",
+    "tags": [
+      "health",
+      "weight-loss",
+      "pharmaceutical",
+      "wellness"
+    ],
+    "categoria": "negocio",
+    "origem": "global",
+    "stars": 0,
+    "forks": 0,
+    "volume": "40.5K",
+    "crescimento": "+900%",
+    "badge": "💊 40.5K Volume +900% - Peptides"
+  },
+  {
+    "id": "20",
+    "titulo": "taste-skill",
+    "descricao": "Gives your AI good taste - stops the AI from generating boring, generic slop",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "ai",
+      "agent",
+      "creativity",
+      "prompting"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 36474,
+    "forks": 2639,
+    "badge": "🎨 36.5K stars - AI Taste"
+  },
+  {
+    "id": "21",
+    "titulo": "Trivy",
+    "descricao": "Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "security",
+      "devops",
+      "go",
+      "vulnerability"
+    ],
+    "categoria": "negocio",
+    "origem": "global",
+    "stars": 36067,
+    "forks": 458,
+    "badge": "🛡️ 36.1K stars - Security Scanner"
+  },
+  {
+    "id": "22",
+    "titulo": "last30days-skill",
+    "descricao": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "ai",
+      "agent",
+      "research",
+      "python",
+      "automation"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 34376,
+    "forks": 2812,
+    "badge": "🔍 34.4K stars - AI Research Agent"
+  },
+  {
+    "id": "23",
+    "titulo": "CopilotKit",
+    "descricao": "The Frontend Stack for Agents & Generative UI. Makers of the AG-UI Protocol",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "agent",
+      "generative-ui",
+      "react",
+      "typescript",
+      "ai"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 33519,
+    "forks": 4263,
+    "badge": "🤖 33.5K stars - AI Agent UI"
+  },
+  {
+    "id": "24",
+    "titulo": "Vention",
+    "descricao": "Company specializing in simplified industrial automation for high-mix manufacturers",
+    "fonte": "Exploding Topics",
+    "tags": [
+      "automation",
+      "manufacturing",
+      "industrial",
+      "saas"
+    ],
+    "categoria": "negocio",
+    "origem": "global",
+    "stars": 0,
+    "forks": 0,
+    "volume": "33.1K",
+    "crescimento": "+257%",
+    "badge": "🏭 33.1K Volume +257% - Industrial Automation"
+  },
+  {
+    "id": "25",
+    "titulo": "Project N.O.M.A.D",
+    "descricao": "Self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered—anytime, anywhere",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "ai",
+      "offline",
+      "survival",
+      "knowledge",
+      "tools"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 29664,
+    "forks": 2938,
+    "badge": "🏕️ 29.7K stars - Offline AI"
+  },
+  {
+    "id": "26",
+    "titulo": "Open Notebook",
+    "descricao": "An Open Source implementation of Notebook LM with more flexibility and features",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "ai",
+      "notebook",
+      "typescript",
+      "open-source"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 27171,
+    "forks": 3089,
+    "badge": "📓 27.2K stars - AI Notebook"
+  },
+  {
+    "id": "27",
+    "titulo": "Epitalon",
+    "descricao": "Synthetic peptide known for potential anti-aging properties by stimulating telomerase production",
+    "fonte": "Exploding Topics",
+    "tags": [
+      "anti-aging",
+      "longevity",
+      "peptide",
+      "health"
+    ],
+    "categoria": "negocio",
+    "origem": "global",
+    "stars": 0,
+    "forks": 0,
+    "volume": "27.1K",
+    "crescimento": "+900%",
+    "badge": "🧬 27.1K Volume +900% - Anti-aging"
+  },
+  {
+    "id": "28",
+    "titulo": "Agent-Reach",
+    "descricao": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "ai",
+      "agent",
+      "web-scraping",
+      "multi-platform",
+      "cli"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 24034,
+    "forks": 2027,
+    "badge": "🌐 24K stars - Multi-platform AI Scraping"
+  },
+  {
+    "id": "29",
+    "titulo": "Stovepipe Jeans",
+    "descricao": "Jeans characterized by a straight cut from hip to hem, maintaining consistent width for a sleek silhouette",
+    "fonte": "Exploding Topics",
+    "tags": [
+      "fashion",
+      "clothing",
+      "jeans",
+      "style"
+    ],
+    "categoria": "negocio",
+    "origem": "global",
+    "stars": 0,
+    "forks": 0,
+    "volume": "22.2K",
+    "crescimento": "+800%",
+    "badge": "👖 22.2K Volume +800% - Fashion"
+  },
+  {
+    "id": "30",
+    "titulo": "Portable EV Charger",
+    "descricao": "Devices enabling EV owners to charge vehicles on the move - Level 1, Level 2, and DC fast chargers",
+    "fonte": "Exploding Topics",
+    "tags": [
+      "ev",
+      "charging",
+      "electric-vehicle",
+      "hardware"
+    ],
+    "categoria": "negocio",
+    "origem": "global",
+    "stars": 0,
+    "forks": 0,
+    "volume": "22.2K",
+    "crescimento": "+365%",
+    "badge": "🔌 22.2K Volume +365% - EV Charger"
   }
 ]
