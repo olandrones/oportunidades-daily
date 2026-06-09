@@ -1,5 +1,213 @@
 [
   {
+    "id": "31",
+    "titulo": "turbovec",
+    "descricao": "A vector index built on TurboQuant, written in Rust with Python bindings. High-performance vector search for AI applications.",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "ai",
+      "vector-search",
+      "rust",
+      "python",
+      "inference",
+      "embedding"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 10114,
+    "forks": 868,
+    "badge": "⚡ 10.1K stars - Rust Vector Index",
+    "data_publicacao": "2026-06-09"
+  },
+  {
+    "id": "32",
+    "titulo": "tolaria",
+    "descricao": "Desktop app to manage markdown knowledge bases. Built with TypeScript for organizing and searching large collections of markdown files.",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "knowledge-base",
+      "markdown",
+      "typescript",
+      "desktop",
+      "productivity"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 14278,
+    "forks": 992,
+    "badge": "📚 14.3K stars - Markdown KB Manager",
+    "data_publicacao": "2026-06-09"
+  },
+  {
+    "id": "33",
+    "titulo": "system-prompts-and-models-of-ai-tools",
+    "descricao": "Collection of system prompts and model information for AI tools. Aggregates and documents AI assistant configurations and capabilities.",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "ai",
+      "prompts",
+      "llm",
+      "open-source",
+      "collection"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 25000,
+    "forks": 2000,
+    "badge": "🧩 ~25K stars - AI Prompts Collection",
+    "data_publicacao": "2026-06-09"
+  },
+  {
+    "id": "34",
+    "titulo": "Sensor Garden Kit",
+    "descricao": "Gardening set incorporating sensors to monitor soil moisture, light levels, and temperature. Connects to apps for automated alerts and smart watering. Targeted at beginner gardeners and tech-oriented users.",
+    "fonte": "Exploding Topics",
+    "tags": [
+      "iot",
+      "gardening",
+      "sensors",
+      "automation",
+      "smart-home",
+      "hardware"
+    ],
+    "categoria": "negocio",
+    "origem": "global",
+    "stars": 0,
+    "forks": 0,
+    "volume": "0-100",
+    "crescimento": "+2300%",
+    "badge": "🌱 0-100 Volume +2300% Growth - Smart Garden",
+    "data_publicacao": "2026-06-09"
+  },
+  {
+    "id": "35",
+    "titulo": "Steel Tongue Drum",
+    "descricao": "Modern percussion instrument made from steel cylinder/tank with tuned tongues producing melodic sounds. Used in meditation, music therapy, and various musical genres.",
+    "fonte": "Exploding Topics",
+    "tags": [
+      "music",
+      "instrument",
+      "meditation",
+      "therapy",
+      "wellness"
+    ],
+    "categoria": "negocio",
+    "origem": "global",
+    "stars": 0,
+    "forks": 0,
+    "volume": "22.2K",
+    "crescimento": "+2400%",
+    "badge": "🥁 22.2K Volume +2400% Growth - Music Instrument",
+    "data_publicacao": "2026-06-09"
+  },
+  {
+    "id": "36",
+    "titulo": "Ribbed Tank Top",
+    "descricao": "Sleeveless garment with ribbed texture, known for stretchy and snug fit. Crafted from cotton/spandex for comfort and flexibility. Popular for workouts and everyday wear.",
+    "fonte": "Exploding Topics",
+    "tags": [
+      "fashion",
+      "clothing",
+      "activewear",
+      "comfort",
+      "e-commerce"
+    ],
+    "categoria": "negocio",
+    "origem": "global",
+    "stars": 0,
+    "forks": 0,
+    "volume": "40.5K",
+    "crescimento": "+511%",
+    "badge": "👕 40.5K Volume +511% Growth - Fashion",
+    "data_publicacao": "2026-06-09"
+  },
+  {
+    "id": "37",
+    "titulo": "Finnt",
+    "descricao": "AI-native financial analysis software transforming complex financial documents into understandable memos. Also addresses remittance market with cross-border payment solution, debit cards, and spending rules.",
+    "fonte": "Exploding Topics",
+    "tags": [
+      "fintech",
+      "ai",
+      "financial-analysis",
+      "remittance",
+      "saas"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 0,
+    "forks": 0,
+    "volume": "1.6K",
+    "crescimento": "+57%",
+    "badge": "💹 1.6K Volume +57% Growth - AI Finance",
+    "data_publicacao": "2026-06-09"
+  },
+  {
+    "id": "38",
+    "titulo": "Taxo",
+    "descricao": "AI-powered platform automating administrative tasks in healthcare: patient intake, benefit verification, prior authorization, medical coding, claim submissions. Reduces processing times by 90%, 98% accuracy.",
+    "fonte": "Exploding Topics",
+    "tags": [
+      "healthcare",
+      "ai",
+      "automation",
+      "saas",
+      "admin",
+      "ehr"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 0,
+    "forks": 0,
+    "volume": "10.8K",
+    "crescimento": "+47%",
+    "badge": "🏥 10.8K Volume +47% Growth - Healthcare AI",
+    "data_publicacao": "2026-06-09"
+  },
+  {
+    "id": "39",
+    "titulo": "Claude Fable 5",
+    "descricao": "Anthropic's latest Claude model with enhanced creative writing, storytelling, and narrative generation capabilities. Represents advancement in AI-assisted content creation.",
+    "fonte": "Hacker News",
+    "tags": [
+      "ai",
+      "anthropic",
+      "llm",
+      "claude",
+      "content-creation"
+    ],
+    "categoria": "tendencia",
+    "origem": "global",
+    "stars": 0,
+    "forks": 0,
+    "volume": "trending",
+    "crescimento": "+1553 points HN",
+    "badge": "📖 HN Trending - Anthropic Claude Fable 5",
+    "data_publicacao": "2026-06-09"
+  },
+  {
+    "id": "40",
+    "titulo": "Kolmogorov-Arnold Networks (KAN)",
+    "descricao": "Revolutionary neural network architecture replacing MLPs with Kolmogorov-Arnold representation theorem. Enables ultrafast machine learning on FPGAs with interpretability advantages.",
+    "fonte": "Hacker News",
+    "tags": [
+      "ai",
+      "deep-learning",
+      "fpga",
+      "KAN",
+      "ml",
+      "research"
+    ],
+    "categoria": "tendencia",
+    "origem": "global",
+    "stars": 0,
+    "forks": 0,
+    "volume": "trending",
+    "crescimento": "+118 points HN",
+    "badge": "🧠 HN Trending - KAN Networks on FPGA",
+    "data_publicacao": "2026-06-09"
+  },
+  {
     "id": "1",
     "titulo": "Airplane Foot Hammock",
     "descricao": "A travel accessory designed to enhance comfort during flights by allowing passengers to elevate their feet and legs. Attaches to tray table, improves circulation and reduces swelling during long flights.",
@@ -20,46 +228,6 @@
     "badge": "✈️ 12.1K Volume +6600% Growth - Foot Hammock"
   },
   {
-    "id": "2",
-    "titulo": "Pandaear",
-    "descricao": "Brand offering a variety of baby and toddler products, including silicone feeding sets, waterproof baby bibs, and portable baby seats. Practical and travel-friendly designs.",
-    "fonte": "Exploding Topics",
-    "tags": [
-      "baby",
-      "toddler",
-      "products",
-      "silicon",
-      "e-commerce"
-    ],
-    "categoria": "negocio",
-    "origem": "global",
-    "stars": 0,
-    "forks": 0,
-    "volume": "2.9K",
-    "crescimento": "+5900%",
-    "badge": "🐼 2.9K Volume +5900% Growth - Baby Products"
-  },
-  {
-    "id": "3",
-    "titulo": "Pdrn Ampoule",
-    "descricao": "Skincare products containing Polydeoxyribonucleotide, known for regenerative properties used for skin healing and rejuvenation. Promotes cellular regeneration and hydration.",
-    "fonte": "Exploding Topics",
-    "tags": [
-      "skincare",
-      "beauty",
-      "regenerative",
-      "health",
-      "anti-aging"
-    ],
-    "categoria": "negocio",
-    "origem": "global",
-    "stars": 0,
-    "forks": 0,
-    "volume": "1.9K",
-    "crescimento": "+5600%",
-    "badge": "💎 1.9K Volume +5600% Growth - Skincare"
-  },
-  {
     "id": "4",
     "titulo": "Ocrmypdf",
     "descricao": "Software tool that adds an optical character recognition (OCR) text layer to scanned PDF files, making them searchable. Command-line interface supporting multiple languages.",
@@ -78,46 +246,6 @@
     "volume": "9.9K",
     "crescimento": "+1150%",
     "badge": "📄 9.9K Volume +1150% Growth - OCR Tool"
-  },
-  {
-    "id": "5",
-    "titulo": "Generative Adversarial Networks",
-    "descricao": "Machine learning frameworks involving two neural networks (generator and discriminator) trained simultaneously through adversarial processes to generate realistic data samples.",
-    "fonte": "Exploding Topics",
-    "tags": [
-      "ai",
-      "machine-learning",
-      "neural-networks",
-      "deep-learning",
-      "research"
-    ],
-    "categoria": "tendencia",
-    "origem": "global",
-    "stars": 0,
-    "forks": 0,
-    "volume": "450K",
-    "crescimento": "+258%",
-    "badge": "🧠 450K Volume +258% Growth - GANs"
-  },
-  {
-    "id": "6",
-    "titulo": "Quadplex",
-    "descricao": "Multi-family home consisting of four separate living spaces, each with its own entrance. Can be arranged in various configurations. Ideal for property investors and multi-generational living.",
-    "fonte": "Exploding Topics",
-    "tags": [
-      "real-estate",
-      "property",
-      "investment",
-      "multi-family",
-      "rental"
-    ],
-    "categoria": "negocio",
-    "origem": "global",
-    "stars": 0,
-    "forks": 0,
-    "volume": "12.1K",
-    "crescimento": "+71%",
-    "badge": "🏠 12.1K Volume +71% Growth - Quadplex"
   },
   {
     "id": "7",
@@ -174,59 +302,6 @@
     "badge": "👁️ 88K stars - Computer Vision"
   },
   {
-    "id": "10",
-    "titulo": "Svelte",
-    "descricao": "Web development for the rest of us",
-    "fonte": "GitHub Trending",
-    "tags": [
-      "javascript",
-      "framework",
-      "web",
-      "svelte"
-    ],
-    "categoria": "app",
-    "origem": "global",
-    "stars": 87097,
-    "forks": 4940,
-    "badge": "⚡ 87.1K stars - Web Framework"
-  },
-  {
-    "id": "11",
-    "titulo": "Vite",
-    "descricao": "Next generation frontend tooling. It's fast!",
-    "fonte": "GitHub Trending",
-    "tags": [
-      "javascript",
-      "tooling",
-      "build",
-      "typescript"
-    ],
-    "categoria": "app",
-    "origem": "global",
-    "stars": 81178,
-    "forks": 8274,
-    "badge": "⚡ 81.2K stars - Frontend Tooling"
-  },
-  {
-    "id": "12",
-    "titulo": "Ulanzi",
-    "descricao": "Company specializing in research, development, production, and sales of accessories for mobile phone and camera photography",
-    "fonte": "Exploding Topics",
-    "tags": [
-      "photography",
-      "accessories",
-      "hardware",
-      "content-creator"
-    ],
-    "categoria": "negocio",
-    "origem": "global",
-    "stars": 0,
-    "forks": 0,
-    "volume": "74K",
-    "crescimento": "+271%",
-    "badge": "📷 74K Volume +271% - Photo Accessories"
-  },
-  {
     "id": "13",
     "titulo": "MemPalace",
     "descricao": "The best-benchmarked open-source AI memory system. And it's free.",
@@ -259,43 +334,6 @@
     "stars": 54151,
     "forks": 5605,
     "badge": "💰 54.2K stars - Personal Finance"
-  },
-  {
-    "id": "15",
-    "titulo": "career-ops",
-    "descricao": "AI-powered job search system built on Claude Code. 14 skill modes, Go dashboard, PDF generation, batch processing.",
-    "fonte": "GitHub Trending",
-    "tags": [
-      "ai",
-      "job-search",
-      "claude-code",
-      "automation",
-      "career"
-    ],
-    "categoria": "app",
-    "origem": "global",
-    "stars": 50457,
-    "forks": 10332,
-    "badge": "💼 50.4K stars - AI Job Search"
-  },
-  {
-    "id": "16",
-    "titulo": "Luminance",
-    "descricao": "UK-based legal technology company providing AI solutions for contract analysis, negotiation, and eDiscovery",
-    "fonte": "Exploding Topics",
-    "tags": [
-      "legal",
-      "ai",
-      "contracts",
-      "automation"
-    ],
-    "categoria": "app",
-    "origem": "global",
-    "stars": 0,
-    "forks": 0,
-    "volume": "49.5K",
-    "crescimento": "+257%",
-    "badge": "⚖️ 49.5K Volume +257% - Legal AI"
   },
   {
     "id": "17",
@@ -473,25 +511,6 @@
     "stars": 27171,
     "forks": 3089,
     "badge": "📓 27.2K stars - AI Notebook"
-  },
-  {
-    "id": "27",
-    "titulo": "Epitalon",
-    "descricao": "Synthetic peptide known for potential anti-aging properties by stimulating telomerase production",
-    "fonte": "Exploding Topics",
-    "tags": [
-      "anti-aging",
-      "longevity",
-      "peptide",
-      "health"
-    ],
-    "categoria": "negocio",
-    "origem": "global",
-    "stars": 0,
-    "forks": 0,
-    "volume": "27.1K",
-    "crescimento": "+900%",
-    "badge": "🧬 27.1K Volume +900% - Anti-aging"
   },
   {
     "id": "28",
