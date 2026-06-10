@@ -1,5 +1,109 @@
 [
   {
+    "tipo": "tendencia",
+    "categoria": "tech",
+    "origem": "global",
+    "titulo": "last30days-skill: AI agent pesquisa multi-plataforma",
+    "badge": "📈 3,191 stars/dia",
+    "volume": "38.6K stars",
+    "crescimento": "+3,191 stars/h",
+    "stars": 38618,
+    "forks": "3,114",
+    "descricao": "AI agent skill que pesquisa qualquer tópico em Reddit, X, YouTube, HN, Polymarket e web — síntese grounded. Crescimento explosivo indica demanda por agentes de pesquisa.",
+    "tags": [
+      "AI",
+      "agent",
+      "research",
+      "multi-platform",
+      "synthesis"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "10/06/2026 07:30",
+    "sugere_oportunidade": "sim"
+  },
+  {
+    "tipo": "tendencia",
+    "categoria": "tech",
+    "origem": "global",
+    "titulo": "PM Skills Marketplace: 100+ skills para agentes",
+    "badge": "🔥 806 stars/dia",
+    "volume": "13.9K stars",
+    "crescimento": "+806 stars/h",
+    "stars": 13894,
+    "forks": "1,575",
+    "descricao": "Marketplace de skills para PMs de agente de IA — discovery até strategy, execução, launch e growth. Cruza com frameworks de skills existentes.",
+    "tags": [
+      "AI",
+      "agent",
+      "marketplace",
+      "skills",
+      "PM"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "10/06/2026 07:30",
+    "cross_ref": "superpowers",
+    "sugere_oportunidade": "sim"
+  },
+  {
+    "tipo": "tendencia",
+    "categoria": "tech",
+    "origem": "global",
+    "titulo": "Tolaria: app desktop p/ gerenciar KBs Markdown",
+    "badge": "🔥 829 stars/dia",
+    "volume": "14.6K stars",
+    "crescimento": "+829 stars/h",
+    "stars": 14626,
+    "forks": "1,012",
+    "descricao": "Desktop app p/ gerenciar bases de conhecimento Markdown. Integra com fluxos de agentes de IA que consomem documentos.",
+    "tags": [
+      "markdown",
+      "knowledge-base",
+      "desktop",
+      "AI"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "10/06/2026 07:30",
+    "sugere_oportunidade": "sim"
+  },
+  {
+    "tipo": "tendencia",
+    "categoria": "consumo",
+    "origem": "global",
+    "titulo": "Sustainable Smartphone: +3350% crescimento",
+    "badge": "🌱 +3350% growth",
+    "volume": "390 menções",
+    "crescimento": "+3350%",
+    "descricao": "Smartphone sustentável: materiais reciclados, componentes modulares p/ reparo fácil, suporte software estendido. Mercado eco-consciente em expansão.",
+    "tags": [
+      "sustentabilidade",
+      "smartphone",
+      "consumo",
+      "circular-economy"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "10/06/2026 07:30",
+    "sugere_oportunidade": "sim"
+  },
+  {
+    "tipo": "tendencia",
+    "categoria": "consumo",
+    "origem": "global",
+    "titulo": "Low Latency Keyboard: +1480% gamers/pros",
+    "badge": "🎮 +1480% growth",
+    "volume": "390 menções",
+    "crescimento": "+1480%",
+    "descricao": "Teclado baixa latência p/ gaming competitivo e workflows rápidos. Wireless otimizado, switches high-speed, input lag mínimo. Mercado gamer/esports em alta.",
+    "tags": [
+      "gaming",
+      "perifericos",
+      "esports",
+      "hardware"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "10/06/2026 07:30",
+    "sugere_oportunidade": "sim"
+  },
+  {
     "categoria": "app",
     "origem": "global",
     "titulo": "🦞 openclaw — Personal AI Assistant (Any OS)",
