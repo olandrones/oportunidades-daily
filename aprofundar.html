@@ -166,6 +166,7 @@
             titulo: 'LangChain',
             desc: 'Framework pra orquestrar agentes: chains, tools, memory, RAG. Mais genérico que LlamaIndex — você monta o fluxo de chamadas. Comunidade enorme.',
             meta: 'langchain.com · orquestração · agentes',
+            nivel: 2,  // clicou 1x — Renato 09/06
             links: [{label: 'docs', url: 'https://python.langchain.com/'}]
         },
         {
@@ -174,6 +175,7 @@
             titulo: 'MCP (Model Context Protocol)',
             desc: 'Protocolo aberto da Anthropic (Nov 2024) que padroniza como agentes conversam com ferramentas/APIs. Pense: "USB-C dos agentes". Um servidor MCP expõe tools, qualquer cliente MCP consome.',
             meta: 'modelcontextprotocol.io · protocolo · tools',
+            nivel: 3,  // clicou 2x — Renato 09/06 ("meia árvore" entre 2 e 3, mas ele falou que já acendeu)
             links: [{label: 'spec', url: 'https://modelcontextprotocol.io/'}]
         },
         {
@@ -182,6 +184,7 @@
             titulo: 'Harness',
             desc: 'Plataforma de "engineering intelligence" — CI/CD + feature flags + cloud cost + security. Ajuda DevOps a ver o que tá rolando na engenharia. Pode ser também: harness de teste de agentes.',
             meta: 'harness.io · devops · ou harness de teste',
+            nivel: 1,  // semente — Renato 09/06 (clicou 0x, mas conceituou muito)
             links: [{label: 'site', url: 'https://www.harness.io/'}]
         },
         {
@@ -190,6 +193,7 @@
             titulo: 'RAG (Retrieval Augmented Generation)',
             desc: 'Técnica onde o LLM busca informação relevante num banco antes de gerar resposta. Resolve o problema do LLM "inventar" dados — ele busca primeiro, depois fala.',
             meta: 'pattern · LLM + busca ·',
+            nivel: 3,  // clicou 2x — Renato 09/06
             links: []
         },
         {
@@ -198,6 +202,7 @@
             titulo: 'IAA (Intelligent Adaptive Agents)',
             desc: 'Agentes que aprendem com interação, ajustam comportamento, evoluem com uso. Diferente de LLM "burro" que sempre responde igual. Inclui memória, contexto, personalização.',
             meta: 'pattern · agentes adaptativos ·',
+            nivel: 3,  // clicou 2x — Renato 09/06
             links: []
         },
         {
@@ -206,6 +211,7 @@
             titulo: 'Agent Orchestration',
             desc: 'Coordenar múltiplos agentes pra resolver uma tarefa. Cada um especialista num pedaço, um orquestrador decide quem faz o quê. É a base de "sistemas multi-agente".',
             meta: 'pattern · multi-agent ·',
+            nivel: 3,  // clicou 2x — Renato 09/06
             links: []
         },
         {
@@ -214,6 +220,7 @@
             titulo: 'Exocerebro (metáfora Renato)',
             desc: 'Sistema que cresce COM você, não PARA você. Quanto mais usa, mais sabe sobre você, mais vira extensão do seu pensamento. Diferente de ferramenta: ferramenta é morta, exocerebro é organismo.',
             meta: 'conceito · próprio ·',
+            nivel: 3,  // clicou 2x — Renato 09/06
             links: []
         },
         {
@@ -378,7 +385,8 @@
 
     // Renderiza um card
     function renderCard(conceito) {
-        const nivel = niveis[conceito.id] || 1;
+        // Hierarquia: localStorage do navegador > campo `nivel` no HTML > 1 (semente)
+        const nivel = niveis[conceito.id] || conceito.nivel || 1;
         const n = NIVEIS[nivel];
         const linksHtml = conceito.links.map(l => `<a href="${l.url}" target="_blank" rel="noopener">${l.label} ↗</a>`).join(' · ');
 
