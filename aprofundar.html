@@ -414,7 +414,10 @@
         const grid = document.getElementById('grid');
         const conceitosFiltrados = filtroAtual === 'todos'
             ? CONCEITOS
-            : CONCEITOS.filter(c => (niveis[c.id] || 1) === parseInt(filtroAtual));
+            : CONCEITOS.filter(c => {
+                const nivel = niveis[c.id] || c.nivel || 1;
+                return nivel === parseInt(filtroAtual);
+              });
         grid.innerHTML = conceitosFiltrados.map(renderCard).join('');
     }
 
