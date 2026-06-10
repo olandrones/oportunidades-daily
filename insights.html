@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas — Insights · Lyriane</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0f0f1a; color: #e0e0e0; min-height: 100vh; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+
+        /* ── HEADER ── */
+        header { text-align: center; padding: 12px 0 20px; border-bottom: 1px solid #2a2a4a; margin-bottom: 32px; }
+        h1.brand { color: #fb923c; font-size: 1.4em; font-weight: 700; margin-bottom: 4px; letter-spacing: -0.3px; }
+        .subtitle { color: #888; font-size: 0.82em; }
+        .view-switch { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 14px; }
+        .view-link { font-size: 0.75em; color: #888; text-decoration: none; padding: 4px 12px; border-radius: 7px; border: 1px solid #2a2a4a; transition: all 0.15s; }
+        .view-link:hover { color: #fff; border-color: #fb923c; }
+        .view-link.active { color: #fb923c; border-color: #fb923c; background: #fb923c15; }
+
+        /* ── HERO: INSIGHT DO DIA ── */
+        .hero-insight {
+            background: linear-gradient(135deg, #1a1530 0%, #1a1a2e 100%);
+            border: 1px solid #3a2a4a;
+            border-radius: 14px;
+            padding: 32px 28px;
+            margin-bottom: 32px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-insight::before {
+            content: '✨';
+            position: absolute;
+            top: -20px;
+            right: -10px;
+            font-size: 140px;
+            opacity: 0.05;
+            transform: rotate(15deg);
+        }
+        .hero-meta { display: flex; gap: 10px; margin-bottom: 16px; align-items: center; }
+        .hero-date { font-size: 0.72em; color: #fb923c; font-weight: 700; letter-spacing: 0.5px; }
+        .hero-cat { font-size: 0.7em; padding: 3px 10px; border-radius: 12px; background: #fb923c20; color: #fb923c; border: 1px solid #fb923c40; }
+        .hero-title { font-size: 1.6em; font-weight: 700; color: #fff; line-height: 1.3; margin-bottom: 16px; letter-spacing: -0.4px; }
+        .hero-lead { font-size: 1em; color: #b0b0c0; line-height: 1.7; max-width: 800px; }
+        .hero-cta { display: inline-block; margin-top: 18px; font-size: 0.78em; color: #fb923c; text-decoration: none; padding: 8px 16px; border-radius: 7px; border: 1px solid #fb923c; background: #fb923c10; font-weight: 600; }
+        .hero-cta:hover { background: #fb923c25; }
+
+        /* ── SECTION TITLE ── */
+        .section-title { font-size: 0.95em; color: #fff; font-weight: 700; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid #2a2a4a; }
+
+        /* ── MOSAICO: 4 CRUZAMENTOS ── */
+        .cruzamentos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 14px;
+            margin-bottom: 40px;
+        }
+        .cruzamento {
+            background: #1a1a2e;
+            border: 1px solid #2a2a4a;
+            border-radius: 10px;
+            padding: 18px;
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .cruzamento:hover { border-color: #fb923c; transform: translateY(-2px); }
+        .cruzamento-tipo { font-size: 0.65em; color: #fb923c; font-weight: 700; letter-spacing: 0.5px; }
+        .cruzamento h4 { font-size: 0.95em; color: #fff; font-weight: 700; line-height: 1.3; }
+        .cruzamento p { font-size: 0.82em; color: #999; line-height: 1.55; }
+
+        /* ── PERGUNTAS PROATIVAS ── */
+        .perguntas { margin-bottom: 40px; }
+        .perguntas-list { display: flex; flex-direction: column; gap: 10px; }
+        .pergunta {
+            background: #1a1a2e;
+            border: 1px solid #2a2a4a;
+            border-left: 3px solid #fb923c;
+            border-radius: 8px;
+            padding: 16px 20px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+        .pergunta-num { font-size: 0.75em; color: #fb923c; font-weight: 700; flex-shrink: 0; padding-top: 2px; }
+        .pergunta-q { font-size: 0.92em; color: #fff; font-weight: 600; margin-bottom: 6px; line-height: 1.4; }
+        .pergunta-opcoes { font-size: 0.78em; color: #888; }
+        .pergunta-opcoes::before { content: '💡 '; }
+
+        /* ── FOOTER ── */
+        .page-meta { text-align: center; color: #555; font-size: 0.75em; padding: 20px 0; margin-top: 40px; border-top: 1px solid #1a1a2e; line-height: 1.7; }
+        .page-meta a { color: #fb923c; text-decoration: none; }
+        .page-meta a:hover { text-decoration: underline; }
+
+        @media (max-width: 600px) {
+            .hero-title { font-size: 1.3em; }
+            .hero-insight { padding: 22px 18px; }
+            .cruzamentos-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="brand">✨ Atlas — Insights</h1>
+            <div class="subtitle">Curadoria editorial · oportunidades × modelos de negócio</div>
+            <nav class="view-switch">
+                <a class="view-link" href="./">🃏 Cards</a>
+                <a class="view-link" href="./tabela.html">📋 Tabela</a>
+                <a class="view-link active" href="./insights.html">✨ Insights</a>
+                <a class="view-link" href="./aprofundar.html">🌱 Aprofundar</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- HERO: insight principal do dia -->
+            <section class="hero-insight">
+                <div class="hero-meta">
+                    <span class="hero-date">09/06/2026 · ATLAS #001</span>
+                    <span class="hero-cat">Editorial</span>
+                </div>
+                <h2 class="hero-title">A economia dos agentes pequenos tá nascendo agora. Quem construir 1 cliente pagante em 2026 vai surfar a próxima onda.</h2>
+                <p class="hero-lead">
+                    GitHub trending mostra 3 projetos de "agent orchestration" crescendo 200%+ em maio. A maioria é pra devs e empresas — mas a demanda <strong style="color:#fff">real</strong> tá em PMs e pesquisadores que não sabem programar. Frameworks como LangChain e LlamaIndex já resolvem 80% do problema técnico. O gap verdadeiro é: <strong style="color:#fb923c">configuração + curadoria + contexto do cliente</strong>. Quem fecha esse gap pra um nicho específico, em 12-18 meses, vai surfar a próxima onda.
+                </p>
+                <a class="hero-cta" href="https://github.com/trending?since=monthly" target="_blank" rel="noopener">Ver evidência no GitHub →</a>
+            </section>
+
+            <!-- MOSAICO: 4 cruzamentos -->
+            <section class="mosaico">
+                <h3 class="section-title">🔗 Cruzamentos do dia — oportunidade × modelo de negócio</h3>
+                <div class="cruzamentos-grid">
+                    <div class="cruzamento">
+                        <div class="cruzamento-tipo">OPORTUNIDADE + MODELO</div>
+                        <h4>Agente-configurado-pronto-pra-PM</h4>
+                        <p>GitHub trending: agent orchestration +200% · Micro-SaaS · Hipótese: PMs gastam 5h/semana em research de roadmap. Agente que faz esse research, configurado pro contexto do cliente, R$500/mês.</p>
+                    </div>
+                    <div class="cruzamento">
+                        <div class="cruzamento-tipo">FRAMEWORK + MODELO</div>
+                        <h4>Boletim semanal hiper-personalizado por IA</h4>
+                        <p>LangChain/LlamaIndex (frameworks) + Curadoria editorial (modelo) · 1 newsletter semanal, 100% relevante pro nicho do assinante. R$97-297/mês · baixo custo marginal.</p>
+                    </div>
+                    <div class="cruzamento">
+                        <div class="cruzamento-tipo">TRENDING + MODELO</div>
+                        <h4>Insights diários curados por assinatura</h4>
+                        <p>Agent observability (crescendo) + Subscription (modelo recorrente) · 1 insight por dia, curado por IA + editor humano. R$29/mês · margem alta · escala por conteúdo, não suporte.</p>
+                    </div>
+                    <div class="cruzamento">
+                        <div class="cruzamento-tipo">PROTOCOL + MODELO</div>
+                        <h4>Implementador MCP pra PMEs</h4>
+                        <p>MCP protocol (GitHub trending) + Service bureau (modelo de projeto) · Implementa integração MCP pra empresa pequena sem dev interno. R$3-5k por implementação · ticket médio alto.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PERGUNTAS PROATIVAS -->
+            <section class="perguntas">
+                <h3 class="section-title">❓ Perguntas proativas — responde 1 que te puxar mais</h3>
+                <div class="perguntas-list">
+                    <div class="pergunta">
+                        <div class="pergunta-num">01</div>
+                        <div>
+                            <p class="pergunta-q">Qual dessas 4 direções te puxou mais?</p>
+                            <p class="pergunta-opcoes">A) Agente PM · B) Boletim personalizado · C) Insights curados · D) Implementador MCP</p>
+                        </div>
+                    </div>
+                    <div class="pergunta">
+                        <div class="pergunta-num">02</div>
+                        <div>
+                            <p class="pergunta-q">Você já validou "agente para PMs" com alguém? Se sim, o que ouviu?</p>
+                            <p class="pergunta-opcoes">Se não, quem seria a 1ª pessoa que você ligaria pra perguntar?</p>
+                        </div>
+                    </div>
+                    <div class="pergunta">
+                        <div class="pergunta-num">03</div>
+                        <div>
+                            <p class="pergunta-q">Qual a sua objeção honesta a cobrar R$500/mês por 1 insight diário curado pra um PM específico?</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="page-meta">
+            <p><strong style="color:#fff">Atlas #001</strong> · gerado manualmente por Lyriane nesta primeira versão</p>
+            <p style="margin-top:4px">Próximo ciclo: <strong style="color:#fb923c">job Atlas 08:00</strong> (skill <code>marketing-insights</code> já criada, falta agendar)</p>
+            <p style="margin-top:8px"><a href="./">← voltar para Cards</a> · <a href="./tabela.html">← Tabela</a></p>
+        </footer>
+    </div>
+</body>
+</html>

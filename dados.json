@@ -9,13 +9,12 @@
     "crescimento": "+3,191 stars/h",
     "stars": 38618,
     "forks": "3,114",
-    "descricao": "AI agent skill que pesquisa qualquer tópico em Reddit, X, YouTube, HN, Polymarket e web — síntese grounded. Crescimento explosivo indica demanda por agentes de pesquisa.",
+    "descricao": "AI agent skill que pesquisa qualquer topico em Reddit, X, YouTube, HN, Polymarket e web. Crescimento explosivo indica demanda por agentes de pesquisa automatizada.",
     "tags": [
       "AI",
       "agent",
       "research",
-      "multi-platform",
-      "synthesis"
+      "multi-platform"
     ],
     "fonte": "GitHub Trending",
     "data_publicacao": "10/06/2026 07:30",
@@ -31,7 +30,7 @@
     "crescimento": "+806 stars/h",
     "stars": 13894,
     "forks": "1,575",
-    "descricao": "Marketplace de skills para PMs de agente de IA — discovery até strategy, execução, launch e growth. Cruza com frameworks de skills existentes.",
+    "descricao": "Marketplace de skills para PMs de agente de IA — de discovery ate strategy, execucao, launch e growth. Cruza com frameworks de skills existentes (Superpowers).",
     "tags": [
       "AI",
       "agent",
@@ -54,7 +53,7 @@
     "crescimento": "+829 stars/h",
     "stars": 14626,
     "forks": "1,012",
-    "descricao": "Desktop app p/ gerenciar bases de conhecimento Markdown. Integra com fluxos de agentes de IA que consomem documentos.",
+    "descricao": "Desktop app p/ gerenciar bases de conhecimento Markdown. Potencial integracao com agentes de IA que consomem documentos.",
     "tags": [
       "markdown",
       "knowledge-base",
@@ -71,9 +70,9 @@
     "origem": "global",
     "titulo": "Sustainable Smartphone: +3350% crescimento",
     "badge": "🌱 +3350% growth",
-    "volume": "390 menções",
+    "volume": "390 mencoes",
     "crescimento": "+3350%",
-    "descricao": "Smartphone sustentável: materiais reciclados, componentes modulares p/ reparo fácil, suporte software estendido. Mercado eco-consciente em expansão.",
+    "descricao": "Smartphone sustentavel: materiais reciclados, componentes modulares p/ reparo, suporte estendido. Mercado eco-consciente em explosao.",
     "tags": [
       "sustentabilidade",
       "smartphone",
@@ -90,9 +89,9 @@
     "origem": "global",
     "titulo": "Low Latency Keyboard: +1480% gamers/pros",
     "badge": "🎮 +1480% growth",
-    "volume": "390 menções",
+    "volume": "390 mencoes",
     "crescimento": "+1480%",
-    "descricao": "Teclado baixa latência p/ gaming competitivo e workflows rápidos. Wireless otimizado, switches high-speed, input lag mínimo. Mercado gamer/esports em alta.",
+    "descricao": "Teclado baixa latencia p/ gaming competitivo e workflows rapidos. Wireless otimizado, switches high-speed. Mercado gamer/esports em alta.",
     "tags": [
       "gaming",
       "perifericos",
@@ -104,552 +103,572 @@
     "sugere_oportunidade": "sim"
   },
   {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🦞 openclaw — Personal AI Assistant (Any OS)",
-    "badge": "🔥 376K ★",
-    "volume": "376K",
-    "crescimento": "",
-    "stars": 375868,
-    "forks": "78,478",
-    "descricao": "Your own personal AI assistant. Any OS. Any Platform. Open-source personal AI assistant with data ownership. Built by openclaw team.",
-    "tags": [
-      "AI",
-      "assistant",
-      "personal",
-      "open-source"
-    ],
+    "id": "31",
+    "titulo": "turbovec",
+    "descricao": "A vector index built on TurboQuant, written in Rust with Python bindings. High-performance vector search for AI applications.",
     "fonte": "GitHub Trending",
-    "data_publicacao": "31/05/2026 18:05"
-  },
-  {
-    "titulo": "💻 coding-interview-university — A complete computer science study plan to become a software ",
-    "descricao": "A complete computer science study plan to become a software engineer.",
-    "stars": "349406",
-    "forks": "83198",
-    "crescimento": "trending",
-    "categoria": "app",
-    "tags": [],
-    "origem": "global",
-    "badge": "🔥 GitHub Trending",
-    "url": "https://github.com/jwasham/coding-interview-university",
-    "volume": "",
-    "fonte": "github-trending"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "⚡ Superpowers — Agentic Skills Framework",
-    "badge": "🔥 211K ★",
-    "volume": "",
-    "crescimento": "",
-    "stars": 210781,
-    "forks": "18,760",
-    "descricao": "An agentic skills framework & software development methodology that works. Enables AI agents to use structured skills for reliable task execution across development workflows.",
     "tags": [
-      "AI",
-      "agents",
-      "developer-tools"
-    ],
-    "fonte": "GitHub Trending"
-  },
-  {
-    "titulo": "💻 ECC — The agent harness performance optimization system. Skills, i",
-    "descricao": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-    "stars": "206528",
-    "forks": "31711",
-    "crescimento": "trending",
-    "categoria": "app",
-    "tags": [
-      "JavaScript"
-    ],
-    "origem": "global",
-    "badge": "🔥 GitHub Trending",
-    "url": "https://github.com/affaan-m/ECC",
-    "volume": "JavaScript",
-    "fonte": "github-trending"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "💻 Ecc — The agent harness performance optimization system for A",
-    "badge": "★ 204,865",
-    "volume": "",
-    "crescimento": "",
-    "stars": 204865,
-    "forks": "31432",
-    "descricao": "The agent harness performance optimization system for AI coding agents (Claude, Codex, Cursor).",
-    "tags": [
-      "ai-agent",
-      "claude",
-      "cursor",
-      "optimization",
-      "coding-agent"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "03/06/2026 07:32"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "⚡ ECC — Agent Harness Performance Optimization",
-    "badge": "🔥 199K ★",
-    "volume": "199K",
-    "crescimento": "908 stars/dia",
-    "stars": 199748,
-    "forks": "30,662",
-    "descricao": "Agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-    "tags": [
-      "AI",
-      "agent",
-      "claude-code",
-      "optimization",
-      "developer-tools"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "31/05/2026 06:30"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "💻 ECC — Agent Harness Optimization",
-    "badge": "🔥 197K ★",
-    "volume": "",
-    "crescimento": "",
-    "stars": 196952,
-    "forks": "30,288",
-    "descricao": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-    "tags": [
-      "AI",
-      "developer-tools",
-      "agents"
-    ],
-    "fonte": "GitHub Trending"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🦞 claw-code — Fastest Repo in History",
-    "badge": "🔥 193K ★",
-    "volume": "193K",
-    "crescimento": "unlocked",
-    "stars": 193083,
-    "forks": "",
-    "descricao": "The repo is finally unlocked. Enjoy the party! The fastest repo in history to reach this star count.",
-    "tags": [
-      "AI",
-      "coding",
-      "agents",
-      "developer-tools"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 18:50"
-  },
-  {
-    "titulo": "💻 hermes-agent — The agent that grows with you",
-    "descricao": "The agent that grows with you",
-    "stars": "180103",
-    "forks": "30866",
-    "crescimento": "trending",
-    "categoria": "app",
-    "tags": [
-      "Python"
-    ],
-    "origem": "global",
-    "badge": "🔥 GitHub Trending",
-    "url": "https://github.com/NousResearch/hermes-agent",
-    "volume": "Python",
-    "fonte": "github-trending"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "📄 andrej-karpathy-skills — Karpathy Claude Code Setup",
-    "badge": "🔥 164K ★",
-    "volume": "164K",
-    "crescimento": "",
-    "stars": 164715,
-    "forks": "",
-    "descricao": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's workflow and best practices.",
-    "tags": [
-      "AI",
-      "claude-code",
-      "skills",
-      "developer-tools"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 18:50"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "💻 Markitdown — Python tool for converting files and office documents t",
-    "badge": "★ 142,179",
-    "volume": "",
-    "crescimento": "",
-    "stars": 142179,
-    "forks": "9696",
-    "descricao": "Python tool for converting files and office documents to Markdown.",
-    "tags": [
-      "markdown",
-      "converter",
-      "documents",
+      "ai",
+      "vector-search",
+      "rust",
       "python",
-      "office"
+      "inference",
+      "embedding"
     ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "03/06/2026 07:32"
-  },
-  {
     "categoria": "app",
     "origem": "global",
-    "titulo": "📄 markitdown — Python Office Docs to Markdown",
-    "badge": "🔥 133K ★",
-    "volume": "133K",
-    "crescimento": "2,470 stars/dia",
-    "stars": 133684,
-    "forks": "9,142",
-    "descricao": "Python tool for converting files and office documents to Markdown. Supports Word, Excel, PowerPoint, PDF and more.",
+    "stars": 10114,
+    "forks": 868,
+    "badge": "⚡ 10.1K stars - Rust Vector Index",
+    "data_publicacao": "2026-06-09"
+  },
+  {
+    "id": "32",
+    "titulo": "tolaria",
+    "descricao": "Desktop app to manage markdown knowledge bases. Built with TypeScript for organizing and searching large collections of markdown files.",
+    "fonte": "GitHub Trending",
     "tags": [
-      "python",
+      "knowledge-base",
       "markdown",
-      "document-conversion",
+      "typescript",
+      "desktop",
       "productivity"
     ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "31/05/2026 06:30"
+    "categoria": "app",
+    "origem": "global",
+    "stars": 14278,
+    "forks": 992,
+    "badge": "📚 14.3K stars - Markdown KB Manager",
+    "data_publicacao": "2026-06-09"
   },
   {
+    "id": "33",
+    "titulo": "system-prompts-and-models-of-ai-tools",
+    "descricao": "Collection of system prompts and model information for AI tools. Aggregates and documents AI assistant configurations and capabilities.",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "ai",
+      "prompts",
+      "llm",
+      "open-source",
+      "collection"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 25000,
+    "forks": 2000,
+    "badge": "🧩 ~25K stars - AI Prompts Collection",
+    "data_publicacao": "2026-06-09"
+  },
+  {
+    "id": "34",
+    "titulo": "Sensor Garden Kit",
+    "descricao": "Gardening set incorporating sensors to monitor soil moisture, light levels, and temperature. Connects to apps for automated alerts and smart watering. Targeted at beginner gardeners and tech-oriented users.",
+    "fonte": "Exploding Topics",
+    "tags": [
+      "iot",
+      "gardening",
+      "sensors",
+      "automation",
+      "smart-home",
+      "hardware"
+    ],
     "categoria": "negocio",
     "origem": "global",
-    "titulo": "🤖 Micro-SaaS: markitdown Integration API",
-    "badge": "💼 131K stars",
-    "volume": "131K",
-    "crescimento": "",
-    "stars": 131320,
-    "forks": "",
-    "descricao": "API wrapper para markitdown — converter documentos Office para Markdown como servico. Receita: R$29-R$199/mês baseado em volume.",
-    "tags": [
-      "micro-saas",
-      "AI",
-      "document-processing"
-    ],
-    "fonte": "GitHub Trending"
+    "stars": 0,
+    "forks": 0,
+    "volume": "0-100",
+    "crescimento": "+2300%",
+    "badge": "🌱 0-100 Volume +2300% Growth - Smart Garden",
+    "data_publicacao": "2026-06-09"
   },
   {
+    "id": "35",
+    "titulo": "Steel Tongue Drum",
+    "descricao": "Modern percussion instrument made from steel cylinder/tank with tuned tongues producing melodic sounds. Used in meditation, music therapy, and various musical genres.",
+    "fonte": "Exploding Topics",
+    "tags": [
+      "music",
+      "instrument",
+      "meditation",
+      "therapy",
+      "wellness"
+    ],
+    "categoria": "negocio",
+    "origem": "global",
+    "stars": 0,
+    "forks": 0,
+    "volume": "22.2K",
+    "crescimento": "+2400%",
+    "badge": "🥁 22.2K Volume +2400% Growth - Music Instrument",
+    "data_publicacao": "2026-06-09"
+  },
+  {
+    "id": "36",
+    "titulo": "Ribbed Tank Top",
+    "descricao": "Sleeveless garment with ribbed texture, known for stretchy and snug fit. Crafted from cotton/spandex for comfort and flexibility. Popular for workouts and everyday wear.",
+    "fonte": "Exploding Topics",
+    "tags": [
+      "fashion",
+      "clothing",
+      "activewear",
+      "comfort",
+      "e-commerce"
+    ],
+    "categoria": "negocio",
+    "origem": "global",
+    "stars": 0,
+    "forks": 0,
+    "volume": "40.5K",
+    "crescimento": "+511%",
+    "badge": "👕 40.5K Volume +511% Growth - Fashion",
+    "data_publicacao": "2026-06-09"
+  },
+  {
+    "id": "37",
+    "titulo": "Finnt",
+    "descricao": "AI-native financial analysis software transforming complex financial documents into understandable memos. Also addresses remittance market with cross-border payment solution, debit cards, and spending rules.",
+    "fonte": "Exploding Topics",
+    "tags": [
+      "fintech",
+      "ai",
+      "financial-analysis",
+      "remittance",
+      "saas"
+    ],
     "categoria": "app",
     "origem": "global",
-    "titulo": "🤖 claude-code — Anthropic Terminal AI Agent",
-    "badge": "🔥 128K ★",
-    "volume": "",
-    "crescimento": "",
-    "stars": 128218,
-    "forks": "20,931",
-    "descricao": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows.",
-    "tags": [
-      "AI",
-      "developer-tools",
-      "agents"
-    ],
-    "fonte": "GitHub Trending"
+    "stars": 0,
+    "forks": 0,
+    "volume": "1.6K",
+    "crescimento": "+57%",
+    "badge": "💹 1.6K Volume +57% Growth - AI Finance",
+    "data_publicacao": "2026-06-09"
   },
   {
-    "titulo": "💻 spec-kit — Toolkit to help you get started with Spec-Driven Development",
-    "descricao": "Toolkit to help you get started with Spec-Driven Development",
-    "stars": "108243",
-    "forks": "9579",
-    "crescimento": "trending",
-    "categoria": "app",
+    "id": "38",
+    "titulo": "Taxo",
+    "descricao": "AI-powered platform automating administrative tasks in healthcare: patient intake, benefit verification, prior authorization, medical coding, claim submissions. Reduces processing times by 90%, 98% accuracy.",
+    "fonte": "Exploding Topics",
     "tags": [
-      "Python"
+      "healthcare",
+      "ai",
+      "automation",
+      "saas",
+      "admin",
+      "ehr"
     ],
-    "origem": "global",
-    "badge": "🔥 GitHub Trending",
-    "url": "https://github.com/github/spec-kit",
-    "volume": "Python",
-    "fonte": "github-trending"
-  },
-  {
     "categoria": "app",
     "origem": "global",
-    "titulo": "⚡ gstack — Garry Tan's Claude Code Setup",
-    "badge": "🔥 105K ★",
-    "volume": "105K",
-    "crescimento": "",
-    "stars": 105693,
-    "forks": "",
-    "descricao": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, engineer, and researcher.",
-    "tags": [
-      "AI",
-      "claude-code",
-      "setup",
-      "developer-tools"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 18:50"
+    "stars": 0,
+    "forks": 0,
+    "volume": "10.8K",
+    "crescimento": "+47%",
+    "badge": "🏥 10.8K Volume +47% Growth - Healthcare AI",
+    "data_publicacao": "2026-06-09"
   },
   {
-    "categoria": "app",
+    "id": "39",
+    "titulo": "Claude Fable 5",
+    "descricao": "Anthropic's latest Claude model with enhanced creative writing, storytelling, and narrative generation capabilities. Represents advancement in AI-assisted content creation.",
+    "fonte": "Hacker News",
+    "tags": [
+      "ai",
+      "anthropic",
+      "llm",
+      "claude",
+      "content-creation"
+    ],
+    "categoria": "tendencia",
     "origem": "global",
-    "titulo": "🧠 autoresearch — Auto Single-GPU Nanochat Training",
-    "badge": "🔥 84K ★",
-    "volume": "84K",
-    "crescimento": "",
-    "stars": 84556,
-    "forks": "",
-    "descricao": "AI agents running research on single-GPU nanochat training automatically. Automated fine-tuning research pipeline.",
-    "tags": [
-      "AI",
-      "training",
-      "research",
-      "agents",
-      "GPU"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 18:50"
+    "stars": 0,
+    "forks": 0,
+    "volume": "trending",
+    "crescimento": "+1553 points HN",
+    "badge": "📖 HN Trending - Anthropic Claude Fable 5",
+    "data_publicacao": "2026-06-09"
   },
   {
-    "categoria": "app",
+    "id": "40",
+    "titulo": "Kolmogorov-Arnold Networks (KAN)",
+    "descricao": "Revolutionary neural network architecture replacing MLPs with Kolmogorov-Arnold representation theorem. Enables ultrafast machine learning on FPGAs with interpretability advantages.",
+    "fonte": "Hacker News",
+    "tags": [
+      "ai",
+      "deep-learning",
+      "fpga",
+      "KAN",
+      "ml",
+      "research"
+    ],
+    "categoria": "tendencia",
     "origem": "global",
-    "titulo": "📈 TradingAgents — Multi-Agent LLM Financial Trading",
-    "badge": "🔥 81.5K ★",
-    "volume": "81.5K",
-    "crescimento": "1,200 stars/dia",
-    "stars": 81565,
-    "forks": "15,865",
-    "descricao": "TradingAgents: Multi-Agents LLM Financial Trading Framework. Uses multi-agent systems for automated trading strategies and market analysis.",
-    "tags": [
-      "AI",
-      "trading",
-      "finance",
-      "agents",
-      "llm"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 12:00"
+    "stars": 0,
+    "forks": 0,
+    "volume": "trending",
+    "crescimento": "+118 points HN",
+    "badge": "🧠 HN Trending - KAN Networks on FPGA",
+    "data_publicacao": "2026-06-09"
   },
   {
-    "titulo": "📄 PaddleOCR — Turn PDFs into structured data",
-    "descricao": "Turn any PDF or image document into structured data for your AI. Supports 100+ languages.",
-    "stars": "80,513",
-    "forks": "10,631",
-    "categoria": "app",
+    "id": "1",
+    "titulo": "Airplane Foot Hammock",
+    "descricao": "A travel accessory designed to enhance comfort during flights by allowing passengers to elevate their feet and legs. Attaches to tray table, improves circulation and reduces swelling during long flights.",
+    "fonte": "Exploding Topics",
+    "tags": [
+      "travel",
+      "accessories",
+      "flight",
+      "comfort",
+      "hardware"
+    ],
+    "categoria": "negocio",
+    "origem": "global",
+    "stars": 0,
+    "forks": 0,
+    "volume": "12.1K",
+    "crescimento": "+6600%",
+    "badge": "✈️ 12.1K Volume +6600% Growth - Foot Hammock"
+  },
+  {
+    "id": "4",
+    "titulo": "Ocrmypdf",
+    "descricao": "Software tool that adds an optical character recognition (OCR) text layer to scanned PDF files, making them searchable. Command-line interface supporting multiple languages.",
+    "fonte": "Exploding Topics",
     "tags": [
       "ocr",
       "pdf",
-      "ai",
-      "document-processing"
-    ],
-    "badge": "Doc AI",
-    "origem": "global"
-  },
-  {
-    "titulo": "💻 PaddleOCR — Turn any PDF or image document into structured data for your",
-    "descricao": "Turn any PDF or image document into structured data for your AI. A powerful, lightweight OCR toolkit that bridges the gap between images/PDFs and LLMs. Supports 100+ languages.",
-    "stars": "79549",
-    "forks": "10581",
-    "crescimento": "trending",
-    "categoria": "app",
-    "tags": [
-      "Python"
-    ],
-    "origem": "global",
-    "badge": "🔥 GitHub Trending",
-    "url": "https://github.com/PaddlePaddle/PaddleOCR",
-    "volume": "Python",
-    "fonte": "github-trending"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "📋 paperclip — Open-Source Agent Management",
-    "badge": "🔥 68K ★",
-    "volume": "68K",
-    "crescimento": "",
-    "stars": 68664,
-    "forks": "",
-    "descricao": "The open-source app everyone uses to manage agents at work. Team collaboration for AI agent workflows.",
-    "tags": [
-      "AI",
-      "agents",
-      "management",
-      "collaboration"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 18:50"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🪨 caveman — Claude Code Token Optimizer",
-    "badge": "🔥 67K ★",
-    "volume": "67K",
-    "crescimento": "65% token reduction",
-    "stars": 67423,
-    "forks": "",
-    "descricao": "Why use many token when few token do trick — Claude Code skill that cuts 65% of token usage on common dev commands.",
-    "tags": [
-      "AI",
-      "claude-code",
-      "optimization",
-      "tokens",
-      "developer-tools"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 18:50"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🔮 MiroFish — Swarm Intelligence Engine",
-    "badge": "trending",
-    "stars": 64670,
-    "forks": 10084,
-    "volume": "64.7K",
-    "crescimento": "+324/dia",
-    "descricao": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. Multi-agent collective intelligence for any prediction task.",
-    "tags": [
-      "AI",
-      "swarm",
-      "multi-agent",
-      "intelligence",
-      "prediction"
-    ],
-    "fonte": "github.com/666ghj/MiroFish",
-    "data_publicacao": "2026-06-05"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🌊 MiroFish — Swarm Intelligence Prediction Engine",
-    "badge": "🔥 64.5K ★",
-    "volume": "64.5K",
-    "crescimento": "324 stars hoje",
-    "stars": 64530,
-    "forks": "10,071",
-    "descricao": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物.",
-    "tags": [
-      "AI",
-      "swarm-intelligence",
-      "prediction",
-      "agents"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "05/06/2026 12:00"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🎬 MoneyPrinterTurbo — AI Short Video Generator",
-    "badge": "🔥 62K ★",
-    "volume": "",
-    "crescimento": "",
-    "stars": 61951,
-    "forks": "9,053",
-    "descricao": "One-click AI-powered high-definition short video generation. Uses LLMs to auto-generate scripts, visuals, and voiceovers for short-form content (TikTok, Reels, Shorts).",
-    "tags": [
-      "AI",
-      "video",
-      "content-creation"
-    ],
-    "fonte": "GitHub Trending"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "💻 Scrapling — An adaptive Web Scraping framework that handles everyth",
-    "badge": "★ 59,703",
-    "volume": "",
-    "crescimento": "",
-    "stars": 59703,
-    "forks": "5756",
-    "descricao": "An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!",
-    "tags": [
-      "scraping",
-      "web",
-      "crawl",
-      "framework",
-      "automation"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "03/06/2026 07:32"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "📊 graphify — Interactive Code Knowledge Graphs",
-    "badge": "🔥 58K ★",
-    "volume": "58K",
-    "crescimento": "",
-    "stars": 58378,
-    "forks": "4,892",
-    "descricao": "Transform any code into interactive knowledge graphs. AI coding assistant skill for Claude Code, Codex, OpenCode, Cursor, Gemini CLI.",
-    "tags": [
-      "ai",
-      "coding",
-      "knowledge-graph",
-      "developer-tools"
-    ],
-    "fonte": "github.com"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "⚡ rtk — CLI Proxy Token Reducer 60-90%",
-    "badge": "🔥 57K ★",
-    "volume": "57K",
-    "crescimento": "60-90% token reduction",
-    "stars": 57428,
-    "forks": "",
-    "descricao": "CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Works with Claude Code, Codex, and more.",
-    "tags": [
-      "AI",
-      "cli",
-      "token-reduction",
-      "developer-tools",
-      "optimization"
-    ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 18:50"
-  },
-  {
-    "categoria": "app",
-    "origem": "global",
-    "titulo": "🌐 open-design — Local-First Claude Design",
-    "badge": "🔥 56K ★",
-    "volume": "56K",
-    "crescimento": "",
-    "stars": 56998,
-    "forks": "",
-    "descricao": "Local-first, open-source Claude Design alternative. Native desktop app with 2-second average response time.",
-    "tags": [
-      "AI",
-      "design",
-      "local-first",
-      "desktop",
+      "document",
+      "automation",
       "open-source"
     ],
-    "fonte": "GitHub Trending",
-    "data_publicacao": "01/06/2026 18:50"
-  },
-  {
     "categoria": "app",
     "origem": "global",
-    "titulo": "🕷️ Scrapling — Adaptive Web Scraping Framework",
-    "badge": "🔥 56K ★",
-    "volume": "56.3K",
-    "crescimento": "639 stars/dia",
-    "stars": 56294,
-    "forks": "5,460",
-    "descricao": "An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl! Handles anti-bot measures and dynamic content.",
+    "stars": 0,
+    "forks": 0,
+    "volume": "9.9K",
+    "crescimento": "+1150%",
+    "badge": "📄 9.9K Volume +1150% Growth - OCR Tool"
+  },
+  {
+    "id": "7",
+    "titulo": "hermes-agent",
+    "descricao": "The agent that grows with you",
+    "fonte": "GitHub Trending",
     "tags": [
-      "scraping",
-      "web",
-      "AI",
-      "developer-tools",
+      "ai",
+      "agent",
+      "open-source",
+      "framework"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 185826,
+    "forks": 31960,
+    "badge": "🤖 185.8K stars - AI Agent Framework"
+  },
+  {
+    "id": "8",
+    "titulo": "llama.cpp",
+    "descricao": "LLM inference in C/C++",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "ai",
+      "llm",
+      "c++",
+      "inference",
+      "open-source"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 115289,
+    "forks": 19295,
+    "badge": "⚡ 115.3K stars - LLM Inference"
+  },
+  {
+    "id": "9",
+    "titulo": "OpenCV",
+    "descricao": "Open Source Computer Vision Library - real-time computer vision and ML",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "cv",
+      "computer-vision",
+      "ai",
+      "python",
+      "c++",
+      "open-source"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 88042,
+    "forks": 56596,
+    "badge": "👁️ 88K stars - Computer Vision"
+  },
+  {
+    "id": "13",
+    "titulo": "MemPalace",
+    "descricao": "The best-benchmarked open-source AI memory system. And it's free.",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "ai",
+      "memory",
+      "python",
+      "open-source"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 54532,
+    "forks": 7127,
+    "badge": "🔥 54.5K stars - AI Memory"
+  },
+  {
+    "id": "14",
+    "titulo": "Maybe",
+    "descricao": "The personal finance app for everyone - open source finance management",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "finance",
+      "personal-finance",
+      "ruby",
+      "open-source"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 54151,
+    "forks": 5605,
+    "badge": "💰 54.2K stars - Personal Finance"
+  },
+  {
+    "id": "17",
+    "titulo": "VibeVoice",
+    "descricao": "Open-Source Frontier Voice AI from Microsoft",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "ai",
+      "voice",
+      "python",
+      "microsoft"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 48467,
+    "forks": 5391,
+    "badge": "🎙️ 48.5K stars - Voice AI"
+  },
+  {
+    "id": "18",
+    "titulo": "goose",
+    "descricao": "An open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "ai",
+      "agent",
+      "extensible",
+      "python"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 47432,
+    "forks": 5005,
+    "badge": "🦆 47.4K stars - AI Agent"
+  },
+  {
+    "id": "19",
+    "titulo": "Weight Loss Peptides",
+    "descricao": "Peptides that mimic the GLP-1 hormone for regulating appetite and metabolism in weight management",
+    "fonte": "Exploding Topics",
+    "tags": [
+      "health",
+      "weight-loss",
+      "pharmaceutical",
+      "wellness"
+    ],
+    "categoria": "negocio",
+    "origem": "global",
+    "stars": 0,
+    "forks": 0,
+    "volume": "40.5K",
+    "crescimento": "+900%",
+    "badge": "💊 40.5K Volume +900% - Peptides"
+  },
+  {
+    "id": "20",
+    "titulo": "taste-skill",
+    "descricao": "Gives your AI good taste - stops the AI from generating boring, generic slop",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "ai",
+      "agent",
+      "creativity",
+      "prompting"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 36474,
+    "forks": 2639,
+    "badge": "🎨 36.5K stars - AI Taste"
+  },
+  {
+    "id": "21",
+    "titulo": "Trivy",
+    "descricao": "Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "security",
+      "devops",
+      "go",
+      "vulnerability"
+    ],
+    "categoria": "negocio",
+    "origem": "global",
+    "stars": 36067,
+    "forks": 458,
+    "badge": "🛡️ 36.1K stars - Security Scanner"
+  },
+  {
+    "id": "22",
+    "titulo": "last30days-skill",
+    "descricao": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "ai",
+      "agent",
+      "research",
+      "python",
       "automation"
     ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 34376,
+    "forks": 2812,
+    "badge": "🔍 34.4K stars - AI Research Agent"
+  },
+  {
+    "id": "23",
+    "titulo": "CopilotKit",
+    "descricao": "The Frontend Stack for Agents & Generative UI. Makers of the AG-UI Protocol",
     "fonte": "GitHub Trending",
-    "data_publicacao": "31/05/2026 12:00"
+    "tags": [
+      "agent",
+      "generative-ui",
+      "react",
+      "typescript",
+      "ai"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 33519,
+    "forks": 4263,
+    "badge": "🤖 33.5K stars - AI Agent UI"
+  },
+  {
+    "id": "24",
+    "titulo": "Vention",
+    "descricao": "Company specializing in simplified industrial automation for high-mix manufacturers",
+    "fonte": "Exploding Topics",
+    "tags": [
+      "automation",
+      "manufacturing",
+      "industrial",
+      "saas"
+    ],
+    "categoria": "negocio",
+    "origem": "global",
+    "stars": 0,
+    "forks": 0,
+    "volume": "33.1K",
+    "crescimento": "+257%",
+    "badge": "🏭 33.1K Volume +257% - Industrial Automation"
+  },
+  {
+    "id": "25",
+    "titulo": "Project N.O.M.A.D",
+    "descricao": "Self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered—anytime, anywhere",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "ai",
+      "offline",
+      "survival",
+      "knowledge",
+      "tools"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 29664,
+    "forks": 2938,
+    "badge": "🏕️ 29.7K stars - Offline AI"
+  },
+  {
+    "id": "26",
+    "titulo": "Open Notebook",
+    "descricao": "An Open Source implementation of Notebook LM with more flexibility and features",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "ai",
+      "notebook",
+      "typescript",
+      "open-source"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 27171,
+    "forks": 3089,
+    "badge": "📓 27.2K stars - AI Notebook"
+  },
+  {
+    "id": "28",
+    "titulo": "Agent-Reach",
+    "descricao": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+    "fonte": "GitHub Trending",
+    "tags": [
+      "ai",
+      "agent",
+      "web-scraping",
+      "multi-platform",
+      "cli"
+    ],
+    "categoria": "app",
+    "origem": "global",
+    "stars": 24034,
+    "forks": 2027,
+    "badge": "🌐 24K stars - Multi-platform AI Scraping"
+  },
+  {
+    "id": "29",
+    "titulo": "Stovepipe Jeans",
+    "descricao": "Jeans characterized by a straight cut from hip to hem, maintaining consistent width for a sleek silhouette",
+    "fonte": "Exploding Topics",
+    "tags": [
+      "fashion",
+      "clothing",
+      "jeans",
+      "style"
+    ],
+    "categoria": "negocio",
+    "origem": "global",
+    "stars": 0,
+    "forks": 0,
+    "volume": "22.2K",
+    "crescimento": "+800%",
+    "badge": "👖 22.2K Volume +800% - Fashion"
+  },
+  {
+    "id": "30",
+    "titulo": "Portable EV Charger",
+    "descricao": "Devices enabling EV owners to charge vehicles on the move - Level 1, Level 2, and DC fast chargers",
+    "fonte": "Exploding Topics",
+    "tags": [
+      "ev",
+      "charging",
+      "electric-vehicle",
+      "hardware"
+    ],
+    "categoria": "negocio",
+    "origem": "global",
+    "stars": 0,
+    "forks": 0,
+    "volume": "22.2K",
+    "crescimento": "+365%",
+    "badge": "🔌 22.2K Volume +365% - EV Charger"
   }
 ]

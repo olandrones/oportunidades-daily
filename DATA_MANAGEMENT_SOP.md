@@ -15,6 +15,81 @@ Garantir que todos os agentes sigam o mesmo padrão na gestão de dados. Sem des
 
 ---
 
+## 🆔 Sistema de IDs de Atualização
+
+Cada execução do agente de pesquisa **incrementa um contador** que vira o `id_atualizacao` dos cards novos. O filtro "🆕 Última" da UI sempre aponta para o `id_atualizacao` máximo.
+
+### Regra de ouro
+
+- **Cards NOVOS adicionados num ciclo** → `id_atualizacao = max(idsExistentes) + 1`
+- **Cards editados (não novos)** → **mantêm o `id_atualizacao` original** (é o mesmo card, só foi atualizado)
+- **Cards do passado (migração inicial)** → `id_atualizacao = 1` (fundação)
+- **Ordem dos IDs no JSON não importa** — o JS calcula o `max()` na hora de renderizar
+- **Gaps são permitidos** (ex: pula de 5 pra 7 porque um ciclo falhou) — o "Último" continua sendo o `max()`
+
+### Exemplo
+
+```json
+[
+  { "titulo": "Card antigo A", "id_atualizacao": 1 },
+  { "titulo": "Card antigo B", "id_atualizacao": 1 },
+  { "titulo": "Card do ciclo 3", "id_atualizacao": 3 },
+  { "titulo": "Card NOVO do ciclo 7", "id_atualizacao": 7 }
+]
+```
+
+- Botão "🆕 Última (#7)" → mostra 1 card
+- Botão "◀ Anterior (#3)" → mostra 1 card
+- Botão "Tudo" → mostra todos
+
+### Schema atualizado do card
+
+```json
+{
+  "titulo": "string",
+  "badge": "string",
+  "descricao": "string",
+  "volume": "string",
+  "crescimento": "string",
+  "stars": number,
+  "forks": "string",
+  "tags": ["string"],
+  "categoria": "tendencia|app|negocio",
+  "origem": "global|brasil",
+  "fonte": "string",
+  "data_publicacao": "DD/MM/YYYY HH:MM",
+  "id_atualizacao": 1   ← CAMPO OBRIGATÓRIO (número inteiro >= 1)
+}
+```
+
+### ⚠️ Validação obrigatória antes do commit
+
+**100% dos cards NOVOS devem ter:**
+- `data_publicacao` no formato `DD/MM/YYYY HH:MM` (string NÃO-VAZIA)
+- `id_atualizacao` numérico ≥ 1
+- `categoria` ∈ {tendencia, app, negocio}
+- `origem` ∈ {global, brasil}
+- `titulo` não-vazio
+
+**Antes de commitar, o agente DEVE validar e REJEITAR** o commit se algum card novo estiver sem data ou sem `id_atualizacao`. Cards legados sem data são migrados UMA vez (com fallback `data_fallback: true` no `_meta`); novos cards sem data = bug.
+
+### Como o agente calcula o próximo ID
+
+Antes de fazer merge, calcular:
+
+```bash
+# Próximo ID = max(id_atualizacao) + 1
+PROX_ID=$(node -e "console.log(Math.max(...require('./dados.json').map(x => x.id_atualizacao || 0)) + 1)")
+```
+
+Todos os cards NOVOS do ciclo ganham `"id_atualizacao": PROX_ID`.
+
+### Histórico de migração
+
+- **2026-06-07** — Migração inicial: 30 cards pré-existentes marcados como `id_atualizacao: 1`. Próximo ciclo = `id_atualizacao: 2`.
+
+---
+
 ## 🏗️ Arquitetura de Cada Board
 
 ```
