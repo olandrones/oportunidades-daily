@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprofundar — Learning Panel · Lyriane</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0a0e0a; color: #e8f0e0; min-height: 100vh; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+
+        /* ── HEADER ── */
+        header { text-align: center; padding: 12px 0 20px; border-bottom: 1px solid #1a2a1a; margin-bottom: 32px; }
+        h1.brand { color: #6ee7b7; font-size: 1.4em; font-weight: 700; margin-bottom: 4px; letter-spacing: -0.3px; }
+        .subtitle { color: #7a9a7a; font-size: 0.82em; }
+        .view-switch { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+        .view-link { font-size: 0.75em; color: #7a9a7a; text-decoration: none; padding: 4px 12px; border-radius: 7px; border: 1px solid #1a2a1a; transition: all 0.15s; }
+        .view-link:hover { color: #fff; border-color: #6ee7b7; }
+        .view-link.active { color: #6ee7b7; border-color: #6ee7b7; background: #6ee7b715; }
+
+        /* ── HERO ── */
+        .hero {
+            background: linear-gradient(135deg, #0a1a0a 0%, #14241a 100%);
+            border: 1px solid #2a4a2a;
+            border-radius: 14px;
+            padding: 28px 24px;
+            margin-bottom: 28px;
+        }
+        .hero-titulo { font-size: 1.4em; color: #fff; font-weight: 700; margin-bottom: 8px; line-height: 1.3; }
+        .hero-sub { font-size: 0.95em; color: #a0c0a0; line-height: 1.6; }
+        .hero-stats { display: flex; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
+        .hero-stat { font-size: 0.78em; color: #6ee7b7; padding: 4px 12px; background: #6ee7b715; border: 1px solid #6ee7b730; border-radius: 12px; }
+
+        /* ── FILTROS ── */
+        .filtros { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
+        .filtro-btn { font-size: 0.78em; padding: 6px 14px; border-radius: 18px; background: #14241a; color: #7a9a7a; border: 1px solid #2a4a2a; cursor: pointer; transition: all 0.2s; }
+        .filtro-btn:hover { color: #fff; border-color: #6ee7b7; }
+        .filtro-btn.active { background: #6ee7b720; border-color: #6ee7b7; color: #6ee7b7; }
+
+        /* ── GRID ── */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-bottom: 40px; }
+        .card {
+            background: linear-gradient(180deg, #14241a 0%, #0a1a0a 100%);
+            border: 1px solid #2a4a2a;
+            border-radius: 12px;
+            padding: 18px 20px;
+            transition: all 0.25s;
+            position: relative;
+            overflow: hidden;
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 3px;
+            background: var(--nivel-cor, #2a4a2a);
+        }
+        .card:hover { border-color: #6ee7b7; transform: translateY(-2px); }
+        .card[data-nivel="1"] { --nivel-cor: #4ade80; }
+        .card[data-nivel="2"] { --nivel-cor: #6ee7b7; }
+        .card[data-nivel="3"] { --nivel-cor: #fbbf24; }
+        .card[data-nivel="4"] { --nivel-cor: #f472b6; box-shadow: 0 0 20px #f472b620; }
+
+        .card-head { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 10px; }
+        .card-titulo { font-size: 1.05em; font-weight: 700; color: #fff; flex: 1; }
+        .card-emoji { font-size: 1.4em; flex-shrink: 0; }
+        .card-nivel { font-size: 0.7em; padding: 3px 10px; border-radius: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.3px; }
+        .card-nivel[data-nivel="1"] { background: #4ade8020; color: #4ade80; border: 1px solid #4ade8040; }
+        .card-nivel[data-nivel="2"] { background: #6ee7b720; color: #6ee7b7; border: 1px solid #6ee7b740; }
+        .card-nivel[data-nivel="3"] { background: #fbbf2420; color: #fbbf24; border: 1px solid #fbbf2440; }
+        .card-nivel[data-nivel="4"] { background: #f472b620; color: #f472b6; border: 1px solid #f472b640; }
+
+        .card-desc { font-size: 0.88em; color: #b0d0b0; line-height: 1.55; margin-bottom: 10px; }
+        .card-meta { font-size: 0.75em; color: #6a8a6a; margin-bottom: 14px; }
+        .card-meta a { color: #6ee7b7; text-decoration: none; }
+        .card-meta a:hover { text-decoration: underline; }
+
+        .card-acao { display: flex; gap: 6px; margin-top: 12px; }
+        .btn-clic {
+            flex: 1;
+            font-size: 0.8em;
+            padding: 8px 12px;
+            border: 1px solid #6ee7b7;
+            background: #6ee7b715;
+            color: #6ee7b7;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .btn-clic:hover { background: #6ee7b730; }
+        .btn-clic:disabled { opacity: 0.4; cursor: not-allowed; }
+        .btn-voltar {
+            font-size: 0.8em;
+            padding: 8px 12px;
+            border: 1px solid #2a4a2a;
+            background: transparent;
+            color: #7a9a7a;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .btn-voltar:hover { color: #fff; border-color: #f472b6; }
+
+        .card[data-nivel="4"] .btn-clic { background: #f472b615; border-color: #f472b6; color: #f472b6; }
+        .card[data-nivel="4"] .btn-clic:hover { background: #f472b630; }
+
+        /* ── FOOTER ── */
+        .footer { text-align: center; color: #4a6a4a; font-size: 0.75em; padding: 20px 0; margin-top: 40px; border-top: 1px solid #1a2a1a; line-height: 1.7; }
+        .footer code { background: #14241a; padding: 2px 6px; border-radius: 4px; color: #6ee7b7; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="brand">🌱 Aprofundar — Learning Panel</h1>
+            <div class="subtitle">Clic-clic pra aumentar. Cards que crescem conforme você evolui o conhecimento.</div>
+            <nav class="view-switch">
+                <a class="view-link" href="./">🃏 Cards</a>
+                <a class="view-link" href="./tabela.html">📋 Tabela</a>
+                <a class="view-link" href="./insights.html">✨ Insights</a>
+                <a class="view-link active" href="./aprofundar.html">🌱 Aprofundar</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <h2 class="hero-titulo">Seu exocerebro em construção</h2>
+                <p class="hero-sub">Cada tema é uma semente. Clic-clic pra fazer crescer. Quando chega em <strong style="color:#f472b6">floresta</strong>, ele vira material que sai do radar de "preciso aprender" pra "já aprendi, posso aplicar".</p>
+                <div class="hero-stats">
+                    <span class="hero-stat">4 níveis: semente → broto → árvore → floresta</span>
+                    <span class="hero-stat">persistência local (localStorage)</span>
+                </div>
+            </section>
+
+            <div class="filtros" id="filtros">
+                <button class="filtro-btn active" data-filtro="todos">todos</button>
+                <button class="filtro-btn" data-filtro="1">🌱 semente</button>
+                <button class="filtro-btn" data-filtro="2">🌿 broto</button>
+                <button class="filtro-btn" data-filtro="3">🌳 árvore</button>
+                <button class="filtro-btn" data-filtro="4">🌸 floresta</button>
+            </div>
+
+            <div class="grid" id="grid"></div>
+        </main>
+
+        <footer class="footer">
+            <p><strong>Como funciona:</strong> cada <code>clic-clic</code> no card cresce 1 nível. Botão "voltar" regride. Tudo persiste no seu navegador (localStorage).</p>
+            <p style="margin-top:8px">Os cards podem ter conteúdo evoluindo em volta deles — links, exemplos, aplicações reais. Quando chegar em floresta, ele sai do radar e vira conhecimento aplicado.</p>
+            <p style="margin-top:8px">Acompanhe sua evolução no <a href="./insights.html" style="color:#6ee7b7">Insights do dia</a>.</p>
+        </footer>
+    </div>
+
+    <script>
+    // === CONCEITOS INICIAIS (sementes) ===
+    const CONCEITOS = [
+        {
+            id: 'llamaindex',
+            emoji: '📚',
+            titulo: 'LlamaIndex',
+            desc: 'Framework Python pra conectar LLMs com dados externos (PDFs, bancos, APIs). Foco em RAG — Retrieval Augmented Generation. O LLM "lê" seus documentos antes de responder.',
+            meta: 'llamaindex.ai · framework · RAG',
+            links: [{label: 'docs', url: 'https://docs.llamaindex.ai/'}]
+        },
+        {
+            id: 'langchain',
+            emoji: '🔗',
+            titulo: 'LangChain',
+            desc: 'Framework pra orquestrar agentes: chains, tools, memory, RAG. Mais genérico que LlamaIndex — você monta o fluxo de chamadas. Comunidade enorme.',
+            meta: 'langchain.com · orquestração · agentes',
+            links: [{label: 'docs', url: 'https://python.langchain.com/'}]
+        },
+        {
+            id: 'mcp',
+            emoji: '🔌',
+            titulo: 'MCP (Model Context Protocol)',
+            desc: 'Protocolo aberto da Anthropic (Nov 2024) que padroniza como agentes conversam com ferramentas/APIs. Pense: "USB-C dos agentes". Um servidor MCP expõe tools, qualquer cliente MCP consome.',
+            meta: 'modelcontextprotocol.io · protocolo · tools',
+            links: [{label: 'spec', url: 'https://modelcontextprotocol.io/'}]
+        },
+        {
+            id: 'harness',
+            emoji: '⚙️',
+            titulo: 'Harness',
+            desc: 'Plataforma de "engineering intelligence" — CI/CD + feature flags + cloud cost + security. Ajuda DevOps a ver o que tá rolando na engenharia. Pode ser também: harness de teste de agentes.',
+            meta: 'harness.io · devops · ou harness de teste',
+            links: [{label: 'site', url: 'https://www.harness.io/'}]
+        },
+        {
+            id: 'rag',
+            emoji: '🧠',
+            titulo: 'RAG (Retrieval Augmented Generation)',
+            desc: 'Técnica onde o LLM busca informação relevante num banco antes de gerar resposta. Resolve o problema do LLM "inventar" dados — ele busca primeiro, depois fala.',
+            meta: 'pattern · LLM + busca ·',
+            links: []
+        },
+        {
+            id: 'iaa',
+            emoji: '🤖',
+            titulo: 'IAA (Intelligent Adaptive Agents)',
+            desc: 'Agentes que aprendem com interação, ajustam comportamento, evoluem com uso. Diferente de LLM "burro" que sempre responde igual. Inclui memória, contexto, personalização.',
+            meta: 'pattern · agentes adaptativos ·',
+            links: []
+        },
+        {
+            id: 'agent-orchestration',
+            emoji: '🎼',
+            titulo: 'Agent Orchestration',
+            desc: 'Coordenar múltiplos agentes pra resolver uma tarefa. Cada um especialista num pedaço, um orquestrador decide quem faz o quê. É a base de "sistemas multi-agente".',
+            meta: 'pattern · multi-agent ·',
+            links: []
+        },
+        {
+            id: 'exocerebro',
+            emoji: '🧠✨',
+            titulo: 'Exocerebro (metáfora Renato)',
+            desc: 'Sistema que cresce COM você, não PARA você. Quanto mais usa, mais sabe sobre você, mais vira extensão do seu pensamento. Diferente de ferramenta: ferramenta é morta, exocerebro é organismo.',
+            meta: 'conceito · próprio ·',
+            links: []
+        }
+    ];
+
+    const NIVEIS = {
+        1: {label: 'semente', emoji: '🌱', cor: '#4ade80'},
+        2: {label: 'broto', emoji: '🌿', cor: '#6ee7b7'},
+        3: {label: 'árvore', emoji: '🌳', cor: '#fbbf24'},
+        4: {label: 'floresta', emoji: '🌸', cor: '#f472b6'}
+    };
+
+    const STORAGE_KEY = 'aprofundar_niveis';
+    const FILTRO_KEY = 'aprofundar_filtro';
+
+    // Carrega níveis do localStorage
+    function loadNiveis() {
+        try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; } catch (e) { return {}; }
+    }
+    function saveNiveis(niveis) {
+        try { localStorage.setItem(STORAGE_KEY, JSON.stringify(niveis)); } catch (e) {}
+    }
+
+    // Estado atual
+    let niveis = loadNiveis();
+    let filtroAtual = localStorage.getItem(FILTRO_KEY) || 'todos';
+
+    // Renderiza um card
+    function renderCard(conceito) {
+        const nivel = niveis[conceito.id] || 1;
+        const n = NIVEIS[nivel];
+        const linksHtml = conceito.links.map(l => `<a href="${l.url}" target="_blank" rel="noopener">${l.label} ↗</a>`).join(' · ');
+
+        return `
+        <div class="card" data-nivel="${nivel}" data-id="${conceito.id}">
+            <div class="card-head">
+                <span class="card-emoji">${conceito.emoji}</span>
+                <div class="card-titulo">${conceito.titulo}</div>
+                <span class="card-nivel" data-nivel="${nivel}">${n.emoji} ${n.label}</span>
+            </div>
+            <div class="card-desc">${conceito.desc}</div>
+            <div class="card-meta">${conceito.meta}${linksHtml ? ' · ' + linksHtml : ''}</div>
+            <div class="card-acao">
+                <button class="btn-clic" onclick="crescer('${conceito.id}')" ${nivel >= 4 ? 'disabled' : ''}>
+                    ${nivel >= 4 ? '✓ floresta — saiu do radar' : 'clic-clic pra crescer →'}
+                </button>
+                ${nivel > 1 ? `<button class="btn-voltar" onclick="voltar('${conceito.id}')">←</button>` : ''}
+            </div>
+        </div>`;
+    }
+
+    // Renderiza grid
+    function render() {
+        const grid = document.getElementById('grid');
+        const conceitosFiltrados = filtroAtual === 'todos'
+            ? CONCEITOS
+            : CONCEITOS.filter(c => (niveis[c.id] || 1) === parseInt(filtroAtual));
+        grid.innerHTML = conceitosFiltrados.map(renderCard).join('');
+    }
+
+    // Cresce 1 nível
+    function crescer(id) {
+        const atual = niveis[id] || 1;
+        if (atual < 4) {
+            niveis[id] = atual + 1;
+            saveNiveis(niveis);
+            render();
+        }
+    }
+
+    // Volta 1 nível
+    function voltar(id) {
+        const atual = niveis[id] || 1;
+        if (atual > 1) {
+            niveis[id] = atual - 1;
+            saveNiveis(niveis);
+            render();
+        }
+    }
+
+    // Filtro
+    document.querySelectorAll('.filtro-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            filtroAtual = btn.dataset.filtro;
+            localStorage.setItem(FILTRO_KEY, filtroAtual);
+            document.querySelectorAll('.filtro-btn').forEach(b => b.classList.toggle('active', b === btn));
+            render();
+        });
+    });
+
+    // Aplica filtro salvo
+    document.querySelectorAll('.filtro-btn').forEach(b => {
+        b.classList.toggle('active', b.dataset.filtro === filtroAtual);
+    });
+
+    render();
+    </script>
+</body>
+</html>
