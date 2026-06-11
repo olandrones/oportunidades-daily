@@ -3,6 +3,113 @@
     "tipo": "tendencia",
     "categoria": "tech",
     "origem": "global",
+    "titulo": "Apple Container: Linux VMs leves em Mac Apple Silicon",
+    "badge": "🔥 1.6k★/dia",
+    "volume": "30.7K stars",
+    "crescimento": "+1,611 stars/h",
+    "stars": 30705,
+    "forks": "859",
+    "descricao": "apple/container: ferramenta p/ criar e rodar containers Linux via VMs leves em Mac Apple Silicon. Crescimento acelerado indica demanda por containerizacao em Mac M-series.",
+    "tags": [
+      "containers",
+      "apple-silicon",
+      "macos",
+      "dev-tool"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "11/06/2026 07:30",
+    "sugere_oportunidade": "sim"
+  },
+  {
+    "tipo": "tendencia",
+    "categoria": "tech",
+    "origem": "global",
+    "titulo": "AI Agent Security Scanner: vulnerabilidades em skills",
+    "badge": "🛡️ 308★/dia",
+    "volume": "2.3K stars",
+    "crescimento": "+308 stars/h",
+    "stars": 2265,
+    "forks": "193",
+    "descricao": "NVIDIA/SkillSpector: scanner de seguranca p/ skills de agentes AI. Detecta vulnerabilidades, padroes maliciosos e riscos. Mercado: empresas deployando agentes em producao.",
+    "tags": [
+      "ai",
+      "security",
+      "agents",
+      "dev-tool",
+      "nvidia"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "11/06/2026 07:30",
+    "sugere_oportunidade": "sim"
+  },
+  {
+    "tipo": "tendencia",
+    "categoria": "tech",
+    "origem": "global",
+    "titulo": "PM Skills Marketplace: 100+ skills agentic",
+    "badge": "📦 804★/dia",
+    "volume": "15.9K stars",
+    "crescimento": "+804 stars/h",
+    "stars": 15866,
+    "forks": "1,673",
+    "descricao": "phuryn/pm-skills: marketplace com 100+ skills agentic de discovery a growth. Mercado: PMs usando agentes AI, oportunidade de agregacao ou toolkits verticais.",
+    "tags": [
+      "agents",
+      "pm",
+      "marketplace",
+      "product-management"
+    ],
+    "fonte": "GitHub Trending",
+    "data_publicacao": "11/06/2026 07:30",
+    "cross_ref": "pm-skills",
+    "sugere_oportunidade": "sim"
+  },
+  {
+    "tipo": "tendencia",
+    "categoria": "consumo",
+    "origem": "global",
+    "titulo": "Podcast Microphone Surge: +1086% crescimento",
+    "badge": "🎙️ +1086% | 60.5K vol",
+    "volume": "60.5K mencoes",
+    "crescimento": "+1086%",
+    "stars": 0,
+    "forks": "",
+    "descricao": "Microfone pra podcast em alta: +1086% crescimento, 60.5K volume de mencoes. Mercado: criadores de conteudo, podcasters profissionais, streamers.",
+    "tags": [
+      "podcast",
+      "content-creation",
+      "microphone",
+      "growth"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "11/06/2026 07:30",
+    "sugere_oportunidade": "sim"
+  },
+  {
+    "tipo": "tendencia",
+    "categoria": "consumo",
+    "origem": "global",
+    "titulo": "Freeze-Dried Pet Food: +525% e 40.5K volume",
+    "badge": "🐕 +525% | 40.5K vol",
+    "volume": "40.5K mencoes",
+    "crescimento": "+525%",
+    "stars": 0,
+    "forks": "",
+    "descricao": "Racao liofilizada pra pet em alta: +525% crescimento, 40.5K volume. Nicho premium pet food crescendo. Mercado: donos de pet conscientes com saude animal.",
+    "tags": [
+      "pet-food",
+      "freeze-dried",
+      "nicho",
+      "premium"
+    ],
+    "fonte": "Exploding Topics",
+    "data_publicacao": "11/06/2026 07:30",
+    "sugere_oportunidade": "sim"
+  },
+  {
+    "tipo": "tendencia",
+    "categoria": "tech",
+    "origem": "global",
     "titulo": "last30days-skill: AI agent pesquisa multi-plataforma",
     "badge": "📈 3,191 stars/dia",
     "volume": "38.6K stars",
@@ -490,185 +597,5 @@
     "volume": "40.5K",
     "crescimento": "+900%",
     "badge": "💊 40.5K Volume +900% - Peptides"
-  },
-  {
-    "id": "20",
-    "titulo": "taste-skill",
-    "descricao": "Gives your AI good taste - stops the AI from generating boring, generic slop",
-    "fonte": "GitHub Trending",
-    "tags": [
-      "ai",
-      "agent",
-      "creativity",
-      "prompting"
-    ],
-    "categoria": "app",
-    "origem": "global",
-    "stars": 36474,
-    "forks": 2639,
-    "badge": "🎨 36.5K stars - AI Taste"
-  },
-  {
-    "id": "21",
-    "titulo": "Trivy",
-    "descricao": "Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more",
-    "fonte": "GitHub Trending",
-    "tags": [
-      "security",
-      "devops",
-      "go",
-      "vulnerability"
-    ],
-    "categoria": "negocio",
-    "origem": "global",
-    "stars": 36067,
-    "forks": 458,
-    "badge": "🛡️ 36.1K stars - Security Scanner"
-  },
-  {
-    "id": "22",
-    "titulo": "last30days-skill",
-    "descricao": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
-    "fonte": "GitHub Trending",
-    "tags": [
-      "ai",
-      "agent",
-      "research",
-      "python",
-      "automation"
-    ],
-    "categoria": "app",
-    "origem": "global",
-    "stars": 34376,
-    "forks": 2812,
-    "badge": "🔍 34.4K stars - AI Research Agent"
-  },
-  {
-    "id": "23",
-    "titulo": "CopilotKit",
-    "descricao": "The Frontend Stack for Agents & Generative UI. Makers of the AG-UI Protocol",
-    "fonte": "GitHub Trending",
-    "tags": [
-      "agent",
-      "generative-ui",
-      "react",
-      "typescript",
-      "ai"
-    ],
-    "categoria": "app",
-    "origem": "global",
-    "stars": 33519,
-    "forks": 4263,
-    "badge": "🤖 33.5K stars - AI Agent UI"
-  },
-  {
-    "id": "24",
-    "titulo": "Vention",
-    "descricao": "Company specializing in simplified industrial automation for high-mix manufacturers",
-    "fonte": "Exploding Topics",
-    "tags": [
-      "automation",
-      "manufacturing",
-      "industrial",
-      "saas"
-    ],
-    "categoria": "negocio",
-    "origem": "global",
-    "stars": 0,
-    "forks": 0,
-    "volume": "33.1K",
-    "crescimento": "+257%",
-    "badge": "🏭 33.1K Volume +257% - Industrial Automation"
-  },
-  {
-    "id": "25",
-    "titulo": "Project N.O.M.A.D",
-    "descricao": "Self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered—anytime, anywhere",
-    "fonte": "GitHub Trending",
-    "tags": [
-      "ai",
-      "offline",
-      "survival",
-      "knowledge",
-      "tools"
-    ],
-    "categoria": "app",
-    "origem": "global",
-    "stars": 29664,
-    "forks": 2938,
-    "badge": "🏕️ 29.7K stars - Offline AI"
-  },
-  {
-    "id": "26",
-    "titulo": "Open Notebook",
-    "descricao": "An Open Source implementation of Notebook LM with more flexibility and features",
-    "fonte": "GitHub Trending",
-    "tags": [
-      "ai",
-      "notebook",
-      "typescript",
-      "open-source"
-    ],
-    "categoria": "app",
-    "origem": "global",
-    "stars": 27171,
-    "forks": 3089,
-    "badge": "📓 27.2K stars - AI Notebook"
-  },
-  {
-    "id": "28",
-    "titulo": "Agent-Reach",
-    "descricao": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
-    "fonte": "GitHub Trending",
-    "tags": [
-      "ai",
-      "agent",
-      "web-scraping",
-      "multi-platform",
-      "cli"
-    ],
-    "categoria": "app",
-    "origem": "global",
-    "stars": 24034,
-    "forks": 2027,
-    "badge": "🌐 24K stars - Multi-platform AI Scraping"
-  },
-  {
-    "id": "29",
-    "titulo": "Stovepipe Jeans",
-    "descricao": "Jeans characterized by a straight cut from hip to hem, maintaining consistent width for a sleek silhouette",
-    "fonte": "Exploding Topics",
-    "tags": [
-      "fashion",
-      "clothing",
-      "jeans",
-      "style"
-    ],
-    "categoria": "negocio",
-    "origem": "global",
-    "stars": 0,
-    "forks": 0,
-    "volume": "22.2K",
-    "crescimento": "+800%",
-    "badge": "👖 22.2K Volume +800% - Fashion"
-  },
-  {
-    "id": "30",
-    "titulo": "Portable EV Charger",
-    "descricao": "Devices enabling EV owners to charge vehicles on the move - Level 1, Level 2, and DC fast chargers",
-    "fonte": "Exploding Topics",
-    "tags": [
-      "ev",
-      "charging",
-      "electric-vehicle",
-      "hardware"
-    ],
-    "categoria": "negocio",
-    "origem": "global",
-    "stars": 0,
-    "forks": 0,
-    "volume": "22.2K",
-    "crescimento": "+365%",
-    "badge": "🔌 22.2K Volume +365% - EV Charger"
   }
 ]
