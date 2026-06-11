@@ -3,108 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atlas — Insights · Lyriane</title>
+    <title>Insights · Atlas Drone · Lyriane</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0f0f1a; color: #e0e0e0; min-height: 100vh; line-height: 1.6; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0a0e0a; color: #e8f0e0; min-height: 100vh; line-height: 1.6; }
         .container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
 
-        /* ── HEADER ── */
-        header { text-align: center; padding: 12px 0 20px; border-bottom: 1px solid #2a2a4a; margin-bottom: 32px; }
-        h1.brand { color: #fb923c; font-size: 1.4em; font-weight: 700; margin-bottom: 4px; letter-spacing: -0.3px; }
-        .subtitle { color: #888; font-size: 0.82em; }
-        .view-switch { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 14px; }
-        .view-link { font-size: 0.75em; color: #888; text-decoration: none; padding: 4px 12px; border-radius: 7px; border: 1px solid #2a2a4a; transition: all 0.15s; }
-        .view-link:hover { color: #fff; border-color: #fb923c; }
-        .view-link.active { color: #fb923c; border-color: #fb923c; background: #fb923c15; }
+        /* HEADER */
+        header { text-align: center; padding: 12px 0 20px; border-bottom: 1px solid #1a2a1a; margin-bottom: 32px; }
+        h1.brand { color: #6ee7b7; font-size: 1.4em; font-weight: 700; margin-bottom: 4px; letter-spacing: -0.3px; }
+        .subtitle { color: #7a9a7a; font-size: 0.82em; }
+        .view-switch { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+        .view-link { font-size: 0.75em; color: #7a9a7a; text-decoration: none; padding: 4px 12px; border-radius: 7px; border: 1px solid #1a2a1a; transition: all 0.15s; }
+        .view-link:hover { color: #fff; border-color: #6ee7b7; }
+        .view-link.active { color: #6ee7b7; border-color: #6ee7b7; background: #6ee7b715; }
 
-        /* ── HERO: INSIGHT DO DIA ── */
-        .hero-insight {
-            background: linear-gradient(135deg, #1a1530 0%, #1a1a2e 100%);
-            border: 1px solid #3a2a4a;
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #0a1a0a 0%, #14241a 100%);
+            border: 1px solid #2a4a2a;
             border-radius: 14px;
-            padding: 32px 28px;
-            margin-bottom: 32px;
+            padding: 28px 24px;
+            margin-bottom: 28px;
+        }
+        .hero-date { font-size: 0.75em; color: #6ee7b7; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .hero-titulo { font-size: 1.5em; color: #fff; font-weight: 700; margin-bottom: 10px; line-height: 1.3; }
+        .hero-sub { font-size: 0.92em; color: #a0c0a0; line-height: 1.6; }
+
+        /* MOSAICO */
+        .mosaico { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-bottom: 36px; }
+        .mosaico-card {
+            background: linear-gradient(180deg, #14241a 0%, #0a1a0a 100%);
+            border: 1px solid #2a4a2a;
+            border-radius: 12px;
+            padding: 18px 20px;
             position: relative;
             overflow: hidden;
         }
-        .hero-insight::before {
-            content: '✨';
+        .mosaico-card::before {
+            content: '';
             position: absolute;
-            top: -20px;
-            right: -10px;
-            font-size: 140px;
-            opacity: 0.05;
-            transform: rotate(15deg);
+            top: 0; left: 0; right: 0; height: 3px;
+            background: var(--cor, #6ee7b7);
         }
-        .hero-meta { display: flex; gap: 10px; margin-bottom: 16px; align-items: center; }
-        .hero-date { font-size: 0.72em; color: #fb923c; font-weight: 700; letter-spacing: 0.5px; }
-        .hero-cat { font-size: 0.7em; padding: 3px 10px; border-radius: 12px; background: #fb923c20; color: #fb923c; border: 1px solid #fb923c40; }
-        .hero-title { font-size: 1.6em; font-weight: 700; color: #fff; line-height: 1.3; margin-bottom: 16px; letter-spacing: -0.4px; }
-        .hero-lead { font-size: 1em; color: #b0b0c0; line-height: 1.7; max-width: 800px; }
-        .hero-cta { display: inline-block; margin-top: 18px; font-size: 0.78em; color: #fb923c; text-decoration: none; padding: 8px 16px; border-radius: 7px; border: 1px solid #fb923c; background: #fb923c10; font-weight: 600; }
-        .hero-cta:hover { background: #fb923c25; }
+        .mosaico-card:hover { border-color: #6ee7b7; transform: translateY(-2px); }
+        .mosaico-emoji { font-size: 1.6em; margin-bottom: 8px; }
+        .mosaico-titulo { font-size: 1em; font-weight: 700; color: #fff; margin-bottom: 6px; }
+        .mosaico-desc { font-size: 0.83em; color: #b0d0b0; line-height: 1.5; }
+        .mosaico-badge { display: inline-block; font-size: 0.7em; padding: 3px 10px; border-radius: 10px; background: #6ee7b715; color: #6ee7b7; border: 1px solid #6ee7b730; margin-bottom: 8px; }
+        .mosaico-link { font-size: 0.75em; color: #6ee7b7; text-decoration: none; display: block; margin-top: 8px; }
+        .mosaico-link:hover { text-decoration: underline; }
 
-        /* ── SECTION TITLE ── */
-        .section-title { font-size: 0.95em; color: #fff; font-weight: 700; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid #2a2a4a; }
+        /* SECAO */
+        .section { margin-bottom: 36px; }
+        .section-title { font-size: 1em; color: #6ee7b7; font-weight: 700; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 8px; }
+        .section-count { font-size: 0.75em; background: #6ee7b720; padding: 2px 8px; border-radius: 10px; color: #6ee7b7; font-weight: 400; }
 
-        /* ── MOSAICO: 4 CRUZAMENTOS ── */
-        .cruzamentos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 14px;
-            margin-bottom: 40px;
-        }
-        .cruzamento {
-            background: #1a1a2e;
-            border: 1px solid #2a2a4a;
-            border-radius: 10px;
-            padding: 18px;
-            transition: all 0.2s;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-        .cruzamento:hover { border-color: #fb923c; transform: translateY(-2px); }
-        .cruzamento-tipo { font-size: 0.65em; color: #fb923c; font-weight: 700; letter-spacing: 0.5px; }
-        .cruzamento h4 { font-size: 0.95em; color: #fff; font-weight: 700; line-height: 1.3; }
-        .cruzamento p { font-size: 0.82em; color: #999; line-height: 1.55; }
-
-        /* ── PERGUNTAS PROATIVAS ── */
-        .perguntas { margin-bottom: 40px; }
-        .perguntas-list { display: flex; flex-direction: column; gap: 10px; }
-        .pergunta {
-            background: #1a1a2e;
-            border: 1px solid #2a2a4a;
-            border-left: 3px solid #fb923c;
+        /* TRD LIST */
+        .trd-list { display: flex; flex-direction: column; gap: 10px; }
+        .trd-item {
+            background: linear-gradient(90deg, #14241a 0%, #0a1a0a 100%);
+            border: 1px solid #f472b630;
+            border-left: 3px solid #f472b6;
             border-radius: 8px;
-            padding: 16px 20px;
+            padding: 14px 18px;
             display: flex;
-            gap: 16px;
-            align-items: flex-start;
+            align-items: center;
+            gap: 12px;
         }
-        .pergunta-num { font-size: 0.75em; color: #fb923c; font-weight: 700; flex-shrink: 0; padding-top: 2px; }
-        .pergunta-q { font-size: 0.92em; color: #fff; font-weight: 600; margin-bottom: 6px; line-height: 1.4; }
-        .pergunta-opcoes { font-size: 0.78em; color: #888; }
-        .pergunta-opcoes::before { content: '💡 '; }
+        .trd-item:hover { border-color: #f472b6; }
+        .trd-icon { font-size: 1.3em; }
+        .trd-info { flex: 1; }
+        .trd-titulo { font-size: 0.95em; font-weight: 700; color: #fff; margin-bottom: 2px; }
+        .trd-meta { font-size: 0.75em; color: #6a8a6a; }
+        .trd-link { font-size: 0.75em; color: #f472b6; text-decoration: none; padding: 4px 12px; border: 1px solid #f472b640; border-radius: 6px; }
+        .trd-link:hover { background: #f472b620; }
 
-        /* ── FOOTER ── */
-        .page-meta { text-align: center; color: #555; font-size: 0.75em; padding: 20px 0; margin-top: 40px; border-top: 1px solid #1a1a2e; line-height: 1.7; }
-        .page-meta a { color: #fb923c; text-decoration: none; }
-        .page-meta a:hover { text-decoration: underline; }
-
-        @media (max-width: 600px) {
-            .hero-title { font-size: 1.3em; }
-            .hero-insight { padding: 22px 18px; }
-            .cruzamentos-grid { grid-template-columns: 1fr; }
+        /* PERGUNTAS */
+        .pergunta {
+            background: linear-gradient(135deg, #0a1a0a 0%, #14241a 100%);
+            border: 1px solid #2a4a2a;
+            border-radius: 10px;
+            padding: 18px 20px;
+            margin-bottom: 12px;
         }
+        .pergunta-num { font-size: 0.7em; color: #6ee7b7; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+        .pergunta-texto { font-size: 0.95em; color: #fff; font-weight: 600; margin-bottom: 10px; line-height: 1.4; }
+        .pergunta-opcoes { display: flex; flex-direction: column; gap: 5px; }
+        .pergunta-opcao { font-size: 0.82em; color: #a0c0a0; padding: 6px 12px; background: #0a1a0a; border: 1px solid #2a4a2a; border-radius: 6px; }
+        .pergunta-opcao strong { color: #6ee7b7; }
+
+        /* FOOTER */
+        .footer { text-align: center; color: #4a6a4a; font-size: 0.75em; padding: 20px 0; margin-top: 40px; border-top: 1px solid #1a2a1a; line-height: 1.7; }
+        .footer code { background: #14241a; padding: 2px 6px; border-radius: 4px; color: #6ee7b7; }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1 class="brand">✨ Atlas — Insights</h1>
-            <div class="subtitle">Curadoria editorial · oportunidades × modelos de negócio</div>
+            <h1 class="brand">✨ Insights · Atlas Drone</h1>
+            <div class="subtitle">Leitura ativa do painel Oportunidades · gerado 2026-06-11 08:00 Manaus</div>
             <nav class="view-switch">
                 <a class="view-link" href="./">🃏 Cards</a>
                 <a class="view-link" href="./tabela.html">📋 Tabela</a>
@@ -114,79 +112,126 @@
         </header>
 
         <main>
-            <!-- HERO: insight principal do dia -->
-            <section class="hero-insight">
-                <div class="hero-meta">
-                    <span class="hero-date">10/06/2026 · ATLAS #002</span>
-                    <span class="hero-cat">Drone Scan</span>
-                </div>
-                <h2 class="hero-title">Healthcare AI automation tem a maior tração anônima de 2026. O proof-point tá em dados — não em hype.</h2>
-                <p class="hero-lead">
-                    Taxo (healthcare admin AI) mostra <strong style="color:#fb923c">90% redução de tempo de processamento + 98% acurácia</strong>. Finnt (AI finance) cresce 57% com documento → memo. Esses não são projetos de hobby — são sinais de que <strong style="color:#fff">backoffice automation verticalizado</strong> funciona. A diferença pro seu contexto: são SaaS com precificação real, não "ferramentas legais". Você consegue transferir essa lógica pra PMEs brasileiras?
-                </p>
-                <a class="hero-cta" href="./aprofundar.html">Ver cards adicionados →</a>
+            <!-- HERO INSIGHT -->
+            <section class="hero">
+                <div class="hero-date">Insight do dia · 11/06/2026</div>
+                <h2 class="hero-titulo">Skills pra agente viraram produto: 3 repos com +800 stars/dia mostram que o mercado quer "LEGO de agente", não framework monolith</h2>
+                <p class="hero-sub">PM Skills Marketplace (13.9K stars), last30days-skill (38.6K stars) e Agent-Reach (24K stars) não são só ferramentas — são proof-of-concept de que "componer habilidades" é o modelo que o mercado tá validando. Renato tem 25 anos de PM + agente configurado. Esse cruzamento é a direção mais concreta que ele tem.</p>
             </section>
 
-            <!-- MOSAICO: 4 cruzamentos -->
-            <section class="mosaico">
-                <h3 class="section-title">🔗 Cruzamentos do dia — oportunidade × modelo de negócio</h3>
-                <div class="cruzamentos-grid">
-                    <div class="cruzamento">
-                        <div class="cruzamento-tipo">TREND + MODELO</div>
-                        <h4>TurboVec + RAG → API de busca vetorial</h4>
-                        <p>TurboVec (10.1K stars, Rust) + conceito RAG (nível 3) · API que entrega busca vetorial como serviço · target: devs que precisam de embedding seminfra · R$100-300/mês por API key.</p>
+            <!-- MOSAICO -->
+            <div class="mosaico">
+                <div class="mosaico-card" style="--cor: #6ee7b7">
+                    <div class="mosaico-badge">🔥 +806 stars/dia</div>
+                    <div class="mosaico-emoji">🛍️</div>
+                    <div class="mosaico-titulo">PM Skills Marketplace + Exocerebro</div>
+                    <div class="mosaico-desc">Skills modulares pra agente de IA (discovery→strategy→launch→growth) + exocerebro que cresce com uso = produto que vira renda. Hipótese: R$100/mês Brasil, $100 USD exterior.</div>
+                    <a class="mosaico-link" href="./aprofundar.html#pm-skills-marketplace">Ver no Aprofundar →</a>
+                </div>
+                <div class="mosaico-card" style="--cor: #fbbf24">
+                    <div class="mosaico-badge">⚡ 10.1K stars</div>
+                    <div class="mosaico-emoji">⚡</div>
+                    <div class="mosaico-titulo">TurboVec + RAG</div>
+                    <div class="mosaico-desc">Vector index em Rust (TurboVec) + busca vetorial de alta performance. Conecta diretamente com LlamaIndex. Oportunidade:infra RAG cheaper que Pinecone.</div>
+                    <a class="mosaico-link" href="./aprofundar.html#turbovec">Ver no Aprofundar →</a>
+                </div>
+                <div class="mosaico-card" style="--cor: #f472b6">
+                    <div class="mosaico-badge">🌸 floresta — TRD pronto</div>
+                    <div class="mosaico-emoji">🛸</div>
+                    <div class="mosaico-titulo">Agent-Reach → RAG Scraper</div>
+                    <div class="mosaico-desc">Scraper multi-plataforma (X, Reddit, HN, GitHub) que alimenta RAG sem pagar API. 24K stars. Útil pro Atlas (pesquisa) e pro exocerebro (dados atualizados).</div>
+                    <a class="mosaico-link" href="./trd/agent-reach-rag-scraper.md">Ver TRD →</a>
+                </div>
+                <div class="mosaico-card" style="--cor: #60a5fa">
+                    <div class="mosaico-badge">📓 27.2K stars</div>
+                    <div class="mosaico-emoji">📓</div>
+                    <div class="mosaico-titulo">Open Notebook LM + Exocerebro</div>
+                    <div class="mosaico-desc">NotebookLM open source. Base de conhecimento que cresce com interação. Paralelo direto com o que Renato quer pro exocerebro — modelo freemium, curated free, pro paid.</div>
+                    <a class="mosaico-link" href="./aprofundar.html#open-notebook-lm">Ver no Aprofundar →</a>
+                </div>
+            </div>
+
+            <!-- TRDs PRONTOS -->
+            <section class="section">
+                <h2 class="section-title">🌸 TRDs prontos pra agente-desenvolvimento <span class="section-count">4</span></h2>
+                <div class="trd-list">
+                    <div class="trd-item">
+                        <span class="trd-icon">🛍️</span>
+                        <div class="trd-info">
+                            <div class="trd-titulo">Agent-PM Skills Marketplace</div>
+                            <div class="trd-meta">Origem: GitHub 13.9K stars · cruzado com exocerebro · 2026-06-11</div>
+                        </div>
+                        <a class="trd-link" href="./trd/agent-pm-skills-marketplace.md">trd/</a>
                     </div>
-                    <div class="cruzamento">
-                        <div class="cruzamento-tipo">VERTICAL + MODELO</div>
-                        <h4>Taxo × Clínicas pequenas → SaaS admin</h4>
-                        <p>Taxo (healthcare) + padrão "automação de volta" · Clínicas pequenas gastam 20h/semana em admin · 90% tempo reduzido · Preço: R$200-500/mês por clínica · ROI em 1 mês.</p>
+                    <div class="trd-item">
+                        <span class="trd-icon">🌐</span>
+                        <div class="trd-info">
+                            <div class="trd-titulo">Agent-Reach RAG Scraper</div>
+                            <div class="trd-meta">Origem: GitHub 24K stars · cruzado com RAG + Atlas research · 2026-06-11</div>
+                        </div>
+                        <a class="trd-link" href="./trd/agent-reach-rag-scraper.md">trd/</a>
                     </div>
-                    <div class="cruzamento">
-                        <div class="cruzamento-tipo">FINANCE + MODELO</div>
-                        <h4>Finnt × PMEs → Financial memo as service</h4>
-                        <p>Finnt (AI finance, +57% growth) + documento → memo · PME não tem analyst · SaaS que transforma relatório em insight-executivo · R$97-297/mês · B2B.</p>
+                    <div class="trd-item">
+                        <span class="trd-icon">📓</span>
+                        <div class="trd-info">
+                            <div class="trd-titulo">Open Notebook LM Clone (Exocerebro v1)</div>
+                            <div class="trd-meta">Origem: GitHub 27.2K stars · cruzado com exocerebro Renato · 2026-06-11</div>
+                        </div>
+                        <a class="trd-link" href="./trd/open-notebook-lm-clone.md">trd/</a>
                     </div>
-                    <div class="cruzamento">
-                        <div class="cruzamento-tipo">AGENT + MODELO</div>
-                        <h4>Agent-Reach × Social media → Monitoring SaaS</h4>
-                        <p>Agent-Reach (24K stars, scraping multi-platform) · Monitoramento de marca/produto em Twitter, Reddit, GitHub · SaaS de R$49-149/mês · target: PMs e marketers.</p>
+                    <div class="trd-item">
+                        <span class="trd-icon">🔍</span>
+                        <div class="trd-info">
+                            <div class="trd-titulo">AI Agent Research Tool</div>
+                            <div class="trd-meta">Origem: last30days-skill 38.6K stars · cruzado com skill 0ddc · 2026-06-11</div>
+                        </div>
+                        <a class="trd-link" href="./trd/ai-agent-research-tool.md">trd/</a>
                     </div>
                 </div>
             </section>
 
             <!-- PERGUNTAS PROATIVAS -->
-            <section class="perguntas">
-                <h3 class="section-title">❓ Perguntas proativas — responde 1 que te puxar mais</h3>
-                <div class="perguntas-list">
-                    <div class="pergunta">
-                        <div class="pergunta-num">01</div>
-                        <div>
-                            <p class="pergunta-q">Healthcare admin automation no Brasil — você conhece alguma clínica/consultório que pagaria R$300/mês pra reduzir 90% do tempo de admin?</p>
-                            <p class="pergunta-opcoes">A) Sim, tenho acesso a esse networks · B) Talvez, mas precisaria validar · C) Não tenho esse network agora</p>
-                        </div>
+            <section class="section">
+                <h2 class="section-title">🎯 Perguntas proativas <span class="section-count">3</span></h2>
+                
+                <div class="pergunta">
+                    <div class="pergunta-num">Pergunta 1 de 3</div>
+                    <div class="pergunta-texto">Qual desses 4 TRDs te puxa mais pra ação concreta (ship em &lt;2 semanas)?</div>
+                    <div class="pergunta-opcoes">
+                        <div class="pergunta-opcao"><strong>A)</strong> Agent-PM Skills Marketplace — "LEGO de agente" + precificação R$100/mês</div>
+                        <div class="pergunta-opcao"><strong>B)</strong> Agent-Reach RAG Scraper — pesquisa de mercado sem API cara</div>
+                        <div class="pergunta-opcao"><strong>C)</strong> Open Notebook LM Clone — exocerebro pessoal, local-first</div>
+                        <div class="pergunta-opcao"><strong>D)</strong> AI Agent Research Tool — pesquisa diária automatizada (coupled with 0ddc)</div>
+                        <div class="pergunta-opcao"><strong>E)</strong> Nenhum — quero validar outra coisa primeiro</div>
                     </div>
-                    <div class="pergunta">
-                        <div class="pergunta-num">02</div>
-                        <div>
-                            <p class="pergunta-q">"Documento → insight executivo" — você já pensou em construir algo assim pro seu próprio uso? Qual seria o 1º documento que você transformaria?</p>
-                            <p class="pergunta-opcoes">A) Relatório de mercado · B) Feedback de usuário · C) Docs de produto · D) Nunca pensei nisso</p>
-                        </div>
+                </div>
+
+                <div class="pergunta">
+                    <div class="pergunta-num">Pergunta 2 de 3</div>
+                    <div class="pergunta-texto">Você já mostrou esses TRDs pra alguém (amigo PM/PO que mencionou)? Se sim, o que ouviu?</div>
+                    <div class="pergunta-opcoes">
+                        <div class="pergunta-opcao"><strong>A)</strong> Sim — feedback foi: "faz isso" (converteu)</div>
+                        <div class="pergunta-opcao"><strong>B)</strong> Sim — feedback foi: "interessante, mas..." (objecao)</div>
+                        <div class="pergunta-opcao"><strong>C)</strong> Ainda não mostrei pra ninguém</div>
                     </div>
-                    <div class="pergunta">
-                        <div class="pergunta-num">03</div>
-                        <div>
-                            <p class="pergunta-q">Dado que seu target é 1 cliente pagante até 30/06/2026 — qual desses 4 cruzamentos você consegue validar mais rápido (com 1 conversa)?</p>
-                            <p class="pergunta-opcoes">A) Busca vetorial API · B) Healthcare admin · C) Financial memo · D) Social monitoring</p>
-                        </div>
+                </div>
+
+                <div class="pergunta">
+                    <div class="pergunta-num">Pergunta 3 de 3</div>
+                    <div class="pergunta-texto">Qual a sua objeção mais honesta a respeito de construir algo agora (junho/2026)?</div>
+                    <div class="pergunta-opcoes">
+                        <div class="pergunta-opcao"><strong>A)</strong> "Preciso de mais validação de mercado antes de codar"</div>
+                        <div class="pergunta-opcao"><strong>B)</strong> "Preciso primeiro clientar meu conhecimento (freelance) pra ter cashflow"</div>
+                        <div class="pergunta-opcao"><strong>C)</strong> "Tô em divida — foco em sair dela primeiro"</div>
+                        <div class="pergunta-opcao"><strong>D)</strong> "Nenhuma objeção — quero shipar, me ajuda a escolher"</div>
                     </div>
                 </div>
             </section>
         </main>
 
-        <footer class="page-meta">
-            <p><strong style="color:#fff">Atlas #002</strong> · gerado por Atlas Drone · 10/06/2026 08:00 Manaus</p>
-            <p style="margin-top:4px">Cards novos: TurboVec, Taxo, Finnt · nenhum promotion · 0 TRDs</p>
-            <p style="margin-top:8px"><a href="./">← Cards</a> · <a href="./tabela.html">← Tabela</a> · <a href="./aprofundar.html">← Aprofundar</a></p>
+        <footer class="footer">
+            <p>Atlas Drone · 2026-06-11 08:00 Manaus · 4 cards novos · 0 promoções · 4 TRDs gerados</p>
+            <p style="margin-top:8px">Cross-ref: <code>0ddc</code> (07:30 trends) · <code>4025</code> (18:50 oportunidades)</p>
         </footer>
     </div>
 </body>

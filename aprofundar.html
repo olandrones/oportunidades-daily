@@ -152,244 +152,271 @@
     <script>
     // === CONCEITOS INICIAIS (sementes) ===
     const CONCEITOS = [
-        {
-            id: 'llamaindex',
-            emoji: '📚',
-            titulo: 'LlamaIndex',
-            desc: 'Framework Python pra conectar LLMs com dados externos (PDFs, bancos, APIs). Foco em RAG — Retrieval Augmented Generation. O LLM "lê" seus documentos antes de responder.',
-            meta: 'llamaindex.ai · framework · RAG',
-            links: [{label: 'docs', url: 'https://docs.llamaindex.ai/'}],
-            nivel: 3  // clicou 2x — Renato 09/06
-        },
-        {
-            id: 'langchain',
-            emoji: '🔗',
-            titulo: 'LangChain',
-            desc: 'Framework pra orquestrar agentes: chains, tools, memory, RAG. Mais genérico que LlamaIndex — você monta o fluxo de chamadas. Comunidade enorme.',
-            meta: 'langchain.com · orquestração · agentes',
-            nivel: 2,  // clicou 1x — Renato 09/06
-            links: [{label: 'docs', url: 'https://python.langchain.com/'}]
-        },
-        {
-            id: 'mcp',
-            emoji: '🔌',
-            titulo: 'MCP (Model Context Protocol)',
-            desc: 'Protocolo aberto da Anthropic (Nov 2024) que padroniza como agentes conversam com ferramentas/APIs. Pense: "USB-C dos agentes". Um servidor MCP expõe tools, qualquer cliente MCP consome.',
-            meta: 'modelcontextprotocol.io · protocolo · tools',
-            nivel: 3,  // clicou 2x — Renato 09/06 ("meia árvore" entre 2 e 3, mas ele falou que já acendeu)
-            links: [{label: 'spec', url: 'https://modelcontextprotocol.io/'}]
-        },
-        {
-            id: 'harness',
-            emoji: '⚙️',
-            titulo: 'Harness',
-            desc: 'Plataforma de "engineering intelligence" — CI/CD + feature flags + cloud cost + security. Ajuda DevOps a ver o que tá rolando na engenharia. Pode ser também: harness de teste de agentes.',
-            meta: 'harness.io · devops · ou harness de teste',
-            nivel: 1,  // semente — Renato 09/06 (clicou 0x, mas conceituou muito)
-            links: [{label: 'site', url: 'https://www.harness.io/'}]
-        },
-        {
-            id: 'rag',
-            emoji: '🧠',
-            titulo: 'RAG (Retrieval Augmented Generation)',
-            desc: 'Técnica onde o LLM busca informação relevante num banco antes de gerar resposta. Resolve o problema do LLM "inventar" dados — ele busca primeiro, depois fala.',
-            meta: 'pattern · LLM + busca ·',
-            nivel: 3,  // clicou 2x — Renato 09/06
-            links: []
-        },
-        {
-            id: 'iaa',
-            emoji: '🤖',
-            titulo: 'IAA (Intelligent Adaptive Agents)',
-            desc: 'Agentes que aprendem com interação, ajustam comportamento, evoluem com uso. Diferente de LLM "burro" que sempre responde igual. Inclui memória, contexto, personalização.',
-            meta: 'pattern · agentes adaptativos ·',
-            nivel: 3,  // clicou 2x — Renato 09/06
-            links: []
-        },
-        {
-            id: 'agent-orchestration',
-            emoji: '🎼',
-            titulo: 'Agent Orchestration',
-            desc: 'Coordenar múltiplos agentes pra resolver uma tarefa. Cada um especialista num pedaço, um orquestrador decide quem faz o quê. É a base de "sistemas multi-agente".',
-            meta: 'pattern · multi-agent ·',
-            nivel: 3,  // clicou 2x — Renato 09/06
-            links: []
-        },
-        {
-            id: 'exocerebro',
-            emoji: '🧠✨',
-            titulo: 'Exocerebro (metáfora Renato)',
-            desc: 'Sistema que cresce COM você, não PARA você. Quanto mais usa, mais sabe sobre você, mais vira extensão do seu pensamento. Diferente de ferramenta: ferramenta é morta, exocerebro é organismo.',
-            meta: 'conceito · próprio ·',
-            nivel: 3,  // clicou 2x — Renato 09/06
-            links: []
-        },
-        {
-            id: 'walker',
-            emoji: '🚶',
-            titulo: 'Walker (IDE/CLI agente)',
-            desc: 'Ambiente que você descreveu como "direitador/arquitetador" — usa LLM pra navegar código, fazer mudanças, abrir PRs. Bom pra prototipar. Limitação: ainda focado em dev, não cobre produto/negócio todo.',
-            meta: 'ferramenta · dev-agent ·',
-            links: []
-        },
-        {
-            id: 'klopper',
-            emoji: '🔨',
-            titulo: 'Klopper (IDE/CLI agente)',
-            desc: 'Outro "direitador/arquitetador" que você mencionou. Similar ao Walker mas com foco diferente. Ambos resolvem o fluxo técnico de "ideia → código" sozinho.',
-            meta: 'ferramenta · dev-agent ·',
-            links: []
-        },
-        {
-            id: 'nct',
-            emoji: '🌀',
-            titulo: 'NCT (criação 3D generativa)',
-            desc: 'Ferramenta de criação 3D que vai além do agente: serve como FORÇA pra ampliar possibilidade de conexão com outras ferramentas. Não é negócio sozinho, mas é parte de produto/serviço maior. Você citou Blender como paralelo histórico.',
-            meta: 'ferramenta · 3D generativo ·',
-            links: []
-        },
-        {
-            id: 'blender',
-            emoji: '🎨',
-            titulo: 'Blender (3D código aberto)',
-            desc: 'Suite 3D open-source, referência de "ferramenta que não é negócio sozinha mas viabiliza milhares de produtos". Qualquer um cria modelo 3D hoje — antes precisava de especialista. Mesma lógica que o NCT aplica em IA.',
-            meta: 'ferramenta · 3D open-source ·',
-            links: [{label: 'site', url: 'https://www.blender.org/'}]
-        },
-        {
-            id: 'text-to-3d',
-            emoji: '🗣️→📦',
-            titulo: 'Text-to-3D (modelagem por linguagem)',
-            desc: 'Tecnologias que transformam descrição em linguagem natural → modelo 3D. Democratiza criação 3D: antes especialista, hoje qualquer um com palavras. Pode treinar com MCP ou criar novas interfaces de interação.',
-            meta: 'pattern · IA + 3D ·',
-            links: []
-        },
-        {
-            id: 'tool-use',
-            emoji: '🛠️',
-            titulo: 'Tool Use / Function Calling',
-            desc: 'Capacidade do LLM de chamar funções externas (buscar API, ler arquivo, executar código). É o que transforma LLM em agente. Sem tool use, é só chat. Com tool use, vira assistente que age.',
-            meta: 'pattern · core de agente ·',
-            links: []
-        },
-        {
-            id: 'agent-loop',
-            emoji: '🔄',
-            titulo: 'Agent Loop (ReAct, CoT)',
-            desc: 'Loop onde o agente: pensa → age → observa resultado → pensa de novo. ReAct = Reason + Act. CoT = Chain of Thought. É o "coraçao" que faz agente parecer inteligente.',
-            meta: 'pattern · raciocínio ·',
-            links: []
-        },
-        {
-            id: 'comunidades-ia-br',
-            emoji: '🇧🇷',
-            titulo: 'Comunidades IA Brasil',
-            desc: 'Pra mergulhar de verdade (você falou "não quero perder tempo com variedade, quero comunidade e fazer"). Candidatas: LangChain Discord, LlamaIndex Discord, AI Builders BR, SouForce IA, Hacker Clube Manaus (se existir), r/brdev, Twitter #buildinpublic.',
-            meta: 'comunidade · mergulhar ·',
-            links: []
-        },
-        {
-            id: 'hermes',
-            emoji: '🐴',
-            titulo: 'Hermes (conexão cavalo↔carga)',
-            desc: 'Metáfora Renato: cavalo = LLM, carga = trabalho, Hermes = a conexão entre eles. Sem Hermes, cavalo corre solto sem carga. Hermes é o sistema que PRENDE, CONECTA, PUXA. Eu (Lyriane) sou um Hermes-já-pronto.',
-            meta: 'metáfora · próprio · arquitetura',
-            links: []
-        },
-        {
-            id: 'guard-rail',
-            emoji: '🛡️',
-            titulo: 'Guard Rail',
-            desc: 'Esforço pra LIMITAR o cavalo — não tropeçar, não negar a carga, não misturar tudo, não mostrar pra todo mundo, distribuir com controle. Par do Hermes. Hermes conecta, Guard Rail governa.',
-            meta: 'pattern · segurança · limits',
-            links: []
-        },
-        {
-            id: 'mct',
-            emoji: '🌀',
-            titulo: 'MCT (Meta-Conversation Tool)',
-            desc: 'Camada de meta-comunicação subliminal entre humano e agente. Renato descobriu isso: dá pra criar "milhares dessas" — cada uma um canal paralelo de insight, comentário, intenção. Pode ser persistido em arquivo/JSON ou via GitHub Issues.',
-            meta: 'conceito · meta-comunicação ·',
-            links: []
-        },
-        {
-            id: 'mission-control',
-            emoji: '🛰️',
-            titulo: 'Mission Control (Kanban do futuro)',
-            desc: 'Visão Renato: o Kanban dos Agentes vai virar um Mission Control. Cada agente especialista, participação rápida em todas as funções, metas claras, conectado com humano fortalecido em exocerebro. "Estabilizar com agentes também necessitados, ver valor, medir".',
-            meta: 'visão · produto · longo prazo',
-            links: []
-        },
-        {
-            id: 'drone-160',
-            emoji: '🛸',
-            titulo: 'Controle de Drone a 160°',
-            desc: 'Metáfora Renato: drone voa em qualquer direção (TDAH = hipofoco). Sistema NECESSITA detectar a "força" da direção atual e dar potência. Quando muda direção, sistema percebe e se adapta. "Aquela direção vai trazendo novas informações, novas sementes, novas árvores".',
-            meta: 'metáfora · TDAH · direção',
-            links: []
-        },
-        {
-            id: 'alma',
-            emoji: '✨',
-            titulo: 'Alma (personalidade do agente)',
-            desc: 'Além de memória, agente tem ALMA = personalidade, traços, perfis, maneiras de tratar coisas. "Você mesmo pode desenhar sua alma" — vem da interação e do que se absorve. Importante: não burocratizar a evolução com vaidade.',
-            meta: 'conceito · personalidade ·',
-            links: []
-        },
-        {
-            id: 'yama',
-            emoji: '🧹',
-            titulo: 'YAMA (faxina de agentes)',
-            desc: 'Ambiente de ecossistemas de agentes, FAXINA de agentes. Tão importantes quanto as ferramentas que interagem. Vão junto: Hermes + Guard Rail + YAMA = sistema completo de orquestração segura.',
-            meta: 'conceito · ecossistema ·',
-            links: []
-        },
-        {
-            id: 'vlml-vr',
-            emoji: '🌐',
-            titulo: 'VLML + Panorâmica 360 (VR)',
-            desc: 'Renato lembra de VLML no passado (Volume/Video Markup Language). Viu no Open DPR. "Panosurto do VR" = panorama 360 pra imóveis e áreas. Quer integrar com HTML simples. Milhares de possibilidades: contações históricas, imersões, categorias de produtos.',
-            meta: 'ferramenta · VR · 360 · integração',
-            links: []
-        },
-        {
-                    id: 'inspetor-mercado',
-                    emoji: '🔍',
-                    titulo: 'Inspetor de Mercado (via agentes)',
-                    desc: 'O que o agente AINDA NÃO PODE: criar mundos/produtos 3D/categorias inteiras a partir de um impulso. MAS pode inspecionar mercado, receber info de outras APIs, mandar outros agentes buscarem, publicar no Instagram, fazer enquete, extrair possibilidades de novos produtos.',
-                    meta: 'conceito · mercado · futuro',
-                    links: []
-                },
-                {
-                    id: 'turbovec',
-                    emoji: '⚡',
-                    titulo: 'TurboVec',
-                    desc: 'Vector index built on TurboQuant, written in Rust with Python bindings. High-performance vector search for AI applications. 10.1K stars no GitHub. Conecta diretamente com RAG (busca vetorial) e LlamaIndex.',
-                    meta: 'github · 10.1K stars · rust · vector-search · AI infra',
-                    links: [{label: 'repo', url: 'https://github.com/turbovec/turbovec'}],
-                    nivel: 1
-                },
-                {
-                    id: 'taxo',
-                    emoji: '🏥',
-                    titulo: 'Taxo (Healthcare AI)',
-                    desc: 'AI-powered healthcare admin automation: patient intake, benefit verification, prior authorization, medical coding, claim submissions. Reduz tempo de processamento em 90%, 98% acurácia. Crescendo +47%. Signal: automação de backoffice verticalizada funciona.',
-                    meta: 'healthcare · SaaS · automation · 90% time reduction',
-                    links: [],
-                    nivel: 1
-                },
-                {
-                    id: 'finnt',
-                    emoji: '💹',
-                    titulo: 'Finnt (AI Finance)',
-                    desc: 'AI-native financial analysis software: transforma documentos financeiros complexos em memos entendíveis. Também endereça remittance market com solução cross-border, debit cards, spending rules. Crescendo +57%. Financeiro + IA + B2B.',
-                    meta: 'fintech · AI · remittance · B2B SaaS',
-                    links: [],
-                    nivel: 1
-                }
-            ];
+    {
+        id: 'llamaindex',
+        emoji: '📚',
+        titulo: 'LlamaIndex',
+        desc: 'Framework Python pra conectar LLMs com dados externos (PDFs, bancos, APIs). Foco em RAG — Retrieval Augmented Generation. O LLM "lê" seus documentos antes de responder.',
+        meta: 'llamaindex.ai · framework · RAG',
+        links: [{label: 'docs', url: 'https://docs.llamaindex.ai/'}],
+        nivel: 3
+    },
+    {
+        id: 'langchain',
+        emoji: '🔗',
+        titulo: 'LangChain',
+        desc: 'Framework pra orquestrar agentes: chains, tools, memory, RAG. Mais genérico que LlamaIndex — você monta o fluxo de chamadas. Comunidade enorme.',
+        meta: 'langchain.com · orquestração · agentes',
+        nivel: 2,
+        links: [{label: 'docs', url: 'https://python.langchain.com/'}]
+    },
+    {
+        id: 'mcp',
+        emoji: '🔌',
+        titulo: 'MCP (Model Context Protocol)',
+        desc: 'Protocolo aberto da Anthropic (Nov 2024) que padroniza como agentes conversam com ferramentas/APIs. Pense: "USB-C dos agentes". Um servidor MCP expõe tools, qualquer cliente MCP consome.',
+        meta: 'modelcontextprotocol.io · protocolo · tools',
+        nivel: 3,
+        links: [{label: 'spec', url: 'https://modelcontextprotocol.io/'}]
+    },
+    {
+        id: 'harness',
+        emoji: '⚙️',
+        titulo: 'Harness',
+        desc: 'Plataforma de "engineering intelligence" — CI/CD + feature flags + cloud cost + security. Ajuda DevOps a ver o que tá rolando na engenharia. Pode ser também: harness de teste de agentes.',
+        meta: 'harness.io · devops · ou harness de teste',
+        nivel: 1,
+        links: [{label: 'site', url: 'https://www.harness.io/'}]
+    },
+    {
+        id: 'rag',
+        emoji: '🧠',
+        titulo: 'RAG (Retrieval Augmented Generation)',
+        desc: 'Técnica onde o LLM busca informação relevante num banco antes de gerar resposta. Resolve o problema do LLM "inventar" dados — ele busca primeiro, depois fala.',
+        meta: 'pattern · LLM + busca ·',
+        nivel: 3,
+        links: []
+    },
+    {
+        id: 'iaa',
+        emoji: '🤖',
+        titulo: 'IAA (Intelligent Adaptive Agents)',
+        desc: 'Agentes que aprendem com interação, ajustam comportamento, evoluem com uso. Diferente de LLM "burro" que sempre responde igual. Inclui memória, contexto, personalização.',
+        meta: 'pattern · agentes adaptativos ·',
+        nivel: 3,
+        links: []
+    },
+    {
+        id: 'agent-orchestration',
+        emoji: '🎼',
+        titulo: 'Agent Orchestration',
+        desc: 'Coordenar múltiplos agentes pra resolver uma tarefa. Cada um especialista num pedaço, um orquestrador decide quem faz o quê. É a base de "sistemas multi-agente".',
+        meta: 'pattern · multi-agent ·',
+        nivel: 3,
+        links: []
+    },
+    {
+        id: 'exocerebro',
+        emoji: '🧠✨',
+        titulo: 'Exocerebro (metáfora Renato)',
+        desc: 'Sistema que cresce COM você, não PARA você. Quanto mais usa, mais sabe sobre você, mais vira extensão do seu pensamento. Diferente de ferramenta: ferramenta é morta, exocerebro é organismo.',
+        meta: 'conceito · próprio ·',
+        nivel: 3,
+        links: []
+    },
+    {
+        id: 'walker',
+        emoji: '🚶',
+        titulo: 'Walker (IDE/CLI agente)',
+        desc: 'Ambiente que você descreveu como "direitador/arquitetador" — usa LLM pra navegar código, fazer mudanças, abrir PRs. Bom pra prototipar. Limitação: ainda focado em dev, não cobre produto/negócio todo.',
+        meta: 'ferramenta · dev-agent ·',
+        links: []
+    },
+    {
+        id: 'klopper',
+        emoji: '🔨',
+        titulo: 'Klopper (IDE/CLI agente)',
+        desc: 'Outro "direitador/arquitetador" que você mencionou. Similar ao Walker mas com foco diferente. Ambos resolvem o fluxo técnico de "ideia → código" sozinho.',
+        meta: 'ferramenta · dev-agent ·',
+        links: []
+    },
+    {
+        id: 'nct',
+        emoji: '🌀',
+        titulo: 'NCT (criação 3D generativa)',
+        desc: 'Ferramenta de criação 3D que vai além do agente: serve como FORÇA pra ampliar possibilidade de conexão com outras ferramentas. Não é negócio sozinho, mas é parte de produto/serviço maior. Você citout Blender como paralelo histórico.',
+        meta: 'ferramenta · 3D generativo ·',
+        links: []
+    },
+    {
+        id: 'blender',
+        emoji: '🎨',
+        titulo: 'Blender (3D código aberto)',
+        desc: 'Suite 3D open-source, referência de "ferramenta que não é negócio sozinha mas viabiliza milhares de produtos". Qualquer um cria modelo 3D hoje — antes precisava de especialista. Mesma lógica que o NCT aplica em IA.',
+        meta: 'ferramenta · 3D open-source ·',
+        links: [{label: 'site', url: 'https://www.blender.org/'}]
+    },
+    {
+        id: 'text-to-3d',
+        emoji: '🗣️→📦',
+        titulo: 'Text-to-3D (modelagem por linguagem)',
+        desc: 'Tecnologias que transformam descrição em linguagem natural → modelo 3D. Democratiza criação 3D: antes especialista, hoje qualquer um com palavras. Pode treinar com MCP ou criar novas interfaces de interação.',
+        meta: 'pattern · IA + 3D ·',
+        links: []
+    },
+    {
+        id: 'tool-use',
+        emoji: '🛠️',
+        titulo: 'Tool Use / Function Calling',
+        desc: 'Capacidade do LLM de chamar funções externas (buscar API, ler arquivo, executar código). É o que transforma LLM em agente. Sem tool use, é só chat. Com tool use, vira assistente que age.',
+        meta: 'pattern · core de agente ·',
+        links: []
+    },
+    {
+        id: 'agent-loop',
+        emoji: '🔄',
+        titulo: 'Agent Loop (ReAct, CoT)',
+        desc: 'Loop onde o agente: pensa → age → observa resultado → pensa de novo. ReAct = Reason + Act. CoT = Chain of Thought. É o "coraçao" que faz agente parecer inteligente.',
+        meta: 'pattern · raciocínio ·',
+        links: []
+    },
+    {
+        id: 'comunidades-ia-br',
+        emoji: '🇧🇷',
+        titulo: 'Comunidades IA Brasil',
+        desc: 'Pra mergulhar de verdade (você falou "não quero perder tempo com variedade, quero comunidade e fazer"). Candidatas: LangChain Discord, LlamaIndex Discord, AI Builders BR, SouForce IA, Hacker Clube Manaus (se existir), r/brdev, Twitter #buildinpublic.',
+        meta: 'comunidade · mergulhar ·',
+        links: []
+    },
+    {
+        id: 'hermes',
+        emoji: '🐴',
+        titulo: 'Hermes (conexão cavalo↔carga)',
+        desc: 'Metáfora Renato: cavalo = LLM, carga = trabalho, Hermes = a conexão entre eles. Sem Hermes, cavalo corre solto sem carga. Hermes é o sistema que PRENDE, CONECTA, PUXA. Eu (Lyriane) sou um Hermes-já-pronto.',
+        meta: 'metáfora · próprio · arquitetura',
+        links: []
+    },
+    {
+        id: 'guard-rail',
+        emoji: '🛡️',
+        titulo: 'Guard Rail',
+        desc: 'Esforço pra LIMITAR o cavalo — não tropeçar, não negar a carga, não misturar tudo, não mostrar pra todo mundo, distribuir com controle. Par do Hermes. Hermes conecta, Guard Rail governa.',
+        meta: 'pattern · segurança · limits',
+        links: []
+    },
+    {
+        id: 'mct',
+        emoji: '🌀',
+        titulo: 'MCT (Meta-Conversation Tool)',
+        desc: 'Camada de meta-comunicação subliminal entre humano e agente. Renato descobriu isso: dá pra criar "milhares dessas" — cada uma um canal paralelo de insight, comentário, intenção. Pode ser persistido em arquivo/JSON ou via GitHub Issues.',
+        meta: 'conceito · meta-comunicação ·',
+        links: []
+    },
+    {
+        id: 'mission-control',
+        emoji: '🛰️',
+        titulo: 'Mission Control (Kanban do futuro)',
+        desc: 'Visão Renato: o Kanban dos Agentes vai virar um Mission Control. Cada agente especialista, participação rápida em todas as funções, metas claras, conectado com humano fortalecido em exocerebro. "Estabilizar com agentes também necessitados, ver valor, medir".',
+        meta: 'visão · produto · longo prazo',
+        links: []
+    },
+    {
+        id: 'drone-160',
+        emoji: '🛸',
+        titulo: 'Controle de Drone a 160°',
+        desc: 'Metáfora Renato: drone voa em qualquer direção (TDAH = hipofoco). Sistema NECESSITA detectar a "força" da direção atual e dar potência. Quando muda direção, sistema percebe e se adapta. "Aquela direção vai trazendo novas informações, novas sementes, novas árvores".',
+        meta: 'metáfora · TDAH · direção',
+        links: []
+    },
+    {
+        id: 'alma',
+        emoji: '✨',
+        titulo: 'Alma (personalidade do agente)',
+        desc: 'Além de memória, agente tem ALMA = personalidade, traços, perfis, maneiras de tratar coisas. "Você mesmo pode desenhar sua alma" — vem da interação e do que se absorve. Importante: não burocratizar a evolução com vaidade.',
+        meta: 'conceito · personalidade ·',
+        links: []
+    },
+    {
+        id: 'yama',
+        emoji: '🧹',
+        titulo: 'YAMA (faxina de agentes)',
+        desc: 'Ambiente de ecossistemas de agentes, FAXINA de agentes. Tão importantes quanto as ferramentas que interagem. Vão junto: Hermes + Guard Rail + YAMA = sistema completo de orquestração segura.',
+        meta: 'conceito · ecossistema ·',
+        links: []
+    },
+    {
+        id: 'vlml-vr',
+        emoji: '🌐',
+        titulo: 'VLML + Panorâmica 360 (VR)',
+        desc: 'Renato lembra de VLML no passado (Volume/Video Markup Language). Viu no Open DPR. "Panosurto do VR" = panorama 360 pra imóveis e áreas. Quer integrar com HTML simples. Milhares de possibilidades: contações históricas, imersões, categorias de produtos.',
+        meta: 'ferramenta · VR · 360 · integração',
+        links: []
+    },
+    {
+        id: 'inspetor-mercado',
+        emoji: '🔍',
+        titulo: 'Inspetor de Mercado (via agentes)',
+        desc: 'O que o agente AINDA NÃO PODE: criar mundos/produtos 3D/categorias inteiras a partir de um impulso. MAS pode inspecionar mercado, receber info de outras APIs, mandar outros agentes buscarem, publicar no Instagram, fazer enquete, extrair possibilidades de novos produtos.',
+        meta: 'conceito · mercado · futuro',
+        links: []
+    },
+    {
+        id: 'turbovec',
+        emoji: '⚡',
+        titulo: 'TurboVec',
+        desc: 'Vector index built on TurboQuant, written in Rust with Python bindings. High-performance vector search for AI applications. 10.1K stars no GitHub. Conecta diretamente com RAG (busca vetorial) e LlamaIndex.',
+        meta: 'github · 10.1K stars · rust · vector-search · AI infra',
+        links: [{label: 'repo', url: 'https://github.com/turbovec/turbovec'}],
+        nivel: 1
+    },
+    {
+        id: 'taxo',
+        emoji: '🏥',
+        titulo: 'Taxo (Healthcare AI)',
+        desc: 'AI-powered healthcare admin automation: patient intake, benefit verification, prior authorization, medical coding, claim submissions. Reduz tempo de processamento em 90%, 98% acurácia. Crescendo +47%. Signal: automação de backoffice verticalizada funciona.',
+        meta: 'healthcare · SaaS · automation · 90% time reduction',
+        links: [],
+        nivel: 1
+    },
+    {
+        id: 'finnt',
+        emoji: '💹',
+        titulo: 'Finnt (AI Finance)',
+        desc: 'AI-native financial analysis software: transforma documentos financeiros complexos em memos entendíveis. Também endereça remittance market com solução cross-border, debit cards, spending rules. Crescendo +57%. Financeiro + IA + B2B.',
+        meta: 'fintech · AI · remittance · B2B SaaS',
+        links: [],
+        nivel: 1
+    },
+    {
+        id: 'pm-skills-marketplace',
+        emoji: '🛍️',
+        titulo: 'PM Skills Marketplace',
+        desc: 'Marketplace de skills para PMs de agente de IA — de discovery até strategy, execution, launch e growth. cruza com frameworks de skills (Superpowers). 13.9K stars, +806/day. Sinal: infra de skills pra agentes virou produto próprio.',
+        meta: 'github · 13.9K stars · skills marketplace · agent-PM',
+        links: [],
+        nivel: 1
+    },
+    {
+        id: 'agent-reach',
+        emoji: '🌐',
+        titulo: 'Agent-Reach (multi-platform scrap)',
+        desc: 'Dá olhos ao agente de IA pra ver a internet inteira. Leia e pesquise Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — uma CLI, zero custo de API. 24K stars. Arquitetura: scraper agent que alimenta RAG sem pagar ScrapeAPI/SerpAPI.',
+        meta: 'github · 24K stars · multi-platform · zero-API-fee scraper',
+        links: [],
+        nivel: 1
+    },
+    {
+        id: 'open-notebook-lm',
+        emoji: '📓',
+        titulo: 'Open Notebook LM',
+        desc: 'Implementação open source do NotebookLM com mais flexibilidade e features. 27.2K stars. Paralelo ao que Renato quer pro exocerebro: base de conhecimento que cresce com interação. Modelo de produto: freemium (curated free, pro paid).',
+        meta: 'github · 27.2K stars · open-source · knowledge-base · notebook',
+        links: [],
+        nivel: 1
+    }
+];
 
-    const NIVEIS = {
+const NIVEIS = {
         1: {label: 'semente', emoji: '🌱', cor: '#4ade80'},
         2: {label: 'broto', emoji: '🌿', cor: '#6ee7b7'},
         3: {label: 'árvore', emoji: '🌳', cor: '#fbbf24'},
