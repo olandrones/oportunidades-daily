@@ -101,12 +101,48 @@
         "Agendamento: CRUD básico no SQLite",
         "Painel admin: aba no crescer.html com WebSocket"
       ]
+    },
+    "mergulho": {
+      "id": "mergulho",
+      "emoji": "🤿",
+      "nome": "Mergulho (metodologia)",
+      "nivel": 1,
+      "nivel_label": "semente (12/06)",
+      "tagline": "Teste profundo que cruza educação × trabalho × nutrição × tech — pra provar resultado real",
+      "status": "framework criado · 1º mergulho aplicado (Clínica)",
+      "problema": "Como saber se uma ideia vira resultado REAL? Não é análise, não é plano, é teste com framework. Sem framework, a gente só 'acha que funciona'. Com framework, a gente PROVA.",
+      "persona": "Renato + qualquer agente que vai mergulhar num projeto. Aplicável a produtos, métodos, padrões.",
+      "jtbd": "Quando eu tô prestes a investir tempo num projeto, eu quero aplicar o framework Mergulho (4 eixos) com conversas-teste reais, pra saber SE funciona ANTES de escalar",
+      "mvp": "Framework: 4 eixos (Educação/Trabalho/Nutrição/Tech) + 3 conversas-teste + 5 validações. Output: 1 .md com tudo. Já aplicado 1x (Clínica 12/06).",
+      "metrica_sucesso": "Mergulho aplicado em 3+ projetos até 30/06, com 4/5 validações passando em cada",
+      "r_esperado": "indireto — Mergulho QUALIFICA projetos antes de investir. Sem Mergulho, investe errado. Com Mergulho, investe certo.",
+      "updates": [
+        {"data": "2026-06-12", "tipo": "framework", "texto": "Framework Mergulho criado: 4 eixos + 5 validações"},
+        {"data": "2026-06-12", "tipo": "mergulho#1", "texto": "Aplicado em Clínica — 3 conversas-teste + 5 validações concretas (saída: clinica-mergulho-livre-12-06.md)"},
+        {"data": "2026-06-12", "tipo": "conceito", "texto": "Nascido em divagação do Renato — drone educação × drone trabalho = mergulho"},
+        {"data": "2026-05-30", "tipo": "origem", "texto": "Primeira menção no histórico (ainda sem nome)"}
+      ],
+      "insights": [
+        "Mergulho LIVRE ≠ mergulho solto. É mergulho com FRAMEWORK (4 eixos) + OUTPUT (artefato) + VALIDAÇÃO (métricas).",
+        "Sem Mergulho, você só 'acha que funciona'. Com Mergulho, você PROVA.",
+        "Aplicável a qualquer projeto antes de investir tempo/dinheiro. Pré-validação rápida."
+      ],
+      "cross_refs": [
+        "oportunidades/trd/clinica-mergulho-livre-12-06.md",
+        "oportunidades/aprofundar.html#mergulho",
+        "visao.json → 12/06 divagação"
+      ],
+      "proximas_acoes": [
+        "Aplicar Mergulho em 🎸 App Violão (próximo fim-de-semana)",
+        "Aplicar Mergulho em 🤖 PM Skills (quando 1 TRD virar piloto)",
+        "Comparar os 3 mergulhos lado a lado — ver padrões"
+      ]
     }
   },
   "stats_globais": {
-    "total_updates": 13,
-    "projetos_ativos": 3,
-    "semente": 2,
+    "total_updates": 14,
+    "projetos_ativos": 4,
+    "semente": 3,
     "broto": 1,
     "arvore": 0,
     "floresta": 0
