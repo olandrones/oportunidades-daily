@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌱 Crescer · 3 Projetos em Evolução</title>
+<style>
+:root {
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --surface-light: #334155;
+  --border: #475569;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --accent: #06b6d4;
+  --green: #4ade80;
+  --green-light: #6ee7b7;
+  --yellow: #fbbf24;
+  --pink: #f472b6;
+  --red: #f87171;
+  --shadow: 0 4px 16px rgba(0,0,0,.3);
+  --radius: 12px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+  padding: 24px 20px;
+}
+.container { max-width: 1200px; margin: 0 auto; }
+header { margin-bottom: 32px; }
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.subtitle {
+  color: var(--muted);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.subtitle .last-update {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: var(--surface);
+  border-radius: 999px;
+  font-size: 12px;
+}
+.subtitle .live-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--green);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .4; }
+}
+
+/* Stats bar */
+.stats-bar {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0 32px;
+  padding: 16px;
+  background: var(--surface);
+  border-radius: var(--radius);
+  flex-wrap: wrap;
+}
+.stat {
+  flex: 1;
+  min-width: 100px;
+  text-align: center;
+}
+.stat .num {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent);
+}
+.stat .lbl {
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+/* Project cards (overview) */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.project-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 2px solid transparent;
+  box-shadow: var(--shadow);
+}
+.project-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+.project-card.selected {
+  border-color: var(--accent);
+  background: var(--surface-light);
+}
+.project-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.project-emoji {
+  font-size: 36px;
+  line-height: 1;
+}
+.project-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.project-tagline {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 16px;
+  min-height: 36px;
+}
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+.badge.semente { background: rgba(74,222,128,.15); color: var(--green); }
+.badge.broto { background: rgba(110,231,183,.15); color: var(--green-light); }
+.badge.arvore { background: rgba(251,191,36,.15); color: var(--yellow); }
+.badge.floresta { background: rgba(244,114,182,.15); color: var(--pink); }
+
+/* Sparkline */
+.sparkline {
+  margin: 12px 0;
+  height: 40px;
+  background: var(--bg);
+  border-radius: 6px;
+  padding: 4px;
+}
+.sparkline svg { display: block; width: 100%; height: 100%; }
+
+/* Project stats */
+.project-stats {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+  font-size: 11px;
+  color: var(--muted);
+}
+.project-stats span { display: flex; align-items: center; gap: 4px; }
+.project-stats strong { color: var(--text); font-weight: 600; }
+
+/* Detail view */
+.detail {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 28px;
+  margin-top: 24px;
+  display: none;
+  box-shadow: var(--shadow);
+}
+.detail.open { display: block; }
+.detail-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.detail-emoji { font-size: 48px; }
+.detail-title { flex: 1; }
+.detail-title h2 { font-size: 24px; font-weight: 700; margin-bottom: 4px; }
+.detail-title .meta { font-size: 13px; color: var(--muted); }
+.close-btn {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.close-btn:hover { background: var(--surface-light); }
+
+/* Section */
+.section { margin-bottom: 24px; }
+.section h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Plano de negócio */
+.plano-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 12px;
+}
+.plano-item {
+  background: var(--bg);
+  border-radius: 8px;
+  padding: 14px;
+  border-left: 3px solid var(--accent);
+}
+.plano-item .label {
+  font-size: 10px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+.plano-item .value { font-size: 14px; line-height: 1.5; }
+.plano-item.highlight { border-left-color: var(--green); }
+.plano-item.highlight .value { color: var(--green); font-weight: 600; }
+
+/* Updates log */
+.updates-log { list-style: none; }
+.updates-log li {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+.updates-log li:last-child { border-bottom: none; }
+.updates-log .date {
+  color: var(--muted);
+  font-size: 12px;
+  min-width: 80px;
+  font-family: monospace;
+}
+.updates-log .tipo {
+  display: inline-block;
+  padding: 2px 8px;
+  background: var(--bg);
+  border-radius: 4px;
+  font-size: 10px;
+  color: var(--accent);
+  text-transform: uppercase;
+  font-weight: 600;
+  min-width: 80px;
+  text-align: center;
+}
+.updates-log .text { flex: 1; }
+
+/* Insights */
+.insights { list-style: none; }
+.insights li {
+  padding: 10px 14px;
+  background: var(--bg);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  border-left: 3px solid var(--yellow);
+  line-height: 1.5;
+}
+
+/* Cross-refs */
+.cross-refs { display: flex; gap: 8px; flex-wrap: wrap; }
+.cross-ref {
+  font-size: 12px;
+  padding: 4px 10px;
+  background: var(--bg);
+  border-radius: 6px;
+  color: var(--muted);
+  font-family: monospace;
+}
+
+/* Próximas ações */
+.next-actions { list-style: none; counter-reset: action; }
+.next-actions li {
+  counter-increment: action;
+  padding: 8px 0 8px 36px;
+  position: relative;
+  font-size: 13px;
+  border-bottom: 1px solid var(--border);
+}
+.next-actions li:last-child { border-bottom: none; }
+.next-actions li::before {
+  content: counter(action);
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 24px;
+  height: 24px;
+  background: var(--accent);
+  color: var(--bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Empty state */
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  color: var(--muted);
+  font-size: 12px;
+  border-top: 1px solid var(--border);
+}
+footer code {
+  background: var(--surface);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body { padding: 16px 12px; }
+  h1 { font-size: 24px; }
+  .project-emoji { font-size: 28px; }
+  .detail { padding: 20px 16px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>🌱 Crescer <span style="color: var(--muted); font-size: 18px; font-weight: 400;">— 3 projetos em evolução</span></h1>
+    <div class="subtitle">
+      <span class="last-update"><span class="live-dot"></span> atualizado <span id="lastUpdate">—</span></span>
+      <span>📊 fonte: <code>crescer.json</code> · 🤖 Lyriane</span>
+    </div>
+    <div class="stats-bar" id="statsBar">
+      <div class="stat"><div class="num" id="statUpdates">—</div><div class="lbl">updates totais</div></div>
+      <div class="stat"><div class="num" id="statActive">—</div><div class="lbl">projetos ativos</div></div>
+      <div class="stat"><div class="num" id="statSemente">—</div><div class="lbl">🌱 semente</div></div>
+      <div class="stat"><div class="num" id="statBroto">—</div><div class="lbl">🌿 broto</div></div>
+      <div class="stat"><div class="num" id="statArvore">—</div><div class="lbl">🌳 árvore</div></div>
+      <div class="stat"><div class="num" id="statFloresta">—</div><div class="lbl">🌸 floresta</div></div>
+    </div>
+  </header>
+
+  <div class="projects-grid" id="projectsGrid">
+    <div class="loading">carregando projetos…</div>
+  </div>
+
+  <div class="detail" id="detail">
+    <div class="detail-head">
+      <span class="detail-emoji" id="detailEmoji">—</span>
+      <div class="detail-title">
+        <h2 id="detailName">—</h2>
+        <div class="meta" id="detailMeta">—</div>
+      </div>
+      <button class="close-btn" onclick="closeDetail()">✕ fechar</button>
+    </div>
+
+    <div class="section">
+      <h3>📈 Linha evolutiva</h3>
+      <div class="sparkline" id="detailSparkline" style="height: 60px;"></div>
+    </div>
+
+    <div class="section">
+      <h3>💼 Plano de negócio</h3>
+      <div class="plano-grid" id="detailPlano"></div>
+    </div>
+
+    <div class="section">
+      <h3>📝 Atualizações</h3>
+      <ul class="updates-log" id="detailUpdates"></ul>
+    </div>
+
+    <div class="section">
+      <h3>💡 Insights</h3>
+      <ul class="insights" id="detailInsights"></ul>
+    </div>
+
+    <div class="section">
+      <h3>🔗 Cross-refs</h3>
+      <div class="cross-refs" id="detailCrossRefs"></div>
+    </div>
+
+    <div class="section" id="detailNextActionsSection" style="display:none">
+      <h3>🎯 Próximas ações</h3>
+      <ol class="next-actions" id="detailNextActions"></ol>
+    </div>
+  </div>
+
+  <footer>
+    🌱 Crescer — plataforma única para 3 projetos (🎸 Violão · 🤖 PM · 🦷 Clínica)<br>
+    auto-refresh: <code>setInterval(loadData, 60000)</code> · dados: <code>./crescer.json</code> · <a href="./aprofundar.html" style="color: var(--accent);">aprofundar.html</a> · <a href="./" style="color: var(--accent);">oportunidades</a>
+  </footer>
+</div>
+
+<script>
+let DATA = null;
+
+async function loadData() {
+  try {
+    const r = await fetch('./crescer.json?ts=' + Date.now());
+    if (!r.ok) throw new Error('http ' + r.status);
+    DATA = await r.json();
+    renderAll();
+  } catch (e) {
+    document.getElementById('projectsGrid').innerHTML = '<div class="loading">⚠️ erro ao carregar: ' + e.message + '</div>';
+  }
+}
+
+function renderAll() {
+  document.getElementById('lastUpdate').textContent = formatDateTime(DATA.ultima_atualizacao);
+  if (DATA.stats_globais) {
+    const s = DATA.stats_globais;
+    document.getElementById('statUpdates').textContent = s.total_updates;
+    document.getElementById('statActive').textContent = s.projetos_ativos;
+    document.getElementById('statSemente').textContent = s.semente;
+    document.getElementById('statBroto').textContent = s.broto;
+    document.getElementById('statArvore').textContent = s.arvore;
+    document.getElementById('statFloresta').textContent = s.floresta;
+  }
+  renderGrid();
+}
+
+function renderGrid() {
+  const grid = document.getElementById('projectsGrid');
+  const projetos = Object.values(DATA.projetos);
+  if (projetos.length === 0) {
+    grid.innerHTML = '<div class="loading">nenhum projeto ainda</div>';
+    return;
+  }
+  grid.innerHTML = projetos.map(p => `
+    <div class="project-card" onclick="openDetail('${p.id}')" data-id="${p.id}">
+      <div class="project-head">
+        <span class="project-emoji">${p.emoji}</span>
+        <span class="badge ${p.nivel_label.split(' ')[0]}">${p.nivel_label}</span>
+      </div>
+      <div class="project-name">${p.nome}</div>
+      <div class="project-tagline">${p.tagline}</div>
+      <div class="sparkline">${renderSparkline(p.updates, 200, 40)}</div>
+      <div class="project-stats">
+        <span>📝 <strong>${p.updates.length}</strong> updates</span>
+        <span>🕐 <strong>${formatDate(p.updates[p.updates.length-1].data)}</strong></span>
+        <span>💰 <strong>${p.r_esperado ? p.r_esperado.split(' ')[0] : '—'}</strong></span>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderSparkline(updates, width, height) {
+  if (!updates || updates.length === 0) return '';
+  const points = updates.map((u, i) => {
+    const x = (i / Math.max(updates.length - 1, 1)) * (width - 4) + 2;
+    const y = height - 4 - (i / Math.max(updates.length - 1, 1)) * (height - 8);
+    return `${x},${y}`;
+  });
+  const last = points[points.length - 1].split(',');
+  return `
+    <svg viewBox="0 0 ${width} ${height}" preserveAspectRatio="none">
+      <polyline points="${points.join(' ')}" fill="none" stroke="#06b6d4" stroke-width="2"/>
+      <circle cx="${last[0]}" cy="${last[1]}" r="3" fill="#06b6d4"/>
+      ${points.map((p, i) => `<circle cx="${p.split(',')[0]}" cy="${p.split(',')[1]}" r="1.5" fill="#06b6d4" opacity="0.5"/>`).join('')}
+    </svg>
+  `;
+}
+
+function openDetail(id) {
+  const p = DATA.projetos[id];
+  if (!p) return;
+  document.querySelectorAll('.project-card').forEach(c => {
+    c.classList.toggle('selected', c.dataset.id === id);
+  });
+  document.getElementById('detailEmoji').textContent = p.emoji;
+  document.getElementById('detailName').textContent = p.nome;
+  document.getElementById('detailMeta').innerHTML = `<span class="badge ${p.nivel_label.split(' ')[0]}">${p.nivel_label}</span> · ${p.status || ''}`;
+  document.getElementById('detailSparkline').innerHTML = renderSparkline(p.updates, 800, 60);
+
+  const planoItems = [
+    { l: 'Problema', v: p.problema },
+    { l: 'Persona', v: p.persona },
+    { l: 'JTBD', v: p.jtbd },
+    { l: 'MVP', v: p.mvp || p.mvp_local, highlight: false },
+    { l: 'Stack', v: p.mvp_stack },
+    { l: 'Métrica de sucesso', v: p.metrica_sucesso, highlight: true },
+    { l: 'R$ esperado', v: p.r_esperado, highlight: true }
+  ];
+  document.getElementById('detailPlano').innerHTML = planoItems
+    .filter(i => i.v)
+    .map(i => `<div class="plano-item ${i.highlight ? 'highlight' : ''}"><div class="label">${i.l}</div><div class="value">${i.v}</div></div>`)
+    .join('');
+
+  document.getElementById('detailUpdates').innerHTML = p.updates.slice().reverse().map(u => `
+    <li>
+      <span class="date">${formatDate(u.data)}</span>
+      <span class="tipo">${u.tipo}</span>
+      <span class="text">${u.texto}</span>
+    </li>
+  `).join('');
+
+  document.getElementById('detailInsights').innerHTML = p.insights.map(i => `<li>${i}</li>`).join('');
+
+  document.getElementById('detailCrossRefs').innerHTML = p.cross_refs.map(r => `<span class="cross-ref">${r}</span>`).join('');
+
+  const nextActionsSection = document.getElementById('detailNextActionsSection');
+  if (p.proximas_acoes && p.proximas_acoes.length > 0) {
+    nextActionsSection.style.display = '';
+    document.getElementById('detailNextActions').innerHTML = p.proximas_acoes.map(a => `<li>${a}</li>`).join('');
+  } else {
+    nextActionsSection.style.display = 'none';
+  }
+
+  document.getElementById('detail').classList.add('open');
+  document.getElementById('detail').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function closeDetail() {
+  document.getElementById('detail').classList.remove('open');
+  document.querySelectorAll('.project-card').forEach(c => c.classList.remove('selected'));
+}
+
+function formatDate(s) {
+  if (!s) return '—';
+  const [y, m, d] = s.split('-');
+  return `${d}/${m}`;
+}
+
+function formatDateTime(s) {
+  if (!s) return '—';
+  const [date, time] = s.split('T');
+  return `${formatDate(date)} ${time ? time.slice(0,5) : ''}`;
+}
+
+loadData();
+setInterval(loadData, 60000);
+</script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+{
+  "version": "1.0",
+  "ultima_atualizacao": "2026-06-12T18:35:00-04:00",
+  "atualizado_por": "Lyriane (scaffold inicial pós-pivô)",
+  "projetos": {
+    "violao": {
+      "id": "violao",
+      "emoji": "🎸",
+      "nome": "App Violão",
+      "nivel": 1,
+      "nivel_label": "semente",
+      "tagline": "Campos harmônicos visuais no braço do violão + MIDI input",
+      "status": "conceito",
+      "problema": "Aprender campos harmônicos no violão é fragmentado entre métodos, apps e vídeos. Quem quer sair de 'tocar músicas' pra 'improvisar/compor' fica perdido sem um mapa visual de tonalidades e funções.",
+      "persona": "Violonista intermediário (2-5 anos) que quer improvisar e compor, não só tocar cover",
+      "jtbd": "Quando sento pra estudar ou improvisar, eu quero ver os campos harmônicos visíveis no braço do violão, pra entender o que funciona em cada tom",
+      "mvp": "App web/PWA: campo harmônico visual no braço (SVG interativo) + toggle de tonalidade + função (tônica, dominante, etc) + MIDI input opcional via WebMIDI",
+      "metrica_sucesso": "10 usuários ativos no demo até 30/06",
+      "r_esperado": "R$29-49/mês assinatura (100 usuários = R$3-5k MRR)",
+      "updates": [
+        {"data": "2026-06-12", "tipo": "scaffold", "texto": "Materializado em crescer.html — conceito semente vindo do aprofundar.html"},
+        {"data": "2026-06-10", "tipo": "conceito", "texto": "Apareceu em divagação do Renato (campos harmônicos + MIDI)"},
+        {"data": "2026-05-30", "tipo": "origem", "texto": "Primeira menção no histórico de conversa Renato (demo sáb-dom)"}
+      ],
+      "insights": [
+        "Mercado de apps de música é grande mas fragmentado. Foco em feature única (campo harmônico visual) > tentar ser Yousician/Ultimate Guitar.",
+        "MIDI input do violão é o 'wow factor' — poucos apps fazem isso bem.",
+        "Público brasileiro de violão é enorme (YouTube: 'campo harmônico violão' tem 1M+ views/mês). Nicho quente."
+      ],
+      "cross_refs": ["aprofundar.html (conceito semente)", "visao.json → histórico"]
+    },
+    "pm": {
+      "id": "pm",
+      "emoji": "🤖",
+      "nome": "PM Skills / Agente-PM",
+      "nivel": 2,
+      "nivel_label": "broto",
+      "tagline": "Agente de PM que cobre a fronteira inteira: estratégia + operação + chat",
+      "status": "TRD pronto",
+      "problema": "PMs gastam tempo em tarefas operacionais (atualizar Kanban, postar status, responder mesmo tipo de pergunta) e perdem o trabalho estratégico. Assistentes atuais são limitados a 'AI que escreve código' (cto.new) ou chat genérico (ChatGPT).",
+      "persona": "PM/PO solo ou em time pequeno (1-3 pessoas), ou freelancer PM que precisa de braço operacional sem contratar",
+      "jtbd": "Quando eu tô atolado de operational work, eu quero um agente que cuide do Kanban + status reports + perguntas repetitivas do time, pra eu focar no estratégico (descoberta, priorização, alinhamento)",
+      "mvp": "Agente conectado a Slack/Discord/Telegram: (1) atualiza Kanban a partir de commits, (2) posta daily status com base em atividade, (3) responde FAQ do time, (4) detecta padrões no backlog (cards parados, dívidas)",
+      "metrica_sucesso": "5 PMs em trial até 30/07 + NPS > 40",
+      "r_esperado": "R$99-299/mês por PM (10 PMs = R$1-3k MRR)",
+      "updates": [
+        {"data": "2026-06-12", "tipo": "scaffold", "texto": "Materializado em crescer.html — broto com TRD pronto"},
+        {"data": "2026-06-11", "tipo": "TRD", "texto": "agent-pm-skills-marketplace.md gerado (Atlas 11/06)"},
+        {"data": "2026-06-09", "tipo": "decisão", "texto": "Direção A validada com Renato: Agente-configurado-pronto-pra-PM"},
+        {"data": "2026-06-09", "tipo": "visão", "texto": "Atlas Drone expandido: 4 níveis (semente→floresta) + TRD quando amadurece"},
+        {"data": "2026-06-08", "tipo": "mercado", "texto": "Validado GitHub trending: AI agent skills como categoria (56K stars addyosmani)"}
+      ],
+      "insights": [
+        "Diferencial vs cto.new: visionário+evolutivo, não só 'AI que escreve código'",
+        "Foco em PMs solos/em times pequenos é o sweet spot — não tentar competir com Jira/Asana (eles já perderam essa batalha)",
+        "Renato validou: PO/PM/Operação borrados é o real — agente cobre a fronteira toda",
+        "Conceito 'turco de ideias' (Anca PM/PO/operação tudo junto) é o差异化"
+      ],
+      "cross_refs": [
+        "oportunidades/trd/agent-pm-skills-marketplace.md",
+        "oportunidades/trd/ai-agent-research-tool.md",
+        "aprofundar.html (conceito broto)"
+      ]
+    },
+    "clinica": {
+      "id": "clinica",
+      "emoji": "🦷",
+      "nome": "Clínica Chatbot",
+      "nivel": 1,
+      "nivel_label": "semente (URGENTE)",
+      "tagline": "Bot WhatsApp com RAG para clínicas — atende, agenda, responde 24/7",
+      "status": "PRD pronto · scaffold pendente",
+      "problema": "Clínicas pequenas/médias (1-5 médicos) perdem leads que chegam via WhatsApp fora do horário comercial ou enquanto a recepção tá ocupada. Resposta lenta = lead frio = receita perdida. CRM visual é nice-to-have, mas comunicação REAL no WhatsApp é o que falta.",
+      "persona": "Dona/gerente de clínica (odonto/médica) 30-60 anos, NÃO técnica, usa WhatsApp Business no celular. Quer resultado sem virar dev.",
+      "jtbd": "Quando um paciente manda mensagem no WhatsApp da clínica — fora do horário ou com dúvida simples — eu quero que ele receba resposta útil em segundos e consiga marcar a consulta, pra não perder o lead e liberar a recepção",
+      "mvp_local": "Bot WhatsApp rodando localmente (Docker simulando VPS): (1) identifica intenção, (2) responde FAQ via RAG (sqlite-vec), (3) agenda consulta no SQLite, (4) painel admin mostra conversas fluindo real-time, (5) guard rails: rate limit + anti-injection + scope + PII",
+      "mvp_stack": "Node 20 + Fastify + sqlite-vec + OpenRouter + Evolution API",
+      "metrica_sucesso": "1 clínica piloto com 50+ conversas/semana processadas + 1 lead agendado/dia até 30/06",
+      "r_esperado": "R$200-500/mês por clínica (10 clínicas = R$2-5k MRR) — alvo: 1 cliente pagante até 30/06",
+      "updates": [
+        {"data": "2026-06-12", "tipo": "PRD", "texto": "PRD salvo (7.5KB, 7 seções) — escopo fim-de-semana definido"},
+        {"data": "2026-06-12", "tipo": "decisão", "texto": "Stack escolhido: Node 20 + Fastify + sqlite-vec + Evolution API + OpenRouter"},
+        {"data": "2026-06-12", "tipo": "decisão", "texto": "Docker local primeiro pra simular VPS — sem esperar decisão de provedor"},
+        {"data": "2026-06-12", "tipo": "arquitetura", "texto": "Diagrama definido: Paciente→WhatsApp→Evolution→Webhook→VPS→Hermes AI(RAG+Guard Rails)→SQLite+Logs"}
+      ],
+      "insights": [
+        "WhatsApp Business API não-oficial (Evolution) é o padrão BR — Meta oficial demora 2+ semanas",
+        "RAG no mesmo SQLite (sqlite-vec) = zero infra extra, ideal pra MVP e clínico local",
+        "Guard rails não são opcionais: paciente pode mandar PII ou tentar prompt-injection",
+        "Diferencial vs chatbots genéricos: conhecimento ESPECÍFICO da clínica (preços, convênios, horários) + agendamento direto no SQLite"
+      ],
+      "cross_refs": [
+        "oportunidades/trd/clinica-chatbot-PRD.md",
+        "visao.json → Pivô 12/06"
+      ],
+      "proximas_acoes": [
+        "Provisionar Docker local com Node 20 + Evolution API",
+        "Scaffold: Fastify + SQLite (pacientes/agendamentos/historico) + sqlite-vec",
+        "RAG: knowledge base inicial (20-30 docs da clínica)",
+        "Guard Rails: middleware com 4 camadas",
+        "Agendamento: CRUD básico no SQLite",
+        "Painel admin: aba no crescer.html com WebSocket"
+      ]
+    }
+  },
+  "stats_globais": {
+    "total_updates": 13,
+    "projetos_ativos": 3,
+    "semente": 2,
+    "broto": 1,
+    "arvore": 0,
+    "floresta": 0
+  }
+}
