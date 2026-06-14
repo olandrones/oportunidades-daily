@@ -60,6 +60,10 @@
         .card[data-nivel="3"] { --nivel-cor: #fbbf24; }
         .card[data-nivel="4"] { --nivel-cor: #f472b6; box-shadow: 0 0 20px #f472b620; }
 
+        /* GLOSSÁRIO — esconder gamificação de nível */
+        .card-nivel { display: none; }
+        .card[data-nivel]::before { background: #2a4a2a !important; } /* tira cor por nível */
+
         .card-head { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 10px; }
         .card-titulo { font-size: 1.05em; font-weight: 700; color: #fff; flex: 1; }
         .card-emoji { font-size: 1.4em; flex-shrink: 0; }
@@ -74,7 +78,7 @@
         .card-meta a { color: #6ee7b7; text-decoration: none; }
         .card-meta a:hover { text-decoration: underline; }
 
-        .card-acao { display: flex; gap: 6px; margin-top: 12px; }
+        .card-acao { display: flex; gap: 6px; margin-top: 12px; flex-wrap: wrap; }
         .btn-clic {
             flex: 1;
             font-size: 0.8em;
@@ -103,6 +107,87 @@
         .card[data-nivel="4"] .btn-clic { background: #f472b615; border-color: #f472b6; color: #f472b6; }
         .card[data-nivel="4"] .btn-clic:hover { background: #f472b630; }
 
+        /* GLOSSÁRIO — botões de anotar e incubar */
+        .btn-anotar, .btn-incubar {
+            font-size: 0.78em;
+            padding: 7px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.15s;
+            border: 1px solid;
+        }
+        .btn-anotar {
+            background: transparent;
+            border-color: #2a4a2a;
+            color: #b0d0b0;
+            flex: 1;
+        }
+        .btn-anotar:hover { border-color: #6ee7b7; color: #6ee7b7; }
+        .btn-anotar.has-nota { border-color: #fbbf24; color: #fbbf24; }
+        .btn-incubar {
+            background: #06b6d415;
+            border-color: #06b6d4;
+            color: #06b6d4;
+            flex: 1;
+        }
+        .btn-incubar:hover { background: #06b6d430; }
+        .nota-area {
+            display: none;
+            margin-top: 10px;
+            background: #0a1a0a;
+            border: 1px solid #2a4a2a;
+            border-radius: 6px;
+            padding: 10px;
+        }
+        .nota-area.open { display: block; }
+        .nota-area textarea {
+            width: 100%;
+            min-height: 90px;
+            background: transparent;
+            border: none;
+            color: #e8f0e0;
+            font-family: inherit;
+            font-size: 0.85em;
+            line-height: 1.5;
+            resize: vertical;
+            outline: none;
+        }
+        .nota-area textarea::placeholder { color: #4a6a4a; }
+        .nota-area .nota-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 8px;
+            font-size: 0.7em;
+            color: #6a8a6a;
+        }
+        .nota-area .nota-meta button {
+            background: #6ee7b720;
+            border: 1px solid #6ee7b740;
+            color: #6ee7b7;
+            padding: 3px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+        .nota-area .nota-meta button:hover { background: #6ee7b730; }
+
+        /* HEADER — botão "ir pra incubadora" */
+        .header-incubar {
+            display: inline-block;
+            background: #06b6d415;
+            border: 1px solid #06b6d4;
+            color: #06b6d4;
+            padding: 5px 12px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-size: 0.78em;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+        .header-incubar:hover { background: #06b6d430; }
+
         /* ── FOOTER ── */
         .footer { text-align: center; color: #4a6a4a; font-size: 0.75em; padding: 20px 0; margin-top: 40px; border-top: 1px solid #1a2a1a; line-height: 1.7; }
         .footer code { background: #14241a; padding: 2px 6px; border-radius: 4px; color: #6ee7b7; }
@@ -111,13 +196,14 @@
 <body>
     <div class="container">
         <header>
-            <h1 class="brand">🌱 Aprofundar — Learning Panel</h1>
-            <div class="subtitle">Clic-clic pra aumentar. Cards que crescem conforme você evolui o conhecimento.</div>
+            <h1 class="brand">🌱 Aprofundar — Glossário</h1>
+            <div class="subtitle">Coisas que estão me matutando. Anota o que quiser, ou manda pra incubadora quando virar projeto.</div>
             <nav class="view-switch">
                 <a class="view-link" href="./">🃏 Cards</a>
                 <a class="view-link" href="./tabela.html">📋 Tabela</a>
                 <a class="view-link" href="./insights.html">✨ Insights</a>
                 <a class="view-link active" href="./aprofundar.html">🌱 Aprofundar</a>
+                <a class="header-incubar" href="./crescer.html" target="_blank">🛠️ ir pra incubadora →</a>
             </nav>
         </header>
 
@@ -132,11 +218,9 @@
             </section>
 
             <div class="filtros" id="filtros">
-                <button class="filtro-btn active" data-filtro="todos">todos</button>
-                <button class="filtro-btn" data-filtro="1">🌱 semente</button>
-                <button class="filtro-btn" data-filtro="2">🌿 broto</button>
-                <button class="filtro-btn" data-filtro="3">🌳 árvore</button>
-                <button class="filtro-btn" data-filtro="4">🌸 floresta</button>
+                <button class="filtro-btn active" data-filtro="todos">todos (34)</button>
+                <button class="filtro-btn" data-filtro="com-nota">📝 com nota</button>
+                <button class="filtro-btn" data-filtro="incubados">🛒 incubados</button>
             </div>
 
             <div class="grid" id="grid"></div>
@@ -452,8 +536,10 @@ const NIVEIS = {
 
     const STORAGE_KEY = 'aprofundar_niveis';
     const FILTRO_KEY = 'aprofundar_filtro';
+    const NOTAS_KEY = 'aprofundar:notas:v1';
+    const INCUBADOS_KEY = 'aprofundar:incubados:v1';
 
-    // Carrega níveis do localStorage
+    // Carrega níveis do localStorage (mantido pra compat, mas não exibido)
     function loadNiveis() {
         try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; } catch (e) { return {}; }
     }
@@ -461,33 +547,97 @@ const NIVEIS = {
         try { localStorage.setItem(STORAGE_KEY, JSON.stringify(niveis)); } catch (e) {}
     }
 
+    // Carrega notas do localStorage
+    function loadNotas() {
+        try { return JSON.parse(localStorage.getItem(NOTAS_KEY)) || {}; } catch (e) { return {}; }
+    }
+    function saveNotas(notas) {
+        try { localStorage.setItem(NOTAS_KEY, JSON.stringify(notas)); } catch (e) {}
+    }
+
+    // Carrega IDs de cards já incubados
+    function loadIncubados() {
+        try { return JSON.parse(localStorage.getItem(INCUBADOS_KEY)) || {}; } catch (e) { return {}; }
+    }
+    function saveIncubados(map) {
+        try { localStorage.setItem(INCUBADOS_KEY, JSON.stringify(map)); } catch (e) {}
+    }
+
     // Estado atual
     let niveis = loadNiveis();
+    let notas = loadNotas();
+    let incubados = loadIncubados();
     let filtroAtual = localStorage.getItem(FILTRO_KEY) || 'todos';
 
-    // Renderiza um card
+    // Renderiza um card (GLOSSÁRIO — sem gamificação)
     function renderCard(conceito) {
-        // Hierarquia: localStorage do navegador > campo `nivel` no HTML > 1 (semente)
-        const nivel = niveis[conceito.id] || conceito.nivel || 1;
-        const n = NIVEIS[nivel];
         const linksHtml = conceito.links.map(l => `<a href="${l.url}" target="_blank" rel="noopener">${l.label} ↗</a>`).join(' · ');
+        const nota = notas[conceito.id] || {};
+        const notaTexto = nota.texto || '';
+        const notaData = nota.updated_at ? new Date(nota.updated_at).toLocaleString('pt-BR', {day:'2-digit', month:'2-digit', hour:'2-digit', minute:'2-digit'}) : '';
+        const jaIncubado = !!incubados[conceito.id];
+        const incubadoLabel = jaIncubado ? `✓ incubado ${incubados[conceito.id].quando ? new Date(incubados[conceito.id].quando).toLocaleDateString('pt-BR') : ''}` : '🛒 incubar →';
+        const incubadoClass = jaIncubado ? 'has-nota' : '';
 
         return `
-        <div class="card" data-nivel="${nivel}" data-id="${conceito.id}">
+        <div class="card" data-id="${conceito.id}">
             <div class="card-head">
                 <span class="card-emoji">${conceito.emoji}</span>
                 <div class="card-titulo">${conceito.titulo}</div>
-                <span class="card-nivel" data-nivel="${nivel}">${n.emoji} ${n.label}</span>
             </div>
             <div class="card-desc">${conceito.desc}</div>
             <div class="card-meta">${conceito.meta}${linksHtml ? ' · ' + linksHtml : ''}</div>
             <div class="card-acao">
-                <button class="btn-clic" onclick="crescer('${conceito.id}')" ${nivel >= 4 ? 'disabled' : ''}>
-                    ${nivel >= 4 ? '✓ floresta — saiu do radar' : 'clic-clic pra crescer →'}
+                <button class="btn-anotar ${notaTexto ? 'has-nota' : ''}" onclick="toggleNota('${conceito.id}')">
+                    ${notaTexto ? '📝 ver/editar nota' : '📝 anotar'}
                 </button>
-                ${nivel > 1 ? `<button class="btn-voltar" onclick="voltar('${conceito.id}')">←</button>` : ''}
+                <a class="btn-incubar ${incubadoClass}" href="${buildIncubarURL(conceito)}" target="_blank" rel="noopener">
+                    ${incubadoLabel}
+                </a>
+            </div>
+            <div class="nota-area" id="nota-${conceito.id}">
+                <textarea id="txt-${conceito.id}" placeholder="ideias, ensaios, links, dúvidas — o que vier à cabeça">${notaTexto}</textarea>
+                <div class="nota-meta">
+                    <span>${notaData ? 'salvo ' + notaData : 'sem nota ainda'}</span>
+                    <button onclick="salvarNota('${conceito.id}')">💾 salvar</button>
+                </div>
             </div>
         </div>`;
+    }
+
+    // Constrói URL pra enviar item pra incubadora
+    function buildIncubarURL(conceito) {
+        const params = new URLSearchParams({
+            new: '1',
+            id: conceito.id,
+            emoji: conceito.emoji,
+            title: conceito.titulo,
+            tagline: (conceito.desc || '').slice(0, 120)
+        });
+        return './crescer.html?' + params.toString();
+    }
+
+    // Toggle da área de nota
+    function toggleNota(id) {
+        const area = document.getElementById('nota-' + id);
+        const isOpen = area.classList.toggle('open');
+        if (isOpen) {
+            const ta = document.getElementById('txt-' + id);
+            setTimeout(() => ta.focus(), 50);
+        }
+    }
+
+    // Salvar nota
+    function salvarNota(id) {
+        const ta = document.getElementById('txt-' + id);
+        const texto = ta.value.trim();
+        if (texto) {
+            notas[id] = { texto, updated_at: new Date().toISOString() };
+        } else {
+            delete notas[id];
+        }
+        saveNotas(notas);
+        render();
     }
 
     // Renderiza grid
@@ -495,31 +645,12 @@ const NIVEIS = {
         const grid = document.getElementById('grid');
         const conceitosFiltrados = filtroAtual === 'todos'
             ? CONCEITOS
-            : CONCEITOS.filter(c => {
-                const nivel = niveis[c.id] || c.nivel || 1;
-                return nivel === parseInt(filtroAtual);
-              });
+            : CONCEITOS.filter(c => filtroAtual === 'com-nota'
+                ? !!(notas[c.id] && notas[c.id].texto)
+                : filtroAtual === 'incubados'
+                ? !!incubados[c.id]
+                : (niveis[c.id] || c.nivel || 1) === parseInt(filtroAtual));
         grid.innerHTML = conceitosFiltrados.map(renderCard).join('');
-    }
-
-    // Cresce 1 nível
-    function crescer(id) {
-        const atual = niveis[id] || 1;
-        if (atual < 4) {
-            niveis[id] = atual + 1;
-            saveNiveis(niveis);
-            render();
-        }
-    }
-
-    // Volta 1 nível
-    function voltar(id) {
-        const atual = niveis[id] || 1;
-        if (atual > 1) {
-            niveis[id] = atual - 1;
-            saveNiveis(niveis);
-            render();
-        }
     }
 
     // Filtro

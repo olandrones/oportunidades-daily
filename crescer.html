@@ -415,6 +415,7 @@ main.board {
   <div class="filtros">
     <button class="active" data-filter="all">tudo</button>
     <button data-filter="desenvolver">só desenvolvendo</button>
+    <a href="./aprofundar.html" target="_blank" style="text-decoration:none;display:inline-flex;align-items:center;font-size:12px;padding:4px 10px;border:1px solid #6ee7b7;border-radius:999px;color:#6ee7b7;background:#6ee7b710;">📚 glossário</a>
   </div>
   <div class="sync" id="sync"><span class="dot"></span><span id="syncText">—</span></div>
 </header>
@@ -449,6 +450,13 @@ main.board {
       <label>Updates</label>
       <ul class="updates-mini" id="fUpdates"></ul>
     </div>
+    <div class="field">
+      <label>🔗 Página de desenvolvimento (opcional)</label>
+      <input type="text" id="fLinkDev" placeholder="https://olandrones.github.io/chatclin/">
+      <div id="fLinkDevBtn" style="margin-top:6px;display:none;">
+        <a id="fLinkDevAnchor" href="#" target="_blank" rel="noopener" style="display:inline-block;background:var(--green);color:var(--bg);padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;font-weight:600;">🔗 abrir página →</a>
+      </div>
+    </div>
     <div class="actions">
       <button class="danger" id="bDel">🗑️ arquivar</button>
       <button id="bCancel">cancelar</button>
@@ -460,7 +468,8 @@ main.board {
 <!-- Modal: new card -->
 <div class="modal-bg" id="newBg">
   <div class="modal">
-    <h2>💡 nova ideia</h2>
+    <h2>💡 nova ideia <span id="nOrigemLabel" style="font-size:11px;color:var(--muted);font-weight:400;"></span></h2>
+    <input type="hidden" id="nFromGlossario">
     <div class="field">
       <label>Emoji</label>
       <input type="text" id="nEmoji" placeholder="💡" maxlength="2" value="💡">
@@ -629,11 +638,12 @@ function renderCard(c) {
   const autorBadge = c.autor === 'hermes' ? '<span class="badge hermes">hermes</span>' : '';
   const hasDir = c.direcionamentos && c.direcionamentos.length > 0 ? ' has-dir' : '';
   const dirCount = c.direcionamentos ? c.direcionamentos.length : 0;
+  const linkDev = c.link_dev ? `<a href="${escapeHtml(c.link_dev)}" target="_blank" rel="noopener" title="${escapeHtml(c.link_dev)}" style="text-decoration:none;font-size:12px;padding:2px 6px;background:var(--green);color:var(--bg);border-radius:4px;font-weight:600;">🔗 dev</a>` : '';
   return `
     <div class="card${hasDir}" data-id="${c.id}">
       <div class="title"><span class="emoji">${c.emoji}</span>${escapeHtml(c.title)}</div>
       <div class="tagline">${escapeHtml(c.tagline || '')}</div>
-      <div class="meta">${tagsHtml}${autorBadge}${dirCount > 0 ? `<span class="badge">${dirCount} 💡</span>` : ''}</div>
+      <div class="meta">${tagsHtml}${autorBadge}${dirCount > 0 ? `<span class="badge">${dirCount} 💡</span>` : ''}${linkDev}</div>
     </div>
   `;
 }
@@ -799,6 +809,15 @@ function openCard(id) {
   document.getElementById('fTitle').value = c.title;
   document.getElementById('fTagline').value = c.tagline || '';
   document.getElementById('fNewDir').value = '';
+  document.getElementById('fLinkDev').value = c.link_dev || '';
+  const linkDevAnchor = document.getElementById('fLinkDevAnchor');
+  const linkDevBtn = document.getElementById('fLinkDevBtn');
+  if (c.link_dev) {
+    linkDevAnchor.href = c.link_dev;
+    linkDevBtn.style.display = '';
+  } else {
+    linkDevBtn.style.display = 'none';
+  }
   const dirList = document.getElementById('fDirList');
   dirList.innerHTML = (c.direcionamentos || []).map(d => `
     <li><span class="ts">${formatTs(d.ts)}</span><span>${escapeHtml(d.texto)}</span></li>
@@ -821,6 +840,7 @@ function saveCard() {
   const c = found.card;
   c.title = document.getElementById('fTitle').value.trim() || c.title;
   c.tagline = document.getElementById('fTagline').value.trim();
+  c.link_dev = document.getElementById('fLinkDev').value.trim() || null;
   const newDir = document.getElementById('fNewDir').value.trim();
   if (newDir) {
     if (!c.direcionamentos) c.direcionamentos = [];
@@ -855,9 +875,33 @@ function formatTs(iso) {
 }
 
 // ===== NEW CARD =====
-function openNewCard() {
+function openNewCard(prefill) {
   document.getElementById('newBg').classList.add('open');
+  if (prefill) {
+    document.getElementById('nTitle').value = prefill.title || '';
+    document.getElementById('nEmoji').value = prefill.emoji || '💡';
+    document.getElementById('nTag').value = prefill.tagline || '';
+    document.getElementById('nCol').value = 'semente'; // sempre cai em semente (do glossário)
+    document.getElementById('nFromGlossario').value = prefill.id || '';
+    document.getElementById('nOrigemLabel').textContent = prefill.id ? `· do glossário: ${prefill.id}` : '';
+  } else {
+    document.getElementById('nFromGlossario').value = '';
+    document.getElementById('nOrigemLabel').textContent = '';
+  }
   document.getElementById('nTitle').focus();
+}
+
+// Detecta deep-link do glossário
+function checkDeepLink() {
+  const params = new URLSearchParams(location.search);
+  if (params.get('new') === '1') {
+    openNewCard({
+      id: params.get('id') || '',
+      emoji: params.get('emoji') || '💡',
+      title: params.get('title') || '',
+      tagline: params.get('tagline') || ''
+    });
+  }
 }
 function closeNewCard() {
   document.getElementById('newBg').classList.remove('open');
@@ -868,15 +912,25 @@ function createCard() {
   const emoji = document.getElementById('nEmoji').value.trim() || '💡';
   const tagline = document.getElementById('nTag').value.trim();
   const colId = document.getElementById('nCol').value;
+  const fromGlossario = document.getElementById('nFromGlossario').value;
   const card = {
     id: 'c' + Date.now(),
     emoji, title, tagline,
     autor: 'renato',
-    tags: [],
+    tags: fromGlossario ? ['glossario'] : [],
+    origem_glossario: fromGlossario || null,
     direcionamentos: [],
-    updates: [{ ts: new Date().toISOString(), tipo: 'novo', texto: 'criado pelo Renato' }]
+    updates: [{ ts: new Date().toISOString(), tipo: 'novo', texto: fromGlossario ? `veio do glossário (${fromGlossario})` : 'criado pelo Renato' }]
   };
   DATA.columns.find(c => c.id === colId).cards.push(card);
+  // se veio do glossário, marca como incubado lá
+  if (fromGlossario) {
+    try {
+      const map = JSON.parse(localStorage.getItem('aprofundar:incubados:v1') || '{}');
+      map[fromGlossario] = { quando: new Date().toISOString(), card_id: card.id };
+      localStorage.setItem('aprofundar:incubados:v1', JSON.stringify(map));
+    } catch (e) {}
+  }
   save();
   closeNewCard();
   render();
@@ -906,7 +960,7 @@ document.querySelectorAll('.modal-bg').forEach(el => {
 });
 
 // ===== START =====
-load();
+load().then(() => checkDeepLink());
 </script>
 </body>
 </html>
