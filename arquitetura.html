@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🗺️ Arquitetura · incubadora v2</title>
+<style>
+:root {
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --surface-light: #334155;
+  --border: #475569;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --accent: #06b6d4;
+  --green: #4ade80;
+  --yellow: #fbbf24;
+  --pink: #f472b6;
+  --red: #f87171;
+  --purple: #a78bfa;
+  --code-bg: #0b1220;
+  --radius: 8px;
+  --shadow: 0 2px 8px rgba(0,0,0,.3);
+  --maxw: 1200px;
+  --mono: ui-monospace, "SF Mono", Menlo, Monaco, "Cascadia Code", monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+  font-size: 15px;
+}
+
+/* === LAYOUT === */
+.page { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
+@media (max-width: 900px) { .page { padding: 16px 12px; } }
+
+/* === HEADER === */
+.hero {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px;
+  background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
+  margin-bottom: 32px;
+}
+.hero h1 { font-size: 32px; margin-bottom: 8px; letter-spacing: -0.5px; }
+.hero .sub { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
+.hero .meta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: var(--muted);
+}
+.hero .meta span { display: flex; align-items: center; gap: 4px; }
+.hero .meta code {
+  font-family: var(--mono);
+  background: var(--code-bg);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+/* === TOC === */
+.toc {
+  position: sticky;
+  top: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  margin-bottom: 24px;
+  z-index: 10;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 12px;
+}
+.toc-label { color: var(--muted); font-weight: 600; }
+.toc a {
+  color: var(--accent);
+  text-decoration: none;
+  padding: 2px 8px;
+  border-radius: 4px;
+  transition: background 0.1s;
+}
+.toc a:hover { background: var(--surface-light); }
+
+/* === SECTIONS === */
+section { margin-bottom: 48px; scroll-margin-top: 80px; }
+h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+h2 .num { color: var(--muted); font-family: var(--mono); font-size: 16px; }
+h3 {
+  font-size: 16px;
+  margin: 24px 0 8px;
+  color: var(--accent);
+  font-weight: 600;
+}
+h4 { font-size: 14px; margin: 16px 0 6px; color: var(--yellow); font-weight: 600; }
+p { margin-bottom: 12px; }
+strong { color: var(--text); font-weight: 600; }
+em { color: var(--muted); font-style: normal; font-size: 12px; display: block; margin-top: -4px; margin-bottom: 12px; }
+ul, ol { padding-left: 20px; margin-bottom: 12px; }
+li { margin-bottom: 4px; }
+
+/* === CARDS === */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 12px;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.card-grid .card { margin-bottom: 0; }
+.card h3 { margin-top: 0; }
+
+/* === CALLOUTS === */
+.callout {
+  border-left: 3px solid var(--accent);
+  background: var(--surface);
+  padding: 12px 16px;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin: 12px 0;
+}
+.callout.warn { border-left-color: var(--yellow); }
+.callout.danger { border-left-color: var(--red); }
+.callout.ok { border-left-color: var(--green); }
+.callout strong { display: block; margin-bottom: 4px; }
+
+/* === CODE === */
+pre, code {
+  font-family: var(--mono);
+  font-size: 12.5px;
+}
+pre {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  overflow-x: auto;
+  margin: 12px 0;
+  line-height: 1.5;
+}
+pre .c { color: var(--muted); font-style: italic; }
+pre .k { color: var(--pink); }
+pre .s { color: var(--green); }
+pre .n { color: var(--yellow); }
+code:not(pre code) {
+  background: var(--code-bg);
+  padding: 1px 6px;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+  font-size: 12px;
+}
+
+/* === DIAGRAMS === */
+.diagram {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  white-space: pre;
+  overflow-x: auto;
+  margin: 12px 0;
+  line-height: 1.4;
+}
+.diagram .hl { color: var(--accent); }
+.diagram .hl-g { color: var(--green); }
+.diagram .hl-y { color: var(--yellow); }
+.diagram .hl-p { color: var(--pink); }
+
+/* === TABLES === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 13px;
+}
+th, td {
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+}
+th {
+  background: var(--surface);
+  color: var(--muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+tbody tr:hover { background: var(--surface); }
+td code { font-size: 11px; }
+
+/* === KBD === */
+kbd {
+  background: var(--surface-light);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-family: var(--mono);
+  font-size: 11px;
+  box-shadow: 0 1px 0 rgba(0,0,0,.3);
+}
+
+/* === BADGES === */
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: var(--surface);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  vertical-align: middle;
+}
+.badge.ok { background: rgba(74,222,128,.15); color: var(--green); border-color: var(--green); }
+.badge.warn { background: rgba(251,191,36,.15); color: var(--yellow); border-color: var(--yellow); }
+.badge.danger { background: rgba(248,113,113,.15); color: var(--red); border-color: var(--red); }
+.badge.info { background: rgba(6,182,212,.15); color: var(--accent); border-color: var(--accent); }
+
+/* === TWEAKS PANEL === */
+.tweaks {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  font-size: 12px;
+  z-index: 20;
+  box-shadow: var(--shadow);
+  max-width: 220px;
+}
+.tweaks summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: 600;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+}
+.tweaks summary::-webkit-details-marker { display: none; }
+.tweaks summary::before { content: '⚙️'; }
+.tweaks[open] summary::before { content: '✕'; }
+.tweaks .row {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.tweaks .row label { color: var(--muted); font-size: 11px; }
+.tweaks select, .tweaks button {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-size: 11px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* === DENSITY === */
+body.density-compact { font-size: 13.5px; }
+body.density-compact .hero { padding: 20px; }
+body.density-compact section { margin-bottom: 32px; }
+body.density-compact h2 { font-size: 18px; }
+body.density-spacious { font-size: 16px; }
+body.density-spacious .hero { padding: 40px; }
+body.density-spacious section { margin-bottom: 64px; }
+body.density-spacious h2 { font-size: 26px; }
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+  padding: 32px 0;
+  border-top: 1px solid var(--border);
+  margin-top: 48px;
+}
+footer a { color: var(--accent); text-decoration: none; }
+
+/* === STEPS === */
+ol.steps {
+  list-style: none;
+  counter-reset: step;
+  padding-left: 0;
+}
+ol.steps > li {
+  counter-increment: step;
+  padding: 10px 12px 10px 40px;
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 8px;
+  font-size: 13.5px;
+}
+ol.steps > li::before {
+  content: counter(step);
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 22px;
+  height: 22px;
+  background: var(--accent);
+  color: var(--bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: var(--mono);
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+<header class="hero">
+  <h1>🗺️ Arquitetura · incubadora v2</h1>
+  <div class="sub">Sistema kanban com persistência online, sync multi-device, editável por humanos e agentes.</div>
+  <div class="meta">
+    <span>📅 <strong>2026-06-14</strong></span>
+    <span>🔖 v2.0</span>
+    <span>👤 Renato Olandesi (1 usuário, sistema pessoal)</span>
+    <span>🌐 <a href="https://olandrones.github.io/oportunidades-daily/crescer.html" style="color:var(--accent)">crescer.html</a> (live)</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <span class="toc-label">📍 mapa</span>
+  <a href="#tldr">0 · TL;DR</a>
+  <a href="#principios">1 · Princípios</a>
+  <a href="#componentes">2 · Componentes</a>
+  <a href="#fluxo">3 · Fluxo</a>
+  <a href="#schema">4 · Schema</a>
+  <a href="#api">5 · API</a>
+  <a href="#falhas">6 · Falhas</a>
+  <a href="#sop">7 · SOP</a>
+  <a href="#deploy">8 · Deploy</a>
+  <a href="#100pessoas">9 · 100 pessoas</a>
+  <a href="#roadmap">10 · Roadmap</a>
+</nav>
+
+<!-- ============================================ -->
+<section id="tldr">
+<h2><span class="num">§0</span> TL;DR</h2>
+
+<p>Sistema de <strong>kanban interativo</strong> onde cada <em>movimento de card</em> é salvo online (jsonbin.io) e sincronizado em todos os devices. O código fica em <strong>GitHub Pages</strong>; os dados ficam em <strong>jsonbin</strong>. <code>localStorage</code> é cache offline. <strong>Hermes</strong> (eu) leio e escrevo via API quando você me pede.</p>
+
+<div class="diagram">
+<span class="hl">┌─────────────┐</span>  GET /latest  <span class="hl">┌──────────────┐</span>  API key   <span class="hl">┌─────────────┐</span>
+<span class="hl">│  NAVEGADOR  │</span> <span class="hl-g">─────────────▶</span> <span class="hl">│  JSONBIN.IO  │</span> ◀──────────── <span class="hl">│   HERMES    │</span>
+<span class="hl">│  (você)     │</span> <span class="hl-g">◀─────────────</span> <span class="hl">│  (bin priv.) │</span> <span class="hl-y">────────────▶</span> <span class="hl">│  (eu, .env) │</span>
+<span class="hl">└─────────────┘</span>  PUT (drag)   <span class="hl">│  bin: 6a2ee7c6</span>              <span class="hl">└─────────────┘</span>
+        ▲                      <span class="hl">└──────────────┘</span>
+        │ serve HTML               <span class="hl-y">     ▲</span>
+        │                          <span class="hl-y">     │ PUT direto</span>
+<span class="hl">┌─────────────┐</span>                <span class="hl-y">     │</span>
+<span class="hl">│ GITHUB PAGES│</span>  <span class="hl-p">──────────────  └───┘</span>
+<span class="hl">│ (crescer.html)│</span>
+<span class="hl">└─────────────┘</span>
+</div>
+
+<p><strong>1 usuário · 1 bin · 1 chave · 1 página</strong>. Sem backend customizado. Sem webhook. Sem servidor rodando. Tudo declarativo e versionado em <code>olandrones/oportunidades-daily</code>.</p>
+</section>
+
+<!-- ============================================ -->
+<section id="principios">
+<h2><span class="num">§1</span> Princípios</h2>
+
+<div class="card-grid">
+  <div class="card">
+    <h3>1. Onde houver movimento, há dado</h3>
+    <p>Todo drag, criação, edição, arquivamento vira evento persistido. Nada "vive só na tela".</p>
+  </div>
+  <div class="card">
+    <h3>2. Schema antes de UI</h3>
+    <p>O <code>JSON</code> é a fonte da verdade. A página é só uma view dele. Posso trocar a UI inteira sem perder dados.</p>
+  </div>
+  <div class="card">
+    <h3>3. Offline-first, online-quando-puder</h3>
+    <p><code>localStorage</code> é a primeira camada. <code>jsonbin</code> sincroniza quando há rede. Falha de rede ≠ falha do sistema.</p>
+  </div>
+  <div class="card">
+    <h3>4. Decisões explícitas, defaults explícitos</h3>
+    <p>Cada coluna, cada campo, cada status tem nome. Nada implícito, nada "mágico".</p>
+  </div>
+  <div class="card">
+    <h3>5. Humano + agente escrevem no mesmo lugar</h3>
+    <p>Card criado por você tem <code>autor: "renato"</code>. Criado por mim, <code>autor: "hermes"</code>. Mesma estrutura, mesma view.</p>
+  </div>
+  <div class="card">
+    <h3>6. Pior é "tá funcionando" sem entender por quê</h3>
+    <p><span class="badge warn">14/06</span> O fix do 401 e o <code>UT</code> truncado ensinaram: a feature "online" não é "passa na URL". Tem que <strong>verificar</strong>.</p>
+  </div>
+</div>
+</section>
+
+<!-- ============================================ -->
+<section id="componentes">
+<h2><span class="num">§2</span> Componentes</h2>
+
+<table>
+<thead>
+<tr><th>Componente</th><th>Onde vive</th><th>Função</th><th>Quem altera</th></tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>crescer.html</strong></td>
+  <td>GH Pages · <code>oportunidades-daily</code></td>
+  <td>UI: kanban, modal, containers, drag/drop</td>
+  <td>Hermes (push via git)</td>
+</tr>
+<tr>
+  <td><strong>jsonbin bin</strong></td>
+  <td>jsonbin.io · <code>6a2ee7c6da38895dfebf95d8</code></td>
+  <td>Dados: cards, colunas, containers, direcionamentos</td>
+  <td>Navegador (PUT) + Hermes (GET/PUT)</td>
+</tr>
+<tr>
+  <td><strong>localStorage</strong></td>
+  <td>Cada browser do Renato</td>
+  <td>Cache offline + fonte primária no 1º load</td>
+  <td>Navegador (auto)</td>
+</tr>
+<tr>
+  <td><strong>X-Master-Key</strong></td>
+  <td>inline no JS + <code>.env</code> em <code>C:\Users\Darida\.hermes\.env</code></td>
+  <td>Autenticação total do bin (read + write)</td>
+  <td>Renato (rotacionar se necessário)</td>
+</tr>
+<tr>
+  <td><strong>Hermes</strong> <span class="badge info">eu</span></td>
+  <td>Este chat + gateway</td>
+  <td>Lê bin quando perguntado · Cria cards com <code>autor: "hermes"</code> · Patcha schema</td>
+  <td>Renato (autoriza)</td>
+</tr>
+<tr>
+  <td><strong>SortableJS</strong> <span class="badge">CDN</span></td>
+  <td>Carregado de <code>cdn.jsdelivr.net</code></td>
+  <td>Drag/drop com mouse + touch</td>
+  <td>(não muda)</td>
+</tr>
+<tr>
+  <td><strong>kanban-agentes</strong></td>
+  <td>GH Pages · repo separado</td>
+  <td>Operacional dos agentes (fora do escopo deste doc)</td>
+  <td>—</td>
+</tr>
+</tbody>
+</table>
+
+<h3>O que NÃO está aqui (por design)</h3>
+<ul>
+  <li><strong>Backend</strong>: nenhum servidor próprio. jsonbin é o "banco".</li>
+  <li><strong>Webhook</strong>: sync é client-driven (PUT a cada drag). Sem push real-time.</li>
+  <li><strong>Auth de usuário</strong>: a X-Master-Key é o gatekeeper. Trocar por X-Access-Key se quiser compartilhar read-only.</li>
+  <li><strong>Histórico de versões</strong>: o jsonbin guarda o último estado. Histórico de edits não existe (ainda).</li>
+</ul>
+</section>
+
+<!-- ============================================ -->
+<section id="fluxo">
+<h2><span class="num">§3</span> Fluxo de dados</h2>
+
+<h3>3.1 — Abrir a página (cold start)</h3>
+<div class="diagram">
+<span class="hl-g">[1]</span> navegador carrega <span class="hl">crescer.html</span> do GH Pages
+<span class="hl-g">[2]</span> JS roda → <code>load()</code>
+<span class="hl-g">[3]</span> lê <code>localStorage["crescer:incubadora:v1"]</code>      → se existe, pinta UI
+<span class="hl-g">[4]</span> em paralelo: <code>fetch GET .../b/{BIN}/latest</code>    → se 200, sobrescreve localStorage
+<span class="hl-g">[5]</span> se nenhum dado em lugar nenhum                    → semeia (4 cards seed) e PUT
+<span class="hl-g">[6]</span> indicador: <span class="hl-g">●</span> verde "jsonbin"  ou  <span class="hl-y">●</span> amarelo "sincronizando"  ou  <span class="hl-p">●</span> rosa "offline"
+</div>
+
+<h3>3.2 — Drag de card</h3>
+<div class="diagram">
+<span class="hl-g">[1]</span> usuário arrasta 🎸 de <span class="hl-y">🌱 semente</span> pra <span class="hl-y">💡 ideia</span>
+<span class="hl-g">[2]</span> SortableJS dispara <code>onAdd</code>
+<span class="hl-g">[3]</span> JS move o card no <code>DATA</code> em memória
+<span class="hl-g">[4]</span> <code>localStorage.setItem(...)</code>        <span class="c">// IMEDIATO, sem rede</span>
+<span class="hl-g">[5]</span> <code>setSync("dirty")</code> + debounce 500ms
+<span class="hl-g">[6]</span> <code>fetch PUT .../b/{BIN}</code> com X-Master-Key
+<span class="hl-g">[7]</span> resposta 200                       → <span class="hl-g">●</span> verde "jsonbin"
+         resposta != 200 ou erro de rede    → <span class="hl-p">●</span> rosa "offline" (tenta próximo drag)
+</div>
+
+<h3>3.3 — Criar card novo (botão +)</h3>
+<div class="diagram">
+<span class="hl-g">[1]</span> usuário clica <kbd>+</kbd> → modal "nova ideia"
+<span class="hl-g">[2]</span> preenche: emoji · título · tagline · coluna inicial
+<span class="hl-g">[3]</span> <code>+ criar</code> → cria <code>{id, autor:"renato", updates:[{novo}]}</code>
+<span class="hl-g">[4]</span> push no <code>DATA.columns[col].cards</code>
+<span class="hl-g">[5]</span> PUT debounced ao jsonbin (mesmo passo 3.2-[5])
+</div>
+
+<h3>3.4 — Direcionamento (input "pra onde crescer")</h3>
+<div class="diagram">
+<span class="hl-g">[1]</span> usuário clica no card → modal
+<span class="hl-g">[2]</span> digita no <code>"novo direcionamento"</code>
+<span class="hl-g">[3]</span> <code>💾 salvar</code> → push em <code>card.direcionamentos[]</code> com <code>status: "pendente"</code>
+<span class="hl-g">[4]</span> também appenda em <code>card.updates[]</code> com <code>tipo: "dir"</code>
+<span class="hl-g">[5]</span> PUT debounced
+</div>
+
+<div class="callout ok">
+<strong>💡 Próximo passo (não implementado ainda)</strong>
+<p style="margin-top:6px;">Quando um direcionamento novo chega com <code>status: "pendente"</code>, o Hermes seria notificado e geraria um insight/update. Hoje isso só acontece se você vier falar comigo dizendo "olha o direcionamento do card X".</p>
+</div>
+
+<h3>3.5 — Container (mistura de ideias)</h3>
+<div class="diagram">
+<span class="hl-g">[1]</span> usuário arrasta 2+ cards pra coluna <span class="hl-p">📦 containers</span>
+<span class="hl-g">[2]</span> SortableJS <code>onAdd</code> num container vazio → cria container novo com nome "novo container"
+<span class="hl-g">[3]</span> ou se arrasta pra um já existente → adiciona ao array <code>container.cards</code>
+<span class="hl-g">[4]</span> renomear: input editável inline (<code>onchange</code> salva direto)
+<span class="hl-g">[5]</span> deletar: botão <code>×</code> → devolve cards pra <code>ideia</code> e remove o container
+<span class="hl-g">[6]</span> PUT debounced
+</div>
+</section>
+
+<!-- ============================================ -->
+<section id="schema">
+<h2><span class="num">§4</span> Schema de dados</h2>
+
+<p>O <strong>bin</strong> armazena 1 objeto JSON com esta estrutura. Cada card tem <code>id</code> estável (string) — usado pra drag, referência, e idempotência.</p>
+
+<pre><span class="c">// Bin: 6a2ee7c6da38895dfebf95d8</span>
+{
+  <span class="k">"version"</span>: <span class="s">"2.0"</span>,                          <span class="c">// schema version (semver)</span>
+  <span class="k">"updated_at"</span>: <span class="s">"2026-06-14T13:45:00Z"</span>,       <span class="c">// ISO 8601</span>
+  <span class="k">"columns"</span>: [
+    {
+      <span class="k">"id"</span>: <span class="s">"semente"</span>,                       <span class="c">// slug, usado em drag/drop</span>
+      <span class="k">"label"</span>: <span class="s">"🌱 semente"</span>,                <span class="c">// texto visível, pode ter emoji</span>
+      <span class="k">"cards"</span>: [
+        {
+          <span class="k">"id"</span>: <span class="s">"c1"</span>,                        <span class="c">// string única, gerada no create</span>
+          <span class="k">"emoji"</span>: <span class="s">"🎸"</span>,                     <span class="c">// 1-2 chars</span>
+          <span class="k">"title"</span>: <span class="s">"App Violão"</span>,             <span class="c">// obrigatório</span>
+          <span class="k">"tagline"</span>: <span class="s">"campos harmônicos visuais no braço + MIDI"</span>,
+          <span class="k">"autor"</span>: <span class="s">"renato"</span> | <span class="s">"hermes"</span>,    <span class="c">// quem criou</span>
+          <span class="k">"tags"</span>: [<span class="s">"urgente"</span>, <span class="s">"framework"</span>], <span class="c">// tags livres, classes CSS por nome</span>
+          <span class="k">"direcionamentos"</span>: [
+            { <span class="k">"ts"</span>: <span class="s">"..."</span>, <span class="k">"texto"</span>: <span class="s">"..."</span>, <span class="k">"status"</span>: <span class="s">"pendente"</span>|<span class="s">"processado"</span> }
+          ],
+          <span class="k">"updates"</span>: [
+            { <span class="k">"ts"</span>: <span class="s">"..."</span>, <span class="k">"tipo"</span>: <span class="s">"scaffold"</span>|<span class="s">"PRD"</span>|<span class="s">"dir"</span>|<span class="s">"novo"</span>|..., <span class="k">"texto"</span>: <span class="s">"..."</span> }
+          ]
+        }
+      ]
+    },
+    { <span class="k">"id"</span>: <span class="s">"ideia"</span>, <span class="k">"label"</span>: <span class="s">"💡 ideia"</span>, <span class="k">"cards"</span>: [...] },
+    { <span class="k">"id"</span>: <span class="s">"pesquisar"</span>, <span class="k">"label"</span>: <span class="s">"🔍 pesquisar"</span>, <span class="k">"cards"</span>: [...] },
+    { <span class="k">"id"</span>: <span class="s">"aprofundar"</span>, <span class="k">"label"</span>: <span class="s">"🧪 aprofundar"</span>, <span class="k">"cards"</span>: [...] },
+    { <span class="k">"id"</span>: <span class="s">"desenvolver"</span>, <span class="k">"label"</span>: <span class="s">"🛠️ desenvolver"</span>, <span class="k">"cards"</span>: [...] }
+  ],
+  <span class="k">"containers"</span>: [                            <span class="c">// mistura de ideias</span>
+    {
+      <span class="k">"id"</span>: <span class="s">"cont-1718376000000"</span>,             <span class="c">// cont-{timestamp}</span>
+      <span class="k">"name"</span>: <span class="s">"música + IA"</span>,                <span class="c">// editável inline</span>
+      <span class="k">"cards"</span>: [ <span class="c">/* refs por id ou objects? hoje: objects */</span> ]
+    }
+  ]
+}</pre>
+
+<h3>Invariantes</h3>
+<ul>
+  <li>Cada <code>id</code> é único dentro de <code>columns[].cards[]</code> e <code>containers[].cards[]</code>.</li>
+  <li><code>version</code> é obrigatório. Mudou → <em>breaking</em>. Migrar ou forkear.</li>
+  <li><code>autor</code> ∈ {<code>renato</code>, <code>hermes</code>}. Hoje livre, mas pode virar enum.</li>
+  <li><code>tags</code> são strings livres, mas só as seguintes têm cor CSS hoje: <code>urgente</code> (vermelho), <code>framework</code> (amarelo).</li>
+  <li><code>direcionamentos[].status</code> ∈ {<code>pendente</code>, <code>processado</code>}. Hermes transita pra <code>processado</code> quando responde.</li>
+  <li>Card em 🛠️ desenvolver é a <strong>única coluna</strong> que pode ter link pra TRD (futuro: campo <code>trd_slug</code>).</li>
+</ul>
+</section>
+
+<!-- ============================================ -->
+<section id="api">
+<h2><span class="num">§5</span> API (jsonbin v3)</h2>
+
+<p>Base: <code>https://api.jsonbin.io/v3</code> · Auth header: <code>X-Master-Key: $2a$10$...</code></p>
+
+<table>
+<thead>
+<tr><th>Método</th><th>Endpoint</th><th>Uso</th><th>Headers obrigatórios</th></tr>
+</thead>
+<tbody>
+<tr>
+  <td><span class="badge ok">GET</span></td>
+  <td><code>/b/{BIN_ID}/latest</code></td>
+  <td>Carregar estado no load() e no refresh</td>
+  <td><code>X-Master-Key</code></td>
+</tr>
+<tr>
+  <td><span class="badge warn">PUT</span></td>
+  <td><code>/b/{BIN_ID}</code></td>
+  <td>Salvar estado (debounced 500ms)</td>
+  <td><code>X-Master-Key</code>, <code>Content-Type: application/json</code></td>
+</tr>
+<tr>
+  <td><span class="badge info">POST</span></td>
+  <td><code>/b</code></td>
+  <td>Criar novo bin (setup inicial, "100 pessoas")</td>
+  <td><code>X-Master-Key</code>, <code>X-Bin-Name</code>, <code>Content-Type</code></td>
+</tr>
+<tr>
+  <td><span class="badge danger">DELETE</span></td>
+  <td><code>/b/{BIN_ID}</code></td>
+  <td>Resetar tudo (cuidado! — backup primeiro)</td>
+  <td><code>X-Master-Key</code></td>
+</tr>
+</tbody>
+</table>
+
+<h3>Exemplo de PUT (salvando um drag)</h3>
+<pre>PUT https://api.jsonbin.io/v3/b/6a2ee7c6da38895dfebf95d8
+X-Master-Key: $2a$10$g6jrm.ifugmyTO7nGzWKIue3Q4ypHTUTwrxhFciJF43NiplD8w9mG
+Content-Type: application/json
+
+{
+  "version": "2.0",
+  "updated_at": "2026-06-14T18:23:45.123Z",
+  "columns": [ ... ],
+  "containers": [ ... ]
+}</pre>
+
+<div class="callout warn">
+<strong>⚠️ Rate limit</strong>
+<p style="margin-top:6px;">jsonbin.io free tier = 100 req/hora por bin. O debounce de 500ms + "só salva se houve mudança" deixa a gente em ~5-10 req/hora de uso real. Sobra 90% pra Hermes e admin.</p>
+</div>
+</section>
+
+<!-- ============================================ -->
+<section id="falhas">
+<h2><span class="num">§6</span> Modos de falha &amp; recuperação</h2>
+
+<table>
+<thead>
+<tr><th>Cenário</th><th>Sintoma</th><th>Mitigação automática</th><th>Recovery manual</th></tr>
+</thead>
+<tbody>
+<tr>
+  <td>jsonbin offline</td>
+  <td>Indicador: <span class="badge danger">●</span> rosa "offline"</td>
+  <td>localStorage continua funcionando. PUT é descartado silenciosamente.</td>
+  <td>Esperar jsonbin voltar. Próximo PUT reenvia o estado inteiro.</td>
+</tr>
+<tr>
+  <td>X-Master-Key inválida / rotacionada</td>
+  <td>Indicador: <span class="badge danger">●</span> "jsonbin: 401"</td>
+  <td>localStorage serve a UI. Sem sync.</td>
+  <td>Gerar nova key no painel jsonbin → atualizar <code>.env</code> + inline no JS → commit + push.</td>
+</tr>
+<tr>
+  <td>localStorage cheio ou bloqueado</td>
+  <td>Sem ícone (silent)</td>
+  <td>jsonbin continua funcionando como fonte.</td>
+  <td>Limpar via DevTools: <code>localStorage.clear(); location.reload()</code></td>
+</tr>
+<tr>
+  <td>CORS preflight bloqueado (raro)</td>
+  <td>Indicador: <span class="badge danger">●</span> "offline" sem 401</td>
+  <td>localStorage continua.</td>
+  <td>jsonbin mudou política. Reportar bug.</td>
+</tr>
+<tr>
+  <td>Bug no código (ex: write_file truncou key)</td>
+  <td>Indicador: <span class="badge danger">●</span> "jsonbin: 401"</td>
+  <td>—</td>
+  <td>Conferir tamanho real da key (<code>grep -oE</code> + <code>wc -c</code>). <span class="badge warn">14/06</span> aprendemos a conferir.</td>
+</tr>
+<tr>
+  <td>Dois devices editando ao mesmo tempo</td>
+  <td>Último PUT ganha. Sem merge.</td>
+  <td>—</td>
+  <td>Decidir quem "tem a versão boa" e fazer PUT dela.</td>
+</tr>
+<tr>
+  <td>Schema quebrado após update</td>
+  <td>Página branca ou erro JS</td>
+  <td>Cache localStorage pode estar ok. Tentar Ctrl+Shift+R.</td>
+  <td>Limpar localStorage, voltar pra <code>version</code> anterior do git, esperar fix.</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<!-- ============================================ -->
+<section id="sop">
+<h2><span class="num">§7</span> SOP — Manutenção</h2>
+
+<p>Dois atores: <strong>humano (Renato)</strong> e <strong>agente (manutenção)</strong>. Tudo abaixo é executável como job, script, ou comando.</p>
+
+<h3>7.1 — SOP diário (manutenção automática, <span class="badge warn">pausado</span>)</h3>
+<ol class="steps">
+  <li><code>curl -sI https://olandrones.github.io/oportunidades-daily/crescer.html</code> → 200?</li>
+  <li><code>curl -sI -H "X-Master-Key: $KEY" https://api.jsonbin.io/v3/b/{BIN}/latest</code> → 200?</li>
+  <li>Verificar <code>version</code> no GET. É igual à <code>SUPPORTED_VERSION</code> hardcoded no HTML? Se não, alerta.</li>
+  <li>Contar cards por coluna. Anomalia (delta &gt;3 vs média móvel 7d)? Reportar.</li>
+  <li>Contar cards com <code>direcionamentos[status="pendente"]</code> &gt; 7 dias. Marcar pra revisão.</li>
+  <li>Reportar tudo pro Renato via Telegram. <strong>SEMPRE</strong>, mesmo que "tudo ok" (princípio 6).</li>
+</ol>
+
+<h3>7.2 — SOP ao adicionar/modificar coluna</h3>
+<ol class="steps">
+  <li>Editar <code>crescer.html</code>: adicionar objeto em <code>SEED().columns</code> E no array <code>columns</code> da seed no bin.</li>
+  <li>Testar local: <code>python -m http.server 8000</code> em <code>E:\00 - Hermes System\repos\oportunidades-daily</code>, abrir <code>localhost:8000/crescer.html</code>.</li>
+  <li>Confirmar que card drag funciona entre TODAS as colunas (não só a nova).</li>
+  <li>Atualizar <code>version</code> no JSON (<code>2.0</code> → <code>2.1</code>) se mudou schema.</li>
+  <li><code>git add crescer.html && git commit -m "feat(col): add 'pausada' column" && git push origin main</code></li>
+  <li>Aguardar deploy (~60s) e validar com curl.</li>
+  <li>Avisar Renato: "coluna 'X' adicionada, schema v2.1".</li>
+</ol>
+
+<h3>7.3 — SOP ao rotacionar a X-Master-Key</h3>
+<ol class="steps">
+  <li>Login em jsonbin.io → Settings → Generate New Master Key.</li>
+  <li>Copiar nova key (60 chars, começa com <code>$2a$10$</code>).</li>
+  <li>Atualizar <code>C:\Users\Darida\.hermes\.env</code> → <code>JSONBIN_API_KEY=...</code></li>
+  <li>Atualizar inline em <code>crescer.html</code> linha 497: <code>const API_KEY = '...nova...'</code></li>
+  <li><strong>Conferir</strong>: <code>grep -oE "'[^']{58,62}'" crescer.html</code> → deve ter 60 chars.</li>
+  <li>Commit + push. Aguardar deploy.</li>
+  <li>Limpar localStorage no browser do Renato: <code>localStorage.clear(); location.reload()</code> (forçar re-fetch com nova key).</li>
+  <li>Confirmar que indicador fica <span class="badge ok">●</span> verde.</li>
+</ol>
+
+<h3>7.4 — SOP ao recuperar de corrupção</h3>
+<ol class="steps">
+  <li>Verificar <code>git log</code> no repo. Qual a última versão "boa" do JSON?</li>
+  <li>Se jsonbin tem dados bons: <code>curl -s -H "X-Master-Key: $KEY" .../b/{BIN}/latest &gt; backup.json</code></li>
+  <li>PUT manual: <code>curl -X PUT -H "X-Master-Key: $KEY" -H "Content-Type: application/json" --data @backup.json .../b/{BIN}</code></li>
+  <li>Limpar localStorage e recarregar.</li>
+  <li>Se jsonbin corrompido E localStorage tem versão boa: <code>localStorage.getItem("crescer:incubadora:v1")</code> no DevTools, copiar, salvar como <code>backup.json</code>, seguir passo 3.</li>
+  <li>Se ambos corrompidos: restaurar <code>seed-crescer.json</code> que está em <code>E:\01 - Team Claw\hermes  - Lyriane\</code> (sempre).</li>
+</ol>
+
+<h3>7.5 — SOP ao criar um agente novo pra incubadora</h3>
+<ol class="steps">
+  <li>Definir escopo: o agente LÊ, ESCREVE, ou AMBOS? Que tipos de card? Que colunas?</li>
+  <li>Escrever prompt em <code>E:\00 - Hermes System\agentes\agente-{nome}.md</code> (template em <code>maintenance-agent-pattern</code>).</li>
+  <li>Se agente escreve: <strong>SEMPRE</strong> usar <code>autor: "hermes"</code> + tag <code>hermes</code> no card.</li>
+  <li>Adicionar job em <code>cron\jobs.json</code> com <code>enabled: false</code> inicialmente.</li>
+  <li>Testar manualmente: <code>hermes cronjob run {job_id}</code> e ver o que ele fez.</li>
+  <li>Se ok: <code>cronjob update ... enabled=true</code>.</li>
+  <li>Adicionar linha em <code>visao.json</code> linkando agente ↔ job (accountability).</li>
+</ol>
+</section>
+
+<!-- ============================================ -->
+<section id="deploy">
+<h2><span class="num">§8</span> Deploy workflow</h2>
+
+<h3>8.1 — Caminho do código (não confunda)</h3>
+<div class="diagram">
+WORKDIR CANÔNICO:  <span class="hl-g">E:\00 - Hermes System\repos\oportunidades-daily</span>
+                  ↓ <code>git remote -v</code> deve mostrar:
+                  ↓ <span class="hl">https://github.com/olandrones/oportunidades-daily.git</span>
+                  ↓
+                  ↓ <code>git status</code> deve estar limpo
+                  ↓
+                  ↓ <code>git add . &amp;&amp; git commit -m "..." &amp;&amp; git push origin main</code>
+                  ↓
+GH PAGES:          <span class="hl-p">https://olandrones.github.io/oportunidades-daily/</span>
+                  ↓ (CDN Cloudflare, cache ~1-2 min)
+
+ESPELHO (NÃO USAR PRA PUSH):  <span class="hl-y">E:\01 - Team Claw\hermes - Lyriane\oportunidades\</span>
+                              ↑ remote errado: <code>team-claw-memory</code>
+</div>
+
+<div class="callout danger">
+<strong>⚠️ Já erramos isso em 14/06</strong>
+<p style="margin-top:6px;">Eu fiz <code>git push</code> a partir do workdir errado. Resultado: 0 deploy. Lição: <strong>sempre</strong> conferir <code>git remote -v</code> antes de pushar.</p>
+</div>
+
+<h3>8.2 — Comandos de release</h3>
+<pre><span class="c"># 1. Ir pro workdir certo</span>
+cd "E:\00 - Hermes System\repos\oportunidades-daily"
+
+<span class="c"># 2. Conferir remote</span>
+git remote -v   <span class="c"># deve ser oportunidades-daily, não team-claw-memory</span>
+
+<span class="c"># 3. Conferir working tree</span>
+git status       <span class="c"># deve estar limpo (ou só o que você quer)</span>
+
+<span class="c"># 4. Adicionar e commitar</span>
+git add crescer.html
+git commit -m "feat: link TRDs em cards de desenvolvimento"
+
+<span class="c"># 5. Push</span>
+git push origin main
+
+<span class="c"># 6. Validar deploy</span>
+sleep 90
+curl -sI "https://olandrones.github.io/oportunidades-daily/crescer.html"   <span class="c"># 200 OK</span></pre>
+
+<h3>8.3 — Cache-busting no browser do Renato</h3>
+<p>Como o CDN do GH Pages cacheia HTML, pedir pro Renato usar <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd> (hard refresh) ou adicionar <code>?v=2</code> na URL.</p>
+<p>Long-term: adicionar <code>&lt;meta http-equiv="cache-control" content="no-cache"&gt;</code> no <code>&lt;head&gt;</code> ajuda no browser do Renato (CDN ignora).</p>
+</section>
+
+<!-- ============================================ -->
+<section id="100pessoas">
+<h2><span class="num">§9</span> Onboarding — "100 pessoas"</h2>
+
+<p>Cada pessoa que quiser usar esse sistema precisa de <strong>3 coisas</strong>. O resto é template.</p>
+
+<ol class="steps">
+  <li><strong>Criar conta no jsonbin.io</strong> (free tier = 100 req/hora, suficiente pra 1 pessoa).</li>
+  <li><strong>Criar um bin</strong>: <code>POST /b</code> com <code>X-Master-Key</code> da conta, <code>X-Bin-Name: incubadora</code>, <code>X-Bin-Private: true</code>, body = seed JSON.</li>
+  <li><strong>Copiar Bin ID</strong> (formato <code>6a2ee7c6da38895dfebf95d8</code>) e <strong>X-Master-Key</strong>.</li>
+  <li><strong>Fork do repo</strong> <code>olandrones/oportunidades-daily</code>.</li>
+  <li><strong>Substituir</strong> em <code>crescer.html</code>:
+    <ul>
+      <li>linha 496: <code>const BIN_ID = '...'</code></li>
+      <li>linha 497: <code>const API_KEY = '...'</code></li>
+    </ul>
+  </li>
+  <li><strong>Habilitar GH Pages</strong> no fork (Settings → Pages → Source: main → /root).</li>
+  <li><strong>Customizar seed</strong> (linha 502+):<ul>
+      <li>Trocar <code>🌱 semente</code>, <code>💡 ideia</code>, etc. pelos labels preferidos.</li>
+      <li>Adicionar/remover colunas.</li>
+      <li>Trocar <code>autor: "renato"</code> por <code>autor: "marina"</code> (ou o nome).</li>
+    </ul>
+  </li>
+  <li><strong>Commit + push</strong>. URL: <code>https://{user}.github.io/oportunidades-daily/crescer.html</code>.</li>
+</ol>
+
+<h3>Variações de auth</h3>
+<table>
+<thead>
+<tr><th>Modo</th><th>Header</th><th>Pode ler?</th><th>Pode escrever?</th><th>Uso</th></tr>
+</thead>
+<tbody>
+<tr>
+  <td>Master</td>
+  <td><code>X-Master-Key</code></td>
+  <td>✅</td>
+  <td>✅</td>
+  <td>Dono único</td>
+</tr>
+<tr>
+  <td>Access</td>
+  <td><code>X-Access-Key</code></td>
+  <td>✅</td>
+  <td>❌</td>
+  <td>Compartilhar read-only (ex: mostrar pra mentor)</td>
+</tr>
+<tr>
+  <td>Sem header</td>
+  <td>—</td>
+  <td>apenas se bin for <em>público</em></td>
+  <td>❌</td>
+  <td>Demo pública, sem nenhum risco</td>
+</tr>
+</tbody>
+</table>
+
+<h3>O que é GENÉRICO (reutilizável) vs ESPECÍFICO (customizável)</h3>
+<table>
+<thead>
+<tr><th>Parte</th><th>Tipo</th><th>Troca por pessoa?</th></tr>
+</thead>
+<tbody>
+<tr><td>SortableJS, CSS, layout, drag/drop logic</td><td>genérico</td><td>não</td></tr>
+<tr><td>5 colunas e seus labels</td><td>genérico, customizável</td><td>sim (opcional)</td></tr>
+<tr><td>Schema do card (campos)</td><td>genérico</td><td>não</td></tr>
+<tr><td>Schema de direcionamentos/updates</td><td>genérico</td><td>não</td></tr>
+<tr><td>Tokens visuais (cores, dark theme)</td><td>genérico, customizável</td><td>sim (opcional)</td></tr>
+<tr><td>BIN_ID, API_KEY, autor default</td><td>específico</td><td>sim (obrigatório)</td></tr>
+<tr><td>Seed inicial (cards pré-criados)</td><td>específico</td><td>sim (opcional)</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- ============================================ -->
+<section id="roadmap">
+<h2><span class="num">§10</span> Roadmap</h2>
+
+<h3>Pronto / funcionando</h3>
+<ul>
+  <li>✅ Kanban 5 colunas com drag/drop (mouse + touch)</li>
+  <li>✅ Containers (mistura de ideias)</li>
+  <li>✅ Modal de card: direcionamentos, updates, arquivar</li>
+  <li>✅ Criar card via botão +</li>
+  <li>✅ Filtro "tudo / só desenvolvendo"</li>
+  <li>✅ jsonbin sync com debounce</li>
+  <li>✅ localStorage cache offline</li>
+  <li>✅ Indicador de status (verde/amarelo/rosa)</li>
+  <li>✅ UTF-8 preservado (emojis, acentos)</li>
+</ul>
+
+<h3>Próxima leva (features que combinamos)</h3>
+<ol class="steps">
+  <li><strong>🔗 Link pra TRD em cards de desenvolvimento</strong> — campo <code>trd_slug</code> + botão no modal que abre <code>/trd/{slug}.md</code> num modal/iframe.</li>
+  <li><strong>📊 % de evolução visual</strong> — barra de progresso em cards na coluna 🛠️, baseada em nº de updates / meta do <code>metrica_sucesso</code>.</li>
+  <li><strong>🔔 Notificar Hermes em novo direcionamento</strong> — webhook simples (jsonbin → Cloudflare Worker → Telegram) ou polling.</li>
+  <li><strong>📋 Botão "💾 exportar JSON"</strong> — backup local adicional (além de localStorage e jsonbin).</li>
+  <li><strong>🔀 "Mesclar com…" no card</strong> — picklist de outros cards pra criar container de 1-clique.</li>
+</ol>
+
+<h3>Backlog (ideias, sem prazo)</h3>
+<ul>
+  <li>Histórico de versões (snapshot a cada PUT)</li>
+  <li>Undo/redo local (Ctrl+Z)</li>
+  <li>Tema claro</li>
+  <li>Exportar tudo como Markdown semanal</li>
+  <li>Compressão do JSON pra reduzir PUT size</li>
+  <li>Migration script v2 → v3</li>
+</ul>
+
+<h3>Possíveis agentes a criar</h3>
+<ol>
+  <li><strong>manutenção</strong> (já existe, pausado) — health check diário, detecta anomalias no kanban.</li>
+  <li><strong>atlas</strong> (já existe, pausado) — gera insights baseados em mudanças, sugere próximos direcionamentos.</li>
+  <li><strong>curador</strong> (a criar) — sugere arquivar cards parados &gt;30 dias, detecta duplicatas.</li>
+  <li><strong>resumidor</strong> (a criar) — toda sexta, gera Markdown com os direcionamentos novos da semana e pede feedback do Renato.</li>
+</ol>
+</section>
+
+<footer>
+🗺️ Arquitetura incubadora v2 · 2026-06-14 · Renato Olandesi<br>
+Temporário, prático, versionado. Última atualização: <span id="lastUpd">—</span><br>
+<a href="https://olandrones.github.io/oportunidades-daily/crescer.html">← voltar pra incubadora</a>
+</footer>
+
+</div>
+
+<!-- TWEAKS PANEL -->
+<details class="tweaks" id="tweaks">
+<summary>Tweaks</summary>
+<div class="row">
+  <label for="density">Densidade</label>
+  <select id="density">
+    <option value="normal">Normal</option>
+    <option value="compact">Compacto</option>
+    <option value="spacious">Espaçoso</option>
+  </select>
+</div>
+<div class="row">
+  <label>Topo</label>
+  <button onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
+</div>
+</details>
+
+<script>
+const LS_TWEAKS = 'arquitetura:tweaks';
+function applyTweaks() {
+  const t = JSON.parse(localStorage.getItem(LS_TWEAKS) || '{}');
+  if (t.density) document.body.className = 'density-' + t.density;
+  if (t.density) document.getElementById('density').value = t.density;
+}
+document.getElementById('density').addEventListener('change', (e) => {
+  const t = JSON.parse(localStorage.getItem(LS_TWEAKS) || '{}');
+  t.density = e.target.value;
+  localStorage.setItem(LS_TWEAKS, JSON.stringify(t));
+  applyTweaks();
+});
+document.getElementById('lastUpd').textContent = new Date().toLocaleString('pt-BR');
+applyTweaks();
+</script>
+</body>
+</html>
