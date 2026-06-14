@@ -532,9 +532,12 @@ async function load() {
   if (cached) {
     try { DATA = JSON.parse(cached); render(); } catch (e) {}
   }
-  // 2. fetch latest from jsonbin
+  // 2. fetch latest from jsonbin (private bin precisa da X-Master-Key mesmo no GET)
   try {
-    const r = await fetch(`${BASE}/b/${BIN_ID}/latest`, { cache: 'no-store' });
+    const r = await fetch(`${BASE}/b/${BIN_ID}/latest`, {
+      cache: 'no-store',
+      headers: { 'X-Master-Key': API_KEY }
+    });
     if (r.ok) {
       const j = await r.json();
       const fresh = j.record;
@@ -545,10 +548,10 @@ async function load() {
       }
       setSync('ok', 'jsonbin');
     } else {
-      setSync('offline', 'cache local');
+      setSync('error', 'jsonbin: ' + r.status);
     }
   } catch (e) {
-    setSync('offline', 'cache local');
+    setSync('error', 'offline');
   }
   // 3. seed if empty
   if (!DATA) {
