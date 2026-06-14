@@ -2,8 +2,8 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🌱 Crescer · 3 Projetos em Evolução</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>🌱 incubadora · crescer</title>
 <style>
 :root {
   --bg: #0f172a;
@@ -14,559 +14,896 @@
   --muted: #94a3b8;
   --accent: #06b6d4;
   --green: #4ade80;
-  --green-light: #6ee7b7;
   --yellow: #fbbf24;
   --pink: #f472b6;
   --red: #f87171;
-  --shadow: 0 4px 16px rgba(0,0,0,.3);
-  --radius: 12px;
+  --radius: 10px;
+  --shadow: 0 2px 8px rgba(0,0,0,.3);
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+html, body { height: 100%; }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.5;
-  min-height: 100vh;
-  padding: 24px 20px;
-}
-.container { max-width: 1200px; margin: 0 auto; }
-header { margin-bottom: 32px; }
-h1 {
-  font-size: 32px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 8px;
-}
-.subtitle {
-  color: var(--muted);
   font-size: 14px;
+  line-height: 1.4;
+  overflow: hidden;
+}
+header {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
   display: flex;
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
 }
-.subtitle .last-update {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 10px;
-  background: var(--surface);
-  border-radius: 999px;
-  font-size: 12px;
-}
-.subtitle .live-dot {
-  width: 8px;
-  height: 8px;
-  background: var(--green);
-  border-radius: 50%;
-  animation: pulse 2s ease-in-out infinite;
-}
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: .4; }
-}
-
-/* Stats bar */
-.stats-bar {
-  display: flex;
-  gap: 12px;
-  margin: 20px 0 32px;
-  padding: 16px;
-  background: var(--surface);
-  border-radius: var(--radius);
-  flex-wrap: wrap;
-}
-.stat {
-  flex: 1;
-  min-width: 100px;
-  text-align: center;
-}
-.stat .num {
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--accent);
-}
-.stat .lbl {
-  font-size: 11px;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-top: 2px;
-}
-
-/* Project cards (overview) */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 16px;
-  margin-bottom: 32px;
-}
-.project-card {
-  background: var(--surface);
-  border-radius: var(--radius);
-  padding: 20px;
-  cursor: pointer;
-  transition: all 0.2s;
-  border: 2px solid transparent;
-  box-shadow: var(--shadow);
-}
-.project-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--accent);
-}
-.project-card.selected {
-  border-color: var(--accent);
-  background: var(--surface-light);
-}
-.project-head {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-bottom: 12px;
-}
-.project-emoji {
-  font-size: 36px;
-  line-height: 1;
-}
-.project-name {
+h1 {
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
-.project-tagline {
-  font-size: 13px;
+.mapa {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
   color: var(--muted);
-  margin-bottom: 16px;
-  min-height: 36px;
+  font-family: monospace;
 }
-.badge {
-  display: inline-block;
+.mapa span { white-space: nowrap; }
+.filtros {
+  margin-left: auto;
+  display: flex;
+  gap: 4px;
+  font-size: 12px;
+}
+.filtros button {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--muted);
   padding: 4px 10px;
   border-radius: 999px;
-  font-size: 11px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.filtros button.active {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
   font-weight: 600;
+}
+.sync {
+  font-size: 11px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.sync .dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--green);
+}
+.sync.dirty .dot { background: var(--yellow); }
+.sync.error .dot { background: var(--red); }
+
+main.board {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  height: calc(100vh - 56px);
+  overflow-x: auto;
+  align-items: flex-start;
+}
+.col {
+  background: var(--surface);
+  border-radius: var(--radius);
+  min-width: 240px;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  box-shadow: var(--shadow);
+}
+.col-head {
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+  font-weight: 600;
+}
+.col-head .count {
+  background: var(--bg);
+  color: var(--muted);
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+}
+.col-body {
+  flex: 1;
+  padding: 8px;
+  overflow-y: auto;
+  min-height: 60px;
+}
+.col-body.drag-over {
+  background: rgba(6, 182, 212, 0.08);
+}
+.empty {
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+  font-style: italic;
+  padding: 16px 4px;
+  opacity: .5;
+}
+
+.card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 6px;
+  cursor: grab;
+  transition: all 0.15s;
+  position: relative;
+}
+.card:hover { border-color: var(--accent); }
+.card:active { cursor: grabbing; }
+.card.ghost { opacity: 0.3; }
+.card.dragging { transform: rotate(2deg); box-shadow: 0 4px 12px rgba(0,0,0,.4); }
+.card .emoji { font-size: 18px; margin-right: 4px; }
+.card .title { font-weight: 600; font-size: 13px; margin-bottom: 2px; word-break: break-word; }
+.card .tagline { font-size: 11px; color: var(--muted); line-height: 1.3; }
+.card .meta {
+  display: flex;
+  gap: 4px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+.card .badge {
+  font-size: 9px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 0.3px;
 }
-.badge.semente { background: rgba(74,222,128,.15); color: var(--green); }
-.badge.broto { background: rgba(110,231,183,.15); color: var(--green-light); }
-.badge.arvore { background: rgba(251,191,36,.15); color: var(--yellow); }
-.badge.floresta { background: rgba(244,114,182,.15); color: var(--pink); }
-
-/* Sparkline */
-.sparkline {
-  margin: 12px 0;
-  height: 40px;
-  background: var(--bg);
-  border-radius: 6px;
-  padding: 4px;
+.card .badge.hermes { background: rgba(244,114,182,.15); color: var(--pink); }
+.card .badge.urgente { background: rgba(248,113,113,.15); color: var(--red); }
+.card .badge.framework { background: rgba(251,191,36,.15); color: var(--yellow); }
+.card .has-dir::after {
+  content: '💡';
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  font-size: 12px;
 }
-.sparkline svg { display: block; width: 100%; height: 100%; }
 
-/* Project stats */
-.project-stats {
-  display: flex;
-  gap: 12px;
-  margin-top: 12px;
-  font-size: 11px;
-  color: var(--muted);
-}
-.project-stats span { display: flex; align-items: center; gap: 4px; }
-.project-stats strong { color: var(--text); font-weight: 600; }
-
-/* Detail view */
-.detail {
-  background: var(--surface);
+.containers-area {
+  background: rgba(244,114,182,0.05);
+  border: 1px dashed var(--pink);
   border-radius: var(--radius);
-  padding: 28px;
-  margin-top: 24px;
-  display: none;
-  box-shadow: var(--shadow);
+  min-width: 280px;
+  width: 280px;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
-.detail.open { display: block; }
-.detail-head {
+.containers-area .head {
+  padding: 10px 12px;
+  border-bottom: 1px dashed var(--pink);
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 24px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--border);
-}
-.detail-emoji { font-size: 48px; }
-.detail-title { flex: 1; }
-.detail-title h2 { font-size: 24px; font-weight: 700; margin-bottom: 4px; }
-.detail-title .meta { font-size: 13px; color: var(--muted); }
-.close-btn {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  color: var(--text);
-  padding: 6px 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 14px;
-}
-.close-btn:hover { background: var(--surface-light); }
-
-/* Section */
-.section { margin-bottom: 24px; }
-.section h3 {
-  font-size: 14px;
+  justify-content: space-between;
+  font-size: 12px;
   font-weight: 600;
+  color: var(--pink);
+}
+.containers-area .body {
+  flex: 1;
+  padding: 8px;
+  overflow-y: auto;
+}
+.containers-area .body.drag-over {
+  background: rgba(244,114,182,0.1);
+}
+.container {
+  background: var(--bg);
+  border: 1px solid var(--pink);
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+.container .name {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--pink);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+.container .name input {
+  background: transparent;
+  border: none;
+  color: var(--pink);
+  font-weight: 600;
+  font-size: 12px;
+  flex: 1;
+  outline: none;
+  font-family: inherit;
+}
+.container .cards-mini {
+  min-height: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.container .mini-card {
+  background: var(--surface);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.container .empty {
+  text-align: center;
   color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-size: 11px;
+  padding: 4px;
+  font-style: italic;
+}
+.add-container-btn {
+  background: transparent;
+  border: 1px dashed var(--pink);
+  color: var(--pink);
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 11px;
+  width: 100%;
+  margin-top: 6px;
+}
+
+.fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  font-size: 28px;
+  font-weight: 300;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(6,182,212,.4);
+  z-index: 100;
+}
+.fab:hover { transform: scale(1.05); }
+
+/* Modal */
+.modal-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 20px;
+}
+.modal-bg.open { display: flex; }
+.modal {
+  background: var(--surface);
+  border-radius: var(--radius);
+  max-width: 480px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,.5);
+}
+.modal h2 {
+  font-size: 18px;
   margin-bottom: 12px;
   display: flex;
   align-items: center;
   gap: 8px;
 }
-
-/* Plano de negócio */
-.plano-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 12px;
-}
-.plano-item {
-  background: var(--bg);
-  border-radius: 8px;
-  padding: 14px;
-  border-left: 3px solid var(--accent);
-}
-.plano-item .label {
-  font-size: 10px;
+.modal .field { margin-bottom: 12px; }
+.modal label {
+  display: block;
+  font-size: 11px;
   color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 4px;
 }
-.plano-item .value { font-size: 14px; line-height: 1.5; }
-.plano-item.highlight { border-left-color: var(--green); }
-.plano-item.highlight .value { color: var(--green); font-weight: 600; }
-
-/* Updates log */
-.updates-log { list-style: none; }
-.updates-log li {
-  display: flex;
-  gap: 12px;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--border);
-  font-size: 13px;
-}
-.updates-log li:last-child { border-bottom: none; }
-.updates-log .date {
-  color: var(--muted);
-  font-size: 12px;
-  min-width: 80px;
-  font-family: monospace;
-}
-.updates-log .tipo {
-  display: inline-block;
-  padding: 2px 8px;
+.modal input[type=text], .modal textarea {
+  width: 100%;
   background: var(--bg);
-  border-radius: 4px;
-  font-size: 10px;
-  color: var(--accent);
-  text-transform: uppercase;
-  font-weight: 600;
-  min-width: 80px;
-  text-align: center;
-}
-.updates-log .text { flex: 1; }
-
-/* Insights */
-.insights { list-style: none; }
-.insights li {
-  padding: 10px 14px;
-  background: var(--bg);
-  border-radius: 8px;
-  margin-bottom: 8px;
-  font-size: 13px;
-  border-left: 3px solid var(--yellow);
-  line-height: 1.5;
-}
-
-/* Cross-refs */
-.cross-refs { display: flex; gap: 8px; flex-wrap: wrap; }
-.cross-ref {
-  font-size: 12px;
-  padding: 4px 10px;
-  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px 10px;
   border-radius: 6px;
-  color: var(--muted);
-  font-family: monospace;
-}
-
-/* Próximas ações */
-.next-actions { list-style: none; counter-reset: action; }
-.next-actions li {
-  counter-increment: action;
-  padding: 8px 0 8px 36px;
-  position: relative;
   font-size: 13px;
-  border-bottom: 1px solid var(--border);
+  font-family: inherit;
 }
-.next-actions li:last-child { border-bottom: none; }
-.next-actions li::before {
-  content: counter(action);
-  position: absolute;
-  left: 0;
-  top: 8px;
-  width: 24px;
-  height: 24px;
+.modal textarea { min-height: 70px; resize: vertical; }
+.modal .actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+.modal button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 13px;
+}
+.modal button.primary {
   background: var(--accent);
   color: var(--bg);
-  border-radius: 50%;
+  border-color: var(--accent);
+  font-weight: 600;
+}
+.modal button.danger {
+  background: var(--bg);
+  color: var(--red);
+  border-color: var(--red);
+}
+.updates-mini {
+  list-style: none;
+  margin-top: 6px;
+}
+.updates-mini li {
+  font-size: 12px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
   display: flex;
-  align-items: center;
-  justify-content: center;
+  gap: 8px;
+}
+.updates-mini li:last-child { border: none; }
+.updates-mini .date { color: var(--muted); font-family: monospace; font-size: 10px; min-width: 50px; }
+.direcionamentos {
+  list-style: none;
+  margin-top: 6px;
+}
+.direcionamentos li {
   font-size: 12px;
-  font-weight: 700;
-}
-
-/* Empty state */
-.loading {
-  text-align: center;
-  padding: 40px;
-  color: var(--muted);
-  font-style: italic;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  margin-top: 40px;
-  padding: 20px;
-  color: var(--muted);
-  font-size: 12px;
-  border-top: 1px solid var(--border);
-}
-footer code {
-  background: var(--surface);
-  padding: 2px 6px;
+  padding: 6px 8px;
+  background: var(--bg);
+  border-left: 3px solid var(--yellow);
   border-radius: 4px;
-  font-size: 11px;
+  margin-bottom: 4px;
+  display: flex;
+  gap: 8px;
 }
+.direcionamentos .ts { color: var(--muted); font-size: 10px; font-family: monospace; min-width: 90px; }
 
-/* Responsive */
-@media (max-width: 600px) {
-  body { padding: 16px 12px; }
-  h1 { font-size: 24px; }
-  .project-emoji { font-size: 28px; }
-  .detail { padding: 20px 16px; }
+@media (max-width: 700px) {
+  main.board { padding: 8px; gap: 6px; }
+  .col { min-width: 200px; width: 200px; }
+  .containers-area { min-width: 220px; width: 220px; }
+  h1 { font-size: 16px; }
+  .mapa { display: none; }
 }
 </style>
 </head>
 <body>
-<div class="container">
-  <header>
-    <h1>🌱 Crescer <span style="color: var(--muted); font-size: 18px; font-weight: 400;">— 3 projetos em evolução</span></h1>
-    <div class="subtitle">
-      <span class="last-update"><span class="live-dot"></span> atualizado <span id="lastUpdate">—</span></span>
-      <span>📊 fonte: <code>crescer.json</code> · 🤖 Lyriane</span>
-    </div>
-    <div class="stats-bar" id="statsBar">
-      <div class="stat"><div class="num" id="statUpdates">—</div><div class="lbl">updates totais</div></div>
-      <div class="stat"><div class="num" id="statActive">—</div><div class="lbl">projetos ativos</div></div>
-      <div class="stat"><div class="num" id="statSemente">—</div><div class="lbl">🌱 semente</div></div>
-      <div class="stat"><div class="num" id="statBroto">—</div><div class="lbl">🌿 broto</div></div>
-      <div class="stat"><div class="num" id="statArvore">—</div><div class="lbl">🌳 árvore</div></div>
-      <div class="stat"><div class="num" id="statFloresta">—</div><div class="lbl">🌸 floresta</div></div>
-    </div>
-  </header>
 
-  <div class="projects-grid" id="projectsGrid">
-    <div class="loading">carregando projetos…</div>
+<header>
+  <h1>🌱 incubadora</h1>
+  <div class="mapa"><span>🌱</span>→<span>💡</span>→<span>🔍</span>→<span>🧪</span>→<span>🛠️</span></div>
+  <div class="filtros">
+    <button class="active" data-filter="all">tudo</button>
+    <button data-filter="desenvolver">só desenvolvendo</button>
   </div>
+  <div class="sync" id="sync"><span class="dot"></span><span id="syncText">—</span></div>
+</header>
 
-  <div class="detail" id="detail">
-    <div class="detail-head">
-      <span class="detail-emoji" id="detailEmoji">—</span>
-      <div class="detail-title">
-        <h2 id="detailName">—</h2>
-        <div class="meta" id="detailMeta">—</div>
-      </div>
-      <button class="close-btn" onclick="closeDetail()">✕ fechar</button>
+<main class="board" id="board">
+  <!-- colunas + containers rendered by JS -->
+</main>
+
+<button class="fab" id="fab" title="nova ideia">+</button>
+
+<!-- Modal: card detail -->
+<div class="modal-bg" id="modalBg">
+  <div class="modal" id="modal">
+    <h2 id="modalTitle">—</h2>
+    <div class="field">
+      <label>Título</label>
+      <input type="text" id="fTitle">
     </div>
-
-    <div class="section">
-      <h3>📈 Linha evolutiva</h3>
-      <div class="sparkline" id="detailSparkline" style="height: 60px;"></div>
+    <div class="field">
+      <label>Tagline (1 linha)</label>
+      <input type="text" id="fTagline">
     </div>
-
-    <div class="section">
-      <h3>💼 Plano de negócio</h3>
-      <div class="plano-grid" id="detailPlano"></div>
+    <div class="field">
+      <label>Direcionamentos</label>
+      <div class="direcionamentos" id="fDirList"></div>
     </div>
-
-    <div class="section">
-      <h3>📝 Atualizações</h3>
-      <ul class="updates-log" id="detailUpdates"></ul>
+    <div class="field">
+      <label>Novo direcionamento (pra onde crescer?)</label>
+      <textarea id="fNewDir" placeholder="ex: validar pricing com 5 clínicas"></textarea>
     </div>
-
-    <div class="section">
-      <h3>💡 Insights</h3>
-      <ul class="insights" id="detailInsights"></ul>
+    <div class="field">
+      <label>Updates</label>
+      <ul class="updates-mini" id="fUpdates"></ul>
     </div>
-
-    <div class="section">
-      <h3>🔗 Cross-refs</h3>
-      <div class="cross-refs" id="detailCrossRefs"></div>
-    </div>
-
-    <div class="section" id="detailNextActionsSection" style="display:none">
-      <h3>🎯 Próximas ações</h3>
-      <ol class="next-actions" id="detailNextActions"></ol>
+    <div class="actions">
+      <button class="danger" id="bDel">🗑️ arquivar</button>
+      <button id="bCancel">cancelar</button>
+      <button class="primary" id="bSave">💾 salvar</button>
     </div>
   </div>
-
-  <footer>
-    🌱 Crescer — plataforma única para 3 projetos (🎸 Violão · 🤖 PM · 🦷 Clínica)<br>
-    auto-refresh: <code>setInterval(loadData, 60000)</code> · dados: <code>./crescer.json</code> · <a href="./aprofundar.html" style="color: var(--accent);">aprofundar.html</a> · <a href="./" style="color: var(--accent);">oportunidades</a>
-  </footer>
 </div>
 
+<!-- Modal: new card -->
+<div class="modal-bg" id="newBg">
+  <div class="modal">
+    <h2>💡 nova ideia</h2>
+    <div class="field">
+      <label>Emoji</label>
+      <input type="text" id="nEmoji" placeholder="💡" maxlength="2" value="💡">
+    </div>
+    <div class="field">
+      <label>Título</label>
+      <input type="text" id="nTitle" placeholder="ex: app de música com IA">
+    </div>
+    <div class="field">
+      <label>Tagline (1 linha)</label>
+      <input type="text" id="nTag" placeholder="ex: campo harmônico visual no violão">
+    </div>
+    <div class="field">
+      <label>Começa em</label>
+      <select id="nCol" style="width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:8px 10px;border-radius:6px;font-size:13px;">
+        <option value="semente">🌱 semente</option>
+        <option value="ideia">💡 ideia</option>
+        <option value="pesquisar">🔍 pesquisar</option>
+        <option value="aprofundar">🧪 aprofundar</option>
+        <option value="desenvolver">🛠️ desenvolver</option>
+      </select>
+    </div>
+    <div class="actions">
+      <button id="nCancel">cancelar</button>
+      <button class="primary" id="nCreate">+ criar</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
 <script>
+// ===== CONFIG =====
+const BIN_ID = '6a2ee7c6da38895dfebf95d8';
+const API_KEY = '$2a$10$g6jrm.ifugmyTO7nGzWKIue3Q4ypHTwrxhFciJF43NiplD8w9mG';
+const BASE = 'https://api.jsonbin.io/v3';
+const LS_KEY = 'crescer:incubadora:v1';
+
+// ===== SEED (4 cards atuais) =====
+const SEED = () => ({
+  version: '2.0',
+  updated_at: new Date().toISOString(),
+  columns: [
+    { id: 'semente', label: '🌱 semente', cards: [
+      { id: 'c1', emoji: '🎸', title: 'App Violão', tagline: 'campos harmônicos visuais no braço + MIDI', autor: 'renato', tags: [], direcionamentos: [{ ts: '2026-06-12T18:00:00Z', texto: 'demo sáb-dom', status: 'pendente' }], updates: [{ ts: '2026-06-12T18:00:00Z', tipo: 'scaffold', texto: 'conceito materializado' }] },
+      { id: 'c2', emoji: '🦷', title: 'Clínica Chatbot', tagline: 'bot WhatsApp com RAG — atender 24/7', autor: 'renato', tags: ['urgente'], direcionamentos: [], updates: [{ ts: '2026-06-12T19:00:00Z', tipo: 'PRD', texto: 'PRD salvo 7.5KB' }, { ts: '2026-06-12T19:01:00Z', tipo: 'stack', texto: 'Node+Fastify+sqlite-vec+Evolution' }] },
+      { id: 'c3', emoji: '🤿', title: 'Mergulho (framework)', tagline: '4 eixos + 5 validações', autor: 'hermes', tags: ['framework'], direcionamentos: [], updates: [{ ts: '2026-06-12T20:00:00Z', tipo: 'aplicado', texto: 'mergulho#1 = clínica' }] }
+    ]},
+    { id: 'ideia', label: '💡 ideia', cards: [
+      { id: 'c4', emoji: '🤖', title: 'PM Skills / Agente-PM', tagline: 'agente cobre estratégia + operação + chat', autor: 'renato', tags: [], direcionamentos: [{ ts: '2026-06-11T10:00:00Z', texto: 'direção A: agente-config-pronto-pra-PM', status: 'processado' }], updates: [{ ts: '2026-06-11T10:00:00Z', tipo: 'TRD', texto: 'agent-pm-skills-marketplace.md gerado' }] }
+    ]},
+    { id: 'pesquisar', label: '🔍 pesquisar', cards: []},
+    { id: 'aprofundar', label: '🧪 aprofundar', cards: []},
+    { id: 'desenvolver', label: '🛠️ desenvolver', cards: []}
+  ],
+  containers: []
+});
+
+// ===== STATE =====
 let DATA = null;
+let CURRENT_FILTER = 'all';
+let OPEN_CARD_ID = null;
+let saveTimer = null;
 
-async function loadData() {
+// ===== LOAD =====
+async function load() {
+  setSync('loading');
+  // 1. try localStorage
+  const cached = localStorage.getItem(LS_KEY);
+  if (cached) {
+    try { DATA = JSON.parse(cached); render(); } catch (e) {}
+  }
+  // 2. fetch latest from jsonbin
   try {
-    const r = await fetch('./crescer.json?ts=' + Date.now());
-    if (!r.ok) throw new Error('http ' + r.status);
-    DATA = await r.json();
-    renderAll();
+    const r = await fetch(`${BASE}/b/${BIN_ID}/latest`, { cache: 'no-store' });
+    if (r.ok) {
+      const j = await r.json();
+      const fresh = j.record;
+      if (!DATA || JSON.stringify(DATA) !== JSON.stringify(fresh)) {
+        DATA = fresh;
+        localStorage.setItem(LS_KEY, JSON.stringify(DATA));
+        render();
+      }
+      setSync('ok', 'jsonbin');
+    } else {
+      setSync('offline', 'cache local');
+    }
   } catch (e) {
-    document.getElementById('projectsGrid').innerHTML = '<div class="loading">⚠️ erro ao carregar: ' + e.message + '</div>';
+    setSync('offline', 'cache local');
+  }
+  // 3. seed if empty
+  if (!DATA) {
+    DATA = SEED();
+    localStorage.setItem(LS_KEY, JSON.stringify(DATA));
+    save();
+    render();
   }
 }
 
-function renderAll() {
-  document.getElementById('lastUpdate').textContent = formatDateTime(DATA.ultima_atualizacao);
-  if (DATA.stats_globais) {
-    const s = DATA.stats_globais;
-    document.getElementById('statUpdates').textContent = s.total_updates;
-    document.getElementById('statActive').textContent = s.projetos_ativos;
-    document.getElementById('statSemente').textContent = s.semente;
-    document.getElementById('statBroto').textContent = s.broto;
-    document.getElementById('statArvore').textContent = s.arvore;
-    document.getElementById('statFloresta').textContent = s.floresta;
-  }
-  renderGrid();
+// ===== SAVE (debounced) =====
+function save() {
+  setSync('dirty', 'sincronizando…');
+  localStorage.setItem(LS_KEY, JSON.stringify(DATA));
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(async () => {
+    try {
+      const r = await fetch(`${BASE}/b/${BIN_ID}`, {
+        method: 'PUT',
+        headers: { 'X-Master-Key': API_KEY, 'Content-Type': 'application/json' },
+        body: JSON.stringify(DATA)
+      });
+      if (r.ok) setSync('ok', 'jsonbin');
+      else setSync('error', 'jsonbin: ' + r.status);
+    } catch (e) {
+      setSync('error', 'offline');
+    }
+  }, 500);
 }
 
-function renderGrid() {
-  const grid = document.getElementById('projectsGrid');
-  const projetos = Object.values(DATA.projetos);
-  if (projetos.length === 0) {
-    grid.innerHTML = '<div class="loading">nenhum projeto ainda</div>';
-    return;
-  }
-  grid.innerHTML = projetos.map(p => `
-    <div class="project-card" onclick="openDetail('${p.id}')" data-id="${p.id}">
-      <div class="project-head">
-        <span class="project-emoji">${p.emoji}</span>
-        <span class="badge ${p.nivel_label.split(' ')[0]}">${p.nivel_label}</span>
+function setSync(state, text) {
+  const el = document.getElementById('sync');
+  el.className = 'sync ' + state;
+  document.getElementById('syncText').textContent = text || state;
+}
+
+// ===== RENDER =====
+function render() {
+  const board = document.getElementById('board');
+  const colsToShow = CURRENT_FILTER === 'desenvolver'
+    ? DATA.columns.filter(c => c.id === 'desenvolver')
+    : DATA.columns;
+  const colsHtml = colsToShow.map(col => `
+    <div class="col">
+      <div class="col-head">
+        <span>${col.label}</span>
+        <span class="count">${col.cards.length}</span>
       </div>
-      <div class="project-name">${p.nome}</div>
-      <div class="project-tagline">${p.tagline}</div>
-      <div class="sparkline">${renderSparkline(p.updates, 200, 40)}</div>
-      <div class="project-stats">
-        <span>📝 <strong>${p.updates.length}</strong> updates</span>
-        <span>🕐 <strong>${formatDate(p.updates[p.updates.length-1].data)}</strong></span>
-        <span>💰 <strong>${p.r_esperado ? p.r_esperado.split(' ')[0] : '—'}</strong></span>
+      <div class="col-body" data-col="${col.id}">
+        ${col.cards.length === 0 ? '<div class="empty">solte uma ideia aqui</div>' : ''}
+        ${col.cards.map(renderCard).join('')}
       </div>
     </div>
   `).join('');
+  const contHtml = `
+    <div class="containers-area">
+      <div class="head">
+        <span>📦 containers (mistura)</span>
+        <button class="add-container-btn" id="addCont" style="width:auto;margin:0;padding:2px 8px;font-size:10px;">+ novo</button>
+      </div>
+      <div class="body" id="contBody">
+        ${DATA.containers.length === 0 ? '<div class="empty" style="color:var(--pink);opacity:.5;">arraste 2+ cards aqui pra fundir ideias</div>' : ''}
+        ${DATA.containers.map(renderContainer).join('')}
+      </div>
+    </div>
+  `;
+  board.innerHTML = colsHtml + contHtml;
+  initSortables();
+  bindCardClicks();
+  document.getElementById('addCont').onclick = addContainer;
 }
 
-function renderSparkline(updates, width, height) {
-  if (!updates || updates.length === 0) return '';
-  const points = updates.map((u, i) => {
-    const x = (i / Math.max(updates.length - 1, 1)) * (width - 4) + 2;
-    const y = height - 4 - (i / Math.max(updates.length - 1, 1)) * (height - 8);
-    return `${x},${y}`;
-  });
-  const last = points[points.length - 1].split(',');
+function renderCard(c) {
+  const tagsHtml = (c.tags || []).map(t => `<span class="badge ${t}">${t}</span>`).join('');
+  const autorBadge = c.autor === 'hermes' ? '<span class="badge hermes">hermes</span>' : '';
+  const hasDir = c.direcionamentos && c.direcionamentos.length > 0 ? ' has-dir' : '';
+  const dirCount = c.direcionamentos ? c.direcionamentos.length : 0;
   return `
-    <svg viewBox="0 0 ${width} ${height}" preserveAspectRatio="none">
-      <polyline points="${points.join(' ')}" fill="none" stroke="#06b6d4" stroke-width="2"/>
-      <circle cx="${last[0]}" cy="${last[1]}" r="3" fill="#06b6d4"/>
-      ${points.map((p, i) => `<circle cx="${p.split(',')[0]}" cy="${p.split(',')[1]}" r="1.5" fill="#06b6d4" opacity="0.5"/>`).join('')}
-    </svg>
+    <div class="card${hasDir}" data-id="${c.id}">
+      <div class="title"><span class="emoji">${c.emoji}</span>${escapeHtml(c.title)}</div>
+      <div class="tagline">${escapeHtml(c.tagline || '')}</div>
+      <div class="meta">${tagsHtml}${autorBadge}${dirCount > 0 ? `<span class="badge">${dirCount} 💡</span>` : ''}</div>
+    </div>
   `;
 }
 
-function openDetail(id) {
-  const p = DATA.projetos[id];
-  if (!p) return;
-  document.querySelectorAll('.project-card').forEach(c => {
-    c.classList.toggle('selected', c.dataset.id === id);
+function renderContainer(cont) {
+  return `
+    <div class="container" data-cont="${cont.id}">
+      <div class="name">
+        <input type="text" value="${escapeHtml(cont.name)}" data-action="rename-cont" data-cont="${cont.id}" />
+        <button data-action="del-cont" data-cont="${cont.id}" style="background:none;border:none;color:var(--muted);cursor:pointer;font-size:11px;">×</button>
+      </div>
+      <div class="cards-mini" data-cont="${cont.id}">
+        ${cont.cards.length === 0 ? '<div class="empty">arraste cards aqui</div>' : ''}
+        ${cont.cards.map(c => `<div class="mini-card" data-id="${c.id}"><span>${c.emoji}</span>${escapeHtml(c.title)}</div>`).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function escapeHtml(s) {
+  return (s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+// ===== DRAG/DROP =====
+let activeColSortable = null;
+function initSortables() {
+  // cada coluna
+  document.querySelectorAll('.col-body').forEach(body => {
+    Sortable.create(body, {
+      group: 'cards',
+      animation: 150,
+      ghostClass: 'ghost',
+      dragClass: 'dragging',
+      forceFallback: false, // funciona touch nativamente
+      onAdd: (evt) => {
+        const cardId = evt.item.dataset.id;
+        const fromCol = evt.from.dataset.col;
+        const fromCont = evt.from.dataset.cont;
+        const toCol = evt.to.dataset.col;
+        const toCont = evt.to.dataset.cont;
+        moveCard(cardId, fromCol, fromCont, toCol, toCont, evt.newIndex);
+      }
+    });
   });
-  document.getElementById('detailEmoji').textContent = p.emoji;
-  document.getElementById('detailName').textContent = p.nome;
-  document.getElementById('detailMeta').innerHTML = `<span class="badge ${p.nivel_label.split(' ')[0]}">${p.nivel_label}</span> · ${p.status || ''}`;
-  document.getElementById('detailSparkline').innerHTML = renderSparkline(p.updates, 800, 60);
-
-  const planoItems = [
-    { l: 'Problema', v: p.problema },
-    { l: 'Persona', v: p.persona },
-    { l: 'JTBD', v: p.jtbd },
-    { l: 'MVP', v: p.mvp || p.mvp_local, highlight: false },
-    { l: 'Stack', v: p.mvp_stack },
-    { l: 'Métrica de sucesso', v: p.metrica_sucesso, highlight: true },
-    { l: 'R$ esperado', v: p.r_esperado, highlight: true }
-  ];
-  document.getElementById('detailPlano').innerHTML = planoItems
-    .filter(i => i.v)
-    .map(i => `<div class="plano-item ${i.highlight ? 'highlight' : ''}"><div class="label">${i.l}</div><div class="value">${i.v}</div></div>`)
-    .join('');
-
-  document.getElementById('detailUpdates').innerHTML = p.updates.slice().reverse().map(u => `
-    <li>
-      <span class="date">${formatDate(u.data)}</span>
-      <span class="tipo">${u.tipo}</span>
-      <span class="text">${u.texto}</span>
-    </li>
-  `).join('');
-
-  document.getElementById('detailInsights').innerHTML = p.insights.map(i => `<li>${i}</li>`).join('');
-
-  document.getElementById('detailCrossRefs').innerHTML = p.cross_refs.map(r => `<span class="cross-ref">${r}</span>`).join('');
-
-  const nextActionsSection = document.getElementById('detailNextActionsSection');
-  if (p.proximas_acoes && p.proximas_acoes.length > 0) {
-    nextActionsSection.style.display = '';
-    document.getElementById('detailNextActions').innerHTML = p.proximas_acoes.map(a => `<li>${a}</li>`).join('');
-  } else {
-    nextActionsSection.style.display = 'none';
+  // containers
+  document.querySelectorAll('.cards-mini').forEach(body => {
+    Sortable.create(body, {
+      group: 'cards',
+      animation: 150,
+      ghostClass: 'ghost',
+      dragClass: 'dragging',
+      onAdd: (evt) => {
+        const cardId = evt.item.dataset.id;
+        const fromCol = evt.from.dataset.col;
+        const fromCont = evt.from.dataset.cont;
+        const toCont = evt.to.dataset.cont;
+        moveCard(cardId, fromCol, fromCont, null, toCont, evt.newIndex);
+      }
+    });
+  });
+  // containers-area body (drop em qualquer container novo)
+  const contBody = document.getElementById('contBody');
+  if (contBody) {
+    Sortable.create(contBody, {
+      group: 'cards',
+      animation: 150,
+      onAdd: (evt) => {
+        const cardId = evt.item.dataset.id;
+        const fromCol = evt.from.dataset.col;
+        const fromCont = evt.from.dataset.cont;
+        // criar container novo automaticamente
+        const cont = { id: 'cont-' + Date.now(), name: 'novo container', cards: [] };
+        cont.cards.push(takeCard(cardId, fromCol, fromCont));
+        DATA.containers.push(cont);
+        evt.item.remove();
+        save();
+        render();
+      }
+    });
   }
-
-  document.getElementById('detail').classList.add('open');
-  document.getElementById('detail').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-function closeDetail() {
-  document.getElementById('detail').classList.remove('open');
-  document.querySelectorAll('.project-card').forEach(c => c.classList.remove('selected'));
+function takeCard(cardId, fromCol, fromCont) {
+  if (fromCol) {
+    const col = DATA.columns.find(c => c.id === fromCol);
+    const idx = col.cards.findIndex(c => c.id === cardId);
+    return col.cards.splice(idx, 1)[0];
+  } else {
+    const cont = DATA.containers.find(c => c.id === fromCont);
+    const idx = cont.cards.findIndex(c => c.id === cardId);
+    return cont.cards.splice(idx, 1)[0];
+  }
 }
 
-function formatDate(s) {
-  if (!s) return '—';
-  const [y, m, d] = s.split('-');
-  return `${d}/${m}`;
+function moveCard(cardId, fromCol, fromCont, toCol, toCont, newIndex) {
+  const card = takeCard(cardId, fromCol, fromCont);
+  if (toCol) {
+    const col = DATA.columns.find(c => c.id === toCol);
+    col.cards.splice(newIndex, 0, card);
+  } else {
+    const cont = DATA.containers.find(c => c.id === toCont);
+    cont.cards.splice(newIndex, 0, card);
+  }
+  save();
+  render();
 }
 
-function formatDateTime(s) {
-  if (!s) return '—';
-  const [date, time] = s.split('T');
-  return `${formatDate(date)} ${time ? time.slice(0,5) : ''}`;
+// ===== CONTAINERS =====
+function addContainer() {
+  DATA.containers.push({ id: 'cont-' + Date.now(), name: 'novo container', cards: [] });
+  save();
+  render();
 }
 
-loadData();
-setInterval(loadData, 60000);
+// ===== CARD CLICKS =====
+function bindCardClicks() {
+  document.querySelectorAll('.card').forEach(el => {
+    el.addEventListener('click', (e) => {
+      if (e.target.closest('.sortable-drag')) return; // evita click durante drag
+      openCard(el.dataset.id);
+    });
+  });
+  document.querySelectorAll('[data-action="rename-cont"]').forEach(el => {
+    el.addEventListener('change', (e) => {
+      const cont = DATA.containers.find(c => c.id === el.dataset.cont);
+      cont.name = el.value;
+      save();
+    });
+  });
+  document.querySelectorAll('[data-action="del-cont"]').forEach(el => {
+    el.addEventListener('click', () => {
+      const cont = DATA.containers.find(c => c.id === el.dataset.cont);
+      // devolve cards pra coluna "ideia" por default
+      cont.cards.forEach(c => {
+        DATA.columns.find(col => col.id === 'ideia').cards.push(c);
+      });
+      DATA.containers = DATA.containers.filter(c => c.id !== el.dataset.cont);
+      save();
+      render();
+    });
+  });
+}
+
+// ===== MODAL =====
+function findCard(id) {
+  for (const col of DATA.columns) {
+    const c = col.cards.find(x => x.id === id);
+    if (c) return { card: c, col };
+  }
+  for (const cont of DATA.containers) {
+    const c = cont.cards.find(x => x.id === id);
+    if (c) return { card: c, cont };
+  }
+  return null;
+}
+
+function openCard(id) {
+  const found = findCard(id);
+  if (!found) return;
+  OPEN_CARD_ID = id;
+  const c = found.card;
+  document.getElementById('modalTitle').innerHTML = `${c.emoji} ${escapeHtml(c.title)} <span style="color:var(--muted);font-size:11px;font-weight:400;">${found.col ? found.col.label : '📦 ' + found.cont.name}</span>`;
+  document.getElementById('fTitle').value = c.title;
+  document.getElementById('fTagline').value = c.tagline || '';
+  document.getElementById('fNewDir').value = '';
+  const dirList = document.getElementById('fDirList');
+  dirList.innerHTML = (c.direcionamentos || []).map(d => `
+    <li><span class="ts">${formatTs(d.ts)}</span><span>${escapeHtml(d.texto)}</span></li>
+  `).join('') || '<li style="color:var(--muted);border:none;font-style:italic;">nenhum ainda</li>';
+  const upList = document.getElementById('fUpdates');
+  upList.innerHTML = (c.updates || []).slice().reverse().map(u => `
+    <li><span class="date">${formatTs(u.ts)}</span><span style="color:var(--accent);">${u.tipo}</span><span>${escapeHtml(u.texto)}</span></li>
+  `).join('') || '<li style="color:var(--muted);border:none;">nenhum ainda</li>';
+  document.getElementById('modalBg').classList.add('open');
+}
+
+function closeModal() {
+  document.getElementById('modalBg').classList.remove('open');
+  OPEN_CARD_ID = null;
+}
+
+function saveCard() {
+  const found = findCard(OPEN_CARD_ID);
+  if (!found) return;
+  const c = found.card;
+  c.title = document.getElementById('fTitle').value.trim() || c.title;
+  c.tagline = document.getElementById('fTagline').value.trim();
+  const newDir = document.getElementById('fNewDir').value.trim();
+  if (newDir) {
+    if (!c.direcionamentos) c.direcionamentos = [];
+    c.direcionamentos.push({ ts: new Date().toISOString(), texto: newDir, status: 'pendente' });
+    c.updates = c.updates || [];
+    c.updates.push({ ts: new Date().toISOString(), tipo: 'dir', texto: newDir });
+  }
+  save();
+  closeModal();
+  render();
+}
+
+function deleteCard() {
+  if (!confirm('arquivar este card?')) return;
+  for (const col of DATA.columns) {
+    const idx = col.cards.findIndex(c => c.id === OPEN_CARD_ID);
+    if (idx >= 0) { col.cards.splice(idx, 1); break; }
+  }
+  for (const cont of DATA.containers) {
+    const idx = cont.cards.findIndex(c => c.id === OPEN_CARD_ID);
+    if (idx >= 0) { cont.cards.splice(idx, 1); break; }
+  }
+  save();
+  closeModal();
+  render();
+}
+
+function formatTs(iso) {
+  if (!iso) return '—';
+  const d = new Date(iso);
+  return `${String(d.getDate()).padStart(2,'0')}/${String(d.getMonth()+1).padStart(2,'0')} ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`;
+}
+
+// ===== NEW CARD =====
+function openNewCard() {
+  document.getElementById('newBg').classList.add('open');
+  document.getElementById('nTitle').focus();
+}
+function closeNewCard() {
+  document.getElementById('newBg').classList.remove('open');
+}
+function createCard() {
+  const title = document.getElementById('nTitle').value.trim();
+  if (!title) return alert('título obrigatório');
+  const emoji = document.getElementById('nEmoji').value.trim() || '💡';
+  const tagline = document.getElementById('nTag').value.trim();
+  const colId = document.getElementById('nCol').value;
+  const card = {
+    id: 'c' + Date.now(),
+    emoji, title, tagline,
+    autor: 'renato',
+    tags: [],
+    direcionamentos: [],
+    updates: [{ ts: new Date().toISOString(), tipo: 'novo', texto: 'criado pelo Renato' }]
+  };
+  DATA.columns.find(c => c.id === colId).cards.push(card);
+  save();
+  closeNewCard();
+  render();
+  document.getElementById('nTitle').value = '';
+  document.getElementById('nTag').value = '';
+}
+
+// ===== FILTERS =====
+document.querySelectorAll('.filtros button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filtros button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    CURRENT_FILTER = btn.dataset.filter;
+    render();
+  });
+});
+
+// ===== BIND BUTTONS =====
+document.getElementById('fab').onclick = openNewCard;
+document.getElementById('bCancel').onclick = closeModal;
+document.getElementById('bSave').onclick = saveCard;
+document.getElementById('bDel').onclick = deleteCard;
+document.getElementById('nCancel').onclick = closeNewCard;
+document.getElementById('nCreate').onclick = createCard;
+document.querySelectorAll('.modal-bg').forEach(el => {
+  el.addEventListener('click', (e) => { if (e.target === el) el.classList.remove('open'); });
+});
+
+// ===== START =====
+load();
 </script>
 </body>
 </html>
