@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "ultima_atualizacao": "2026-06-12T18:35:00-04:00",
-  "atualizado_por": "Lyriane (scaffold inicial pós-pivô)",
+  "ultima_atualizacao": "2026-07-05T11:15:00-04:00",
+  "atualizado_por": "Atlas (input do Renato — Telegram, 05/07 manhã)",
   "projetos": {
     "violao": {
       "id": "violao",
@@ -137,12 +137,51 @@
         "Aplicar Mergulho em 🤖 PM Skills (quando 1 TRD virar piloto)",
         "Comparar os 3 mergulhos lado a lado — ver padrões"
       ]
+    },
+    "podcast_interativo": {
+      "id": "podcast_interativo",
+      "emoji": "🎙️",
+      "nome": "Podcast Interativo",
+      "nivel": 1,
+      "nivel_label": "semente (05/07)",
+      "tagline": "Player de podcast com botão 'dúvida' — pausa, agente explica, continua do ponto exato",
+      "status": "conceito · capturado em divagação do Renato",
+      "problema": "Em podcasts densos (30-50 capítulos sobre agentes, tech, etc.), dúvidas surgem em tempo real enquanto o host fala. Mas você não tem como perguntar SEM pausar, abrir outro app, perder o fio da meada. Resultado: a dúvida fica solta — ou você ignora e perde o aprendizado, ou você para e nunca mais volta. TDAH amplifica: o interesse evapora em segundos se você não age na dúvida.",
+      "persona": "Ouvinte de podcasts longos/densos (técnicos, educacionais, livros em áudio) que quer TRANSFORMAR escuta passiva em aprendizado ativo. Pessoa que consome 5+ horas de podcast/semana e tá cansada de 'ouvir sem reter'.",
+      "jtbd": "Quando tô ouvindo um podcast e surge uma dúvida sobre o que o host acabou de falar, eu quero apertar UM botão, fazer a pergunta em voz ou texto, receber uma explicação contextualizada no episódio (o agente sabe o que tá sendo discutido AGORA), e voltar pro podcast DO PONTO EXATO onde parei",
+      "mvp": "Player de áudio web com 4 features: (1) player padrão (play/pause/seek/velocidade); (2) botão '🤔 Dúvida' que PAUSA e abre chat com agente contextualizado — agente tem acesso à transcrição do episódio + cap atual + histórico de dúvidas do ouvinte; (3) agente responde com base no que tá sendo discutido, com transcrição citável; (4) botão '▶️ Voltar' que retoma do timestamp exato. Stack sugerido: Next.js + Whisper (transcrição) + RAG no SQLite + OpenRouter.",
+      "metrica_sucesso": "1 protótipo funcional até próximo fim-de-semana (com 1 episódio de teste) + 5 beta-testers até 31/07 + medir: nº de dúvidas/episódio + tempo até voltar ao podcast",
+      "r_esperado": "R$9-19/mês assinatura OU freemium (3 dúvidas/episódio grátis) + B2C: lifelong learners, estudantes, profissionais. TAM: 500M+ ouvintes de podcast globalmente; SAM: nicho de podcasts educacionais/densos (Skillshare, Huberman, Lex, Naval, etc.)",
+      "updates": [
+        {"data": "2026-07-05", "tipo": "scaffold", "texto": "Materializado em crescer.html — semente capturada de divagação do Renato (Telegram manhã, 05/07)"},
+        {"data": "2026-07-05", "tipo": "conceito", "texto": "Nasceu de frustração real: podcast 30-50 cap sobre agentes, dúvidas que ficam soltas, sem como trabalhar em tempo real"},
+        {"data": "2026-07-05", "tipo": "gatilho", "texto": "Insight do Renato: 'esses podcasts eu vou tendo dúvidas e não tenho como trabalhar essas dúvidas'"}
+      ],
+      "insights": [
+        "Não é só 'perguntar pra um chat genérico' — é um agente CONTEXTUALIZADO no episódio. Ele sabe o que o host tá falando AGORA. Sem isso, é só mais um ChatGPT wrapper.",
+        "TDAH-friendly: transforma escuta passiva em ativa. A dúvida não trava o fluxo — ela VIRA conteúdo.",
+        "Aplicável a QUALQUER conteúdo denso: podcasts, audiobooks, videoaulas, conferências gravadas, cursos. Mercado é gigante.",
+        "Second brain do ouvinte: histórico de dúvidas + respostas = sumário automático do episódio. Diferencial vs concorrentes.",
+        "O 'segundo ator' (agente) é o que falta nos players atuais (Spotify, Apple, Overcast). Eles só reproduzem. Esse ENSINA.",
+        "Modelo de monetização dupla: assinatura (ouvinte aprende melhor) + licenciar API pra criadores (insight agregado dos ouvintes = dado de ouro pra podcasters)"
+      ],
+      "cross_refs": [
+        "visao.json → divagação 05/07 (Telegram manhã)",
+        "aprofundar.html (conceito a aprofundar depois)"
+      ],
+      "proximas_acoes": [
+        "Validar problema com 5 ouvintes de podcast (pesquisa rápida: 'você tem dúvidas que ficam soltas ouvindo podcast?')",
+        "Espiar players existentes (Snipd, Airr) — eles já tentam isso, o que falta?",
+        "Decidir stack (web vs mobile, Whisper local vs API, etc)",
+        "Prototipar 1 episódio de teste: pegar podcast público, gerar transcrição, montar agente contextual"
+      ],
+      "proxima_conversa_com_agente": "Madurar com Atlas no próximo encontro — explorar: (a) diferencial vs Snipd/Airr que JÁ fazem resumo; (b) é B2C ou B2B (creators)?; (c) freemium vs assinatura?; (d) web-only ou mobile-first?"
     }
   },
   "stats_globais": {
-    "total_updates": 14,
-    "projetos_ativos": 4,
-    "semente": 3,
+    "total_updates": 15,
+    "projetos_ativos": 5,
+    "semente": 4,
     "broto": 1,
     "arvore": 0,
     "floresta": 0
